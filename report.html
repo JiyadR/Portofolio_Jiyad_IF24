@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Report - Jiyad Rifqi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=report-v6">
+  <style>
+    .report-doc > li::before {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .report-doc > li > h4,
+    .report-doc > li > p,
+    .report-doc > li > ul,
+    .report-doc > li > div,
+    .report-doc > li > figure {
+      grid-column: 2 / -1 !important;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav-neo navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      Jiyad<span class="brand-accent">R</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="report.html">Report</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-5 mt-4 report-page">
+  <header class="report-hero">
+    <div>
+      <div class="report-kicker">Practicum Archive</div>
+      <h2 class="section-title">Laporan Praktikum</h2>
+      <p class="muted">
+        Kumpulan laporan praktikum berdasarkan mata kuliah. Pilih kategori mata kuliah, lalu buka detail laporan untuk membaca pendahuluan, tujuan, tools, hasil, dan dokumentasi pendukung.
+      </p>
+    </div>
+    <div class="report-count glass">
+      <strong>03</strong>
+      <span>Laporan awal</span>
+    </div>
+  </header>
+
+  <ul class="nav nav-pills mb-4" id="reportFilters">
+    <li class="nav-item"><button class="nav-link active" data-filter="*">All</button></li>
+    <li class="nav-item"><button class="nav-link" data-filter="pemrograman-web">Pemrograman Web</button></li>
+    <li class="nav-item"><button class="nav-link" data-filter="machine-learning">Machine Learning</button></li>
+    <li class="nav-item"><button class="nav-link" data-filter="oop">OOP</button></li>
+  </ul>
+
+  <div class="row g-4" id="reportGrid">
+
+    <div class="col-md-4 report-item pemrograman-web">
+      <div class="card report-card">
+        <div class="card-body">
+          <div class="report-card-top">
+            <span class="report-number">01</span>
+            <span class="report-badge">Pemrograman Web</span>
+          </div>
+          <h5 class="card-title">Praktikum Laravel: Routing, View, dan Controller</h5>
+          <p class="text-muted small">Pengenalan struktur Laravel, konsep MVC, routing dasar, dan pembuatan halaman sederhana.</p>
+          <div class="project-meta">
+            <span>Laravel</span>
+            <span>MVC</span>
+            <span>PHP</span>
+          </div>
+          <div class="report-actions">
+            <a href="#report-laravel" class="btn btn-solid report-open" data-report-target="report-laravel">Baca Laporan</a>
+            <a href="https://github.com/JiyadR/Portofolio_Jiyad_IF24" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+              <i class="bi bi-github"></i>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 report-item machine-learning">
+      <div class="card report-card">
+        <div class="card-body">
+          <div class="report-card-top">
+            <span class="report-number">02</span>
+            <span class="report-badge">Machine Learning</span>
+          </div>
+          <h5 class="card-title">Praktikum CNN: Klasifikasi Gambar Anjing dan Kucing</h5>
+          <p class="text-muted small">Eksperimen preprocessing gambar, training model CNN, evaluasi sederhana, dan visualisasi prediksi.</p>
+          <div class="project-meta">
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>CNN</span>
+          </div>
+          <a href="#report-cnn" class="btn btn-solid report-open" data-report-target="report-cnn">Baca Laporan</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 report-item oop">
+      <div class="card report-card">
+        <div class="card-body">
+          <div class="report-card-top">
+            <span class="report-number">03</span>
+            <span class="report-badge">OOP</span>
+          </div>
+          <h5 class="card-title">Praktikum Java GUI: Aplikasi Presensi Piket</h5>
+          <p class="text-muted small">Penerapan class, object, event handling, tabel data, dan operasi CRUD pada aplikasi desktop.</p>
+          <div class="project-meta">
+            <span>Java</span>
+            <span>Swing</span>
+            <span>CRUD</span>
+          </div>
+          <a href="#report-java" class="btn btn-solid report-open" data-report-target="report-java">Baca Laporan</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="report-reader" id="reportReader">
+    <div class="report-empty glass" id="reportEmpty">
+      <i class="bi bi-journal-text"></i>
+      <div>
+        <strong>Pilih salah satu laporan</strong>
+        <p class="mb-0">Tekan tombol Baca Laporan pada card untuk membuka detail praktikum.</p>
+      </div>
+    </div>
+
+    <article class="report-detail glass" id="report-laravel" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Pemrograman Web</span>
+        <h3>Praktikum Laravel: Routing, View, dan Controller</h3>
+        <p>Ringkasan laporan praktikum tentang pengenalan Laravel sebagai framework PHP berbasis arsitektur MVC.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Laravel merupakan salah satu framework PHP yang banyak digunakan dalam pengembangan aplikasi berbasis web. Framework ini mendukung konsep arsitektur MVC atau Model-View-Controller, sehingga proses pengembangan aplikasi menjadi lebih terstruktur, rapi, dan mudah dikelola.
+          </p>
+          <p>
+            Pada praktikum ini, mahasiswa diperkenalkan dengan Laravel mulai dari pemahaman dasar mengenai framework Laravel, kebutuhan perangkat lunak yang digunakan, struktur dasar project Laravel, hingga konsep MVC yang menjadi dasar utama dalam pengembangan aplikasi menggunakan Laravel.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Mahasiswa mampu memahami dasar-dasar framework Laravel sebagai framework PHP untuk pengembangan aplikasi web.</li>
+            <li>Mahasiswa mampu mengetahui tools dan kebutuhan awal yang diperlukan untuk membuat project Laravel.</li>
+            <li>Mahasiswa mampu mengenal struktur dasar Laravel serta memahami konsep MVC, yaitu Model, View, dan Controller.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Alat atau Tools yang Dipakai</h4>
+          <ul>
+            <li>Laragon atau XAMPP</li>
+            <li>Visual Studio Code</li>
+            <li>Composer</li>
+            <li>Git dan GitHub</li>
+            <li>Node JS dan NPM</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Langkah Pengerjaan</h4>
+          <p>
+            Pada bagian ini dilakukan proses persiapan dan konfigurasi awal Laravel sesuai dengan modul praktikum. Tahapan pengerjaan dimulai dari pengecekan kebutuhan sistem, pembuatan project Laravel, menjalankan project, hingga mengenal struktur dasar Laravel dan konsep MVC.
+          </p>
+
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>4.1 Mengecek Kebutuhan Sistem Laravel</h5>
+              <p>
+                Sebelum membuat project Laravel, terlebih dahulu dilakukan pengecekan terhadap beberapa tools yang dibutuhkan. Laravel membutuhkan PHP, Composer, Git, Node JS, dan NPM agar proses pembuatan serta pengembangan project dapat berjalan dengan baik.
+              </p>
+              <p>
+                Bisa dilihat pada gambar untuk bagaimana cara mengecek kebutuhan system dari Laravel.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-4-1-kebutuhan-system.png" alt="Screenshot pengecekan versi PHP Composer Git Node JS dan NPM">
+                <figcaption>Pengecekan versi PHP, Composer, Git, Node JS, dan NPM melalui terminal.</figcaption>
+              </figure>
+              <p>
+                Setelah perintah tersebut dijalankan, terminal akan menampilkan versi dari masing-masing tools. Jika seluruh tools sudah menampilkan versi, maka tools tersebut sudah berhasil terpasang dan dapat digunakan.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.2 Membuat Project Laravel</h5>
+              <p>
+                Setelah semua kebutuhan sistem terpenuhi, langkah selanjutnya adalah membuat project Laravel. Pada praktikum ini, project Laravel dapat dibuat menggunakan Composer atau Laravel Installer.
+              </p>
+              <p>
+                Gunakan perintah <code>composer create-project laravel/laravel:^12 PraktWeb1 --prefer-dist</code>.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-4-2-create-project-1.png" alt="Screenshot perintah composer create project Laravel">
+                <figcaption>Proses awal pembuatan project Laravel menggunakan Composer.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-4-2-create-project-2.png" alt="Screenshot proses instalasi dependensi Laravel selesai">
+                <figcaption>Proses instalasi package, generate application key, dan migration awal Laravel.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.3 Masuk ke Folder Project</h5>
+              <p>
+                Setelah project berhasil dibuat, langkah berikutnya adalah masuk ke dalam folder project menggunakan perintah <code>cd PraktWeb1</code>.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.4 Menjalankan Project Laravel</h5>
+              <p>
+                Untuk menjalankan project Laravel, digunakan perintah Artisan <code>php artisan serve</code>. Setelah perintah dijalankan, Laravel akan menjalankan server lokal. Biasanya aplikasi dapat diakses melalui browser dengan alamat <code>http://127.0.0.1:8000</code>. Jika berhasil, maka halaman awal Laravel akan tampil pada browser.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-4-4-run-project.png" alt="Screenshot halaman awal Laravel dan terminal php artisan serve">
+                <figcaption>Project Laravel berhasil dijalankan pada server lokal melalui perintah <code>php artisan serve</code>.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.5 Menampilkan Halaman Hello World</h5>
+              <p>
+                Setelah project Laravel berhasil dijalankan, langkah berikutnya adalah mencoba menampilkan halaman sederhana. Hal ini dilakukan untuk memastikan bahwa routing dan tampilan pada Laravel dapat berjalan dengan baik.
+              </p>
+              <p>
+                Route sederhana dapat dibuat untuk menampilkan teks <code>Hello World</code> pada browser.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-4-5-route-hello.png" alt="Screenshot route hello world pada file web php">
+                <figcaption>Penambahan route <code>/hello</code> pada file <code>routes/web.php</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-4-5-result-hello.png" alt="Screenshot hasil halaman hello world di browser">
+                <figcaption>Hasil tampilan halaman <code>/hello</code> pada browser.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.6 Challenge</h5>
+              <ul>
+                <li>Buat controller, beri nama <code>UserController</code>.</li>
+                <li>Di dalam controller, buat sebuah function dengan nama <code>index</code>.</li>
+                <li>Buat view di dalam folder resources dengan struktur <code>user/index</code>.</li>
+                <li>Dalam file index, buat tampilan HTML sederhana.</li>
+                <li>Buatkan routing <code>/user</code> menggunakan view tersebut.</li>
+              </ul>
+              <figure class="report-figure">
+                <img src="images/report-laravel-4-6-controller.png" alt="Screenshot kode userController php">
+                <figcaption>Pembuatan controller <code>userController</code> dengan function <code>index</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-4-6-view.png" alt="Screenshot file index blade php untuk halaman user">
+                <figcaption>Pembuatan view <code>resources/views/user/index.blade.php</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-4-6-route-user.png" alt="Screenshot route user pada file web php">
+                <figcaption>Penambahan route <code>/user</code> yang mengarah ke <code>userController</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-4-6-result-user.png" alt="Screenshot hasil halaman user di browser">
+                <figcaption>Hasil tampilan halaman <code>/user</code> pada browser.</figcaption>
+              </figure>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Praktikum ini memberikan pemahaman awal mengenai alur kerja Laravel dan bagaimana routing, view, serta controller saling terhubung dalam membangun halaman web yang terstruktur.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/JiyadR/Portofolio_Jiyad_IF24" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-detail glass" id="report-cnn" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Machine Learning</span>
+        <h3>Praktikum CNN: Klasifikasi Gambar Anjing dan Kucing</h3>
+        <p>Ringkasan laporan praktikum tentang pembangunan model Convolutional Neural Network untuk klasifikasi gambar.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Convolutional Neural Network atau CNN adalah salah satu metode deep learning yang banyak digunakan untuk pengolahan citra. CNN mampu mengenali pola visual melalui proses convolution, pooling, dan classification layer.
+          </p>
+          <p>
+            Pada praktikum ini, dataset gambar anjing dan kucing digunakan untuk memahami alur dasar machine learning, mulai dari preprocessing, training model, evaluasi, hingga visualisasi hasil prediksi.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Mahasiswa mampu memahami alur preprocessing data gambar sebelum digunakan untuk training.</li>
+            <li>Mahasiswa mampu membangun model CNN sederhana menggunakan Python.</li>
+            <li>Mahasiswa mampu membaca hasil evaluasi model dan menampilkan prediksi gambar.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Alat atau Tools yang Dipakai</h4>
+          <ul>
+            <li>Python</li>
+            <li>Google Colab atau Jupyter Notebook</li>
+            <li>TensorFlow dan Keras</li>
+            <li>Matplotlib</li>
+            <li>Dataset gambar anjing dan kucing</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Dokumentasi Praktikum</h4>
+          <figure class="report-figure">
+            <img src="images/Project 2.jpg" alt="Screenshot hasil prediksi CNN">
+            <figcaption>Visualisasi hasil prediksi model CNN terhadap beberapa sampel gambar.</figcaption>
+          </figure>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Praktikum ini menunjukkan bagaimana model CNN dapat digunakan untuk mengenali pola gambar dan melakukan klasifikasi sederhana berdasarkan data latih yang tersedia.
+          </p>
+        </li>
+      </ol>
+    </article>
+
+    <article class="report-detail glass" id="report-java" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">OOP</span>
+        <h3>Praktikum Java GUI: Aplikasi Presensi Piket</h3>
+        <p>Ringkasan laporan praktikum tentang penerapan konsep OOP pada aplikasi desktop sederhana berbasis Java GUI.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Pemrograman berorientasi objek membantu pengembang membangun aplikasi dengan struktur class dan object yang jelas. Pada Java, konsep OOP dapat diterapkan dalam pembuatan aplikasi desktop menggunakan komponen GUI seperti form, button, table, dan event listener.
+          </p>
+          <p>
+            Praktikum ini membahas pembuatan aplikasi presensi piket sederhana untuk melatih penggunaan class, object, event handling, dan operasi data dasar.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Mahasiswa mampu menerapkan konsep class dan object pada aplikasi Java.</li>
+            <li>Mahasiswa mampu membuat form input dan tabel data pada aplikasi GUI.</li>
+            <li>Mahasiswa mampu menerapkan operasi simpan, ubah, hapus, dan reset data.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Alat atau Tools yang Dipakai</h4>
+          <ul>
+            <li>Java Development Kit</li>
+            <li>NetBeans atau IntelliJ IDEA</li>
+            <li>Java Swing</li>
+            <li>Git dan GitHub</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Dokumentasi Praktikum</h4>
+          <figure class="report-figure">
+            <img src="images/Project 3.jpg" alt="Screenshot aplikasi presensi piket Java">
+            <figcaption>Tampilan aplikasi GUI Java untuk pencatatan presensi piket.</figcaption>
+          </figure>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Praktikum ini memperkuat pemahaman konsep OOP melalui aplikasi nyata yang memiliki input pengguna, tabel data, dan aksi pengelolaan data sederhana.
+          </p>
+        </li>
+      </ol>
+    </article>
+  </section>
+</main>
+
+<footer class="footer-neo py-4">
+  <div class="container">
+
+    <div class="row text-center text-md-start">
+
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">JiyadR Portfolio</h5>
+        <p class="small muted">
+          Website portofolio pribadi yang menampilkan perjalanan, pengalaman, laporan praktikum, serta karya saya sebagai mahasiswa Informatika.
+        </p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h6 class="fw-bold">Navigasi</h6>
+        <ul class="list-unstyled small">
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+          <li><a href="report.html" class="footer-link">Report</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h6 class="fw-bold">Jejak Digital</h6>
+        <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+          <a href="https://instagram.com/jypsrb" target="_blank" rel="noopener noreferrer" class="social-link"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/JiyadR" target="_blank" rel="noopener noreferrer" class="social-link"><i class="bi bi-github"></i></a>
+          <a href="https://wa.me/6282363629197" target="_blank" rel="noopener noreferrer" class="social-link"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr>
+    <p class="text-center small muted mb-0">&copy; 2025 Jiyad Rifqi - Portfolio</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const reportFilters = document.querySelectorAll('#reportFilters button');
+  const reportItems = document.querySelectorAll('.report-item');
+  const reportOpeners = document.querySelectorAll('.report-open');
+  const reportDetails = document.querySelectorAll('.report-detail');
+  const reportEmpty = document.getElementById('reportEmpty');
+  const reportReader = document.getElementById('reportReader');
+
+  function showReport(id, scrollToReport = true) {
+    let activeReport = null;
+
+    reportDetails.forEach(detail => {
+      const isActive = detail.id === id;
+      detail.classList.toggle('active', isActive);
+      if (isActive) {
+        activeReport = detail;
+      }
+    });
+
+    reportEmpty.classList.toggle('d-none', Boolean(activeReport));
+
+    if (activeReport) {
+      activeReport.focus({ preventScroll: true });
+      if (scrollToReport) {
+        reportReader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
+  reportFilters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      reportFilters.forEach(filterBtn => filterBtn.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      reportItems.forEach(item => {
+        item.style.display = (filter === "*" || item.classList.contains(filter)) ? "" : "none";
+      });
+
+      reportDetails.forEach(detail => detail.classList.remove('active'));
+      reportEmpty.classList.remove('d-none');
+      history.replaceState(null, "", "report.html");
+    });
+  });
+
+  reportOpeners.forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const reportId = link.dataset.reportTarget;
+      history.replaceState(null, "", `#${reportId}`);
+      showReport(reportId);
+    });
+  });
+
+  if (window.location.hash) {
+    showReport(window.location.hash.slice(1));
+  }
+</script>
+
+</body>
+</html>
