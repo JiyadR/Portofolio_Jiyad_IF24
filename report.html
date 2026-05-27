@@ -64,7 +64,6 @@
   <ul class="nav nav-pills mb-4" id="reportFilters">
     <li class="nav-item"><button class="nav-link active" data-filter="*">All</button></li>
     <li class="nav-item"><button class="nav-link" data-filter="pemrograman-web">Pemrograman Web</button></li>
-    <li class="nav-item"><button class="nav-link" data-filter="machine-learning">Machine Learning</button></li>
     <li class="nav-item"><button class="nav-link" data-filter="oop">OOP</button></li>
   </ul>
 
@@ -120,21 +119,27 @@
       </div>
     </div>
 
-    <div class="col-md-4 report-item machine-learning">
+    <div class="col-md-4 report-item pemrograman-web">
       <div class="card report-card">
         <div class="card-body">
           <div class="report-card-top">
             <span class="report-number">03</span>
-            <span class="report-badge">Machine Learning</span>
+            <span class="report-badge">Pemrograman Web</span>
           </div>
-          <h5 class="card-title">Praktikum CNN: Klasifikasi Gambar Anjing dan Kucing</h5>
-          <p class="text-muted small">Eksperimen preprocessing gambar, training model CNN, evaluasi sederhana, dan visualisasi prediksi.</p>
+          <h5 class="card-title">Praktikum Laravel Relationship</h5>
+          <p class="text-muted small">Pembahasan relasi database Laravel, migration, model relationship, seeder, controller, view, dan query Eloquent.</p>
           <div class="project-meta">
-            <span>Python</span>
-            <span>TensorFlow</span>
-            <span>CNN</span>
+            <span>Laravel</span>
+            <span>Relationship</span>
+            <span>Eloquent</span>
           </div>
-          <a href="#report-cnn" class="btn btn-solid report-open" data-report-target="report-cnn">Baca Laporan</a>
+          <div class="report-actions">
+            <a href="#report-laravel-relationship" class="btn btn-solid report-open" data-report-target="report-laravel-relationship">Baca Laporan</a>
+            <a href="https://github.com/JiyadR/Jiyad_Praktikum8_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+              <i class="bi bi-github"></i>
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -788,61 +793,394 @@
           </p>
         </li>
       </ol>
+
     </article>
 
-    <article class="report-detail glass" id="report-cnn" tabindex="-1">
+    <article class="report-detail glass" id="report-laravel-relationship" tabindex="-1">
       <div class="report-detail-head">
-        <span class="report-badge">Machine Learning</span>
-        <h3>Praktikum CNN: Klasifikasi Gambar Anjing dan Kucing</h3>
-        <p>Ringkasan laporan praktikum tentang pembangunan model Convolutional Neural Network untuk klasifikasi gambar.</p>
+        <span class="report-badge">Pemrograman Web</span>
+        <h3>Praktikum Laravel Relationship</h3>
+        <p>Ringkasan laporan praktikum tentang pembuatan relasi antar tabel pada Laravel menggunakan migration, model, seeder, controller, view, dan query Eloquent Relationship.</p>
       </div>
 
       <ol class="report-doc">
         <li>
           <h4>Pendahuluan</h4>
           <p>
-            Convolutional Neural Network atau CNN adalah salah satu metode deep learning yang banyak digunakan untuk pengolahan citra. CNN mampu mengenali pola visual melalui proses convolution, pooling, dan classification layer.
+            Laravel merupakan salah satu framework PHP yang digunakan untuk membangun aplikasi web secara lebih terstruktur dan efisien. Laravel menerapkan konsep MVC atau Model-View-Controller, sehingga proses pengolahan data, tampilan, dan logika aplikasi dapat dipisahkan dengan rapi. Selain itu, Laravel juga menyediakan fitur Eloquent ORM yang memudahkan pengembang dalam mengelola database dan relasi antar tabel.
           </p>
           <p>
-            Pada praktikum ini, dataset gambar anjing dan kucing digunakan untuk memahami alur dasar machine learning, mulai dari preprocessing, training model, evaluasi, hingga visualisasi hasil prediksi.
+            Pada praktikum ini, mahasiswa mempelajari konsep relationship atau relasi antar tabel dalam Laravel. Relationship digunakan untuk menghubungkan data yang saling berkaitan, seperti data mahasiswa, jurusan, dan mata kuliah. Relasi yang digunakan adalah One-to-Many, Many-to-One, dan Many-to-Many.
+          </p>
+          <p>
+            Praktikum ini juga membahas pembuatan migration, model, seeder, controller, route, dan view. Migration digunakan untuk membuat struktur tabel database, model digunakan untuk mendefinisikan relasi antar data, seeder digunakan untuk mengisi data contoh, controller digunakan untuk mengatur proses pengolahan data, sedangkan view digunakan untuk menampilkan data ke halaman web.
           </p>
         </li>
 
         <li>
           <h4>Tujuan</h4>
           <ul>
-            <li>Mahasiswa mampu memahami alur preprocessing data gambar sebelum digunakan untuk training.</li>
-            <li>Mahasiswa mampu membangun model CNN sederhana menggunakan Python.</li>
-            <li>Mahasiswa mampu membaca hasil evaluasi model dan menampilkan prediksi gambar.</li>
+            <li>Mahasiswa mampu memahami konsep relationship atau relasi antar tabel pada Laravel.</li>
+            <li>Mahasiswa mampu membuat relasi One-to-Many, Many-to-One, dan Many-to-Many pada model Laravel.</li>
+            <li>Mahasiswa mampu membuat migration dengan foreign key dan tabel pivot untuk menghubungkan data antar tabel.</li>
+            <li>Mahasiswa mampu menggunakan Eloquent Relationship untuk mengambil dan mengelola data yang saling berhubungan.</li>
+            <li>Mahasiswa mampu membuat seeder untuk mengisi data awal pada tabel jurusan, mahasiswa, dan mata kuliah.</li>
+            <li>Mahasiswa mampu menampilkan data relationship ke dalam view, seperti data mahasiswa beserta jurusan, mata kuliah, dan total SKS yang diambil.</li>
           </ul>
         </li>
 
         <li>
           <h4>Alat atau Tools yang Dipakai</h4>
           <ul>
-            <li>Python</li>
-            <li>Google Colab atau Jupyter Notebook</li>
-            <li>TensorFlow dan Keras</li>
-            <li>Matplotlib</li>
-            <li>Dataset gambar anjing dan kucing</li>
+            <li>Laragon atau XAMPP</li>
+            <li>Visual Studio Code</li>
+            <li>Composer</li>
+            <li>Git</li>
+            <li>Node JS</li>
+            <li>NPM</li>
+            <li>GitHub</li>
           </ul>
         </li>
 
         <li>
-          <h4>Dokumentasi Praktikum</h4>
-          <figure class="report-figure">
-            <img src="images/Project 2.jpg" alt="Screenshot hasil prediksi CNN">
-            <figcaption>Visualisasi hasil prediksi model CNN terhadap beberapa sampel gambar.</figcaption>
-          </figure>
+          <h4>Langkah Pengerjaan</h4>
+          <p>
+            Pada bagian ini dilakukan proses pembuatan sistem akademik sederhana menggunakan Laravel Relationship. Tahapan pengerjaan dimulai dari pembuatan migration untuk tabel database, pembuatan model beserta relationship, pembuatan seeder, pembuatan controller, pembuatan route, sampai pembuatan view untuk menampilkan dan menambahkan data mahasiswa.
+          </p>
+
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>4.1 Membuat Migration</h5>
+              <p>
+                Langkah pertama yang dilakukan adalah membuat migration. Migration digunakan untuk membuat struktur tabel pada database. Pada praktikum ini terdapat beberapa tabel yang dibuat, yaitu tabel majors, students, subjects, dan student_subject. Tabel-tabel tersebut saling berhubungan untuk membentuk sistem akademik sederhana.
+              </p>
+              <p><strong>a. Migration untuk Tabel Majors</strong></p>
+              <p>
+                Migration pertama yang dibuat adalah tabel majors. Tabel ini digunakan untuk menyimpan data jurusan mahasiswa.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-01.png" alt="Perintah membuat migration tabel majors">
+                <figcaption>Perintah <code>php artisan make:migration create_majors_table</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-02.png" alt="Kode migration tabel majors">
+                <figcaption>Struktur tabel <code>majors</code> berisi kolom <code>id</code>, <code>name</code>, dan <code>timestamps</code>.</figcaption>
+              </figure>
+              <p>
+                Tabel majors berfungsi untuk menyimpan nama jurusan yang nantinya akan dihubungkan dengan tabel mahasiswa.
+              </p>
+
+              <p><strong>b. Migration untuk Tabel Students</strong></p>
+              <p>
+                Selanjutnya dibuat migration untuk tabel students. Tabel ini digunakan untuk menyimpan data mahasiswa seperti NIM, nama, alamat, dan jurusan.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-03.png" alt="Perintah membuat migration tabel students">
+                <figcaption>Perintah <code>php artisan make:migration create_students_table</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-04.png" alt="Kode migration tabel students">
+                <figcaption>Struktur tabel <code>students</code> dengan foreign key <code>major_id</code> yang mengarah ke tabel <code>majors</code>.</figcaption>
+              </figure>
+              <p>
+                Kolom <code>major_id</code> digunakan sebagai foreign key untuk menghubungkan data mahasiswa dengan data jurusan. Pada bagian NIM dibuat unique agar setiap mahasiswa memiliki NIM yang berbeda.
+              </p>
+
+              <p><strong>c. Migration untuk Tabel Subjects</strong></p>
+              <p>
+                Tabel subjects digunakan untuk menyimpan data mata kuliah. Data yang disimpan meliputi nama mata kuliah dan jumlah SKS.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-05.png" alt="Perintah membuat migration tabel subjects">
+                <figcaption>Perintah <code>php artisan make:migration create_subjects_table</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-06.png" alt="Kode migration tabel subjects">
+                <figcaption>Struktur tabel <code>subjects</code> berisi kolom <code>name</code> dan <code>sks</code>.</figcaption>
+              </figure>
+
+              <p><strong>d. Migration untuk Tabel Student Subject</strong></p>
+              <p>
+                Migration berikutnya adalah tabel student_subject. Tabel ini merupakan tabel pivot yang digunakan untuk menghubungkan tabel students dan subjects.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-07.png" alt="Perintah membuat migration tabel student subject">
+                <figcaption>Perintah <code>php artisan make:migration create_student_subject_table</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-08.png" alt="Kode migration tabel student subject">
+                <figcaption>Tabel pivot <code>student_subject</code> memiliki foreign key <code>student_id</code> dan <code>subject_id</code>.</figcaption>
+              </figure>
+              <p>
+                Bagian unique digunakan agar kombinasi mahasiswa dan mata kuliah tidak terduplikasi. Setelah seluruh migration selesai dibuat, migration dijalankan menggunakan perintah <code>php artisan migrate</code>.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.2 Membuat Model dengan Relationship</h5>
+              <p>
+                Setelah tabel database dibuat, langkah berikutnya adalah membuat model. Model digunakan untuk menghubungkan aplikasi Laravel dengan tabel database. Selain itu, model juga digunakan untuk mendefinisikan relationship antar tabel.
+              </p>
+              <p><strong>a. Model Major</strong></p>
+              <p>
+                Model Major digunakan untuk mengelola data pada tabel majors. Pada model Major, ditambahkan properti <code>$fillable</code> agar kolom <code>name</code> dapat diisi secara massal. Relasi yang dibuat adalah <code>students()</code> untuk menunjukkan bahwa satu jurusan dapat memiliki banyak mahasiswa.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-09.png" alt="Kode model Major">
+                <figcaption>Model <code>Major</code> dengan relationship <code>hasMany(Student::class)</code>.</figcaption>
+              </figure>
+
+              <p><strong>b. Model Student</strong></p>
+              <p>
+                Model Student digunakan untuk mengelola data mahasiswa. Pada model ini terdapat relationship <code>major()</code> untuk menghubungkan mahasiswa dengan jurusan, serta relationship <code>subjects()</code> untuk menghubungkan mahasiswa dengan mata kuliah.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-10.png" alt="Kode model Student">
+                <figcaption>Model <code>Student</code> dengan relasi <code>belongsTo</code> ke jurusan dan <code>belongsToMany</code> ke mata kuliah.</figcaption>
+              </figure>
+
+              <p><strong>c. Model Subject</strong></p>
+              <p>
+                Model Subject digunakan untuk mengelola data mata kuliah. Kolom yang dapat diisi adalah <code>name</code> dan <code>sks</code>. Relationship <code>students()</code> digunakan untuk menunjukkan bahwa satu mata kuliah dapat diambil oleh banyak mahasiswa.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-11.png" alt="Kode model Subject">
+                <figcaption>Model <code>Subject</code> dengan relationship <code>belongsToMany(Student::class)</code>.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.3 Membuat Seeder untuk Data Sample</h5>
+              <p>
+                Setelah model dan relationship dibuat, langkah berikutnya adalah membuat seeder. Seeder digunakan untuk mengisi data awal ke dalam database agar aplikasi memiliki data contoh yang dapat ditampilkan.
+              </p>
+              <p><strong>a. Seeder untuk Major</strong></p>
+              <p>
+                MajorSeeder digunakan untuk mengisi data jurusan ke dalam tabel majors. Data jurusan yang dimasukkan adalah Teknik Informatika, Sistem Informasi, Teknik Komputer, dan Manajemen Informatika.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-12.png" alt="Kode MajorSeeder">
+                <figcaption>Seeder untuk memasukkan data jurusan.</figcaption>
+              </figure>
+
+              <p><strong>b. Seeder untuk Subject</strong></p>
+              <p>
+                SubjectSeeder digunakan untuk mengisi data mata kuliah ke dalam tabel subjects. Data mata kuliah yang dimasukkan terdiri dari nama mata kuliah dan jumlah SKS.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-13.png" alt="Kode SubjectSeeder">
+                <figcaption>Seeder untuk memasukkan data mata kuliah dan jumlah SKS.</figcaption>
+              </figure>
+
+              <p><strong>c. Seeder untuk Student</strong></p>
+              <p>
+                StudentSeeder digunakan untuk mengisi data mahasiswa ke dalam tabel students. Setelah data mahasiswa dibuat, setiap mahasiswa diberikan mata kuliah secara acak menggunakan hubungan melalui tabel pivot student_subject.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-14.png" alt="Kode StudentSeeder">
+                <figcaption>Seeder untuk memasukkan data mahasiswa dan menghubungkannya dengan mata kuliah.</figcaption>
+              </figure>
+
+              <p><strong>d. Update DatabaseSeeder</strong></p>
+              <p>
+                Setelah semua seeder dibuat, seluruh seeder tersebut dipanggil di dalam file DatabaseSeeder agar dapat dijalankan secara berurutan.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-15.png" alt="Kode pemanggilan seeder pada DatabaseSeeder">
+                <figcaption>Pemanggilan <code>MajorSeeder</code>, <code>SubjectSeeder</code>, <code>SubjectScheduleSeeder</code>, dan <code>StudentSeeder</code>.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.4 Membuat Controller</h5>
+              <p>
+                Setelah data dan relationship selesai dibuat, langkah berikutnya adalah membuat controller. Controller digunakan untuk mengatur proses pengambilan, penyimpanan, perubahan, dan penghapusan data mahasiswa.
+              </p>
+              <p>
+                Controller yang dibuat adalah <code>StudentController</code>. Pada controller ini terdapat beberapa function, seperti index, show, create, store, edit, update, dan destroy.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-16.png" alt="Kode function index pada StudentController">
+                <figcaption>Function <code>index()</code> mengambil data mahasiswa beserta jurusan dan mata kuliah menggunakan eager loading.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-17.png" alt="Kode function show pada StudentController">
+                <figcaption>Function <code>show()</code> menampilkan detail data mahasiswa berdasarkan ID.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-18.png" alt="Kode function create pada StudentController">
+                <figcaption>Function <code>create()</code> menampilkan form tambah mahasiswa beserta data jurusan dan mata kuliah.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-19.png" alt="Kode function store pada StudentController">
+                <figcaption>Function <code>store()</code> menyimpan mahasiswa baru dan menghubungkan data mata kuliah yang dipilih.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-20.png" alt="Kode sync subject pada StudentController">
+                <figcaption>Method <code>sync()</code> digunakan untuk memperbarui mata kuliah yang diambil mahasiswa.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-21.png" alt="Kode detach dan delete pada StudentController">
+                <figcaption>Function <code>destroy()</code> melepaskan relasi mata kuliah sebelum data mahasiswa dihapus.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.5 Membuat Routes</h5>
+              <p>
+                Setelah controller dibuat, langkah berikutnya adalah membuat route. Route digunakan untuk menentukan alamat URL yang akan mengarah ke controller tertentu.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-22.png" alt="Kode route halaman utama mahasiswa">
+                <figcaption>Route halaman utama diarahkan ke <code>students.index</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-23.png" alt="Kode resource route students">
+                <figcaption>Resource route <code>students</code> menghubungkan function CRUD pada <code>StudentController</code>.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.6 Membuat Views</h5>
+              <p>
+                Setelah controller dan route dibuat, langkah selanjutnya adalah membuat view. View digunakan untuk menampilkan data ke halaman web. Pada praktikum ini, view dibuat menggunakan Blade dan Bootstrap agar tampilan lebih rapi.
+              </p>
+              <p><strong>a. Layout Utama</strong></p>
+              <p>
+                Layout utama digunakan sebagai template dasar untuk halaman lainnya. Di dalam file ini terdapat struktur HTML, link Bootstrap, navbar, alert success, dan bagian <code>@yield('content')</code>.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-24.png" alt="Lokasi file layout app blade">
+                <figcaption>File <code>resources/views/layouts/app.blade.php</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-25.png" alt="Kode yield dan script bootstrap pada layout">
+                <figcaption>Bagian layout untuk menampilkan isi halaman dari view lain.</figcaption>
+              </figure>
+
+              <p><strong>b. Index Student</strong></p>
+              <p>
+                View index digunakan untuk menampilkan data mahasiswa dalam bentuk tabel. Data yang ditampilkan meliputi NIM, nama, jurusan, mata kuliah, total SKS, dan aksi.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-26.png" alt="Lokasi file index blade students">
+                <figcaption>File <code>resources/views/students/index.blade.php</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-27.png" alt="Kode view index students">
+                <figcaption>Perulangan data mahasiswa, jurusan, mata kuliah, total SKS, dan tombol aksi.</figcaption>
+              </figure>
+
+              <p><strong>c. Create Student</strong></p>
+              <p>
+                View create adalah halaman tambah mahasiswa. Form ini berisi input NIM, nama, alamat, pilihan jurusan, dan pilihan mata kuliah.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-28.png" alt="Lokasi file create blade students">
+                <figcaption>File <code>resources/views/students/create.blade.php</code>.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-29.png" alt="Kode form action students store">
+                <figcaption>Form dikirim ke route <code>students.store</code> menggunakan method POST.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-30.png" alt="Kode dropdown jurusan pada form">
+                <figcaption>Bagian jurusan ditampilkan menggunakan dropdown dari data majors.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-31.png" alt="Kode checkbox mata kuliah pada form">
+                <figcaption>Bagian mata kuliah menggunakan checkbox karena mahasiswa dapat mengambil lebih dari satu mata kuliah.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.7 Latihan Query dengan Relationship</h5>
+              <p>
+                Pada bagian latihan ini dilakukan pembuatan query menggunakan Eloquent Relationship. Query yang dibuat tidak menggunakan SQL secara langsung, tetapi menggunakan model dan relasi yang sudah dibuat sebelumnya.
+              </p>
+              <p><strong>a. Menampilkan Semua Mahasiswa Beserta Jurusan dan Mata Kuliahnya</strong></p>
+              <p>
+                Method <code>with()</code> digunakan untuk mengambil data relasi dari model Student. Relasi major digunakan untuk mengambil data jurusan mahasiswa, sedangkan relasi subjects digunakan untuk mengambil data mata kuliah yang diambil oleh mahasiswa.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-32.png" alt="Query menampilkan semua mahasiswa dengan jurusan dan mata kuliah">
+                <figcaption>Query untuk mengambil semua mahasiswa beserta jurusan dan mata kuliah.</figcaption>
+              </figure>
+
+              <p><strong>b. Menampilkan Jurusan yang Memiliki Mahasiswa Terbanyak</strong></p>
+              <p>
+                Method <code>withCount('students')</code> digunakan untuk menghitung jumlah mahasiswa pada setiap jurusan. Setelah itu data diurutkan dari jumlah mahasiswa terbanyak.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-33.png" alt="Query jurusan dengan mahasiswa terbanyak">
+                <figcaption>Query untuk mencari jurusan yang memiliki mahasiswa terbanyak.</figcaption>
+              </figure>
+
+              <p><strong>c. Menampilkan Mata Kuliah yang Diambil oleh Mahasiswa Tertentu</strong></p>
+              <p>
+                Query berikut mencari mahasiswa berdasarkan NIM, kemudian mengambil data mata kuliah yang berhubungan dengan mahasiswa tersebut melalui relasi subjects.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-34.png" alt="Query mata kuliah yang diambil mahasiswa tertentu">
+                <figcaption>Query untuk mengambil mata kuliah dari mahasiswa tertentu.</figcaption>
+              </figure>
+
+              <p><strong>d. Menampilkan Total SKS yang Diambil Setiap Mahasiswa</strong></p>
+              <p>
+                Setelah data mahasiswa dan mata kuliahnya diambil, total SKS dapat dihitung dengan menjumlahkan kolom SKS dari setiap mata kuliah yang diambil mahasiswa.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-35.png" alt="Query total SKS setiap mahasiswa">
+                <figcaption>Query untuk menghitung total SKS yang diambil setiap mahasiswa.</figcaption>
+              </figure>
+
+              <p><strong>e. Output</strong></p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-36.png" alt="Output semua mahasiswa beserta jurusan dan mata kuliah">
+                <figcaption>Output semua mahasiswa beserta jurusan dan mata kuliahnya.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-37.png" alt="Output jurusan terbanyak dan mata kuliah mahasiswa tertentu">
+                <figcaption>Output jurusan dengan mahasiswa terbanyak serta mata kuliah yang diambil oleh mahasiswa tertentu.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-38.png" alt="Output total SKS yang diambil setiap mahasiswa">
+                <figcaption>Output total SKS yang diambil setiap mahasiswa.</figcaption>
+              </figure>
+            </section>
+          </div>
         </li>
 
         <li>
           <h4>Kesimpulan</h4>
           <p>
-            Praktikum ini menunjukkan bagaimana model CNN dapat digunakan untuk mengenali pola gambar dan melakukan klasifikasi sederhana berdasarkan data latih yang tersedia.
+            Berdasarkan praktikum yang telah dilakukan, dapat disimpulkan bahwa Laravel dapat digunakan untuk membangun aplikasi web yang memiliki hubungan antar tabel database secara terstruktur. Pada praktikum ini, sistem yang dibuat adalah sistem akademik sederhana yang menghubungkan data mahasiswa, jurusan, dan mata kuliah menggunakan konsep relationship pada Laravel.
+          </p>
+          <p>
+            Melalui praktikum ini, telah dilakukan pembuatan migration untuk tabel majors, students, subjects, dan student_subject. Tabel tersebut digunakan untuk membentuk relasi antara jurusan, mahasiswa, dan mata kuliah. Relasi yang diterapkan yaitu One-to-Many antara jurusan dan mahasiswa, Many-to-One antara mahasiswa dan jurusan, serta Many-to-Many antara mahasiswa dan mata kuliah melalui tabel pivot.
+          </p>
+          <p>
+            Selain itu, praktikum ini juga membahas pembuatan model beserta relationship, pembuatan seeder untuk mengisi data awal, pembuatan controller untuk mengelola proses CRUD mahasiswa, pembuatan route, serta pembuatan view untuk menampilkan daftar mahasiswa dan form tambah mahasiswa. Data yang ditampilkan pada halaman mahasiswa sudah memanfaatkan relationship, seperti menampilkan nama jurusan, daftar mata kuliah yang diambil, dan total SKS dari setiap mahasiswa.
+          </p>
+          <p>
+            Pada bagian latihan, dilakukan penggunaan query Eloquent Relationship untuk menampilkan semua mahasiswa beserta jurusan dan mata kuliahnya, mencari jurusan dengan mahasiswa terbanyak, menampilkan mata kuliah yang diambil oleh mahasiswa tertentu, serta menghitung total SKS setiap mahasiswa. Dengan demikian, praktikum ini membantu mahasiswa memahami cara membangun aplikasi Laravel yang menggunakan relasi database secara efisien, rapi, dan mudah dikelola.
           </p>
         </li>
       </ol>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project Laravel Relationship dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/JiyadR/Jiyad_Praktikum8_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
     </article>
 
     <article class="report-detail glass" id="report-java" tabindex="-1">
