@@ -56,7 +56,7 @@
       </p>
     </div>
     <div class="report-count glass">
-      <strong>04</strong>
+      <strong>05</strong>
       <span>Laporan awal</span>
     </div>
   </header>
@@ -163,6 +163,31 @@
       </div>
     </div>
 
+    <div class="col-md-4 report-item pemrograman-web">
+      <div class="card report-card">
+        <div class="card-body">
+          <div class="report-card-top">
+            <span class="report-number">05</span>
+            <span class="report-badge">Pemrograman Web</span>
+          </div>
+          <h5 class="card-title">Laravel UI Bootstrap dan Templating</h5>
+          <p class="text-muted small">Penerapan Laravel UI dengan Bootstrap untuk autentikasi dan templating halaman web.</p>
+          <div class="project-meta">
+            <span>Laravel</span>
+            <span>Bootstrap</span>
+            <span>UI Auth</span>
+          </div>
+          <div class="report-actions">
+            <a href="#report-laravel-ui" class="btn btn-solid report-open" data-report-target="report-laravel-ui">Baca Laporan</a>
+            <a href="https://github.com/JiyadR" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+              <i class="bi bi-github"></i>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <section class="report-reader" id="reportReader">
@@ -173,6 +198,380 @@
         <p class="mb-0">Tekan tombol Baca Laporan pada card untuk membuka detail praktikum.</p>
       </div>
     </div>
+
+    <article class="report-detail glass" id="report-laravel-ui" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Pemrograman Web</span>
+        <h3>Laravel UI Bootstrap dan Templating</h3>
+        <p>Ringkasan laporan praktikum tentang penerapan Laravel UI dengan Bootstrap untuk autentikasi, integrasi template SB Admin 2, dan manajemen pengguna berbasis CRUD.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Laravel merupakan salah satu framework PHP yang banyak digunakan untuk mengembangkan aplikasi web secara cepat, terstruktur, efisien, dan modern. Laravel menerapkan arsitektur MVC (Model-View-Controller) sebagai proses pengelolaan data, logika aplikasi, dan tampilan pengguna. Selain itu, Laravel adalah framework berbasis package yang mendukung proses pengembangan, termasuk fitur autentikasi secara otomatis.
+          </p>
+          <p>
+            Pada praktikum ini, mahasiswa mempelajari pengelolaan halaman data autentikasi (login dan register) yang dibangun menggunakan package Laravel UI berbasis framework CSS Bootstrap. Selain itu dilakukan juga proses pengelolaan tabel database melalui penggunaan fitur migration untuk membentuk struktur tabel dan admin default secara otomatis.
+          </p>
+          <p>
+            Selain pengelolaan basis data dan autentikasi, fokus utama lainnya dalam praktikum ini adalah templating atau penyusunan tata letak (layout) aplikasi. Mahasiswa mempelajari penggunaan template eksternal, yaitu SB Admin 2, ke dalam project Laravel untuk membangun antarmuka komponen halaman web menjadi bagian-bagian kecil seperti sidebar, topbar, dan konten utama agar kode lebih modular dan mudah dikelola.
+          </p>
+          <p>
+            Di akhir praktikum, mahasiswa mengimplementasikan konsep CRUD (Create, Read, Update, Delete) pada pengelolaan pengguna (users). Implementasi ini memanfaatkan Resource Controller dan diperkaya dengan penggunaan plugin DataTables pada bagian view untuk mempermudah proses pencarian (search) dan paginasi (pagination) data. Dengan pendekatan ini, mahasiswa mendapatkan gambaran yang menyeluruh mengenai pengelolaan dan pembangunan fitur web.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Mahasiswa mampu mengimplementasikan sistem autentikasi pengguna (login dan register) serta pengelolaan basis data menggunakan migration dan seeding pada framework Laravel.</li>
+            <li>Mahasiswa mampu mengimplementasikan template desain eksternal (SB Admin 2) ke dalam project Laravel dengan pendekatan templating yang modular dan responsif.</li>
+            <li>Mahasiswa mampu membangun fitur manajemen pengguna (user management) dengan menerapkan konsep CRUD (Create, Read, Update, Delete) melalui Resource Controller dan plugin DataTables.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Alat atau Tools yang Dipakai</h4>
+          <ul>
+            <li>Laragon / XAMPP</li>
+            <li>Visual Studio Code</li>
+            <li>Composer</li>
+            <li>Git</li>
+            <li>Node JS</li>
+            <li>NPM</li>
+            <li>GitHub</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Langkah Pengerjaan</h4>
+          <p>
+            Pada bagian ini dilakukan proses pembuatan sistem akademik sederhana menggunakan Laravel Full-stack MVC. Tahapan pengerjaan dimulai dari pembuatan project, database, migration, model, controller, pembuatan route, blade template, view untuk mengelola dan menampilkan data pengguna.
+          </p>
+
+          <div class="report-substeps">
+
+            <section class="report-substep">
+              <h5>4.1 Membuat Project Laravel</h5>
+              <p>
+                Pada tahap ini, dilakukan pembuatan project, konfigurasi environment, dan logika sistem.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.2 Pembuatan Project dan Konfigurasi Database</h5>
+              <p>
+                Langkah pertama adalah membuat project Laravel. Setelah project berhasil dibuat, jalankan perintah <code>npm install</code> dan <code>npm run build</code> untuk menginstal dependensi frontend dan membangun aset.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-01.png" alt="Terminal menjalankan npm install dan npm run build pada project Laravel">
+                <figcaption>Proses instalasi dependensi frontend menggunakan <code>npm install</code> dan <code>npm run build</code>.</figcaption>
+              </figure>
+              <p>
+                Setelah project selesai, dilakukan konfigurasi database pada file <code>.env</code>. Hal ini bertujuan agar aplikasi dapat terkoneksi ke database MySQL yang telah dibuat melalui interface (phpMyAdmin).
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-02.png" alt="Konfigurasi database pada file env Laravel">
+                <figcaption>Konfigurasi koneksi database pada file <code>.env</code>.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.2 Implementasi Autentikasi</h5>
+              <p>
+                Untuk fitur login dan register, digunakan package <code>laravel/ui</code> dengan framework Bootstrap. Hal ini mempermudah proses scaffolding halaman autentikasi.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-03.png" alt="Instalasi package laravel ui dan bootstrap auth melalui terminal">
+                <figcaption>Instalasi package <code>laravel/ui</code> dan scaffolding autentikasi Bootstrap menggunakan <code>php artisan ui bootstrap --auth</code>.</figcaption>
+              </figure>
+              <p>
+                Setelah berhasil, silakan buka halaman login dan register. Jika berhasil maka akan menampilkan seperti berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-04.png" alt="Halaman login Laravel UI Bootstrap">
+                <figcaption>Halaman login yang dihasilkan oleh Laravel UI Bootstrap.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-05.png" alt="Halaman register Laravel UI Bootstrap">
+                <figcaption>Halaman register yang dihasilkan oleh Laravel UI Bootstrap.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.3 Kustomisasi Database dan Seeding</h5>
+              <p>
+                Dilakukan penambahan kolom pada tabel users untuk mengakomodasi kebutuhan sistem informasi sekolah. Penambahan kolom <code>username</code>, <code>level</code>, dan <code>nama</code> dilakukan melalui migration baru.
+              </p>
+
+              <p><strong>a. Custom Table Users</strong></p>
+              <p>
+                Authentication Laravel secara otomatis akan menggunakan table Users yang berisi tentang informasi data user, berikut struktur table users. Dengan menggunakan perintah <code>php artisan make:migration create_table_users</code>, maka ada pada tabel pada database dengan struktur berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-06.png" alt="Struktur tabel users pada database">
+                <figcaption>Struktur tabel <code>users</code> pada database.</figcaption>
+              </figure>
+              <p>
+                Selanjutnya buka folder migration yang sudah di buat dan tulis kode berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-07.png" alt="Kode migration untuk kustomisasi tabel users">
+                <figcaption>File migration untuk kustomisasi struktur tabel <code>users</code>.</figcaption>
+              </figure>
+
+              <p><strong>b. Seeder untuk Admin</strong></p>
+              <p>
+                Langkah selanjutnya setelah mengisikan tabel users adalah mengisi data pengguna melalui fitur seeding. Untuk menguji, buatlah seeder bernama <code>AdminSeeder</code>, dengan menggunakan perintah <code>php artisan make:seeder AdminSeeder</code>.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-08.png" alt="Perintah membuat AdminSeeder melalui terminal">
+                <figcaption>Perintah untuk membuat file <code>AdminSeeder</code>.</figcaption>
+              </figure>
+              <p>
+                Setelah perintah dijalankan, file <code>AdminSeeder.php</code> pada folder <code>database/seeders</code>. Selanjutnya, silakan akses file tersebut dan masukkan kode berikut untuk menambahkan data administrator.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-09.png" alt="Kode AdminSeeder untuk data administrator">
+                <figcaption>Kode <code>AdminSeeder</code> berisi data awal untuk akun administrator.</figcaption>
+              </figure>
+              <p>
+                Selanjutnya untuk menjalankan seeding dengan cara menggunakan perintah berikut: <code>php artisan db:seed --class=AdminSeeder</code>. Jika berhasil maka akan muncul seperti gambar berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-10.png" alt="Menjalankan seeder AdminSeeder melalui terminal">
+                <figcaption>Perintah <code>php artisan db:seed --class=AdminSeeder</code> berhasil dijalankan.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.4 Integrasi Template SB Admin 2</h5>
+              <p>
+                Setelah autentikasi Laravel berhasil diimplementasikan untuk menampilkan dashboard, langkah selanjutnya adalah melakukan kustomisasi template aplikasi agar sesuai dengan desain yang diinginkan. Pada studi kasus ini, kami menggunakan template SB Admin 2 berbasis framework Bootstrap. Proses pengimplementasian dilakukan dengan mengunduh template dari situs resmi, mengekstrak berkas tersebut, kemudian membuat direktori baru bernama <code>sb-admin</code> di dalam folder <code>public</code> project Laravel untuk menyimpan seluruh aset template tersebut.
+              </p>
+
+              <p><strong>a. Halaman Login Aplikasi</strong></p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-11.png" alt="Kode halaman login dengan template SB Admin 2">
+                <figcaption>Kode blade untuk halaman login menggunakan template SB Admin 2.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-12.png" alt="Kode lanjutan halaman login SB Admin 2">
+                <figcaption>Kode lanjutan halaman login SB Admin 2.</figcaption>
+              </figure>
+              <p>
+                Maka output yang akan di hasilkan adalah sebagai berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-13.png" alt="Tampilan halaman login dengan template SB Admin 2">
+                <figcaption>Hasil tampilan halaman login menggunakan template SB Admin 2.</figcaption>
+              </figure>
+
+              <p><strong>b. Layout Global</strong></p>
+              <p>
+                Tahap berikutnya adalah membuat layout global yang berfungsi sebagai kerangka utama bagi keseluruhan aplikasi. Mengingat file <code>app.blade.php</code> sudah digunakan untuk halaman autentikasi (login), maka diperlukan pembuatan layout alternatif. Oleh karena itu, dibuatlah file <code>main.blade.php</code> di dalam direktori <code>views/layouts</code> sebagai layout utama yang akan digunakan oleh seluruh halaman yang membutuhkan tampilan dashboard. Kode program untuk layout global adalah sebagai berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-14.png" alt="Kode file main blade php sebagai layout global">
+                <figcaption>File <code>main.blade.php</code> sebagai layout global aplikasi.</figcaption>
+              </figure>
+
+              <p><strong>c. Sidebar</strong></p>
+              <p>
+                Buat file pada folder layouts dengan nama <code>sidebar.blade.php</code> dengan kode program berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-15.png" alt="Kode sidebar blade php bagian 1">
+                <figcaption>Kode <code>sidebar.blade.php</code> bagian pertama.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-16.png" alt="Kode sidebar blade php bagian 2">
+                <figcaption>Kode <code>sidebar.blade.php</code> bagian kedua.</figcaption>
+              </figure>
+
+              <p><strong>d. Topbar</strong></p>
+              <p>
+                Buat file pada folder layouts dengan nama <code>topbar.blade.php</code> dan isi dengan kode program berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-17.png" alt="Kode topbar blade php bagian 1">
+                <figcaption>Kode <code>topbar.blade.php</code> bagian pertama.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-18.png" alt="Kode topbar blade php bagian 2">
+                <figcaption>Kode <code>topbar.blade.php</code> bagian kedua.</figcaption>
+              </figure>
+
+              <p><strong>e. Hasil Konfigurasi Template</strong></p>
+              <p>
+                Jika konfigurasi berhasil maka tampilan nya akan menjadi seperti berikut ini.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-19.png" alt="Tampilan dashboard dengan template SB Admin 2">
+                <figcaption>Hasil tampilan dashboard setelah integrasi template SB Admin 2 berhasil.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.5 Manajemen Users</h5>
+              <p>
+                Tahap berikutnya adalah membangun fitur manajemen pengguna. Mengingat fitur ini menerapkan fungsi CRUD (Create, Read, Update, dan Delete) secara penuh, maka kita akan menggunakan Resource Controller. Langkah ini dilakukan melalui terminal dengan menjalankan perintah <code>php artisan make:controller UserController --resource</code>.
+              </p>
+              <p>
+                Selanjutnya ini kode program berikut pada route web.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-20.png" alt="Kode route resource untuk UserController pada file web php">
+                <figcaption>Penambahan route resource untuk <code>UserController</code> pada file <code>routes/web.php</code>.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.6 File UserController</h5>
+              <p>
+                Setelah rute sudah berhasil di buat, selanjutnya adalah isi file tersebut seperti pada gambar.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-21.png" alt="Kode UserController bagian 1">
+                <figcaption>Kode <code>UserController</code> bagian pertama.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-22.png" alt="Kode UserController bagian 2">
+                <figcaption>Kode <code>UserController</code> bagian kedua.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-23.png" alt="Kode UserController bagian 3">
+                <figcaption>Kode <code>UserController</code> bagian ketiga.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.7 Create Users</h5>
+              <p>
+                Route untuk menampilkan view form tambah data user adalah <code>user/create</code>. Silahkan buka file <code>UserController</code> kemudian pada action create edit kode program menjadi seperti berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-24.png" alt="Kode create blade php bagian 1">
+                <figcaption>Kode file <code>create.blade.php</code> bagian pertama.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-25.png" alt="Kode create blade php bagian 2">
+                <figcaption>Kode file <code>create.blade.php</code> bagian kedua.</figcaption>
+              </figure>
+              <p>
+                Jika sudah, silahkan di cek apakah hasilnya sudah sama dengan gambar berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-26.png" alt="Tampilan form create user pada browser">
+                <figcaption>Hasil tampilan form create user pada browser.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-27.png" alt="Tampilan form create user dengan template SB Admin 2">
+                <figcaption>Tampilan form create user setelah integrasi template SB Admin 2.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.8 Read / List Users</h5>
+              <p>
+                Selanjutnya setelah fungsi create selesai, kita akan menyimpan dan menampilkan data user. Untuk menampilkan data user kita akan menggunakan method <code>GET</code> pada rute <code>localhost/users</code> yang mana rute ini merupakan action <code>index</code> pada <code>UserController</code>. Buka action index kemudian edit menjadi seperti kode program berikut.
+              </p>
+              <p>
+                Selanjutnya buat file dengan nama <code>index.blade.php</code> pada folder <code>views/user</code> dan isi dengan kode program berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-28.png" alt="Kode index blade php untuk menampilkan list user">
+                <figcaption>Kode file <code>index.blade.php</code> untuk menampilkan daftar user.</figcaption>
+              </figure>
+              <p>
+                Untuk mengecek apakah sudah berhasil, coba lakukan penginputan data seperti pada gambar.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-29.png" alt="Tampilan list user pada browser">
+                <figcaption>Hasil tampilan daftar user pada browser.</figcaption>
+              </figure>
+              <p>
+                Setelah di tambahkan kode ini maka tampilan list user akan menjadi seperti berikut.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-30.png" alt="Tampilan list user final dengan DataTables">
+                <figcaption>Tampilan akhir daftar user dengan fitur DataTables.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.9 Update User</h5>
+              <p>
+                Tahap berikutnya dalam proses pengelolaan data pengguna adalah menyediakan antarmuka untuk mengedit data pengguna. Langkah ini dimulai dengan mengimplementasikan logika pada file <code>edit.blade.php</code> di dalam direktori <code>views/user</code>, yang akan memanfaatkan method <code>edit</code> pada <code>UserController</code> serta menggunakan method HTTP PUT untuk proses pengiriman perubahan.
+              </p>
+              <p>
+                Saat pengguna mengakses URL dengan format <code>users/{user}/edit</code>, di mana <code>{user}</code> merepresentasikan ID unik dari data yang dipilih. Langkah berikut adalah mengimplementasikan logika perubahan data pada method edit di dalam <code>UserController</code>.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-31.png" alt="Kode edit blade php untuk form update user">
+                <figcaption>Kode file <code>edit.blade.php</code> untuk form update data user.</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-32.png" alt="Kode lanjutan edit blade php">
+                <figcaption>Kode lanjutan file <code>edit.blade.php</code>.</figcaption>
+              </figure>
+              <p>
+                Tampilan form jika sudah akan menjadi seperti ini.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-33.png" alt="Tampilan form edit user pada browser">
+                <figcaption>Hasil tampilan form edit user pada browser.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.10 Delete Users</h5>
+              <p>
+                Tambahkan tombol atau link pada list user, silahkan buka view user <code>index.blade.php</code> dan tambahkan kode program berikut di bawah link edit.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-34.png" alt="Kode tombol delete pada halaman list user">
+                <figcaption>Penambahan tombol delete pada halaman daftar user.</figcaption>
+              </figure>
+              <p>
+                Untuk mengecek apakah sudah berhasil, coba lakukan penghapusan data seperti pada gambar.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-laravel-ui/report-laravel-ui-35.png" alt="Proses penghapusan data user">
+                <figcaption>Proses penghapusan data user berhasil dilakukan.</figcaption>
+              </figure>
+            </section>
+
+          </div>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Berdasarkan pelaksanaan praktikum yang telah dilakukan, dapat disimpulkan bahwa Laravel merupakan framework PHP yang sangat efektif dalam membangun aplikasi web yang terstruktur, efisien, dan mudah dikelola melalui penerapan arsitektur MVC (Model-View-Controller). Penggunaan fitur migration menjadi sebuah praktik utama dalam pengelolaan basis data yang terstruktur, migration dan seeder membantu mempercepat proses pengembangan aplikasi. Dengan DataSeeder, data awal dapat disediakan dan dikelola secara efisien sebagai fondasi data pengguna.
+          </p>
+          <p>
+            Selain itu, integrasi template eksternal seperti SB Admin 2 berhasil memberikan antarmuka pengguna yang profesional dan responsif. Pendekatan konsep layouting modular dengan komponen sidebar dan topbar memungkinkan struktur kode yang lebih rapi dan mudah untuk dipelihara di masa depan. Praktik implementasi fitur CRUD (Create, Read, Update, Delete) menggunakan Resource Controller serta penambahan fitur DataTables memperlihatkan kemampuan pengelolaan data untuk pembangunan fungsi pengelolaan pengguna secara prosedural. Dengan demikian, praktikum ini memberikan mahasiswa pemahaman dan kemampuan dasar yang diperlukan untuk membangun sebuah aplikasi berbasis web yang terorganisir.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/JiyadR" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
 
     <article class="report-detail glass" id="report-laravel" tabindex="-1">
       <div class="report-detail-head">
