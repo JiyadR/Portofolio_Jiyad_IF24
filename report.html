@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="utf-8">
@@ -6,7 +6,7 @@
   <title>Report - Jiyad Rifqi</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=report-v6">
+  <link rel="stylesheet" href="style.css">
   <style>
     .report-doc > li::before {
       grid-column: 1;
@@ -24,13 +24,13 @@
 </head>
 <body>
 
-<nav class="nav-neo navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="nav-neo navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">
+    <a class="navbar-brand" href="index.html">
       Jiyad<span class="brand-accent">R</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -50,13 +50,13 @@
   <header class="report-hero">
     <div>
       <div class="report-kicker">Practicum Archive</div>
-      <h2 class="section-title">Laporan Praktikum</h2>
+      <h2 class="section-title">Laporan Praktikum & Project</h2>
       <p class="muted">
-        Kumpulan laporan praktikum berdasarkan mata kuliah. Pilih kategori mata kuliah, lalu buka detail laporan untuk membaca pendahuluan, tujuan, tools, hasil, dan dokumentasi pendukung.
+        Kumpulan laporan praktikum berdasarkan mata kulia beserta projek kecil yang saya buat. Pilih kategori mata kuliah, lalu buka detail laporan untuk membaca pendahuluan, tujuan, tools, hasil, dan dokumentasi pendukung.
       </p>
     </div>
     <div class="report-count glass">
-      <strong>05</strong>
+      <strong>09</strong>
       <span>Laporan awal</span>
     </div>
   </header>
@@ -65,128 +65,187 @@
     <li class="nav-item"><button class="nav-link active" data-filter="*">All</button></li>
     <li class="nav-item"><button class="nav-link" data-filter="pemrograman-web">Pemrograman Web</button></li>
     <li class="nav-item"><button class="nav-link" data-filter="oop">OOP</button></li>
+    <li class="nav-item"><button class="nav-link" data-filter="projek">Projek</button></li>
   </ul>
 
-  <div class="row g-4" id="reportGrid">
+  <div class="report-index" id="reportGrid">
 
-    <div class="col-md-4 report-item pemrograman-web">
-      <div class="card report-card">
-        <div class="card-body">
-          <div class="report-card-top">
-            <span class="report-number">01</span>
-            <span class="report-badge">Pemrograman Web</span>
-          </div>
-          <h5 class="card-title">Praktikum Laravel: Routing, View, dan Controller</h5>
-          <p class="text-muted small">Pengenalan struktur Laravel, konsep MVC, routing dasar, dan pembuatan halaman sederhana.</p>
-          <div class="project-meta">
-            <span>Laravel</span>
-            <span>MVC</span>
-            <span>PHP</span>
-          </div>
-          <div class="report-actions">
-            <a href="#report-laravel" class="btn btn-solid report-open" data-report-target="report-laravel">Baca Laporan</a>
-            <a href="https://github.com/JiyadR/Portofolio_Jiyad_IF24" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
-              <i class="bi bi-github"></i>
-              GitHub
-            </a>
-          </div>
+    <article class="report-index-item report-item pemrograman-web reveal">
+      <div class="report-index-num">01</div>
+      <div class="report-index-main">
+        <span class="report-badge">Pemrograman Web</span>
+        <h3 class="report-index-title">Praktikum Laravel: Routing, View, dan Controller</h3>
+        <p class="report-index-desc">Pengenalan struktur Laravel, konsep MVC, routing dasar, dan pembuatan halaman sederhana.</p>
+        <div class="project-meta">
+          <span>Laravel</span>
+          <span>MVC</span>
+          <span>PHP</span>
         </div>
       </div>
-    </div>
+      <div class="report-index-actions">
+        <a href="#report-laravel" class="btn btn-solid report-open" data-report-target="report-laravel">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/Portofolio_Jiyad_IF24" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
 
-    <div class="col-md-4 report-item pemrograman-web">
-      <div class="card report-card">
-        <div class="card-body">
-          <div class="report-card-top">
-            <span class="report-number">02</span>
-            <span class="report-badge">Pemrograman Web</span>
-          </div>
-          <h5 class="card-title">Praktikum Laravel: Migration, Seeding, Routing, Model, Controller, dan View</h5>
-          <p class="text-muted small">Pembahasan lanjutan Laravel tentang pengelolaan database, alur data, dan penyusunan fitur berbasis MVC.</p>
-          <div class="project-meta">
-            <span>Laravel</span>
-            <span>Migration</span>
-            <span>Seeding</span>
-          </div>
-          <div class="report-actions">
-            <a href="#report-laravel-migration" class="btn btn-solid report-open" data-report-target="report-laravel-migration">Baca Laporan</a>
-            <a href="https://github.com/JiyadR/Jiyad_Praktikum7_241533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
-              <i class="bi bi-github"></i>
-              GitHub
-            </a>
-          </div>
+    <article class="report-index-item report-item pemrograman-web reveal">
+      <div class="report-index-num">02</div>
+      <div class="report-index-main">
+        <span class="report-badge">Pemrograman Web</span>
+        <h3 class="report-index-title">Praktikum Laravel: Migration, Seeding, Routing, Model, Controller, dan View</h3>
+        <p class="report-index-desc">Pembahasan lanjutan Laravel tentang pengelolaan database, alur data, dan penyusunan fitur berbasis MVC.</p>
+        <div class="project-meta">
+          <span>Laravel</span>
+          <span>Migration</span>
+          <span>Seeding</span>
         </div>
       </div>
-    </div>
+      <div class="report-index-actions">
+        <a href="#report-laravel-migration" class="btn btn-solid report-open" data-report-target="report-laravel-migration">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/Jiyad_Praktikum7_241533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
 
-    <div class="col-md-4 report-item pemrograman-web">
-      <div class="card report-card">
-        <div class="card-body">
-          <div class="report-card-top">
-            <span class="report-number">03</span>
-            <span class="report-badge">Pemrograman Web</span>
-          </div>
-          <h5 class="card-title">Praktikum Laravel Relationship</h5>
-          <p class="text-muted small">Pembahasan relasi database Laravel, migration, model relationship, seeder, controller, view, dan query Eloquent.</p>
-          <div class="project-meta">
-            <span>Laravel</span>
-            <span>Relationship</span>
-            <span>Eloquent</span>
-          </div>
-          <div class="report-actions">
-            <a href="#report-laravel-relationship" class="btn btn-solid report-open" data-report-target="report-laravel-relationship">Baca Laporan</a>
-            <a href="https://github.com/JiyadR/Jiyad_Praktikum8_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
-              <i class="bi bi-github"></i>
-              GitHub
-            </a>
-          </div>
+    <article class="report-index-item report-item pemrograman-web reveal">
+      <div class="report-index-num">03</div>
+      <div class="report-index-main">
+        <span class="report-badge">Pemrograman Web</span>
+        <h3 class="report-index-title">Praktikum Laravel Relationship</h3>
+        <p class="report-index-desc">Pembahasan relasi database Laravel, migration, model relationship, seeder, controller, view, dan query Eloquent.</p>
+        <div class="project-meta">
+          <span>Laravel</span>
+          <span>Relationship</span>
+          <span>Eloquent</span>
         </div>
       </div>
-    </div>
+      <div class="report-index-actions">
+        <a href="#report-laravel-relationship" class="btn btn-solid report-open" data-report-target="report-laravel-relationship">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/Jiyad_Praktikum8_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
 
-    <div class="col-md-4 report-item oop">
-      <div class="card report-card">
-        <div class="card-body">
-          <div class="report-card-top">
-            <span class="report-number">04</span>
-            <span class="report-badge">OOP</span>
-          </div>
-          <h5 class="card-title">Praktikum Java GUI: Aplikasi Presensi Piket</h5>
-          <p class="text-muted small">Penerapan class, object, event handling, tabel data, dan operasi CRUD pada aplikasi desktop.</p>
-          <div class="project-meta">
-            <span>Java</span>
-            <span>Swing</span>
-            <span>CRUD</span>
-          </div>
-          <a href="#report-java" class="btn btn-solid report-open" data-report-target="report-java">Baca Laporan</a>
+    <article class="report-index-item report-item pemrograman-web reveal">
+      <div class="report-index-num">04</div>
+      <div class="report-index-main">
+        <span class="report-badge">Pemrograman Web</span>
+        <h3 class="report-index-title">Laravel UI Bootstrap dan Templating</h3>
+        <p class="report-index-desc">Penerapan Laravel UI dengan Bootstrap untuk autentikasi dan templating halaman web.</p>
+        <div class="project-meta">
+          <span>Laravel</span>
+          <span>Bootstrap</span>
+          <span>UI Auth</span>
         </div>
       </div>
-    </div>
+      <div class="report-index-actions">
+        <a href="#report-laravel-ui" class="btn btn-solid report-open" data-report-target="report-laravel-ui">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/Jiyad_Praktikum9_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
 
-    <div class="col-md-4 report-item pemrograman-web">
-      <div class="card report-card">
-        <div class="card-body">
-          <div class="report-card-top">
-            <span class="report-number">05</span>
-            <span class="report-badge">Pemrograman Web</span>
-          </div>
-          <h5 class="card-title">Laravel UI Bootstrap dan Templating</h5>
-          <p class="text-muted small">Penerapan Laravel UI dengan Bootstrap untuk autentikasi dan templating halaman web.</p>
-          <div class="project-meta">
-            <span>Laravel</span>
-            <span>Bootstrap</span>
-            <span>UI Auth</span>
-          </div>
-          <div class="report-actions">
-            <a href="#report-laravel-ui" class="btn btn-solid report-open" data-report-target="report-laravel-ui">Baca Laporan</a>
-            <a href="https://github.com/JiyadR/Jiyad_Praktikum9_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
-              <i class="bi bi-github"></i>
-              GitHub
-            </a>
-          </div>
+    <article class="report-index-item report-item oop reveal">
+      <div class="report-index-num">05</div>
+      <div class="report-index-main">
+        <span class="report-badge">OOP</span>
+        <h3 class="report-index-title">Praktikum Java GUI: Aplikasi Presensi Piket</h3>
+        <p class="report-index-desc">Penerapan class, object, event handling, tabel data, dan operasi CRUD pada aplikasi desktop.</p>
+        <div class="project-meta">
+          <span>Java</span>
+          <span>Swing</span>
+          <span>CRUD</span>
         </div>
       </div>
-    </div>
+      <div class="report-index-actions">
+        <a href="#report-java" class="btn btn-solid report-open" data-report-target="report-java">Baca Laporan</a>
+      </div>
+    </article>
+
+    <article class="report-index-item report-item projek reveal">
+      <div class="report-index-num">06</div>
+      <div class="report-index-main">
+        <span class="report-badge">Projek</span>
+        <h3 class="report-index-title">DocuTemplate</h3>
+        <p class="report-index-desc">Aplikasi generator template dokumen otomatis untuk kebutuhan administrasi dan laporan.</p>
+        <div class="project-meta">
+          <span>Web</span>
+          <span>Automation</span>
+          <span>Template</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-docutemplate" class="btn btn-solid report-open" data-report-target="report-docutemplate">Baca Laporan</a>
+        <a href="https://github.com/ArmnskBamban/DocuTemplate" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-index-item report-item projek reveal">
+      <div class="report-index-num">07</div>
+      <div class="report-index-main">
+        <span class="report-badge">Projek</span>
+        <h3 class="report-index-title">Google Auto-Login: Multi-Akun Berurutan</h3>
+        <p class="report-index-desc">Skrip Python + Playwright untuk login otomatis ke banyak akun Google secara berurutan, lengkap dengan launcher satu klik.</p>
+        <div class="project-meta">
+          <span>Python</span>
+          <span>Playwright</span>
+          <span>Automation</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-autologin" class="btn btn-solid report-open" data-report-target="report-autologin">Baca Laporan</a>
+        <a href="https://github.com/ArmnskBamban/AutoLoginGoogle" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-index-item report-item projek reveal">
+      <div class="report-index-num">08</div>
+      <div class="report-index-main">
+        <span class="report-badge">Projek</span>
+        <h3 class="report-index-title">GForm Automator: Auto Google Form Filler</h3>
+        <p class="report-index-desc">Otomasi pengisian Google Form dengan Stealth Mode dan Headless Browser menggunakan Playwright untuk bypass bot detection.</p>
+        <div class="project-meta">
+          <span>Node.js</span>
+          <span>Playwright</span>
+          <span>Automation</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-gform" class="btn btn-solid report-open" data-report-target="report-gform">Baca Laporan</a>
+        <a href="https://github.com/ArmnskBamban/AutoFillGform" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-index-item report-item projek reveal">
+      <div class="report-index-num">09</div>
+      <div class="report-index-main">
+        <span class="report-badge">Projek</span>
+        <h3 class="report-index-title">FileHunt: Web-Based File Search System</h3>
+        <p class="report-index-desc">Sistem pencarian file berbasis web yang membantu pengguna menemukan file dengan fitur verifikasi link, multiple search modes (Academic, Dataset, Official), dan dukungan berbagai tipe file.</p>
+        <div class="project-meta">
+          <span>Python</span>
+          <span>React</span>
+          <span>FastAPI</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-filehunt" class="btn btn-solid report-open" data-report-target="report-filehunt">Baca Laporan</a>
+        <a href="https://github.com/ArmnskBamban/FileHunt" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
 
   </div>
 
@@ -1635,44 +1694,861 @@
         </li>
       </ol>
     </article>
+
+    <article class="report-detail glass" id="report-docutemplate" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Projek</span>
+        <h3>DocuTemplate — Smart Report Template Extractor</h3>
+        <p>Aplikasi otomatis untuk mengubah laporan praktikum yang sudah jadi (.docx) menjadi template bersih yang siap dipakai ulang, dengan menjaga format asli dan menghapus konten lama.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Dalam proses akademik, laporan praktikum sering kali menjadi referensi untuk praktikum berikutnya. Namun, menyalin dan menghapus konten lama satu per satu memakan waktu dan rawan kesalahan pada format.
+          </p>
+          <p>
+            <strong>DocuTemplate</strong> adalah tool otomatis yang mengubah laporan praktikum yang sudah jadi menjadi template bersih siap dipakai ulang. Tool ini mempertahankan format asli (cover, logo, margins, heading, numbering, page breaks) sambil menghapus konten lama dan mengganti data identitas dengan placeholder seperti {{NAMA}}, {{NIM}}, {{KELAS}}.
+          </p>
+          <p>
+            Keunggulan DocuTemplate adalah proses yang 100% deterministik — tidak memerlukan AI atau API eksternal, sehingga hasilnya konsisten dan dapat dipercaya.
+          </p>
+        </li>
+
+        <li>
+          <h4>Fitur Utama</h4>
+          <ul>
+            <li><strong>Menjaga format asli</strong> — cover, logo, margins, heading, numbering, page breaks tetap utuh</li>
+            <li><strong>Menghapus konten lama</strong> — isi laporan dihapus, struktur dan format tetap ada</li>
+            <li><strong>Ganti data identitas dengan placeholder</strong> — Nama/NIM/Kelas → {{NAMA}}/{{NIM}}/{{KELAS}}</li>
+            <li><strong>Bekerja otomatis tanpa AI</strong> — 100% deterministik, tidak perlu internet/API key</li>
+            <li><strong>Smart Detection</strong> — Mendeteksi elemen halaman (cover, heading, body, tabel, gambar) secara otomatis</li>
+            <li><strong>Leak Prevention</strong> — Mencegah konten lama "bocor" ke template dengan second-pass comparison</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Teknologi & Stack</h4>
+          <ul>
+            <li><strong>Backend:</strong> Python 3.11+, FastAPI, python-docx, Pydantic</li>
+            <li><strong>Frontend:</strong> Next.js, React, TypeScript</li>
+            <li><strong>Deployment:</strong> Docker, Docker Compose</li>
+            <li><strong>API:</strong> REST API dengan Swagger UI Documentation</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Cara Instalasi & Penggunaan</h4>
+          
+          <div class="report-substep">
+            <h5>1. Quick Start dengan Docker (Paling Mudah)</h5>
+            <p><strong>Prerequisite:</strong> Docker harus sudah terinstall</p>
+            <p><strong>Langkah:</strong></p>
+            <ul>
+              <li>Clone project: <code>git clone https://github.com/ArmnskBamban/DocuTemplate.git</code></li>
+              <li>Masuk folder: <code>cd DocuTemplate</code></li>
+              <li>Jalankan: <code>docker compose up --build</code></li>
+              <li>Buka browser: <code>http://localhost:3000</code></li>
+              <li>Upload file .docx laporan → Download template bersih!</li>
+            </ul>
+          </div>
+
+          <div class="report-substep">
+            <h5>2. Install Manual (Tanpa Docker)</h5>
+            <p><strong>Prerequisite:</strong></p>
+            <ul>
+              <li>Python 3.11+ (Download: https://www.python.org/downloads/)</li>
+              <li>Node.js 20+ (Download: https://nodejs.org/)</li>
+            </ul>
+            <p><strong>Windows:</strong></p>
+            <ul>
+              <li><code>git clone https://github.com/ArmnskBamban/DocuTemplate.git</code></li>
+              <li><code>cd DocuTemplate</code></li>
+              <li>Terminal 1: <code>cd backend && python -m venv .venv && .venv\Scripts\activate && pip install -e ".[dev]"</code></li>
+              <li>Terminal 2: <code>cd frontend && npm install</code></li>
+            </ul>
+            <p><strong>Jalankan:</strong></p>
+            <ul>
+              <li>Backend: <code>.venv\Scripts\python -m uvicorn praktikit.api.app:app --host 127.0.0.1 --port 8000</code></li>
+              <li>Frontend: <code>npm run dev</code></li>
+              <li>Buka: http://localhost:3000</li>
+            </ul>
+          </div>
+
+          <div class="report-substep">
+            <h5>3. CLI (Command Line) - Advanced</h5>
+            <ul>
+              <li><strong>Analyze:</strong> <code>uv run praktikit analyze laporan.docx</code></li>
+              <li><strong>Generate template:</strong> <code>uv run praktikit clean laporan.docx --output template.docx</code></li>
+              <li><strong>Personalized:</strong> <code>uv run praktikit clean laporan.docx --output laporan-saya.docx --var NAMA "Jiyad Rifqi" --var NIM "2411533003"</code></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <h4>Contoh Input → Output</h4>
+          
+          <div class="report-substep">
+            <h5>Input (Laporan Lama):</h5>
+            <p>
+              File .docx dengan konten lengkap mencakup cover, nama/NIM/kelas, bab-bab pendahuluan dengan isi detail, tabel hasil eksperimen, gambar, dan struktur dokumen yang kompleks.
+            </p>
+          </div>
+
+          <div class="report-substep">
+            <h5>Output (Template Bersih):</h5>
+            <p>
+              File .docx dengan struktur yang sama, tetapi:
+            </p>
+            <ul>
+              <li>Data identitas diganti placeholder: {{NAMA}}, {{NIM}}, {{KELAS}}, {{MODUL}}</li>
+              <li>Isi body paragraf dihapus, diganti placeholder [Isi ... di sini]</li>
+              <li>List items (a), b), c)) dihapus</li>
+              <li>Tabel data dihapus, siap diisi baru</li>
+              <li>Format, heading, structure, gambar tetap dipertahankan</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <h4>API Endpoints (Untuk Integration)</h4>
+          <table>
+            <tr>
+              <th>Method</th>
+              <th>Path</th>
+              <th>Deskripsi</th>
+            </tr>
+            <tr>
+              <td>POST</td>
+              <td>/api/documents/analyze</td>
+              <td>Analyze DOCX file</td>
+            </tr>
+            <tr>
+              <td>POST</td>
+              <td>/api/documents/{id}/generate</td>
+              <td>Generate template</td>
+            </tr>
+            <tr>
+              <td>GET</td>
+              <td>/api/documents/{id}/download</td>
+              <td>Download hasil</td>
+            </tr>
+            <tr>
+              <td>GET</td>
+              <td>/docs</td>
+              <td>Interactive API Documentation (Swagger UI)</td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          <h4>Performance & Requirement</h4>
+          <p><strong>Kecepatan:</strong></p>
+          <ul>
+            <li>Analyze 50-page DOCX: ~1 detik</li>
+            <li>Generate template: ~0.5 detik</li>
+            <li>Total end-to-end: ~2-3 detik</li>
+          </ul>
+          <p><strong>Requirement:</strong></p>
+          <ul>
+            <li>Python 3.11+</li>
+            <li>Node.js 20+ (frontend only)</li>
+            <li>Docker 20.10+ (optional)</li>
+            <li>Disk space: ~500 MB</li>
+            <li>RAM: 2 GB minimum</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Security & Keamanan</h4>
+          <ul>
+            <li>✅ Original file never modified (works on clone only)</li>
+            <li>✅ No external API calls</li>
+            <li>✅ No LLM/AI dependency</li>
+            <li>✅ Hardened ZIP parser (prevent traversal)</li>
+            <li>✅ No PII in logs</li>
+            <li>✅ Encrypted session store (optional)</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            DocuTemplate adalah solusi praktis dan otomatis untuk mengubah laporan praktikum menjadi template yang siap dipakai ulang. Dengan pendekatan deterministic tanpa AI, tool ini memberikan hasil yang konsisten dan dapat diandalkan. Baik digunakan melalui UI web, CLI, atau API, DocuTemplate memudahkan proses pembuatan dan pengelolaan template dokumen akademik.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/ArmnskBamban/DocuTemplate" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-detail glass" id="report-autologin" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Projek</span>
+        <h3>Google Auto-Login: Multi-Akun Berurutan</h3>
+        <p>Skrip Python + Playwright untuk login otomatis ke banyak akun Google secara berurutan, lengkap dengan launcher satu klik untuk memudahkan penggunaan akun pribadi.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Dalam penggunaan sehari-hari, seseorang sering memiliki lebih dari satu akun Google untuk keperluan pribadi, perkuliahan, maupun organisasi. Melakukan login secara manual satu per satu ke setiap akun sangat memakan waktu dan rawan lupa, apalagi jika harus berpindah-pindah sesi secara berkala.
+          </p>
+          <p>
+            <strong>Google Auto-Login (Banyak Akun)</strong> adalah skrip otomasi yang dibangun menggunakan Python dan Playwright. Skrip ini berfungsi untuk melakukan login otomatis ke banyak akun Google secara berurutan hanya dengan satu perintah. Dengan pendekatan ini, proses autentikasi ke banyak akun dapat dilakukan dengan cepat dan tanpa intervensi manual berulang.
+          </p>
+          <p>
+            Skrip ini dirancang khusus untuk keperluan pribadi dan hanya diperuntukkan bagi akun yang benar-benar menjadi milik sendiri, sehingga penggunaan tetap aman dan terkendali.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Mahasiswa mampu mengotomatisasi proses login ke banyak akun Google secara berurutan menggunakan Playwright.</li>
+            <li>Mahasiswa mampu mempermudah penggunaan banyak akun tanpa perlu login manual berulang-ulang.</li>
+            <li>Mahasiswa mampu menyediakan launcher satu klik (run.bat / run.sh) untuk menjalankan skrip tanpa membuka terminal.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Alat atau Tools yang Dipakai</h4>
+          <ul>
+            <li>Python 3</li>
+            <li>Playwright</li>
+            <li>Virtual Environment (venv)</li>
+            <li>Command Prompt / Terminal (Windows)</li>
+            <li>Git Bash</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Langkah Pengerjaan</h4>
+          <p>
+            Pada bagian ini dilakukan persiapan environment dan cara menjalankan skrip otomasi login multi-akun Google. Tahapan dimulai dari pengunduhan project, pembuatan virtual environment, instalasi Playwright, penyusunan daftar akun, hingga menjalankan skrip melalui launcher maupun secara manual.
+          </p>
+
+          <div class="report-substeps">
+
+            <section class="report-substep">
+              <h5>4.1 Persiapan Project</h5>
+              <p>
+                Langkah pertama adalah mengunduh project ke folder mana saja di laptop, lalu membuka terminal atau command prompt dan masuk ke folder project tersebut dengan perintah <code>cd lokasi/folder/project/kamu</code>.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.2 Membuat Virtual Environment</h5>
+              <p>
+                Untuk menjaga dependensi tetap rapi, dibuat virtual environment dengan perintah <code>python -m venv venv</code>. Virtual environment ini akan mengisolasi paket Python yang digunakan oleh skrip dari sistem utama.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.3 Menginstall Playwright</h5>
+              <p>
+                Setelah virtual environment tersedia, lakukan instalasi Playwright dengan perintah <code>pip install playwright</code>. Playwright merupakan library yang digunakan untuk mengotomatisasi browser sehingga proses login dapat berjalan secara terprogram.
+              </p>
+              <p>
+                Penting untuk selalu mengaktifkan <code>venv</code> sebelum menjalankan skrip. Jika virtual environment tidak diaktifkan, skrip akan gagal dengan error <code>ModuleNotFoundError: No module named 'playwright'</code>.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.4 Menyiapkan Daftar Akun</h5>
+              <p>
+                Daftar akun disimpan pada file <code>akun.txt</code> dengan format <code>email|password</code> per baris. Setiap baris mewakili satu akun Google yang akan diloginkan secara berurutan oleh skrip.
+              </p>
+              <p>
+                Contoh isi <code>akun.txt</code>:
+              </p>
+              <p>
+                <code>akun1@gmail.com|passwordakun1</code><br>
+                <code>akun2@gmail.com|passwordakun2</code>
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>4.5 Cara Menjalankan</h5>
+              <p><strong>Cara cepat:</strong> Klik <code>run.bat</code> (Windows) atau jalankan <code>./run.sh</code> (Git Bash) untuk langsung menjalankan skrip tanpa membuka terminal.</p>
+              <p><strong>Cara manual:</strong> Aktifkan virtual environment terlebih dahulu dengan <code>venv\Scripts\activate</code> (Windows), lalu jalankan <code>python login_google.py</code> setiap kali ingin menggunakan skrip.</p>
+            </section>
+
+          </div>
+        </li>
+
+        <li>
+          <h4>Struktur File Penting</h4>
+          <ul>
+            <li><code>login_google.py</code> — skrip utama otomasi login.</li>
+            <li><code>akun.txt</code> — daftar akun dengan format <code>email|password</code> per baris.</li>
+            <li><code>run.bat</code> / <code>run.sh</code> — launcher otomatis satu klik.</li>
+            <li><code>venv/</code> — virtual environment yang berisi Playwright.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Google Auto-Login (Banyak Akun) merupakan solusi otomasi sederhana namun efektif untuk melakukan login ke banyak akun Google secara berurutan menggunakan Python dan Playwright. Dengan bantuan virtual environment dan launcher satu klik, skrip ini mudah dijalankan tanpa perlu konfigurasi terminal yang rumit. Penggunaan skrip tetap diperuntukkan bagi akun milik sendiri demi menjaga keamanan dan privasi.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/ArmnskBamban/AutoLoginGoogle" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-detail glass" id="report-gform" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Projek</span>
+        <h3>GForm Automator: Auto Google Form Filler</h3>
+        <p>Otomasi pengisian Google Form dengan Stealth Mode dan Headless Browser menggunakan Playwright untuk bypass bot detection, dilengkapi form analyzer dan smart answer generator.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Google Form merupakan tools yang sering digunakan untuk survey, pendaftaran, dan kuesioner. Namun, untuk keperluan testing atau pengisian form berulang, proses manual sangat memakan waktu dan membosankan. Selain itu, banyak form yang memiliki mekanisme bot detection yang mencegah pengisian otomatis.
+          </p>
+          <p>
+            <strong>GForm Automator</strong> adalah aplikasi otomasi berbasis Node.js dan Playwright yang dapat mengisi Google Form secara otomatis dengan kemampuan Stealth Mode untuk bypass bot detection. Aplikasi ini dilengkapi dengan Form Analyzer untuk mendeteksi otomatis tipe pertanyaan, Smart Answer Generator untuk menghasilkan jawaban berdasarkan konteks, dan simulasi perilaku manusia untuk menghindari detection.
+          </p>
+          <p>
+            Fitur Stealth Mode mencakup penghapusan properti webdriver, mock browser features, canvas fingerprinting protection, random user agents, dan human-like typing delays. Dengan pendekatan ini, form automation dapat berjalan lebih natural dan meminimalisir risiko detection.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Mahasiswa mampu mengotomatisasi pengisian Google Form dengan Playwright secara efisien.</li>
+            <li>Mahasiswa mampu mengimplementasikan Stealth Mode untuk bypass bot detection dengan teknik anti-detection lanjutan.</li>
+            <li>Mahasiswa mampu menganalisis struktur form secara otomatis dan menghasilkan jawaban yang sesuai dengan konteks pertanyaan.</li>
+            <li>Mahasiswa mampu mensimulasikan perilaku manusia (human-like behavior) untuk menghindari detection sistem otomatis.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Alat atau Tools yang Dipakai</h4>
+          <ul>
+            <li>Node.js 16+ (LTS)</li>
+            <li>Playwright</li>
+            <li>npm atau yarn</li>
+            <li>Terminal / Command Prompt</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Fitur Utama</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>✨ Core Features</h5>
+              <ul>
+                <li><strong>Input URL Google Form</strong> — Dukungan link Google Form apa saja</li>
+                <li><strong>Otomatis Login Google</strong> — Opsi login otomatis ke akun Google dengan dukungan 2FA manual</li>
+                <li><strong>Stealth Mode</strong> — Bypass bot detection dengan advanced anti-detection techniques</li>
+                <li><strong>Headless Mode</strong> — Jalankan browser tanpa GUI untuk performa lebih cepat</li>
+                <li><strong>Incognito Mode</strong> — Operasi dalam mode incognito untuk privasi</li>
+                <li><strong>Form Analyzer</strong> — Deteksi otomatis tipe pertanyaan (10+ tipe didukung)</li>
+                <li><strong>Smart Answer Generator</strong> — Generate jawaban otomatis berdasarkan konteks</li>
+                <li><strong>Human-like Behavior</strong> — Simulasi perilaku manusia untuk menghindari detection</li>
+              </ul>
+            </section>
+
+            <section class="report-substep">
+              <h5>🛡️ Stealth Mode Features</h5>
+              <ul>
+                <li>Hapus properti webdriver untuk menyembunyikan automasi</li>
+                <li>Mock browser features (plugins, languages, chrome object)</li>
+                <li>Canvas fingerprinting protection untuk menghindari tracking</li>
+                <li>AudioContext fingerprinting protection</li>
+                <li>Random user agents dan viewport sizes untuk variasi</li>
+                <li>Human-like mouse movement dengan bezier curves</li>
+                <li>Natural typing delays dengan randomized timing</li>
+              </ul>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>Tipe Pertanyaan yang Didukung</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>✅ Fully Supported</h5>
+              <ul>
+                <li><strong>Short Answer</strong> — Jawaban singkat</li>
+                <li><strong>Paragraph Text</strong> — Teks paragraf panjang</li>
+                <li><strong>Multiple Choice</strong> — Pilihan ganda</li>
+                <li><strong>Checkbox</strong> — Kotak centang multiple</li>
+                <li><strong>Dropdown</strong> — Menu dropdown</li>
+                <li><strong>Date</strong> — Pemilihan tanggal</li>
+                <li><strong>Time</strong> — Pemilihan waktu</li>
+                <li><strong>File Upload</strong> — Upload file (tanpa response)</li>
+              </ul>
+            </section>
+
+            <section class="report-substep">
+              <h5>🔄 Partially Supported</h5>
+              <ul>
+                <li>Linear Scale</li>
+                <li>Grid Pilihan Ganda</li>
+                <li>Grid Kotak Centang</li>
+                <li>Date & Time</li>
+                <li>Duration</li>
+              </ul>
+            </section>
+
+            <section class="report-substep">
+              <h5>⚠️ Not Supported</h5>
+              <ul>
+                <li>Complementary question (Data Duplicate)</li>
+                <li>Phone with digits validation</li>
+                <li>Personal data detection</li>
+                <li>Captcha (Google reCAPTCHA, hCaptcha, etc.)</li>
+              </ul>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>Langkah Instalasi & Penggunaan</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>1. Instalasi</h5>
+              <p><strong>Clone atau download repository:</strong></p>
+              <p><code>git clone https://github.com/ArmnskBamban/AutoFillGform.git</code></p>
+              <p><code>cd AutoFillGform</code></p>
+              
+              <p><strong>Install dependencies:</strong></p>
+              <p><code>npm install</code></p>
+            </section>
+
+            <section class="report-substep">
+              <h5>2. Penggunaan Interaktif (Terminal UI)</h5>
+              <p><strong>Jalankan script:</strong></p>
+              <p><code>npm start</code> atau <code>node src/gform-automator.js</code></p>
+              
+              <p><strong>Ikuti prompt di terminal:</strong></p>
+              <ul>
+                <li>Masukkan URL Google Form</li>
+                <li>Tentukan apakah form memerlukan login Google</li>
+                <li>Masukkan email dan password Google (jika perlu)</li>
+                <li>Aktifkan Stealth Mode (rekomendasi: ON)</li>
+                <li>Aktifkan Headless Mode (opsional: OFF untuk debugging)</li>
+              </ul>
+              
+              <p><strong>Script akan otomatis:</strong></p>
+              <ul>
+                <li>Mengisi URL yang dimasukkan</li>
+                <li>Login ke Google jika diminta (support 2FA manual)</li>
+                <li>Menganalisis struktur form dan mendeteksi tipe pertanyaan</li>
+                <li>Mengisi semua pertanyaan dengan jawaban yang sesuai</li>
+                <li>Menyubmit form dan menampilkan log detail</li>
+              </ul>
+            </section>
+
+            <section class="report-substep">
+              <h5>3. Konfigurasi via JSON</h5>
+              <p><strong>data/config.json</strong> — aturan global:</p>
+              <p>Atur <code>stealthMode</code>, <code>headlessMode</code>, <code>incognitoMode</code>, dan timing delays.</p>
+              
+              <p><strong>data/answers.json</strong> — template jawaban:</p>
+              <p>Definisikan template jawaban untuk berbagai tipe pertanyaan (name, email, age, feedback, dll).</p>
+              
+              <p><strong>data/user-profile.json</strong> — profil pengguna:</p>
+              <p>Simpan data profil untuk pengisian otomatis (nama, NIM, kelas, jurusan, dll).</p>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>Struktur Project</h4>
+          <ul>
+            <li><strong>src/</strong> — Kode utama aplikasi (gform-automator.js, stealth.js, form-analyzer.js, google-login.js, dll)</li>
+            <li><strong>tests/</strong> — Script test & debug (10 file test-*.js, 3 file debug-*.js)</li>
+            <li><strong>data/</strong> — Data input runtime (config.json, answers.json, user-profile.json)</li>
+            <li><strong>output/</strong> — Hasil generate (screenshot, laporan, log, trainer-data.json)</li>
+            <li><strong>docs/</strong> — Dokumentasi lengkap (guides, release-notes, archive)</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Security & Keamanan</h4>
+          <ul>
+            <li>✅ <strong>Original file never modified</strong> — Bekerja pada clone only</li>
+            <li>✅ <strong>No external API calls</strong> — Semua proses lokal</li>
+            <li>✅ <strong>No LLM/AI dependency</strong> — Deterministik tanpa AI</li>
+            <li>✅ <strong>No PII in logs</strong> — Password dan kredensial hanya di memori</li>
+            <li>✅ <strong>Hardened parser</strong> — Prevent traversal dan injection</li>
+            <li>⚠️ <strong>Rate Limiting</strong> — Gunakan dengan bijak untuk menghindari IP block</li>
+            <li>⚠️ <strong>Google ToS Compliance</strong> — Pastikan mematuhi Terms of Service</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Output Logging</h4>
+          <p>
+            Script mencatat detail log untuk debugging dan monitoring. Setiap step ditampilkan dengan emoji indicator untuk memudahkan tracking proses automation:
+          </p>
+          <ul>
+            <li>⏳ Memulai proses automation</li>
+            <li>🚀 Meluncurkan browser</li>
+            <li>🔐 Melakukan login ke Google (jika diperlukan)</li>
+            <li>📝 Membuka Google Form</li>
+            <li>🔍 Menganalisis struktur form</li>
+            <li>✏️ Mengisi form (dengan detail per pertanyaan)</li>
+            <li>📤 Mengirimkan form</li>
+            <li>🎉 Form berhasil disubmit</li>
+            <li>👋 Browser ditutup</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Troubleshooting</h4>
+          <ul>
+            <li><strong>Script fails to load form</strong> — Check URL format, verify internet connection, increase timeout settings</li>
+            <li><strong>Form not detected properly</strong> — Check if form is loading correctly, increase page wait time, update selectors</li>
+            <li><strong>Bot detection triggered</strong> — Enable Stealth Mode, disable Headless Mode temporarily, increase delays between actions</li>
+            <li><strong>2FA required</strong> — Script support manual 2FA, follow on-screen instructions, wait up to 5 minutes for verification</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            GForm Automator merupakan solusi otomasi yang powerful dan fleksibel untuk pengisian Google Form secara otomatis. Dengan kemampuan Stealth Mode untuk bypass bot detection, Form Analyzer untuk deteksi otomatis tipe pertanyaan, dan simulasi perilaku manusia, aplikasi ini dapat mengisi form dengan tingkat keberhasilan yang tinggi. Aplikasi ini sangat berguna untuk keperluan testing, research, dan automation tasks yang memerlukan pengisian form berulang. Penggunaan tetap harus mematuhi Google Terms of Service dan digunakan untuk tujuan yang sah dan legal.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/ArmnskBamban/AutoFillGform" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-detail glass" id="report-filehunt" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Projek</span>
+        <h3>FileHunt: Web-Based File Search System</h3>
+        <p>Sistem pencarian file berbasis web yang membantu pengguna menemukan file yang benar-benar mereka butuhkan secara langsung — bukan sekadar halaman website yang membahasnya, dengan verifikasi link dan support untuk berbagai tipe file.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Saat mencari file di internet, pencarian web sering mengembalikan halaman web yang membahas tentang file tersebut, bukan file itu sendiri. Ini sangat tidak efisien ketika pengguna membutuhkan file langsung untuk digunakan atau dibaca.
+          </p>
+          <p>
+            <strong>FileHunt</strong> adalah sistem pencarian file berbasis web yang dirancang untuk memecahkan masalah ini. Aplikasi ini tidak hanya mencari link, tetapi juga memverifikasi apakah link benar-benar mengarah ke file yang dapat diakses (PDF, DOCX, XLSX, CSV, ZIP, PPTX), serta menawarkan berbagai mode pencarian yang dioptimalkan untuk berbagai tujuan.
+          </p>
+          <p>
+            Aplikasi ini dibangun dengan arsitektur full-stack modern: backend Python FastAPI dan frontend React dengan Vite, dilengkapi dengan sistem verifikasi link, deduplikasi hasil, scoring relevansi, dan support untuk multiple search engines.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Mahasiswa mampu membangun sistem pencarian file yang lebih presisi dengan fokus pada hasil yang benar-benar berupa file download, bukan halaman web.</li>
+            <li>Mahasiswa mampu mengimplementasikan sistem verifikasi link untuk memastikan file dapat diakses sebelum ditampilkan kepada pengguna.</li>
+            <li>Mahasiswa mampu mengintegrasikan berbagai search engines (Bing, DuckDuckGo, arXiv API, CrossRef API) dalam satu platform pencarian yang terpadu.</li>
+            <li>Mahasiswa mampu menyediakan mode pencarian khusus untuk berbagai kebutuhan (Academic, Dataset, Official Documents, General Search).</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Alat atau Tools yang Dipakai</h4>
+          <ul>
+            <li>Python 3.12 & FastAPI (Backend)</li>
+            <li>React 18 & Vite (Frontend)</li>
+            <li>Node.js 22.x (Development environment)</li>
+            <li>TailwindCSS v4 (Styling)</li>
+            <li>Git Bash / Command Prompt (Terminal)</li>
+            <li>httpx, duckduckgo-search, feedparser (Python libraries)</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Fitur Utama</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>✨ Search Modes</h5>
+              <ul>
+                <li><strong>General Search</strong> — Mencari semua jenis file dari berbagai sumber web</li>
+                <li><strong>Academic Mode</strong> — Cari paper akademik dari arXiv dan CrossRef API (10+ PDF papers garansi)</li>
+                <li><strong>Dataset Mode</strong> — Cari dataset dalam format CSV, XLSX, ZIP untuk analisis data</li>
+                <li><strong>Official Mode</strong> — Cari dokumen resmi dari domain .gov, .edu, .org</li>
+              </ul>
+            </section>
+
+            <section class="report-substep">
+              <h5>🛡️ File Verification System</h5>
+              <ul>
+                <li><strong>Link Verification</strong> — HEAD request untuk verifikasi file accessibility</li>
+                <li><strong>Size Detection</strong> — Mendeteksi ukuran file (KB/MB) dari HTTP headers</li>
+                <li><strong>File Type Detection</strong> — Mengidentifikasi tipe file dari extension dan content-type</li>
+                <li><strong>Deduplication</strong> — Menghapus duplikat berdasarkan URL hash dan similarity</li>
+              </ul>
+            </section>
+
+            <section class="report-substep">
+              <h5>🎯 Smart Features</h5>
+              <ul>
+                <li><strong>Query Optimization</strong> — Keyword expansion untuk hasil lebih relevan</li>
+                <li><strong>Relevance Scoring</strong> — Skor relevansi berdasarkan keyword match dan authority domain</li>
+                <li><strong>File Type Filtering</strong> — Filter PDF, DOCX, XLSX, PPTX, CSV, ZIP</li>
+                <li><strong>Result Sorting</strong> — Urutkan berdasarkan relevansi, size, atau verification status</li>
+              </ul>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>Supported File Types</h4>
+          <ul>
+            <li>✅ <strong>PDF</strong> — Research papers, reports, documents</li>
+            <li>✅ <strong>DOCX</strong> — Word documents, reports, papers</li>
+            <li>✅ <strong>XLSX</strong> — Excel spreadsheets, datasets, tables</li>
+            <li>✅ <strong>CSV</strong> — Comma-separated values data files</li>
+            <li>✅ <strong>ZIP</strong> — Compressed archives with multiple files</li>
+            <li>✅ <strong>PPTX</strong> — PowerPoint presentations, slides</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Langkah Instalasi & Penggunaan</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>1. Prerequisites</h5>
+              <ul>
+                <li>Python 3.12+</li>
+                <li>Node.js 22.x+</li>
+                <li>Git Bash (recommended) atau Command Prompt</li>
+              </ul>
+            </section>
+
+            <section class="report-substep">
+              <h5>2. Startup - Two Terminal Setup</h5>
+              <p><strong>Terminal 1 (Backend - Python FastAPI):</strong></p>
+              <p><code>cd project-folder/backend</code></p>
+              <p><code>venv312/Scripts/python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload</code></p>
+              
+              <p><strong>Terminal 2 (Frontend - React):</strong></p>
+              <p><code>cd project-folder/frontend</code></p>
+              <p><code>npm run dev</code></p>
+            </section>
+
+            <section class="report-substep">
+              <h5>3. Access & Verification</h5>
+              <ul>
+                <li>Frontend: <code>http://localhost:3000</code></li>
+                <li>Backend API: <code>http://localhost:8000</code></li>
+                <li>API Docs (Swagger): <code>http://localhost:8000/docs</code></li>
+                <li>Health Check: <code>curl http://localhost:8000/api/health</code></li>
+              </ul>
+            </section>
+
+            <section class="report-substep">
+              <h5>4. Search Workflow</h5>
+              <ol>
+                <li>Buka <code>http://localhost:3000</code> di browser</li>
+                <li>Masukkan query pencarian (misal: "machine learning")</li>
+                <li>Pilih mode: <strong>Academic</strong> (recommended), Dataset, Official, atau General</li>
+                <li>Klik Settings (⚙️) untuk filter file types (opsional)</li>
+                <li>Klik "Search" dan tunggu ~3-5 detik</li>
+                <li>Hasil muncul dengan badges: <strong>✓ Verified</strong> atau <strong>⚠ Unverified</strong></li>
+                <li>Klik card atau tombol ↗ untuk membuka file langsung</li>
+              </ol>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>Tech Stack & Architecture</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>Backend (Python FastAPI)</h5>
+              <ul>
+                <li><strong>Search Orchestrator</strong> — Koordinasi antara search engines</li>
+                <li><strong>Verification Module</strong> — File verification dan metadata extraction</li>
+                <li><strong>Scoring Engine</strong> — Relevansi scoring dan result ranking</li>
+                <li><strong>Search Engines Integration</strong> — Bing, DuckDuckGo, arXiv API, CrossRef API</li>
+              </ul>
+            </section>
+
+            <section class="report-substep">
+              <h5>Frontend (React + Vite)</h5>
+              <ul>
+                <li><strong>React Query</strong> — Data fetching dan caching</li>
+                <li><strong>TailwindCSS v4</strong> — Utility-first styling</li>
+                <li><strong>Axios</strong> — HTTP client untuk API calls</li>
+                <li><strong>Lucide React</strong> — Icon library</li>
+              </ul>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>API Endpoints (Backend)</h4>
+          <ul>
+            <li><code>GET /api/health</code> — Health check (status: ok, service: filehunt, version: 1.0.0)</li>
+            <li><code>GET /api/modes</code> — Get available search modes</li>
+            <li><code>POST /api/search</code> — Main search endpoint dengan query, mode, file_types, max_results</li>
+            <li><code>GET /api/search/{search_id}/results</code> — Get results untuk search tertentu</li>
+            <li><code>GET /api/search/{search_id}/status</code> — Check search status</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Query Examples yang Terbukti Bekerja</h4>
+          <ul>
+            <li><strong>Academic (100% working):</strong> "machine learning", "artificial intelligence", "neural networks"</li>
+            <li><strong>General/Dataset/Official:</strong> "annual report 2024", "dataset covid-19 Indonesia", "struktur data"</li>
+            <li><strong>Best Practice:</strong> Gunakan academic mode untuk research papers, dataset mode untuk CSV/XLSX files</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Troubleshooting & Solutions</h4>
+          <ul>
+            <li><strong>Network Issues (Telkomsel):</strong> Gunakan Bing search (integrated) atau Academic mode (arXiv/CrossRef API)</li>
+            <li><strong>Port Conflicts:</strong> Vite otomatis pilih port 3001, 3002 jika 3000 sudah dipakai</li>
+            <li><strong>SSL Certificate Issues:</strong> DuckDuckGo mungkin diblokir, fallback ke Bing otomatis</li>
+            <li><strong>No Results:</strong> Gunakan academic mode atau coba query bahasa Inggris</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            FileHunt merupakan sistem pencarian file yang powerful dan presisi, dirancang khusus untuk menemukan file yang dapat langsung diakses dan digunakan. Dengan arsitektur full-stack modern, multiple search modes, dan sistem verifikasi link, aplikasi ini mengatasi masalah pencarian web tradisional yang sering mengembalikan halaman pembahasan bukan file. Aplikasi ini sangat berguna untuk researcher, student, dan professional yang membutuhkan akses cepat ke file-file seperti research papers, datasets, official documents, dan technical reports.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/ArmnskBamban/FileHunt" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
   </section>
 </main>
 
-<footer class="footer-neo py-4">
+<footer class="footer-clean reveal">
   <div class="container">
-
-    <div class="row text-center text-md-start">
-
-      <div class="col-md-4 mb-3">
-        <h5 class="fw-bold">JiyadR Portfolio</h5>
-        <p class="small muted">
-          Website portofolio pribadi yang menampilkan perjalanan, pengalaman, laporan praktikum, serta karya saya sebagai mahasiswa Informatika.
-        </p>
+    <div class="row py-4">
+      
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="footer-brand mb-3">Jiyad<span style="color: var(--color-lake-blue);">R</span></h5>
+        <p class="text-muted small">Mahasiswa Informatika Universitas Andalas yang fokus pada pengembangan web, machine learning, dan aplikasi berbasis OOP.</p>
       </div>
 
-      <div class="col-md-4 mb-3">
-        <h6 class="fw-bold">Navigasi</h6>
-        <ul class="list-unstyled small">
-          <li><a href="about.html" class="footer-link">About</a></li>
-          <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
-          <li><a href="report.html" class="footer-link">Report</a></li>
-          <li><a href="contact.html" class="footer-link">Contact</a></li>
+      <div class="col-md-2 mb-4 mb-md-0">
+        <h6 class="text-uppercase mb-3" style="font-size: 0.875rem; font-weight: 500;">Navigasi</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="index.html" class="text-muted small text-decoration-none">Home</a></li>
+          <li class="mb-2"><a href="about.html" class="text-muted small text-decoration-none">About</a></li>
+          <li class="mb-2"><a href="portfolio.html" class="text-muted small text-decoration-none">Portfolio</a></li>
+          <li class="mb-2"><a href="report.html" class="text-muted small text-decoration-none">Report</a></li>
+          <li class="mb-2"><a href="contact.html" class="text-muted small text-decoration-none">Contact</a></li>
         </ul>
       </div>
 
-      <div class="col-md-4 mb-3">
-        <h6 class="fw-bold">Jejak Digital</h6>
-        <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-          <a href="https://instagram.com/jypsrb" target="_blank" rel="noopener noreferrer" class="social-link"><i class="bi bi-instagram"></i></a>
-          <a href="https://github.com/JiyadR" target="_blank" rel="noopener noreferrer" class="social-link"><i class="bi bi-github"></i></a>
-          <a href="https://wa.me/6282363629197" target="_blank" rel="noopener noreferrer" class="social-link"><i class="bi bi-whatsapp"></i></a>
-        </div>
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h6 class="text-uppercase mb-3" style="font-size: 0.875rem; font-weight: 500;">Area Fokus</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><span class="text-muted small">Responsive Web Development</span></li>
+          <li class="mb-2"><span class="text-muted small">Machine Learning &amp; AI</span></li>
+          <li class="mb-2"><span class="text-muted small">Java GUI Applications</span></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="text-uppercase mb-3" style="font-size: 0.875rem; font-weight: 500;">Koneksi</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="https://github.com/JiyadR" target="_blank" class="text-muted small text-decoration-none">
+              <i class="bi bi-github me-2"></i>GitHub
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="https://instagram.com/jypsrb" target="_blank" class="text-muted small text-decoration-none">
+              <i class="bi bi-instagram me-2"></i>Instagram
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="https://wa.me/6282363629197" target="_blank" class="text-muted small text-decoration-none">
+              <i class="bi bi-whatsapp me-2"></i>WhatsApp
+            </a>
+          </li>
+        </ul>
       </div>
 
     </div>
 
-    <hr>
-    <p class="text-center small muted mb-0">&copy; 2025 Jiyad Rifqi - Portfolio</p>
+    <div class="border-top pt-4 mt-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0 small text-muted">&copy; 2025 Jiyad Rifqi. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0 small text-muted">Informatics Student Portfolio</p>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 
@@ -1737,5 +2613,75 @@
   }
 </script>
 
+<footer class="footer-clean reveal">
+  <div class="container">
+    <div class="row py-4">
+      
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="footer-brand mb-3">Jiyad<span style="color: var(--color-lake-blue);">R</span></h5>
+        <p class="text-muted small">Mahasiswa Informatika Universitas Andalas yang fokus pada pengembangan web, machine learning, dan aplikasi berbasis OOP.</p>
+      </div>
+
+      <div class="col-md-2 mb-4 mb-md-0">
+        <h6 class="text-uppercase mb-3" style="font-size: 0.875rem; font-weight: 500;">Navigasi</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="index.html" class="text-muted small text-decoration-none">Home</a></li>
+          <li class="mb-2"><a href="about.html" class="text-muted small text-decoration-none">About</a></li>
+          <li class="mb-2"><a href="portfolio.html" class="text-muted small text-decoration-none">Portfolio</a></li>
+          <li class="mb-2"><a href="report.html" class="text-muted small text-decoration-none">Report</a></li>
+          <li class="mb-2"><a href="contact.html" class="text-muted small text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h6 class="text-uppercase mb-3" style="font-size: 0.875rem; font-weight: 500;">Area Fokus</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><span class="text-muted small">Responsive Web Development</span></li>
+          <li class="mb-2"><span class="text-muted small">Machine Learning &amp; AI</span></li>
+          <li class="mb-2"><span class="text-muted small">Java GUI Applications</span></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="text-uppercase mb-3" style="font-size: 0.875rem; font-weight: 500;">Koneksi</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="https://github.com/JiyadR" target="_blank" class="text-muted small text-decoration-none">
+              <i class="bi bi-github me-2"></i>GitHub
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="https://instagram.com/jypsrb" target="_blank" class="text-muted small text-decoration-none">
+              <i class="bi bi-instagram me-2"></i>Instagram
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="https://wa.me/6282363629197" target="_blank" class="text-muted small text-decoration-none">
+              <i class="bi bi-whatsapp me-2"></i>WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-top pt-4 mt-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0 small text-muted">&copy; 2025 Jiyad Rifqi. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0 small text-muted">Informatics Student Portfolio</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
