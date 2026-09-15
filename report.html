@@ -56,7 +56,7 @@
       </p>
     </div>
     <div class="report-count glass">
-      <strong>09</strong>
+      <strong>10</strong>
       <span>Laporan awal</span>
     </div>
   </header>
@@ -65,6 +65,7 @@
     <li class="nav-item"><button class="nav-link active" data-filter="*">All</button></li>
     <li class="nav-item"><button class="nav-link" data-filter="pemrograman-web">Pemrograman Web</button></li>
     <li class="nav-item"><button class="nav-link" data-filter="oop">OOP</button></li>
+    <li class="nav-item"><button class="nav-link" data-filter="aplikasi-mobile">Aplikasi Mobile</button></li>
     <li class="nav-item"><button class="nav-link" data-filter="projek">Projek</button></li>
   </ul>
 
@@ -242,6 +243,26 @@
       <div class="report-index-actions">
         <a href="#report-filehunt" class="btn btn-solid report-open" data-report-target="report-filehunt">Baca Laporan</a>
         <a href="https://github.com/ArmnskBamban/FileHunt" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-index-item report-item aplikasi-mobile reveal">
+      <div class="report-index-num">10</div>
+      <div class="report-index-main">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3 class="report-index-title">Flutter Form Validation: TextField & TextFormField</h3>
+        <p class="report-index-desc">Pengenalan widget input TextField dan TextFormField di Flutter dengan implementasi validasi form, TextEditingController, GlobalKey, dan lifecycle management.</p>
+        <div class="project-meta">
+          <span>Flutter</span>
+          <span>Dart</span>
+          <span>Mobile Dev</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-mobile" class="btn btn-solid report-open" data-report-target="report-mobile">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
           <i class="bi bi-github"></i> GitHub
         </a>
       </div>
@@ -2479,6 +2500,489 @@
           </p>
         </div>
         <a href="https://github.com/ArmnskBamban/FileHunt" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-detail glass" id="report-mobile" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3>Flutter Form Validation: TextField & TextFormField</h3>
+        <p>Ringkasan laporan praktikum tentang implementasi widget input TextField dan TextFormField di Flutter dengan fokus pada validasi form, pengelolaan state, dan lifecycle management.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Flutter sebagai framework pengembangan aplikasi mobile modern menyediakan berbagai widget yang memungkinkan developer untuk membangun antarmuka pengguna yang interaktif dan responsif. Salah satu aspek fundamental dalam pengembangan aplikasi adalah kemampuan untuk menerima, mengelola, dan memvalidasi input dari pengguna. Flutter menyediakan dua widget utama untuk menangani input teks, yaitu TextField dan TextFormField.
+          </p>
+          <p>
+            TextField adalah widget dasar untuk menerima input teks yang memberikan fleksibilitas tinggi dalam styling dan behavior, cocok untuk kasus sederhana seperti search bar atau input tunggal. Sementara itu, TextFormField merupakan versi yang lebih advance yang terintegrasi dengan widget Form dan menyediakan fitur validasi yang lebih robust melalui properti validator, memungkinkan developer untuk mendefinisikan aturan validasi secara deklaratif dan menampilkan pesan error secara otomatis.
+          </p>
+          <p>
+            Dalam praktikum ini, dilakukan implementasi kedua jenis input widget tersebut untuk memahami perbedaan karakteristik dan use case dalam penggunaannya. Implementasi meliputi pembuatan basic form menggunakan TextField dengan TextEditingController untuk menangkap input pengguna dan menampilkan feedback melalui SnackBar, serta implementasi form dengan TextFormField yang dilengkapi dengan mekanisme validasi menggunakan GlobalKey untuk memastikan data input sesuai aturan yang ditetapkan.
+          </p>
+          <p>
+            Praktikum ini juga mencakup pemahaman konsep-konsep penting seperti StatefulWidget untuk mengelola state, lifecycle method dispose() untuk pembersihan resource dan mencegah memory leak, serta penggunaan kata kunci const untuk optimasi performa. Melalui praktikum ini, diharapkan dapat dipahami secara komprehensif cara kerja input widgets di Flutter, mengelola state dan controller, melakukan validasi input, dan menerapkan best practice dalam pengembangan form yang user-friendly dan performant.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Memahami konsep, perbedaan, dan mampu mengimplementasikan basic form menggunakan widget TextField dan TextFormField dalam Flutter untuk menerima dan mengelola input dari pengguna.</li>
+            <li>Mampu menggunakan TextEditingController untuk mengelola nilai input, GlobalKey untuk manajemen state form secara kolektif, serta menerapkan method validator untuk melakukan validasi input sesuai aturan yang ditentukan (required field dan format email).</li>
+            <li>Memahami dan menerapkan lifecycle method dispose() untuk pembersihan resource dan mencegah memory leak, serta penggunaan setState() untuk memicu rebuild widget ketika terjadi perubahan state.</li>
+            <li>Mampu memberikan feedback kepada pengguna menggunakan SnackBar dan menerapkan best practice dalam pengembangan form yang user-friendly, performant, dan mengikuti prinsip clean code.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Alat atau Tools yang Dipakai</h4>
+          <ul>
+            <li>Flutter SDK</li>
+            <li>Dart Programming Language</li>
+            <li>Android Studio / Visual Studio Code</li>
+            <li>Android Emulator / iOS Simulator</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Langkah Pengerjaan</h4>
+          <p>
+            Pada bagian ini dilakukan proses implementasi basic form menggunakan TextField dan form validation menggunakan TextFormField. Tahapan pengerjaan dimulai dari pembuatan file baru, konfigurasi widget, implementasi controller, hingga validasi input.
+          </p>
+
+          <div class="report-substeps">
+
+            <!-- ==================== BAGIAN 1: TextField ==================== -->
+            
+            <section class="report-substep" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📱 File Pertama: Implementasi Basic Form dengan TextField</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">form-textfield.dart</p>
+            </section>
+            
+            <section class="report-substep">
+              <h5>a. Import Package dan Main Function</h5>
+              <p>Langkah pertama adalah membuat file baru form-textfield.dart di dalam folder lib dan mengimport package Flutter Material Design yang menyediakan widget-widget dasar untuk membangun UI.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image001.png" alt="Screenshot import package" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Import package Material Design</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Class MyApp</h5>
+              <p>Selanjutnya, dibuat class MyApp sebagai root widget yang menggunakan StatelessWidget karena tidak memerlukan perubahan state. Widget ini mengembalikan MaterialApp dengan Scaffold yang berisi AppBar dan body.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image003.png" alt="Screenshot Class MyApp" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Class MyApp sebagai root widget</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Class MyForm StatefulWidget</h5>
+              <p>Kemudian dibuat class MyForm yang extends StatefulWidget karena form ini akan mengelola state berupa input text dari pengguna. StatefulWidget memerlukan class State yang terpisah untuk mengelola logika dan state-nya.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image005.png" alt="Screenshot Class MyForm" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Class MyForm extends StatefulWidget</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>d. Deklarasi TextEditingController</h5>
+              <p>Di dalam class _MyFormState, dideklarasikan variabel _textEditingController yang berfungsi sebagai controller untuk mengambil dan mengelola nilai input dari TextField. Controller ini sangat penting untuk mendapatkan nilai yang diinputkan pengguna.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image007.png" alt="Screenshot TextEditingController" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Deklarasi TextEditingController</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>e. Method dispose()</h5>
+              <p>Method dispose() dioverride untuk membersihkan TextEditingController ketika widget dihapus dari widget tree. Ini penting untuk mencegah memory leak karena controller perlu di-dispose secara manual.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image009.png" alt="Screenshot dispose method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Method dispose() untuk membersihkan controller</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>f. Method build() dengan Padding dan Column</h5>
+              <p>Pada method build(), dibuat layout menggunakan Padding untuk memberikan jarak dari tepi layar, dan Column untuk menyusun widget secara vertikal dengan crossAxisAlignment.start agar konten rata kiri.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image011.png" alt="Screenshot build method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Method build() dengan Padding dan Column</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>g. Widget Text dan SizedBox</h5>
+              <p>Ditambahkan widget Text sebagai label instruksi untuk pengguna, diikuti dengan SizedBox untuk memberikan jarak vertikal sebesar 10 pixel sebelum TextField.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image013.png" alt="Screenshot Text label" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Widget Text dan SizedBox</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>h. TextField dengan InputDecoration</h5>
+              <p>Dibuat widget TextField dengan berbagai properti decoration untuk tampilan visual yang menarik. InputDecoration berisi labelText sebagai label, hintText sebagai placeholder, border: OutlineInputBorder() untuk border kotak, dan prefixIcon untuk icon di sebelah kiri.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image015.png" alt="Screenshot TextField decoration" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>TextField dengan InputDecoration</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>i. Properti controller, keyboardType, dan onChanged</h5>
+              <p>Pada TextField yang sama, ditambahkan properti controller yang menghubungkan dengan _textEditingController, keyboardType untuk menentukan jenis keyboard yang muncul (text), dan onChanged sebagai event listener yang akan dijalankan setiap kali ada perubahan input.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image017.png" alt="Screenshot TextField properties" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Properti controller, keyboardType, dan onChanged</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>j. SizedBox untuk Jarak</h5>
+              <p>Ditambahkan SizedBox dengan height 20 untuk memberikan jarak antara TextField dan button.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image019.png" alt="Screenshot SizedBox" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>SizedBox untuk jarak</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>k. ElevatedButton dengan SnackBar</h5>
+              <p>Dibuat ElevatedButton dengan method onPressed yang akan mengambil nilai dari controller, kemudian menampilkan nilai tersebut menggunakan SnackBar. Button ini juga diberi styling menggunakan styleFrom dengan background amber dan foreground hitam.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image021.png" alt="Screenshot ElevatedButton" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>ElevatedButton dengan SnackBar</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>l. Hasil Running Aplikasi TextField</h5>
+              <p>Jalankan programnya dan akan terlihat seperti pada gambar di bawah ini.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/hasil pertama.png" alt="Screenshot Hasil running TextField" class="report-figure-img" style="width: 40%; max-width: 400px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Tampilan hasil running aplikasi TextField</figcaption>
+              </figure>
+            </section>
+
+            <!-- ==================== BAGIAN 2: TextFormField ==================== -->
+            
+            <section class="report-substep" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; border-radius: 12px; margin: 30px 0; margin-top: 50px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📱 File Kedua: Implementasi Form Validation dengan TextFormField</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">form-textformfield.dart</p>
+            </section>
+
+            <section class="report-substep">
+              <h5>a. Import Package dan Main Function</h5>
+              <p>Sama seperti file sebelumnya, langkah pertama adalah mengimport package Material dan membuat main function yang menjalankan aplikasi.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image023.jpg" alt="Screenshot Import TextFormField" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Import package dan main function</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Class MyApp</h5>
+              <p>Dibuat class MyApp sebagai root widget dengan judul AppBar "Basic Form TextFormField" untuk membedakan dengan implementasi TextField sebelumnya.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image025.jpg" alt="Screenshot MyApp TextFormField" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Class MyApp untuk TextFormField</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Class MyFormText StatefulWidget</h5>
+              <p>Dibuat class MyFormText yang extends StatefulWidget karena form ini akan mengelola state yang lebih kompleks dengan mekanisme validasi.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image027.jpg" alt="Screenshot MyFormText class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Class MyFormText extends StatefulWidget</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>d. Deklarasi GlobalKey dan Controllers</h5>
+              <p>Di dalam class _MyFormTextState, dideklarasikan _formKey bertipe GlobalKey&lt;FormState&gt; yang berfungsi untuk mengakses state dari Form dan memanggil method validasi. Kemudian dideklarasikan dua controller untuk field nama dan email.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image029.jpg" alt="Screenshot GlobalKey declaration" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Deklarasi GlobalKey dan controllers</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>e. Method dispose()</h5>
+              <p>Method dispose() dioverride untuk membersihkan kedua controller (name dan email) ketika widget dihapus dari widget tree.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image031.jpg" alt="Screenshot dispose() method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Method dispose() untuk kedua controller</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>f. Method _submitForm() dengan Validasi</h5>
+              <p>Dibuat method _submitForm() yang akan dipanggil ketika button submit ditekan. Method ini menggunakan _formKey.currentState!.validate() untuk menjalankan validasi pada semua TextFormField. Jika validasi berhasil (return true), maka nilai dari kedua controller diambil dan ditampilkan menggunakan SnackBar.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image033.jpg" alt="Screenshot _submitForm() method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Method _submitForm() dengan validasi</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>g. Widget Form dengan Key</h5>
+              <p>Pada method build(), layout dibungkus dengan widget Form dan diberi key _formKey untuk menghubungkan dengan GlobalKey yang telah dideklarasikan. Form ini kemudian berisi Padding dan Column untuk layout.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image035.jpg" alt="Screenshot Widget Form" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Widget Form dengan key</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>h. SizedBox untuk Jarak dari Atas</h5>
+              <p>Ditambahkan SizedBox dengan height 10 untuk memberikan jarak dari atas.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image037.jpg" alt="Screenshot SizedBox" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>SizedBox untuk jarak dari atas</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>i. TextFormField untuk Input Nama</h5>
+              <p>Dibuat TextFormField pertama untuk input nama dengan controller _nameController dan decoration yang sesuai. Yang membedakan dengan TextField adalah adanya properti validator yang berisi logika validasi. Validator ini menerima parameter value dan mengembalikan String jika ada error, atau null jika valid.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image039.jpg" alt="Screenshot TextFormField nama" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>TextFormField untuk input nama</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>j. SizedBox untuk Jarak Antar Field</h5>
+              <p>Ditambahkan SizedBox untuk jarak antar TextFormField.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image043.jpg" alt="Screenshot SizedBox jarak" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>SizedBox untuk jarak antar field</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>k. TextFormField untuk Input Email</h5>
+              <p>Dibuat TextFormField kedua untuk input email dengan controller _emailController. Validator pada field ini lebih kompleks karena memeriksa dua kondisi: apakah field kosong dan apakah format email valid (mengandung '@').</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image045.jpg" alt="Screenshot TextFormField email" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>TextFormField untuk input email</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>l. SizedBox untuk Jarak Sebelum Button</h5>
+              <p>Ditambahkan SizedBox untuk jarak sebelum button submit.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image047.jpg" alt="Screenshot SizedBox button" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>SizedBox sebelum button</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>m. ElevatedButton Submit dengan Full Width</h5>
+              <p>Dibuat SizedBox dengan width double.infinity agar button memenuhi lebar layar, kemudian di dalamnya terdapat ElevatedButton yang onPressed-nya memanggil method _submitForm yang telah dibuat sebelumnya.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/image049.jpg" alt="Screenshot Button submit" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Button submit dengan full width</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>n. Hasil Running Aplikasi TextFormField</h5>
+              <p>Jalankan programnya dan akan terlihat seperti pada gambar di bawah ini.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/hasil kedua.png" alt="Screenshot Hasil running TextFormField" class="report-figure-img" style="width: 40%; max-width: 400px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Tampilan hasil running aplikasi TextFormField</figcaption>
+              </figure>
+            </section>
+
+            <!-- ==================== TUGAS PRAKTIKUM: Calculator App ==================== -->
+            
+            <section class="report-substep" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 20px; border-radius: 12px; margin: 30px 0; margin-top: 50px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">🧮 TUGAS PRAKTIKUM</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">Aplikasi Kalkulator Sederhana</p>
+            </section>
+
+            <!-- ==================== FILE KETIGA: main.dart ==================== -->
+            
+            <section class="report-substep" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📱 File Ketiga: Main Application</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">main.dart</p>
+            </section>
+
+            <section class="report-substep">
+              <h5>a. Import Package dan Calculator Page</h5>
+              <p>Import material.dart dan calculator_page.dart</p>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_01.png" alt="Screenshot Import package" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Import material dan calculator_page</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Fungsi main() dengan runApp(MyApp())</h5>
+              <p>Fungsi main sebagai entry point aplikasi</p>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_02.png" alt="Screenshot main() function" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Fungsi main dengan runApp</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Class MyApp</h5>
+              <p>Class MyApp sebagai root widget aplikasi dengan MaterialApp, theme, dan home</p>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_03.png" alt="Screenshot MyApp class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Class MyApp dengan MaterialApp</figcaption>
+              </figure>
+            </section>
+
+            <!-- ==================== FILE KEEMPAT: calculator_page.dart ==================== -->
+            
+            <section class="report-substep" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 20px; border-radius: 12px; margin: 30px 0; margin-top: 50px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📱 File Keempat: Calculator Page Implementation</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">calculator_page.dart</p>
+            </section>
+
+            <section class="report-substep">
+              <h5>a. Import Material Package dan CalculatorPage Class</h5>
+              <p>Import material package dan class CalculatorPage</p>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_04.png" alt="Screenshot CalculatorPage class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Class CalculatorPage extends StatefulWidget</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Deklarasi Variabel-Variabel yang Diperlukan</h5>
+              <p>Deklarasi variabel untuk mengelola state kalkulator</p>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_05.png" alt="Screenshot Variable declarations" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Deklarasi variabel state kalkulator</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Method dispose() untuk Membersihkan Memory</h5>
+              <p>Method dispose untuk cleanup resource</p>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_06.png" alt="Screenshot dispose() method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Method dispose untuk cleanup</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>d. Fungsi Utama untuk Melakukan Perhitungan</h5>
+              <p>Fungsi ini pertama-tama mengambil text dari kedua controller, lalu melakukan validasi untuk memastikan kedua field tidak kosong. Jika ada yang kosong, akan muncul SnackBar peringatan berwarna merah.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_07.png" alt="Screenshot Calculation methods part 1" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Fungsi perhitungan - validasi input</figcaption>
+              </figure>
+              <p>Selanjutnya, kita mengubah text menjadi angka menggunakan double.tryParse(). Jika parsing gagal (input bukan angka), akan muncul peringatan.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_08.png" alt="Screenshot Calculation methods part 2" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Parsing input menjadi angka</figcaption>
+              </figure>
+              <p>Pada bagian ini, kita menggunakan switch-case untuk menentukan operasi yang akan dilakukan.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_09.png" alt="Screenshot Calculation methods part 3" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Switch-case untuk operasi matematika</figcaption>
+              </figure>
+              <p>Setelah perhitungan selesai, kita gunakan setState() untuk mengupdate tampilan hasil, dan menampilkan SnackBar hijau sebagai konfirmasi perhitungan berhasil.</p>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_10.png" alt="Screenshot Calculation methods part 4" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Update state dan tampilkan hasil</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>e. Kemudian, kita membuat tampilan UI aplikasi kalkulator</h5>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_11.png" alt="Screenshot UI part 1" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Scaffold dengan AppBar</figcaption>
+              </figure>
+              <p>Scaffold menyediakan struktur dasar halaman dengan AppBar berwarna deep purple dan judul "Kalkulator Kalkulator".</p>
+              
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_12.png" alt="Screenshot UI part 2" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Body dengan SingleChildScrollView</figcaption>
+              </figure>
+              <p>Bagian header menampilkan icon kalkulator berbukuran besar, judul aplikasi, dan instruksi singkat untuk pengguna. Kita menggunakan SingleChildScrollView agar konten bisa di-scroll jika layar kecil.</p>
+
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_13.png" alt="Screenshot UI part 3" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>TextField dengan controller</figcaption>
+              </figure>
+              <p>TextField pertama menggunakan _firstNumberController sebagai controller, dengan keyboard tipe numeric. Decoration meliputi label, hint text, icon angka 1, dan border dengan rounded corners. Saat di-focus, border akan berubah menjadi deep purple dengan ketebalan 2 pixel.</p>
+
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_14.png" alt="Screenshot UI part 4" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>TextField kedua dengan struktur sama</figcaption>
+              </figure>
+              <p>TextField kedua memiliki struktur yang sama dengan TextField pertama, namun menggunakan _secondNumberController dan icon angka 2.</p>
+
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_15.png" alt="Screenshot UI part 5" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Button operasi matematika</figcaption>
+              </figure>
+              <p>Pada bagian ini, kita membuat 4 tombol operasi matematika yang disusun dalam Row dengan spacing merata (spaceEvenly).</p>
+
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_17.png" alt="Screenshot UI part 6" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Tampilan hasil perhitungan</figcaption>
+              </figure>
+              <p>Bagian terakhir menampilkan hasil perhitungan. Pertama ada Divider sebagai pemisah visual, kemudian label "Hasil Perhitungan", dan terakhir Container yang menampilkan nilai _result.</p>
+            </section>
+
+            <section class="report-substep">
+              <h5>f. Jalankan Program dan Coba</h5>
+              <p>Hasil running aplikasi kalkulator</p>
+              <figure class="report-figure">
+                <img src="images/appmob/tugas_18.png" alt="Screenshot Hasil running Calculator" class="report-figure-img" style="width: 40%; max-width: 400px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Tampilan hasil running aplikasi Kalkulator</figcaption>
+              </figure>
+            </section>
+
+          </div>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Berdasarkan praktikum yang telah dilakukan, dapat disimpulkan bahwa Flutter menyediakan dua widget utama untuk menangani input teks dari pengguna yaitu TextField dan TextFormField, dimana keduanya memiliki karakteristik dan use case yang berbeda. TextField merupakan widget yang lebih sederhana dan fleksibel, cocok digunakan untuk input tunggal atau form sederhana yang tidak memerlukan validasi kompleks, dengan mengandalkan TextEditingController untuk mengelola nilai input dan event listener onChanged untuk menangkap perubahan secara real-time.
+          </p>
+          <p>
+            Sementara TextFormField merupakan widget yang lebih advance dengan fitur validasi bawaan melalui properti validator, yang terintegrasi dengan widget Form dan GlobalKey untuk melakukan validasi kolektif terhadap multiple input fields, menampilkan pesan error secara otomatis, dan mengelola state form secara terpusat dengan method validate().
+          </p>
+          <p>
+            Praktikum ini juga memberikan pemahaman mendalam tentang konsep-konsep penting dalam Flutter seperti penggunaan StatefulWidget untuk mengelola state yang dapat berubah, TextEditingController untuk mengontrol dan mengambil nilai input, lifecycle method dispose() yang sangat penting untuk pembersihan resource dan mencegah memory leak, serta penggunaan setState() untuk memicu rebuild widget ketika terjadi perubahan state.
+          </p>
+          <p>
+            Implementasi kedua jenis form ini menunjukkan bahwa pemilihan widget yang tepat sangat bergantung pada kompleksitas requirement aplikasi, dimana TextField cocok untuk kasus sederhana dengan kontrol manual, sedangkan TextFormField lebih efisien untuk form yang memerlukan validasi kompleks dengan multiple field. Penerapan best practice seperti penggunaan const keyword untuk optimasi performa, proper resource management dengan dispose(), dan pemberian feedback yang jelas kepada pengguna melalui SnackBar merupakan hal fundamental yang harus diperhatikan dalam pengembangan aplikasi Flutter yang robust, user-friendly, dan performant.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
           <i class="bi bi-github"></i>
           Buka GitHub
         </a>

@@ -1,0 +1,295 @@
+          <div class="report-substeps">
+
+            <!-- BAGIAN 1: TextField (11 langkah) -->
+            
+            <section class="report-substep">
+              <h5>Implementasi Basic Form dengan TextField (form-textfield.dart)</h5>
+              <p><strong>Langkah 1:</strong> Langkah pertama adalah membuat file baru form-textfield.dart di dalam folder lib dan mengimport package Flutter Material Design yang menyediakan widget-widget dasar untuk membangun UI.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: Import package</p>
+                </div>
+                <figcaption>Import package Material Design</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 2</h5>
+              <p>Selanjutnya, dibuat class MyApp sebagai root widget yang menggunakan StatelessWidget karena tidak memerlukan perubahan state. Widget ini mengembalikan MaterialApp dengan Scaffold yang berisi AppBar dan body.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: Class MyApp</p>
+                </div>
+                <figcaption>Class MyApp sebagai root widget</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 3</h5>
+              <p>Kemudian dibuat class MyForm yang extends StatefulWidget karena form ini akan mengelola state berupa input text dari pengguna. StatefulWidget memerlukan class State yang terpisah untuk mengelola logika dan state-nya.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: Class MyForm</p>
+                </div>
+                <figcaption>Class MyForm extends StatefulWidget</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 4</h5>
+              <p>Di dalam class _MyFormState, dideklarasikan variabel _textEditingController yang berfungsi sebagai controller untuk mengambil dan mengelola nilai input dari TextField. Controller ini sangat penting untuk mendapatkan nilai yang diinputkan pengguna.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: TextEditingController</p>
+                </div>
+                <figcaption>Deklarasi TextEditingController</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 5</h5>
+              <p>Method dispose() dioverride untuk membersihkan TextEditingController ketika widget dihapus dari widget tree. Ini penting untuk mencegah memory leak karena controller perlu di-dispose secara manual.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: dispose() method</p>
+                </div>
+                <figcaption>Method dispose() untuk membersihkan controller</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 6</h5>
+              <p>Pada method build(), dibuat layout menggunakan Padding untuk memberikan jarak dari tepi layar, dan Column untuk menyusun widget secara vertikal dengan crossAxisAlignment.start agar konten rata kiri.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: build() method</p>
+                </div>
+                <figcaption>Method build() dengan Padding dan Column</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 7</h5>
+              <p>Ditambahkan widget Text sebagai label instruksi untuk pengguna, diikuti dengan SizedBox untuk memberikan jarak vertikal sebesar 10 pixel sebelum TextField.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: Text label</p>
+                </div>
+                <figcaption>Widget Text dan SizedBox</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 8</h5>
+              <p>Dibuat widget TextField dengan berbagai properti decoration untuk tampilan visual yang menarik. InputDecoration berisi labelText sebagai label, hintText sebagai placeholder, border: OutlineInputBorder() untuk border kotak, dan prefixIcon untuk icon di sebelah kiri.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: TextField decoration</p>
+                </div>
+                <figcaption>TextField dengan InputDecoration</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 9</h5>
+              <p>Pada TextField yang sama, ditambahkan properti controller yang menghubungkan dengan _textEditingController, keyboardType untuk menentukan jenis keyboard yang muncul (text), dan onChanged sebagai event listener yang akan dijalankan setiap kali ada perubahan input.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: TextField properties</p>
+                </div>
+                <figcaption>Properti controller, keyboardType, dan onChanged</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 10</h5>
+              <p>Ditambahkan SizedBox dengan height 20 untuk memberikan jarak antara TextField dan button.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: SizedBox</p>
+                </div>
+                <figcaption>SizedBox untuk jarak</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 11</h5>
+              <p>Dibuat ElevatedButton dengan method onPressed yang akan mengambil nilai dari controller, kemudian menampilkan nilai tersebut menggunakan SnackBar. Button ini juga diberi styling menggunakan styleFrom dengan background amber dan foreground hitam.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: ElevatedButton</p>
+                </div>
+                <figcaption>ElevatedButton dengan SnackBar</figcaption>
+              </figure>
+            </section>
+
+            <!-- BAGIAN 2: TextFormField (13 langkah) -->
+
+            <section class="report-substep">
+              <h5>Implementasi Form Validation dengan TextFormField (form-textformfield.dart)</h5>
+              <p><strong>Langkah 12:</strong> Sama seperti file sebelumnya, langkah pertama adalah mengimport package Material dan membuat main function yang menjalankan aplikasi.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: Import TextFormField</p>
+                </div>
+                <figcaption>Import package dan main function</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 13</h5>
+              <p>Dibuat class MyApp sebagai root widget dengan judul AppBar "Basic Form TextFormField" untuk membedakan dengan implementasi TextField sebelumnya.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: MyApp TextFormField</p>
+                </div>
+                <figcaption>Class MyApp untuk TextFormField</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 14</h5>
+              <p>Dibuat class MyFormText yang extends StatefulWidget karena form ini akan mengelola state yang lebih kompleks dengan mekanisme validasi.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: MyFormText class</p>
+                </div>
+                <figcaption>Class MyFormText extends StatefulWidget</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 15</h5>
+              <p>Di dalam class _MyFormTextState, dideklarasikan _formKey bertipe GlobalKey&lt;FormState&gt; yang berfungsi untuk mengakses state dari Form dan memanggil method validasi. Kemudian dideklarasikan dua controller untuk field nama dan email.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: GlobalKey declaration</p>
+                </div>
+                <figcaption>Deklarasi GlobalKey dan controllers</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 16</h5>
+              <p>Method dispose() dioverride untuk membersihkan kedua controller (name dan email) ketika widget dihapus dari widget tree.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: dispose() method</p>
+                </div>
+                <figcaption>Method dispose() untuk kedua controller</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 17</h5>
+              <p>Dibuat method _submitForm() yang akan dipanggil ketika button submit ditekan. Method ini menggunakan _formKey.currentState!.validate() untuk menjalankan validasi pada semua TextFormField. Jika validasi berhasil (return true), maka nilai dari kedua controller diambil dan ditampilkan menggunakan SnackBar.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: _submitForm() method</p>
+                </div>
+                <figcaption>Method _submitForm() dengan validasi</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 18</h5>
+              <p>Pada method build(), layout dibungkus dengan widget Form dan diberi key _formKey untuk menghubungkan dengan GlobalKey yang telah dideklarasikan. Form ini kemudian berisi Padding dan Column untuk layout.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: Widget Form</p>
+                </div>
+                <figcaption>Widget Form dengan key</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 19</h5>
+              <p>Ditambahkan SizedBox dengan height 10 untuk memberikan jarak dari atas.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: SizedBox</p>
+                </div>
+                <figcaption>SizedBox untuk jarak dari atas</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 20</h5>
+              <p>Dibuat TextFormField pertama untuk input nama dengan controller _nameController dan decoration yang sesuai. Yang membedakan dengan TextField adalah adanya properti validator yang berisi logika validasi. Validator ini menerima parameter value dan mengembalikan String jika ada error, atau null jika valid.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: TextFormField nama</p>
+                </div>
+                <figcaption>TextFormField untuk input nama</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 21</h5>
+              <p>Ditambahkan SizedBox untuk jarak antar TextFormField.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: SizedBox jarak</p>
+                </div>
+                <figcaption>SizedBox untuk jarak antar field</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 22</h5>
+              <p>Dibuat TextFormField kedua untuk input email dengan controller _emailController. Validator pada field ini lebih kompleks karena memeriksa dua kondisi: apakah field kosong dan apakah format email valid (mengandung '@').</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: TextFormField email</p>
+                </div>
+                <figcaption>TextFormField untuk input email</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 23</h5>
+              <p>Ditambahkan SizedBox untuk jarak sebelum button submit.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: SizedBox button</p>
+                </div>
+                <figcaption>SizedBox sebelum button</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Langkah 24</h5>
+              <p>Dibuat SizedBox dengan width double.infinity agar button memenuhi lebar layar, kemudian di dalamnya terdapat ElevatedButton yang onPressed-nya memanggil method _submitForm yang telah dibuat sebelumnya.</p>
+              <figure class="report-figure">
+                <div style="background: var(--color-periwinkle-mist); padding: 60px; border-radius: var(--radius-cards); text-align: center; color: var(--color-graphite);">
+                  <i class="bi bi-image" style="font-size: 48px; opacity: 0.5;"></i>
+                  <p style="margin-top: 16px; font-family: var(--font-abc-diatype-mono); font-size: 12px;">Screenshot: Button submit</p>
+                </div>
+                <figcaption>Button submit dengan full width</figcaption>
+              </figure>
+            </section>
+
+          </div>
