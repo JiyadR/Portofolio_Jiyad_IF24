@@ -56,7 +56,7 @@
       </p>
     </div>
     <div class="report-count glass">
-      <strong>10</strong>
+      <strong>12</strong>
       <span>Laporan awal</span>
     </div>
   </header>
@@ -262,6 +262,46 @@
       </div>
       <div class="report-index-actions">
         <a href="#report-mobile" class="btn btn-solid report-open" data-report-target="report-mobile">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-index-item report-item aplikasi-mobile reveal">
+      <div class="report-index-num">11</div>
+      <div class="report-index-main">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3 class="report-index-title">Flutter Widget Dasar: StatelessWidget & StatefulWidget</h3>
+        <p class="report-index-desc">Implementasi konsep dasar widget Flutter melalui pembuatan aplikasi info saldo dengan fitur toggle visibility menggunakan StatelessWidget untuk komponen statis dan StatefulWidget untuk komponen interaktif.</p>
+        <div class="project-meta">
+          <span>Flutter</span>
+          <span>Dart</span>
+          <span>Mobile Dev</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-flutter-widget-dasar" class="btn btn-solid report-open" data-report-target="report-flutter-widget-dasar">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-index-item report-item aplikasi-mobile reveal">
+      <div class="report-index-num">12</div>
+      <div class="report-index-main">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3 class="report-index-title">Flutter Layouting: Row, Column, Container & ListTile</h3>
+        <p class="report-index-desc">Implementasi widget layouting Flutter melalui pembuatan halaman dashboard Expense Tracker dengan integrasi widget Row, Column, Container, ListTile, dan SingleChildScrollView agar halaman terstruktur dan bisa di-scroll.</p>
+        <div class="project-meta">
+          <span>Flutter</span>
+          <span>Dart</span>
+          <span>Mobile Dev</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-flutter-layouting" class="btn btn-solid report-open" data-report-target="report-flutter-layouting">Baca Laporan</a>
         <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
           <i class="bi bi-github"></i> GitHub
         </a>
@@ -2500,6 +2540,409 @@
           </p>
         </div>
         <a href="https://github.com/ArmnskBamban/FileHunt" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-detail glass" id="report-flutter-widget-dasar" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3>Flutter Widget Dasar: StatelessWidget & StatefulWidget</h3>
+        <p>Implementasi konsep dasar widget Flutter melalui pembuatan aplikasi info saldo dengan fitur toggle visibility menggunakan StatelessWidget untuk komponen statis dan StatefulWidget untuk komponen interaktif.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Flutter merupakan framework open-source yang dikembangkan oleh Google untuk membangun aplikasi mobile yang responsif dan interaktif. Dalam pengembangan aplikasi Flutter, pemahaman terhadap konsep widget menjadi fondasi utama karena seluruh elemen tampilan aplikasi dibangun dari kombinasi widget-widget tersebut. Widget sendiri terbagi menjadi dua kategori utama, yaitu StatelessWidget yang bersifat statis dan StatefulWidget yang dapat berubah secara dinamis sesuai interaksi pengguna. Pemahaman yang baik tentang kedua jenis widget ini akan sangat membantu dalam membangun aplikasi yang efisien dan responsif.
+          </p>
+          <p>
+            Pada praktikum kali ini, dilakukan implementasi konsep dasar widget Flutter melalui pembuatan aplikasi sederhana yang menampilkan informasi saldo pengguna. Aplikasi ini terdiri dari dua komponen utama: widget sapaan pengguna yang bersifat statis menggunakan StatelessWidget, dan widget kartu saldo yang interaktif menggunakan StatefulWidget. Komponen kartu saldo dilengkapi dengan fitur toggle visibility yang memungkinkan pengguna menyembunyikan atau menampilkan nominal saldo dengan menekan ikon mata, sehingga memberikan pengalaman interaktif yang sederhana namun fungsional.
+          </p>
+          <p>
+            Melalui praktikum ini, diharapkan dapat dipahami perbedaan mendasar antara StatelessWidget dan StatefulWidget, cara kerja fungsi setState() dalam merender ulang tampilan secara dinamis, serta penerapan struktur dasar Flutter menggunakan MaterialApp dan Scaffold. Praktikum ini juga mencakup latihan styling dan modifikasi UI untuk memperdalam pemahaman terhadap properti-properti widget yang sering digunakan dalam pengembangan aplikasi Flutter.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Memahami dan menerapkan struktur dasar aplikasi Flutter menggunakan MaterialApp dan Scaffold sebagai kerangka utama pengembangan antarmuka pengguna.</li>
+            <li>Membedakan karakteristik dan implementasi StatelessWidget untuk komponen statis dan StatefulWidget untuk komponen dinamis dalam membangun tampilan aplikasi.</li>
+            <li>Menerapkan fungsi setState() untuk melakukan manajemen state dasar dan merender ulang tampilan secara interaktif sesuai dengan interaksi pengguna.</li>
+            <li>Melakukan kustomisasi styling dan modifikasi UI pada widget Flutter dengan mengubah properti warna, menambahkan elemen teks, serta mengatur tata letak komponen sesuai kebutuhan desain aplikasi.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Alat atau Tools yang Dipakai</h4>
+          <ul>
+            <li>Flutter SDK</li>
+            <li>Dart Programming Language</li>
+            <li>Android Studio / Visual Studio Code</li>
+            <li>Android Emulator / iOS Simulator</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Langkah Pengerjaan</h4>
+          <p>
+            Pada bagian ini dilakukan proses implementasi aplikasi Flutter dasar dengan menggunakan StatelessWidget dan StatefulWidget. Tahapan pengerjaan dimulai dari pembuatan struktur aplikasi, implementasi widget statis, widget dinamis, hingga fitur toggle visibility.
+          </p>
+
+          <div class="report-substeps">
+            
+            <section class="report-substep" style="background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%); padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📱 Aplikasi Info Saldo dengan Toggle Visibility</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">dashboard_screen.dart</p>
+            </section>
+            
+            <section class="report-substep">
+              <h5>a. Fungsi main() dan runApp</h5>
+              <p>Pertama, dibuat fungsi main() yang menjadi titik awal eksekusi aplikasi Flutter. Di dalamnya, dipanggil fungsi runApp() yang akan menjalankan widget utama aplikasi, yaitu MyApp.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-widget-dasar/image001.jpg" alt="Screenshot main() function" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Fungsi main() sebagai entry point aplikasi</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Class MyApp sebagai StatelessWidget</h5>
+              <p>Selanjutnya, dibuat kelas MyApp yang merupakan StatelessWidget. Widget ini berfungsi sebagai akar dari seluruh aplikasi yang mengatur tema, judul, dan halaman awal yang akan ditampilkan.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-widget-dasar/image002.jpg" alt="Screenshot Class MyApp" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Class MyApp sebagai root widget</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. DashboardScreen dengan Scaffold</h5>
+              <p>Langkah berikutnya adalah membuat halaman utama aplikasi melalui kelas DashboardScreen. Widget ini menggunakan Scaffold yang menyediakan kerangka dasar aplikasi seperti AppBar dan body. AppBar menampilkan judul praktikum dengan warna latar biru, sedangkan body diisi dengan padding dan tata letak Column yang vertikal.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-widget-dasar/image003.jpg" alt="Screenshot DashboardScreen" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Widget DashboardScreen dengan AppBar dan body</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>d. GreetingWidget (StatelessWidget)</h5>
+              <p>Untuk bagian sapaan pengguna, dibuat GreetingWidget yang merupakan StatelessWidget. Widget ini menggunakan tata letak Row untuk menyusun ikon avatar dan teks sapaan secara horizontal. Ikon avatar dibuat dengan CircleAvatar berwarna biru, sementara teks sapaan diatur dalam Column untuk penyusunan vertikal.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-widget-dasar/image004.jpg" alt="Screenshot GreetingWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>GreetingWidget untuk sapaan pengguna</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>e. BalanceCardWidget (StatefulWidget)</h5>
+              <p>Komponen yang membutuhkan interaktivitas dikembangkan menggunakan StatefulWidget. Didefinisikan kelas BalanceCardWidget yang memiliki kelas state terpisah bernama _BalanceCardWidgetState. Di dalam state class, variabel _isBalanceVisible digunakan untuk menyimpan status tampilan saldo, sementara fungsi _toggleVisibility() bertugas mengubah nilai variabel tersebut.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-widget-dasar/image005.jpg" alt="Screenshot BalanceCardWidget class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Class BalanceCardWidget dengan state management</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>f. Build Method dengan Card dan Kondisional</h5>
+              <p>Dalam metode build() dari state class, dibuat kartu saldo menggunakan widget Card dengan desain melengkung (border radius) dan warna biru. Kartu ini memiliki dua bagian utama: baris atas berisi label "Saldo Utama" dan tombol ikon mata yang dapat ditekan. Logika kondisional (ternary operator) diterapkan untuk menentukan ikon yang ditampilkan (Icons.visibility atau Icons.visibility_off) dan teks saldo yang ditampilkan (nominal atau sensor).</p>
+              <figure class="report-figure">
+                <img src="images/flutter-widget-dasar/image006.jpg" alt="Screenshot Build method dengan Card" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Build method dengan Card dan conditional rendering</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>g. Implementasi setState() dan _toggleVisibility</h5>
+              <p>Fungsi setState() memegang peranan kunci dalam pembaruan tampilan. Saat tombol ikon mata ditekan, fungsi _toggleVisibility() dipanggil dan di dalamnya setState() digunakan untuk mengubah nilai _isBalanceVisible. Flutter kemudian secara otomatis memicu rebuild pada widget BalanceCardWidget, sehingga tampilan diperbarui sesuai dengan status terbaru. Mekanisme ini memungkinkan UI menjadi responsif terhadap interaksi pengguna tanpa perlu memuat ulang halaman.</p>
+            </section>
+
+            <section class="report-substep">
+              <h5>h. Hasil Akhir Aplikasi</h5>
+              <p>Setelah semua komponen dibuat, hasil akhir aplikasi menampilkan dua widget utama secara terintegrasi. Bagian atas layar menampilkan sapaan pengguna yang statis, sementara bagian bawah menampilkan kartu saldo yang interaktif. Pengguna dapat menekan ikon mata pada kartu saldo untuk menyembunyikan atau menampilkan nominal saldo, memberikan pengalaman interaksi yang sederhana namun efektif dalam memahami konsep state management pada Flutter.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-widget-dasar/image007.jpg" alt="Screenshot Final app result" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Hasil akhir aplikasi dengan kedua widget</figcaption>
+              </figure>
+            </section>
+
+          </div>
+        </li>
+
+        <li>
+          <h4>Tugas Praktikum</h4>
+          <p>Pada bagian ini diberikan dua tugas latihan untuk memperdalam pemahaman tentang styling dan modifikasi UI pada aplikasi Flutter yang telah dibuat.</p>
+
+          <div class="report-substeps">
+            
+            <section class="report-substep" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📝 Tugas 1: Modifikasi Warna Theme</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">Ubah warna BalanceCard dari Colors.blueAccent menjadi Colors.teal</p>
+            </section>
+            
+            <section class="report-substep">
+              <h5>Implementasi</h5>
+              <p>Pada tugas pertama, dilakukan perubahan warna pada BalanceCard dari warna biru (Colors.blueAccent) menjadi warna hijau emerald (Colors.teal). Perubahan ini dilakukan dengan menambahkan properti color: Colors.teal pada widget Card. Properti color pada widget Card berfungsi untuk mengatur warna background dari kartu tersebut. Dengan mengubah nilai properti ini menjadi Colors.teal, maka tampilan kartu saldo akan berubah menjadi hijau emerald sesuai dengan permintaan tugas.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-widget-dasar/image008.jpg" alt="Screenshot Tugas 1 - Color change" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Modifikasi warna Card menjadi Colors.teal</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep" style="background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%); padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📝 Tugas 2: Penambahan Teks Statis</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">Tambahkan teks "No. Rekening: 1234-5678" di bawah nominal saldo</p>
+            </section>
+            
+            <section class="report-substep">
+              <h5>Implementasi</h5>
+              <p>Pada tugas kedua, ditambahkan teks statis berupa nomor rekening di bagian bawah nominal saldo di dalam kartu. Penambahan ini dilakukan dengan menambahkan widget Text baru setelah widget Text yang menampilkan nominal saldo. Sebelum teks nomor rekening, ditambahkan widget SizedBox(height: 8) untuk memberikan jarak vertikal sebesar 8 pixel antara teks nominal saldo dengan teks nomor rekening. Teks nomor rekening menggunakan styling dengan ukuran font 14 dan warna Colors.white70 agar terlihat lebih subtle dan tidak mendominasi tampilan nominal saldo.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-widget-dasar/image009.jpg" alt="Screenshot Tugas 2 - Add account number" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Penambahan teks nomor rekening</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Verifikasi Hasil Tugas</h5>
+              <p>Jalankan program nya, dan lihat hasil dari tugas apakah sudah terpenuhi dengan memastikan kedua modifikasi tampil dengan benar di aplikasi.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-widget-dasar/image010.jpg" alt="Screenshot Verification result" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Hasil akhir setelah tugas selesai</figcaption>
+              </figure>
+            </section>
+
+          </div>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Pada praktikum ini, berhasil dipahami dengan baik perbedaan utama antara StatelessWidget dan StatefulWidget. StatelessWidget digunakan untuk komponen yang tampilannya statis dan tidak akan berubah selama aplikasi berjalan, sedangkan StatefulWidget memiliki kemampuan untuk menyimpan dan mengubah data internal melalui state, sehingga memungkinkan komponen tersebut bereaksi terhadap interaksi pengguna seperti tombol yang dapat ditekan dan data yang dapat diubah. Selain itu, fungsi setState() terbukti sangat krusial sebagai mekanisme trigger untuk memicu rebuild UI, sehingga perubahan data pada state akan otomatis tercermin ke tampilan secara instan tanpa perlu memuat ulang halaman.
+          </p>
+          <p>
+            Selain memahami konsep widget dan state, telah pula dilakukan penerapan tugas-tugas latihan untuk memperdalam pemahaman tentang styling dan modifikasi UI. Pertama, warna tema pada kartu saldo berhasil diubah dari Colors.blueAccent menjadi Colors.teal sebagai latihan perubahan visual. Kedua, teks "No. Rekening: 1234-5678" berhasil ditambahkan di bagian bawah nominal saldo, yang menunjukkan kemampuan untuk mengembangkan komponen yang sudah ada sesuai kebutuhan desain. Praktikum ini memberikan pemahaman yang cukup komprehensif mengenai kerangka kerja Flutter, pemahaman tentang aliran eksekusi aplikasi, serta keterampilan dasar dalam pembuatan antarmuka pengguna yang responsif.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-detail-repo glass">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-detail glass" id="report-flutter-layouting" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3>Flutter Layouting: Row, Column, Container & ListTile</h3>
+        <p>Implementasi widget layouting Flutter melalui pembuatan halaman dashboard Expense Tracker dengan integrasi widget Row, Column, Container, ListTile, dan SingleChildScrollView agar halaman terstruktur dan bisa di-scroll.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Perkembangan teknologi mobile yang pesat mendorong semakin banyaknya aplikasi yang dibutuhkan oleh pengguna dalam kehidupan sehari-hari, termasuk aplikasi yang berhubungan dengan pengelolaan keuangan pribadi. Sebuah aplikasi tidak hanya dinilai dari fungsionalitasnya, tetapi juga dari tampilan antarmuka (user interface) yang rapi, mudah dipahami, dan nyaman digunakan. Oleh karena itu, kemampuan seorang pengembang dalam menyusun tampilan UI menjadi aspek penting dalam proses pengembangan aplikasi mobile.
+          </p>
+          <p>
+            Flutter, sebagai framework pengembangan aplikasi lintas platform, menyediakan berbagai widget layouting yang memudahkan pengembang dalam menyusun komponen-komponen UI secara sistematis. Beberapa widget utama yang sering digunakan antara lain Row untuk penataan elemen secara horizontal, Column untuk penataan elemen secara vertikal, Container untuk pembungkus elemen dengan pengaturan padding, margin, dan warna, serta ListTile untuk membuat baris daftar secara instan sesuai standar Material Design. Dengan memahami dan menguasai widget-widget ini, pengembang dapat menyusun halaman aplikasi yang terstruktur dan profesional.
+          </p>
+          <p>
+            Pada praktikum kali ini, mahasiswa akan mempraktikkan penggunaan widget-widget layouting tersebut untuk menyusun halaman dashboard pada aplikasi Expense Tracker. Komponen dari Modul 1, yaitu sapaan pengguna dan kartu saldo, akan digabungkan dengan komponen baru Modul 2 berupa tombol aksi dan daftar transaksi terakhir. Seluruh komponen kemudian dibungkus dengan SingleChildScrollView agar halaman dapat di-scroll dengan lancar tanpa terjadi overflow, sehingga menghasilkan tampilan dashboard yang fungsional dan terintegrasi.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Menerapkan widget Row untuk menyusun tombol aksi (Pemasukan, Pengeluaran, dan Transfer) secara horizontal dengan jarak yang terbagi rata menggunakan mainAxisAlignment.</li>
+            <li>Menerapkan widget Column untuk menyusun daftar transaksi secara vertikal serta menumpuk teks judul dan komponen lainnya dalam satu kolom.</li>
+            <li>Mengatur tampilan elemen menggunakan Container, Card, dan ListTile dengan pengaturan padding, margin, warna, serta border radius agar tampilan komponen lebih rapi dan sesuai standar Material Design.</li>
+            <li>Menggabungkan seluruh komponen dari Modul 1 dan Modul 2 ke dalam satu halaman dashboard dengan membungkusnya menggunakan SingleChildScrollView agar halaman dapat di-scroll tanpa terjadi overflow.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Alat atau Tools yang Dipakai</h4>
+          <ul>
+            <li>Flutter SDK</li>
+            <li>Dart Programming Language</li>
+            <li>Android Studio / Visual Studio Code</li>
+            <li>Android Emulator / iOS Simulator</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Langkah Pengerjaan</h4>
+          <p>
+            Pada bagian ini dilakukan proses implementasi widget layouting Flutter untuk membangun halaman dashboard Expense Tracker. Tahapan pengerjaan dimulai dari pembuatan root widget, layout dasar, komponen sapaan, kartu saldo, tombol aksi, hingga daftar transaksi terakhir.
+          </p>
+
+          <div class="report-substeps">
+            
+            <section class="report-substep" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📱 Expense Tracker Dashboard</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">dashboard_screen.dart</p>
+            </section>
+            
+            <section class="report-substep">
+              <h5>a. Widget MyApp sebagai Root Aplikasi</h5>
+              <p>Langkah pertama adalah membuat widget utama sebagai root aplikasi. Widget ini menggunakan StatelessWidget karena tidak memerlukan perubahan state. Di dalam widget MyApp, dikonfigurasi MaterialApp sebagai wrapper aplikasi dengan tema berwarna biru dan menghilangkan banner debug.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-layouting/image001.jpg" alt="Screenshot MyApp" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Widget MyApp sebagai root aplikasi</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. DashboardScreen dengan SingleChildScrollView</h5>
+              <p>Selanjutnya, dibuat halaman utama DashboardScreen yang berfungsi sebagai container untuk seluruh komponen aplikasi. Halaman ini menggunakan Scaffold sebagai struktur dasar dengan AppBar di bagian atas. Agar halaman dapat di-scroll ketika konten melebihi tinggi layar, seluruh body dibungkus dengan SingleChildScrollView. Di dalamnya terdapat Padding untuk memberi jarak dari tepi layar, kemudian Column untuk menyusun widget-widget secara vertikal.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-layouting/image002.jpg" alt="Screenshot DashboardScreen" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>DashboardScreen dengan SingleChildScrollView</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. GreetingWidget dengan Row</h5>
+              <p>Lalu dibuat komponen sapaan pengguna menggunakan StatelessWidget. Widget ini menampilkan avatar pengguna dan teks sapaan. Layout disusun menggunakan Row agar avatar dan teks berada dalam satu baris horizontal. Avatar dibuat dengan CircleAvatar berisi ikon person, sedangkan teks sapaan disusun vertikal menggunakan Column dengan dua baris teks: nama pengguna dan kalimat sambutan.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-layouting/image003.jpg" alt="Screenshot GreetingWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>GreetingWidget dengan Row untuk layout horizontal</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>d. BalanceCardWidget dengan Toggle Visibility</h5>
+              <p>Kemudian dibuat komponen kartu saldo menggunakan StatefulWidget karena memerlukan state untuk mengatur visibilitas saldo. Di dalam state class, terdapat variabel boolean _isBalanceVisible yang mengontrol apakah saldo ditampilkan atau disembunyikan. Fungsi _toggleVisibility() menggunakan setState() untuk memperbarui state ketika tombol visibility ditekan. Tampilan kartu menggunakan widget Card dengan elevasi dan border radius untuk efek bayangan. Layout internal menggunakan Column dan Row untuk menyusun label, tombol toggle, dan nominal saldo.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-layouting/image004.jpg" alt="Screenshot BalanceCardWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>BalanceCardWidget dengan toggle visibility</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>e. Tombol Aksi dengan Row.spaceEvenly</h5>
+              <p>Berikutnya dibuat widget tombol aksi yang menampilkan tiga tombol: Pemasukan, Pengeluaran, dan Transfer. Widget ini menggunakan Row dengan mainAxisAlignment.spaceEvenly agar jarak antar tombol terbagi rata secara horizontal. Untuk menghindari pengulangan kode, dibuat fungsi helper _buildActionButton() yang menerima parameter ikon, label, dan warna. Setiap tombol disusun vertikal menggunakan Column, berisi Container dengan background transparan sebagai wadah ikon, dan Text sebagai label tombol.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-layouting/image005.jpg" alt="Screenshot Tombol Aksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Tombol aksi dengan Row.spaceEvenly</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>f. Daftar Transaksi dengan ListTile</h5>
+              <p>Terakhir, dibuat widget untuk menampilkan daftar transaksi terakhir. Widget ini menggunakan Column untuk menyusun judul dan daftar transaksi secara vertikal. Judul "Transaksi Terakhir" diberi style bold dengan ukuran font 18. Daftar transaksi dibungkus dengan Card untuk memberikan efek bayangan dan bingkai. Di dalam Card, terdapat beberapa ListTile yang masing-masing merepresentasikan satu item transaksi. Setiap ListTile memiliki tiga komponen utama: leading berupa CircleAvatar dengan ikon, title dan subtitle untuk nama dan tanggal transaksi, serta trailing untuk menampilkan nominal dengan warna sesuai jenis transaksi. Antar item transaksi dipisahkan dengan Divider.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-layouting/image006.jpg" alt="Screenshot Daftar Transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Daftar transaksi dengan ListTile</figcaption>
+              </figure>
+            </section>
+
+          </div>
+        </li>
+
+        <li>
+          <h4>Tugas Praktikum</h4>
+          <p>Pada bagian ini diberikan dua tugas latihan untuk memperdalam pemahaman tentang styling dan penambahan data pada komponen daftar transaksi.</p>
+
+          <div class="report-substeps">
+            
+            <section class="report-substep" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📝 Tugas 1: Styling Warna Trailing Text</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">Ubah warna nominal transaksi berdasarkan jenis (merah untuk pengeluaran, hijau untuk pemasukan)</p>
+            </section>
+            
+            <section class="report-substep">
+              <h5>Implementasi Warna Hijau untuk Pemasukan</h5>
+              <p>Untuk transaksi pemasukan seperti "Gaji Bulanan" dan "Bonus Proyek", diberikan style dengan warna hijau untuk menunjukkan arus uang masuk. Pada properti trailing, widget Text menggunakan TextStyle dengan color: Colors.green dan fontWeight: FontWeight.bold agar nominal terlihat jelas.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-layouting/image007.jpg" alt="Screenshot warna hijau pemasukan" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Implementasi warna hijau untuk transaksi pemasukan</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Implementasi Warna Merah untuk Pengeluaran</h5>
+              <p>Sementara itu, untuk transaksi pengeluaran seperti "Makan Siang", "Isi Bensin", dan "Belanja Bulanan", diberikan style dengan warna merah untuk menunjukkan arus uang keluar. Pada properti trailing, widget Text menggunakan TextStyle dengan color: Colors.red dan fontWeight: FontWeight.bold.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-layouting/image008.jpg" alt="Screenshot warna merah pengeluaran" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Implementasi warna merah untuk transaksi pengeluaran</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 20px; border-radius: 12px; margin: 30px 0;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📝 Tugas 2: Menambahkan Transaksi Baru</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">Tambahkan dua transaksi fiktif baru ke dalam daftar "Transaksi Terakhir"</p>
+            </section>
+
+            <section class="report-substep">
+              <h5>Transaksi Keempat: Belanja Bulanan</h5>
+              <p>Transaksi pertama yang ditambahkan adalah "Belanja Bulanan" yang merupakan transaksi pengeluaran. Item ini disisipkan setelah transaksi "Isi Bensin" dengan menambahkan Divider terlebih dahulu sebagai pemisah. ListTile ini memiliki leading berupa CircleAvatar dengan background warna orange dan ikon shopping_bag, title dengan teks "Belanja Bulanan", subtitle dengan tanggal "15 Sep 2026", dan trailing menampilkan nominal "- Rp 350.000" dengan warna merah untuk menunjukkan pengeluaran.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-layouting/image009.jpg" alt="Screenshot Belanja Bulanan" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Penambahan transaksi Belanja Bulanan</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Transaksi Kelima: Bonus Proyek</h5>
+              <p>Transaksi kedua yang ditambahkan adalah "Bonus Proyek" yang merupakan transaksi pemasukan. Item ini disisipkan setelah transaksi "Belanja Bulanan" dengan menambahkan Divider terlebih dahulu. ListTile ini memiliki leading berupa CircleAvatar dengan background warna hijau dan ikon card_giftcard, title dengan teks "Bonus Proyek", subtitle dengan tanggal "18 Sep 2026", dan trailing menampilkan nominal "+ Rp 1.500.000" dengan warna hijau untuk menunjukkan pemasukan.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-layouting/image010.jpg" alt="Screenshot Bonus Proyek" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Penambahan transaksi Bonus Proyek</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>Verifikasi Hasil Tugas</h5>
+              <p>Jalankan program nya, dan lihat hasil dari tugas apakah sudah terpenuhi dengan memastikan kedua transaksi baru tampil dengan benar di daftar transaksi beserta styling warna yang sesuai.</p>
+              <figure class="report-figure">
+                <img src="images/flutter-layouting/image011.jpg" alt="Screenshot hasil akhir" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <figcaption>Hasil akhir dashboard Expense Tracker</figcaption>
+              </figure>
+            </section>
+
+          </div>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Dari praktikum ini dapat disimpulkan bahwa Flutter menyediakan berbagai widget layouting yang efektif dan mudah digunakan untuk menyusun antarmuka pengguna aplikasi mobile. Widget Row dan Column memungkinkan pengembang menyusun elemen secara horizontal dan vertikal dengan kendali yang presisi melalui properti seperti mainAxisAlignment, crossAxisAlignment, dan SizedBox. Penggunaan Container dan Card memberikan kemampuan untuk mengatur tampilan visual seperti padding, margin, warna, dan efek bayangan, sehingga menghasilkan komponen yang rapi dan menarik.
+          </p>
+          <p>
+            Widget ListTile terbukti sangat efisien untuk membuat daftar item dengan struktur standar Material Design, yang terdiri dari elemen leading, title, subtitle, dan trailing. Dengan menggabungkan beberapa widget ini secara terstruktur, berhasil dibuat halaman dashboard yang fungsional dengan komponen sapaan pengguna, kartu saldo dengan fitur toggle visibility, tombol aksi yang tersusun horizontal, dan daftar transaksi yang tersusun vertikal.
+          </p>
+          <p>
+            Penerapan SingleChildScrollView terbukti efektif dalam menangani masalah overflow dengan memungkinkan halaman dapat di-scroll secara lancar ketika konten melebihi tinggi layar. Selain itu, tampilan visual dapat ditingkatkan dengan penerapan styling warna pada trailing text untuk membedakan jenis transaksi—merah untuk pengeluaran dan hijau untuk pemasukan—sehingga meningkatkan keterbacaan dan user experience.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-detail-repo glass">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
           <i class="bi bi-github"></i>
           Buka GitHub
         </a>
