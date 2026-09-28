@@ -56,7 +56,7 @@
       </p>
     </div>
     <div class="report-count glass">
-      <strong>12</strong>
+      <strong>13</strong>
       <span>Laporan awal</span>
     </div>
   </header>
@@ -302,6 +302,26 @@
       </div>
       <div class="report-index-actions">
         <a href="#report-flutter-layouting" class="btn btn-solid report-open" data-report-target="report-flutter-layouting">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-index-item report-item aplikasi-mobile reveal">
+      <div class="report-index-num">13</div>
+      <div class="report-index-main">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3 class="report-index-title">Flutter Input Widgets dan Forms: Expense Tracker</h3>
+        <p class="report-index-desc">Implementasi input widgets dan forms di Flutter untuk aplikasi pencatat transaksi keuangan. Menggunakan TextFormField, DropdownButtonFormField, showDatePicker, dan validasi input dengan GlobalKey<FormState>.</p>
+        <div class="project-meta">
+          <span>Flutter</span>
+          <span>Dart</span>
+          <span>Forms</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-flutter-input-forms" class="btn btn-solid report-open" data-report-target="report-flutter-input-forms">Baca Laporan</a>
         <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
           <i class="bi bi-github"></i> GitHub
         </a>
@@ -2949,6 +2969,349 @@
       </div>
     </article>
 
+    <article class="report-detail glass" id="report-flutter-input-forms" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3>Flutter Input Widgets dan Forms: Expense Tracker</h3>
+        <p>Implementasi widget input dan forms di Flutter untuk aplikasi pencatat transaksi keuangan mencakup TextFormField, DropdownButtonFormField, showDatePicker, GlobalKey, dan validasi form.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Aplikasi mobile menjadi bagian integral dalam kehidupan sehari-hari modern. Salah satu aspek penting dalam pengembangan aplikasi mobile adalah kemampuan untuk menangkap dan memproses input dari pengguna. Input dari pengguna merupakan fondasi interaksi antara aplikasi dan pengguna (user interface), sehingga penggunaan widget input yang tepat sangat memengaruhi kualitas aplikasi yang dibangun.
+          </p>
+          <p>
+            Flutter adalah framework open-source yang dikembangkan oleh Google untuk membangun aplikasi mobile multi-platform dengan performa tinggi. Flutter menyediakan berbagai widget bawaan yang memudahkan pengembang dalam membuat form dan menangkap input dari pengguna. Pada praktikum kali ini, kita mempelajari Input Widgets dan Forms di Flutter, yang mencakup penggunaan TextFormField, DropdownButtonFormField, serta implementasi validasi input untuk memastikan data yang dimasukkan sesuai dengan format yang diharapkan.
+          </p>
+          <p>
+            Dalam praktikum ini, kita akan membangun sebuah aplikasi sederhana bernama Expense Tracker yang berfungsi untuk mencatat transaksi keuangan. Aplikasi ini akan mengimplementasikan form input dengan beberapa field seperti judul transaksi, nominal uang, dan kategori pengeluaran. Melalui praktikum ini, diharapkan mahasiswa dapat memahami konsep input widgets, form validation, dan state management di Flutter secara lebih mendalam.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Mengimplementasikan widget input dengan controller, khususnya penggunaan TextFormField dengan TextEditingController untuk menangkap dan memproses input teks dari pengguna secara efektif.</li>
+            <li>Mengimplementasikan widget dropdown statis, dengan menggunakan DropdownButtonFormField untuk menyediakan pilihan kategori transaksi dan mengelola state perubahan pilihan tersebut.</li>
+            <li>Menerapkan sistem validasi input, baik untuk input teks biasa maupun input numerik, guna mencegah data kosong, format tidak valid, atau input yang tidak sesuai dengan persyaratan sistem sebelum disimpan.</li>
+            <li>Membuat form yang terstruktur dengan validasi otomatis, meliputi pengelolaan form menggunakan GlobalKey&lt;FormState&gt;, pengelompokan input dalam widget Form, serta menampilkan feedback visual berupa SnackBar ketika data berhasil disimpan.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Langkah pengerjaan</h4>
+          
+          <div class="report-substeps">
+            
+            <!-- ==================== FILE: Main.dart ==================== -->
+            <section class="report-substep" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📄 Main.dart</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">File entry point aplikasi</p>
+            </section>
+
+            <section class="report-substep">
+              <h5>a. Import Library dan Entry Point</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/1.png" data-basesrc="images/flutter-input-forms/1" alt="File main.dart sebagai titik awal aplikasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>File main.dart sebagai titik awal aplikasi</figcaption>
+              </figure>
+              <p>
+                Langkah pertama, kita menyiapkan file main.dart sebagai titik awal (entry point) aplikasi. Kita mengimpor library material yang berisi widget-widget dasar Flutter, serta file add_transaction_screen.dart yang berisi halaman form transaksi yang akan kita buat.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Fungsi main()</h5>
+              <p>
+                Selanjutnya, kita membuat fungsi main() sebagai fungsi utama yang pertama kali dijalankan. Fungsi ini memanggil runApp() untuk menjalankan aplikasi Flutter dengan widget MyApp di dalamnya.
+              </p>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/2.png" data-basesrc="images/flutter-input-forms/2" alt="Fungsi main() sebagai entry point aplikasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Fungsi main() sebagai entry point aplikasi</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Class MyApp</h5>
+              <p>
+                Kita membuat class MyApp yang merupakan StatelessWidget sebagai root dari aplikasi. Di dalamnya terdapat MaterialApp yang berisi pengaturan tema dengan warna dasar Colors.deepPurple sesuai tema Modul 3, serta home yang langsung mengarahkan aplikasi membuka halaman AddTransactionScreen.
+              </p>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/3.png" data-basesrc="images/flutter-input-forms/3" alt="Class MyApp sebagai root widget aplikasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Class MyApp sebagai root widget aplikasi</figcaption>
+              </figure>
+            </section>
+
+            <!-- ==================== FILE: add_transaction_screen.dart ==================== -->
+            <section class="report-substep" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; border-radius: 12px; margin: 50px 0 30px 0;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📄 add_transaction_screen.dart</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">Halaman form transaksi</p>
+            </section>
+
+            <section class="report-substep">
+              <h5>a. StatefulWidget</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/4.png" data-basesrc="images/flutter-input-forms/4" alt="Halaman form transaksi menggunakan StatefulWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Halaman form transaksi menggunakan StatefulWidget</figcaption>
+              </figure>
+              <p>
+                Halaman form transaksi dibuat menggunakan StatefulWidget karena isi formulir (teks dan dropdown) akan terus berubah saat pengguna mengetik, sehingga membutuhkan state yang bisa diperbarui. Di sinilah kita mengelola seluruh logika form transaksi.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Persiapan GlobalKey dan Controller</h5>
+              <p>
+                Sebelum membangun tampilan, kita menyiapkan beberapa hal penting. Pertama, GlobalKey&lt;FormState&gt; yang digunakan untuk mengontrol dan memicu validasi seluruh form. Kedua, TextEditingController untuk judul dan nominal yang berfungsi menangkap teks dari input pengguna. Ketiga, variabel state untuk dropdown beserta daftar kategorinya.
+              </p>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/5.png" data-basesrc="images/flutter-input-forms/5" alt="Deklarasi GlobalKey, TextEditingController, dan state dropdown" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Deklarasi GlobalKey, TextEditingController, dan state dropdown</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Method dispose()</h5>
+              <p>
+                Agar tidak terjadi kebocoran memori (memory leak), kedua controller dibersihkan menggunakan metode dispose() saat halaman ditutup.
+              </p>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/6.png" data-basesrc="images/flutter-input-forms/6" alt="Method dispose() untuk membersihkan controller" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Method dispose() untuk membersihkan controller</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>d. Scaffold dan AppBar</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/7.png" data-basesrc="images/flutter-input-forms/7" alt="Struktur Scaffold dengan AppBar Deep Purple" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Struktur Scaffold dengan AppBar Deep Purple</figcaption>
+              </figure>
+              <p>
+                Kita membangun tampilan halaman dengan Scaffold dan AppBar berjudul "Catat Transaksi Baru". Body dibungkus SingleChildScrollView agar tidak terjadi error layout saat keyboard muncul, kemudian seluruh kolom input dibungkus dengan widget Form yang terhubung dengan _formKey untuk keperluan validasi.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>e. TextFormField untuk Judul</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/8.png" data-basesrc="images/flutter-input-forms/8" alt="Implementasi TextFormField dengan validator" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Implementasi TextFormField dengan validator</figcaption>
+              </figure>
+              <p>
+                Kita membuat input pertama yaitu TextFormField untuk judul transaksi. Field ini dihubungkan dengan _titleController agar teks yang diketik bisa ditangkap. Selain itu, diberikan validator yang merupakan inti dari sistem validasi: jika nilai kosong, fungsi mengembalikan pesan error "Judul transaksi tidak boleh kosong", sebaliknya jika terisi, mengembalikan null yang berarti data valid.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>f. TextFormField untuk Nominal</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/9.png" data-basesrc="images/flutter-input-forms/9" alt="Input nominal dengan keyboardType.number" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Input nominal dengan keyboardType.number</figcaption>
+              </figure>
+              <p>
+                Selanjutnya, input untuk nominal uang. Field ini menggunakan keyboardType: TextInputType.number sehingga keyboard yang muncul khusus angka, mempermudah pengguna saat mengisi nominal. Validatornya memastikan field tidak boleh kosong dan hanya menerima input berupa angka.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>g. DropdownButtonFormField</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/10.png" data-basesrc="images/flutter-input-forms/10" alt="Implementasi DropdownButtonFormField" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Implementasi DropdownButtonFormField</figcaption>
+              </figure>
+              <p>
+                Kemudian kita membuat DropdownButtonFormField&lt;String&gt; untuk pilihan kategori. Daftar _categories dipetakan menjadi DropdownMenuItem sebagai pilihan yang tampil. Saat pengguna memilih kategori lain, onChanged akan memperbarui state _selectedCategory menggunakan setState().
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>h. Tombol Submit</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/11.png" data-basesrc="images/flutter-input-forms/11" alt="Tombol submit dengan validasi form" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Tombol submit dengan validasi form</figcaption>
+              </figure>
+              <p>
+                Terakhir, kita membuat tombol ElevatedButton "Simpan Transaksi". Tombol ini menjadi pengeksekusi validasi keseluruhan form melalui _formKey.currentState!.validate(). Jika semua field lolos validasi, muncul SnackBar hijau berisi ringkasan transaksi yang tersimpan. Jika ada field yang kosong atau tidak valid, aplikasi otomatis menampilkan pesan error merah di bawah field yang bermasalah.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>i. Hasil Running</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/hasil1.png" data-basesrc="images/flutter-input-forms/hasil1" alt="Tampilan aplikasi Expense Tracker" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Tampilan aplikasi Expense Tracker</figcaption>
+              </figure>
+              <p>
+                Jalankan program nya pada main.dart dan akan tampil seperti ini
+              </p>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>Tugas Praktikum</h4>
+          
+          <div class="report-substeps">
+            
+            <!-- ==================== FILE: add_transaction_screen.dart ==================== -->
+            <section class="report-substep" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+              <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 600;">📄 add_transaction_screen.dart</h4>
+              <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 0.95rem;">Implementasi lengkap dengan date picker</p>
+            </section>
+
+            <section class="report-substep">
+              <h5>a. Class AddTransactionScreen sebagai StatefulWidget</h5>
+              <p>
+                Class AddTransactionScreen dibuat sebagai StatefulWidget karena form memerlukan perubahan state saat user berinteraksi dengannya, seperti mengetik teks pada input field, memilih opsi dari dropdown, atau memilih tanggal dari date picker. Widget ini memiliki state yang berubah-ubahan sehingga dibuat sebagai StatefulWidget, dan method createState() digunakan untuk membuat instance dari state class _AddTransactionScreenState yang berisi logic dan UI dari form.
+              </p>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/12.png" data-basesrc="images/flutter-input-forms/12" alt="Class AddTransactionScreen sebagai StatefulWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Class AddTransactionScreen sebagai StatefulWidget</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Deklarasi GlobalKey dan Controllers</h5>
+              <p>
+                Di dalam state class _AddTransactionScreenState, beberapa komponen penting disiapkan. GlobalKey&lt;FormState&gt; dibuat sebagai _formKey untuk mengakses state form dan memicu validasi ketika tombol submit ditekan. TextEditingController untuk _titleController, _amountController, dan _dateController digunakan untuk mengambil nilai input yang diketik user pada masing-masing field. Variabel _selectedCategory digunakan untuk menyimpan pilihan kategori yang dipilih dari dropdown, dengan nilai default 'Makanan', dan _categories adalah list yang berisi semua opsi kategori yang tersedia di dropdown yaitu Makanan, Transportasi, Hiburan, dan Lainnya.
+              </p>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/13.png" data-basesrc="images/flutter-input-forms/13" alt="Deklarasi GlobalKey, TextEditingController, dan daftar kategori" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Deklarasi GlobalKey, TextEditingController, dan daftar kategori</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Method dispose()</h5>
+              <p>
+                Method dispose() dipanggil secara otomatis saat widget dihancurkan, seperti saat user meninggalkan halaman. Dengan memanggil .dispose() pada setiap controller, memory yang digunakan oleh controller dibebaskan sehingga tidak terjadi memory leak yang dapat memengaruhi kinerja aplikasi.
+              </p>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/14.png" data-basesrc="images/flutter-input-forms/14" alt="Method dispose() untuk membersihkan controller" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Method dispose() untuk membersihkan controller</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>d. Scaffold dan AppBar</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/15.png" data-basesrc="images/flutter-input-forms/15" alt="Struktur Scaffold pada method build()" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Struktur Scaffold pada method build()</figcaption>
+              </figure>
+              <p>
+                Pada method build(), struktur halaman dibuat menggunakan Scaffold yang menyediakan kerangka dasar Material Design. Bagian AppBar ditempatkan di bagian atas halaman dengan judul 'Catat Transaksi Baru', background warna Deep Purple, dan teks berwarna putih. Tampilan AppBar ini memberikan identitas visual yang konsisten dengan tema aplikasi dan memberikan informasi jelas tentang fungsi halaman kepada user.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>e. SingleChildScrollView dan Form</h5>
+              <p>
+                SingleChildScrollView digunakan sebagai wrapper agar konten bisa di-scroll jika ukurannya melebihi tinggi layar, terutama saat keyboard muncul dan memenuhi sebagian layar. Form adalah widget wrapper yang menghubungkan semua input field dan memungkinkan penggunaan validasi secara keseluruhan. Key pada Form diisi dengan _formKey agar bisa dipicu validasinya nanti. Column digunakan untuk mengatur layout vertikal dengan crossAxisAlignment: CrossAxisAlignment.stretch agar semua child memiliki lebar yang sama dengan lebar layar.
+              </p>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/16.png" data-basesrc="images/flutter-input-forms/16" alt="SingleChildScrollView, Form, dan Column sebagai kerangka layout" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>SingleChildScrollView, Form, dan Column sebagai kerangka layout</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>f. TextFormField untuk Judul</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/17.png" data-basesrc="images/flutter-input-forms/17" alt="TextFormField judul transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>TextFormField judul transaksi</figcaption>
+              </figure>
+              <p>
+                TextFormField untuk input judul menggunakan _titleController untuk mengambil nilai input. Tampilan input diatur melalui decoration yang mencakup label text, hint text dengan contoh pengisian, dan icon title di awal input. Validasi diterapkan di validator dengan memeriksa apakah nilai yang dimasukkan null atau kosong. Jika kosong, pesan error 'Judul transaksi tidak boleh kosong' akan ditampilkan, sedangkan jika ada isinya, validator mengembalikan null yang berarti input valid.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>g. TextFormField untuk Nominal</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/18.png" data-basesrc="images/flutter-input-forms/18" alt="Input nominal uang" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Input nominal uang</figcaption>
+              </figure>
+              <p>
+                Input nominal menggunakan _amountController dan keyboardType: TextInputType.number yang membuat keyboard yang muncul saat user mengklik field ini adalah numeric keyboard agar user hanya bisa memasukkan angka. Tampilan diatur dengan label, hint text, dan icon uang untuk memperjelas fungsi field. Validator memeriksa apakah field kosong dan menampilkan pesan error jika belum diisi.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>h. DropdownButtonFormField untuk Kategori</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/19.png" data-basesrc="images/flutter-input-forms/19" alt="Dropdown kategori transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Dropdown kategori transaksi</figcaption>
+              </figure>
+              <p>
+                DropdownButtonFormField memungkankan user memilih salah satu kategori dari daftar yang tersedia. value menampilkan kategori yang saat ini dipilih. Tampilan dropdown diatur dengan label text dan border menggunakan OutlineInputBorder. items diisi dengan hasil mapping dari _categories list menjadi DropdownMenuItem agar bisa ditampilkan dalam dropdown. Ketika user memilih opsi baru, onChanged dipanggil dan setState() digunakan untuk update nilai _selectedCategory sehingga tampilan dropdown berubah sesuai pilihan user.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>i. Input Tanggal dengan Date Picker</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/20.png" data-basesrc="images/flutter-input-forms/20" alt="Input tanggal dengan date picker" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Input tanggal dengan date picker</figcaption>
+              </figure>
+              <p>
+                Input tanggal dibuat dengan readOnly: true agar user tidak bisa mengetik manual, melainkan harus memilih dari date picker. Tampilan input menggunakan label, hint text, dan icon kalender. suffixIcon berisi IconButton dengan icon tambah untuk membuka dialog date picker. Ketika tombol ditekan, showDatePicker() dipanggil secara async dengan tanggal saat ini sebagai nilai awal, rentang tanggal dari tahun 2000 hingga hari ini, dan jika user memilih tanggal, nilai tersebut diformat menjadi format DD/MM/YYYY menggunakan padLeft(2, '0') untuk memastikan angka dua digit, lalu disimpan ke _dateController dengan setState(). Validator memeriksa apakah field kosong.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>j. Tombol Submit dengan SnackBar</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/21.png" data-basesrc="images/flutter-input-forms/21" alt="SnackBar feedback setelah submit" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>SnackBar feedback setelah submit</figcaption>
+              </figure>
+              <p>
+                Tombol ElevatedButton digunakan untuk submit form. Ketika ditekan, onPressed dipanggil dan _formKey.currentState!.validate() digunakan untuk memicu validasi semua field dalam form sekaligus. Jika semua field valid (validator tidak mengembalikan pesan error), maka ScaffoldMessenger.of(context).showSnackBar() dipanggil untuk menampilkan SnackBar di bagian bawah layar dengan background hijau sebagai indikator keberhasilan. SnackBar menampilkan ringkasan data yang telah diinput oleh user yaitu judul, nominal, dan tanggal transaksi.
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>k. Hasil Running</h5>
+              <figure class="report-figure">
+                <img src="images/flutter-input-forms/hasil2.png" data-basesrc="images/flutter-input-forms/hasil2" alt="Tampilan aplikasi tugas praktikum" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <figcaption>Tampilan aplikasi tugas praktikum</figcaption>
+              </figure>
+              <p>
+                Jalankan program nya
+              </p>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Melalui pembuatan aplikasi Expense Tracker, mahasiswa telah berhasil memahami konsep dasar input widgets dan forms di Flutter, mulai dari penggunaan TextFormField dengan TextEditingController, widget dropdown menggunakan DropdownButtonFormField, hingga sistem validasi input yang memastikan data tidak kosong atau tidak valid. Proses pembuatan aplikasi ini menunjukkan bagaimana menggabungkan beberapa widget Flutter menjadi satu form yang terstruktur dan user-friendly.
+          </p>
+          <p>
+            Pembuatan aplikasi ini juga melibatkan pengelolaan state menggunakan StatefulWidget, implementasi GlobalKey&lt;FormState&gt;, serta fungsi dispose() untuk membersihkan controller. Selain itu, penambahan fitur showDatePicker membuat aplikasi semakin lengkap dalam menangkap data transaksi keuangan. Dengan aplikasi ini, diharapkan mahasiswa dapat mengaplikasikan pengetahuan yang telah dipelajari dalam membuat aplikasi mobile yang lebih kompleks di masa mendatang.
+          </p>
+          <p>
+            Secara keseluruhan, praktikum ini memberikan pemahaman yang lebih mendalam tentang bagaimana membangun form input yang baik di Flutter. Meskipun masih ada ruang untuk pengembangan lebih lanjut, hasil yang diperoleh sudah sangat memuaskan dan sesuai dengan tujuan pembelajaran.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>Kode dan arsip project dapat dibuka melalui repository GitHub berikut.</p>
+        </div>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
+
     <article class="report-detail glass" id="report-mobile" tabindex="-1">
       <div class="report-detail-head">
         <span class="report-badge">Aplikasi Mobile</span>
@@ -3558,6 +3921,22 @@
   if (window.location.hash) {
     showReport(window.location.hash.slice(1));
   }
+
+  window.tryReportImageExt = function (img) {
+    const base = img.dataset.basesrc;
+    if (!base) return;
+
+    const extensions = ['png', 'jpg', 'jpeg', 'webp', 'PNG', 'JPG', 'JPEG'];
+    let index = Number(img.dataset.extIndex || 1);
+
+    if (index >= extensions.length) {
+      img.onerror = null;
+      return;
+    }
+
+    img.dataset.extIndex = String(index + 1);
+    img.src = base + '.' + extensions[index];
+  };
 </script>
 
 <footer class="footer-clean reveal">
