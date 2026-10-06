@@ -426,14 +426,14 @@
                 Langkah pertama adalah membuat project Laravel. Setelah project berhasil dibuat, jalankan perintah <code>npm install</code> dan <code>npm run build</code> untuk menginstal dependensi frontend dan membangun aset.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-01.png" alt="Terminal menjalankan npm install dan npm run build pada project Laravel">
+                <img src="images/report-laravel-ui/report-laravel-ui-01.webp" alt="Terminal menjalankan npm install dan npm run build pada project Laravel">
                 <figcaption>Proses instalasi dependensi frontend menggunakan <code>npm install</code> dan <code>npm run build</code>.</figcaption>
               </figure>
               <p>
                 Setelah project selesai, dilakukan konfigurasi database pada file <code>.env</code>. Hal ini bertujuan agar aplikasi dapat terkoneksi ke database MySQL yang telah dibuat melalui interface (phpMyAdmin).
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-02.png" alt="Konfigurasi database pada file env Laravel">
+                <img src="images/report-laravel-ui/report-laravel-ui-02.webp" alt="Konfigurasi database pada file env Laravel">
                 <figcaption>Konfigurasi koneksi database pada file <code>.env</code>.</figcaption>
               </figure>
             </section>
@@ -444,18 +444,18 @@
                 Untuk fitur login dan register, digunakan package <code>laravel/ui</code> dengan framework Bootstrap. Hal ini mempermudah proses scaffolding halaman autentikasi.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-03.png" alt="Instalasi package laravel ui dan bootstrap auth melalui terminal">
+                <img src="images/report-laravel-ui/report-laravel-ui-03.webp" alt="Instalasi package laravel ui dan bootstrap auth melalui terminal">
                 <figcaption>Instalasi package <code>laravel/ui</code> dan scaffolding autentikasi Bootstrap menggunakan <code>php artisan ui bootstrap --auth</code>.</figcaption>
               </figure>
               <p>
                 Setelah berhasil, silakan buka halaman login dan register. Jika berhasil maka akan menampilkan seperti berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-04.png" alt="Halaman login Laravel UI Bootstrap">
+                <img src="images/report-laravel-ui/report-laravel-ui-04.webp" alt="Halaman login Laravel UI Bootstrap">
                 <figcaption>Halaman login yang dihasilkan oleh Laravel UI Bootstrap.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-05.png" alt="Halaman register Laravel UI Bootstrap">
+                <img src="images/report-laravel-ui/report-laravel-ui-05.webp" alt="Halaman register Laravel UI Bootstrap">
                 <figcaption>Halaman register yang dihasilkan oleh Laravel UI Bootstrap.</figcaption>
               </figure>
             </section>
@@ -471,14 +471,14 @@
                 Authentication Laravel secara otomatis akan menggunakan table Users yang berisi tentang informasi data user, berikut struktur table users. Dengan menggunakan perintah <code>php artisan make:migration create_table_users</code>, maka ada pada tabel pada database dengan struktur berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-06.png" alt="Struktur tabel users pada database">
+                <img src="images/report-laravel-ui/report-laravel-ui-06.webp" alt="Struktur tabel users pada database">
                 <figcaption>Struktur tabel <code>users</code> pada database.</figcaption>
               </figure>
               <p>
                 Selanjutnya buka folder migration yang sudah di buat dan tulis kode berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-07.png" alt="Kode migration untuk kustomisasi tabel users">
+                <img src="images/report-laravel-ui/report-laravel-ui-07.webp" alt="Kode migration untuk kustomisasi tabel users">
                 <figcaption>File migration untuk kustomisasi struktur tabel <code>users</code>.</figcaption>
               </figure>
 
@@ -487,21 +487,21 @@
                 Langkah selanjutnya setelah mengisikan tabel users adalah mengisi data pengguna melalui fitur seeding. Untuk menguji, buatlah seeder bernama <code>AdminSeeder</code>, dengan menggunakan perintah <code>php artisan make:seeder AdminSeeder</code>.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-08.png" alt="Perintah membuat AdminSeeder melalui terminal">
+                <img src="images/report-laravel-ui/report-laravel-ui-08.webp" alt="Perintah membuat AdminSeeder melalui terminal">
                 <figcaption>Perintah untuk membuat file <code>AdminSeeder</code>.</figcaption>
               </figure>
               <p>
                 Setelah perintah dijalankan, file <code>AdminSeeder.php</code> pada folder <code>database/seeders</code>. Selanjutnya, silakan akses file tersebut dan masukkan kode berikut untuk menambahkan data administrator.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-09.png" alt="Kode AdminSeeder untuk data administrator">
+                <img src="images/report-laravel-ui/report-laravel-ui-09.webp" alt="Kode AdminSeeder untuk data administrator">
                 <figcaption>Kode <code>AdminSeeder</code> berisi data awal untuk akun administrator.</figcaption>
               </figure>
               <p>
                 Selanjutnya untuk menjalankan seeding dengan cara menggunakan perintah berikut: <code>php artisan db:seed --class=AdminSeeder</code>. Jika berhasil maka akan muncul seperti gambar berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-10.png" alt="Menjalankan seeder AdminSeeder melalui terminal">
+                <img src="images/report-laravel-ui/report-laravel-ui-10.webp" alt="Menjalankan seeder AdminSeeder melalui terminal">
                 <figcaption>Perintah <code>php artisan db:seed --class=AdminSeeder</code> berhasil dijalankan.</figcaption>
               </figure>
             </section>
@@ -514,18 +514,18 @@
 
               <p><strong>a. Halaman Login Aplikasi</strong></p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-11.png" alt="Kode halaman login dengan template SB Admin 2">
+                <img src="images/report-laravel-ui/report-laravel-ui-11.webp" alt="Kode halaman login dengan template SB Admin 2">
                 <figcaption>Kode blade untuk halaman login menggunakan template SB Admin 2.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-12.png" alt="Kode lanjutan halaman login SB Admin 2">
+                <img src="images/report-laravel-ui/report-laravel-ui-12.webp" alt="Kode lanjutan halaman login SB Admin 2">
                 <figcaption>Kode lanjutan halaman login SB Admin 2.</figcaption>
               </figure>
               <p>
                 Maka output yang akan di hasilkan adalah sebagai berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-13.png" alt="Tampilan halaman login dengan template SB Admin 2">
+                <img src="images/report-laravel-ui/report-laravel-ui-13.webp" alt="Tampilan halaman login dengan template SB Admin 2">
                 <figcaption>Hasil tampilan halaman login menggunakan template SB Admin 2.</figcaption>
               </figure>
 
@@ -534,7 +534,7 @@
                 Tahap berikutnya adalah membuat layout global yang berfungsi sebagai kerangka utama bagi keseluruhan aplikasi. Mengingat file <code>app.blade.php</code> sudah digunakan untuk halaman autentikasi (login), maka diperlukan pembuatan layout alternatif. Oleh karena itu, dibuatlah file <code>main.blade.php</code> di dalam direktori <code>views/layouts</code> sebagai layout utama yang akan digunakan oleh seluruh halaman yang membutuhkan tampilan dashboard. Kode program untuk layout global adalah sebagai berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-14.png" alt="Kode file main blade php sebagai layout global">
+                <img src="images/report-laravel-ui/report-laravel-ui-14.webp" alt="Kode file main blade php sebagai layout global">
                 <figcaption>File <code>main.blade.php</code> sebagai layout global aplikasi.</figcaption>
               </figure>
 
@@ -543,11 +543,11 @@
                 Buat file pada folder layouts dengan nama <code>sidebar.blade.php</code> dengan kode program berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-15.png" alt="Kode sidebar blade php bagian 1">
+                <img src="images/report-laravel-ui/report-laravel-ui-15.webp" alt="Kode sidebar blade php bagian 1">
                 <figcaption>Kode <code>sidebar.blade.php</code> bagian pertama.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-16.png" alt="Kode sidebar blade php bagian 2">
+                <img src="images/report-laravel-ui/report-laravel-ui-16.webp" alt="Kode sidebar blade php bagian 2">
                 <figcaption>Kode <code>sidebar.blade.php</code> bagian kedua.</figcaption>
               </figure>
 
@@ -556,11 +556,11 @@
                 Buat file pada folder layouts dengan nama <code>topbar.blade.php</code> dan isi dengan kode program berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-17.png" alt="Kode topbar blade php bagian 1">
+                <img src="images/report-laravel-ui/report-laravel-ui-17.webp" alt="Kode topbar blade php bagian 1">
                 <figcaption>Kode <code>topbar.blade.php</code> bagian pertama.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-18.png" alt="Kode topbar blade php bagian 2">
+                <img src="images/report-laravel-ui/report-laravel-ui-18.webp" alt="Kode topbar blade php bagian 2">
                 <figcaption>Kode <code>topbar.blade.php</code> bagian kedua.</figcaption>
               </figure>
 
@@ -569,7 +569,7 @@
                 Jika konfigurasi berhasil maka tampilan nya akan menjadi seperti berikut ini.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-19.png" alt="Tampilan dashboard dengan template SB Admin 2">
+                <img src="images/report-laravel-ui/report-laravel-ui-19.webp" alt="Tampilan dashboard dengan template SB Admin 2">
                 <figcaption>Hasil tampilan dashboard setelah integrasi template SB Admin 2 berhasil.</figcaption>
               </figure>
             </section>
@@ -583,7 +583,7 @@
                 Selanjutnya ini kode program berikut pada route web.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-20.png" alt="Kode route resource untuk UserController pada file web php">
+                <img src="images/report-laravel-ui/report-laravel-ui-20.webp" alt="Kode route resource untuk UserController pada file web php">
                 <figcaption>Penambahan route resource untuk <code>UserController</code> pada file <code>routes/web.php</code>.</figcaption>
               </figure>
             </section>
@@ -594,15 +594,15 @@
                 Setelah rute sudah berhasil di buat, selanjutnya adalah isi file tersebut seperti pada gambar.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-21.png" alt="Kode UserController bagian 1">
+                <img src="images/report-laravel-ui/report-laravel-ui-21.webp" alt="Kode UserController bagian 1">
                 <figcaption>Kode <code>UserController</code> bagian pertama.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-22.png" alt="Kode UserController bagian 2">
+                <img src="images/report-laravel-ui/report-laravel-ui-22.webp" alt="Kode UserController bagian 2">
                 <figcaption>Kode <code>UserController</code> bagian kedua.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-23.png" alt="Kode UserController bagian 3">
+                <img src="images/report-laravel-ui/report-laravel-ui-23.webp" alt="Kode UserController bagian 3">
                 <figcaption>Kode <code>UserController</code> bagian ketiga.</figcaption>
               </figure>
             </section>
@@ -613,22 +613,22 @@
                 Route untuk menampilkan view form tambah data user adalah <code>user/create</code>. Silahkan buka file <code>UserController</code> kemudian pada action create edit kode program menjadi seperti berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-24.png" alt="Kode create blade php bagian 1">
+                <img src="images/report-laravel-ui/report-laravel-ui-24.webp" alt="Kode create blade php bagian 1">
                 <figcaption>Kode file <code>create.blade.php</code> bagian pertama.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-25.png" alt="Kode create blade php bagian 2">
+                <img src="images/report-laravel-ui/report-laravel-ui-25.webp" alt="Kode create blade php bagian 2">
                 <figcaption>Kode file <code>create.blade.php</code> bagian kedua.</figcaption>
               </figure>
               <p>
                 Jika sudah, silahkan di cek apakah hasilnya sudah sama dengan gambar berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-26.png" alt="Tampilan form create user pada browser">
+                <img src="images/report-laravel-ui/report-laravel-ui-26.webp" alt="Tampilan form create user pada browser">
                 <figcaption>Hasil tampilan form create user pada browser.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-27.png" alt="Tampilan form create user dengan template SB Admin 2">
+                <img src="images/report-laravel-ui/report-laravel-ui-27.webp" alt="Tampilan form create user dengan template SB Admin 2">
                 <figcaption>Tampilan form create user setelah integrasi template SB Admin 2.</figcaption>
               </figure>
             </section>
@@ -642,21 +642,21 @@
                 Selanjutnya buat file dengan nama <code>index.blade.php</code> pada folder <code>views/user</code> dan isi dengan kode program berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-28.png" alt="Kode index blade php untuk menampilkan list user">
+                <img src="images/report-laravel-ui/report-laravel-ui-28.webp" alt="Kode index blade php untuk menampilkan list user">
                 <figcaption>Kode file <code>index.blade.php</code> untuk menampilkan daftar user.</figcaption>
               </figure>
               <p>
                 Untuk mengecek apakah sudah berhasil, coba lakukan penginputan data seperti pada gambar.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-29.png" alt="Tampilan list user pada browser">
+                <img src="images/report-laravel-ui/report-laravel-ui-29.webp" alt="Tampilan list user pada browser">
                 <figcaption>Hasil tampilan daftar user pada browser.</figcaption>
               </figure>
               <p>
                 Setelah di tambahkan kode ini maka tampilan list user akan menjadi seperti berikut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-30.png" alt="Tampilan list user final dengan DataTables">
+                <img src="images/report-laravel-ui/report-laravel-ui-30.webp" alt="Tampilan list user final dengan DataTables">
                 <figcaption>Tampilan akhir daftar user dengan fitur DataTables.</figcaption>
               </figure>
             </section>
@@ -670,18 +670,18 @@
                 Saat pengguna mengakses URL dengan format <code>users/{user}/edit</code>, di mana <code>{user}</code> merepresentasikan ID unik dari data yang dipilih. Langkah berikut adalah mengimplementasikan logika perubahan data pada method edit di dalam <code>UserController</code>.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-31.png" alt="Kode edit blade php untuk form update user">
+                <img src="images/report-laravel-ui/report-laravel-ui-31.webp" alt="Kode edit blade php untuk form update user">
                 <figcaption>Kode file <code>edit.blade.php</code> untuk form update data user.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-32.png" alt="Kode lanjutan edit blade php">
+                <img src="images/report-laravel-ui/report-laravel-ui-32.webp" alt="Kode lanjutan edit blade php">
                 <figcaption>Kode lanjutan file <code>edit.blade.php</code>.</figcaption>
               </figure>
               <p>
                 Tampilan form jika sudah akan menjadi seperti ini.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-33.png" alt="Tampilan form edit user pada browser">
+                <img src="images/report-laravel-ui/report-laravel-ui-33.webp" alt="Tampilan form edit user pada browser">
                 <figcaption>Hasil tampilan form edit user pada browser.</figcaption>
               </figure>
             </section>
@@ -692,14 +692,14 @@
                 Tambahkan tombol atau link pada list user, silahkan buka view user <code>index.blade.php</code> dan tambahkan kode program berikut di bawah link edit.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-34.png" alt="Kode tombol delete pada halaman list user">
+                <img src="images/report-laravel-ui/report-laravel-ui-34.webp" alt="Kode tombol delete pada halaman list user">
                 <figcaption>Penambahan tombol delete pada halaman daftar user.</figcaption>
               </figure>
               <p>
                 Untuk mengecek apakah sudah berhasil, coba lakukan penghapusan data seperti pada gambar.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-ui/report-laravel-ui-35.png" alt="Proses penghapusan data user">
+                <img src="images/report-laravel-ui/report-laravel-ui-35.webp" alt="Proses penghapusan data user">
                 <figcaption>Proses penghapusan data user berhasil dilakukan.</figcaption>
               </figure>
             </section>
@@ -787,7 +787,7 @@
                 Bisa dilihat pada gambar untuk bagaimana cara mengecek kebutuhan system dari Laravel.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-4-1-kebutuhan-system.png" alt="Screenshot pengecekan versi PHP Composer Git Node JS dan NPM">
+                <img src="images/report-laravel-4-1-kebutuhan-system.webp" alt="Screenshot pengecekan versi PHP Composer Git Node JS dan NPM">
                 <figcaption>Pengecekan versi PHP, Composer, Git, Node JS, dan NPM melalui terminal.</figcaption>
               </figure>
               <p>
@@ -804,11 +804,11 @@
                 Gunakan perintah <code>composer create-project laravel/laravel:^12 PraktWeb1 --prefer-dist</code>.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-4-2-create-project-1.png" alt="Screenshot perintah composer create project Laravel">
+                <img src="images/report-laravel-4-2-create-project-1.webp" alt="Screenshot perintah composer create project Laravel">
                 <figcaption>Proses awal pembuatan project Laravel menggunakan Composer.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-4-2-create-project-2.png" alt="Screenshot proses instalasi dependensi Laravel selesai">
+                <img src="images/report-laravel-4-2-create-project-2.webp" alt="Screenshot proses instalasi dependensi Laravel selesai">
                 <figcaption>Proses instalasi package, generate application key, dan migration awal Laravel.</figcaption>
               </figure>
             </section>
@@ -826,7 +826,7 @@
                 Untuk menjalankan project Laravel, digunakan perintah Artisan <code>php artisan serve</code>. Setelah perintah dijalankan, Laravel akan menjalankan server lokal. Biasanya aplikasi dapat diakses melalui browser dengan alamat <code>http://127.0.0.1:8000</code>. Jika berhasil, maka halaman awal Laravel akan tampil pada browser.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-4-4-run-project.png" alt="Screenshot halaman awal Laravel dan terminal php artisan serve">
+                <img src="images/report-laravel-4-4-run-project.webp" alt="Screenshot halaman awal Laravel dan terminal php artisan serve">
                 <figcaption>Project Laravel berhasil dijalankan pada server lokal melalui perintah <code>php artisan serve</code>.</figcaption>
               </figure>
             </section>
@@ -840,11 +840,11 @@
                 Route sederhana dapat dibuat untuk menampilkan teks <code>Hello World</code> pada browser.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-4-5-route-hello.png" alt="Screenshot route hello world pada file web php">
+                <img src="images/report-laravel-4-5-route-hello.webp" alt="Screenshot route hello world pada file web php">
                 <figcaption>Penambahan route <code>/hello</code> pada file <code>routes/web.php</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-4-5-result-hello.png" alt="Screenshot hasil halaman hello world di browser">
+                <img src="images/report-laravel-4-5-result-hello.webp" alt="Screenshot hasil halaman hello world di browser">
                 <figcaption>Hasil tampilan halaman <code>/hello</code> pada browser.</figcaption>
               </figure>
             </section>
@@ -859,19 +859,19 @@
                 <li>Buatkan routing <code>/user</code> menggunakan view tersebut.</li>
               </ul>
               <figure class="report-figure">
-                <img src="images/report-laravel-4-6-controller.png" alt="Screenshot kode userController php">
+                <img src="images/report-laravel-4-6-controller.webp" alt="Screenshot kode userController php">
                 <figcaption>Pembuatan controller <code>userController</code> dengan function <code>index</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-4-6-view.png" alt="Screenshot file index blade php untuk halaman user">
+                <img src="images/report-laravel-4-6-view.webp" alt="Screenshot file index blade php untuk halaman user">
                 <figcaption>Pembuatan view <code>resources/views/user/index.blade.php</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-4-6-route-user.png" alt="Screenshot route user pada file web php">
+                <img src="images/report-laravel-4-6-route-user.webp" alt="Screenshot route user pada file web php">
                 <figcaption>Penambahan route <code>/user</code> yang mengarah ke <code>userController</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-4-6-result-user.png" alt="Screenshot hasil halaman user di browser">
+                <img src="images/report-laravel-4-6-result-user.webp" alt="Screenshot hasil halaman user di browser">
                 <figcaption>Hasil tampilan halaman <code>/user</code> pada browser.</figcaption>
               </figure>
             </section>
@@ -962,7 +962,7 @@
                 Setelah MySQL aktif, buka phpMyAdmin melalui browser dengan alamat <code>http://localhost/phpmyadmin</code>. Kemudian buat database baru dengan nama <code>praktikum_laravel</code>. Database ini akan digunakan untuk menyimpan tabel dan data yang dibuat melalui Laravel.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-01.png" alt="Pembuatan database praktikum laravel di phpMyAdmin">
+                <img src="images/report-laravel-migration/report-laravel-migration-01.webp" alt="Pembuatan database praktikum laravel di phpMyAdmin">
                 <figcaption>Pembuatan database <code>praktikum_laravel</code> melalui phpMyAdmin.</figcaption>
               </figure>
               <p>
@@ -972,7 +972,7 @@
                 Konfigurasi yang digunakan adalah <code>DB_CONNECTION=mysql</code>, <code>DB_HOST=127.0.0.1</code>, <code>DB_PORT=3306</code>, <code>DB_DATABASE=praktikum_laravel</code>, <code>DB_USERNAME=root</code>, dan <code>DB_PASSWORD=</code>. Pada XAMPP, username database biasanya menggunakan <code>root</code>, sedangkan password dikosongkan.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-02.png" alt="Konfigurasi database Laravel pada file env">
+                <img src="images/report-laravel-migration/report-laravel-migration-02.webp" alt="Konfigurasi database Laravel pada file env">
                 <figcaption>Konfigurasi koneksi database pada file <code>.env</code>.</figcaption>
               </figure>
             </section>
@@ -986,7 +986,7 @@
                 Untuk membuat migration tabel products, digunakan perintah <code>php artisan make:migration create_products_table</code> pada terminal. Setelah perintah dijalankan, Laravel akan membuat file migration baru di dalam folder <code>database/migrations</code>.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-03.png" alt="File migration create products table di folder migrations">
+                <img src="images/report-laravel-migration/report-laravel-migration-03.webp" alt="File migration create products table di folder migrations">
                 <figcaption>File migration <code>create_products_table</code> berhasil dibuat pada folder <code>migrations</code>.</figcaption>
               </figure>
             </section>
@@ -1000,14 +1000,14 @@
                 Pada bagian function <code>up()</code>, ditambahkan struktur tabel seperti <code>id</code>, <code>name</code>, <code>price</code>, <code>description</code>, <code>created_at</code>, dan <code>updated_at</code>. Kolom-kolom tersebut digunakan untuk menyimpan data produk yang nantinya akan ditampilkan pada halaman web.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-04.png" alt="Kode struktur tabel products pada function up">
+                <img src="images/report-laravel-migration/report-laravel-migration-04.webp" alt="Kode struktur tabel products pada function up">
                 <figcaption>Struktur tabel <code>products</code> dituliskan pada function <code>up()</code>.</figcaption>
               </figure>
               <p>
                 Selanjutnya, pada bagian function <code>down()</code>, dituliskan perintah <code>Schema::dropIfExists('products')</code>. Function <code>down()</code> digunakan untuk menghapus tabel jika migration dibatalkan atau dilakukan rollback.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-05.png" alt="Kode function down untuk menghapus tabel products">
+                <img src="images/report-laravel-migration/report-laravel-migration-05.webp" alt="Kode function down untuk menghapus tabel products">
                 <figcaption>Function <code>down()</code> digunakan untuk menghapus tabel ketika migration di-rollback.</figcaption>
               </figure>
             </section>
@@ -1021,7 +1021,7 @@
                 Untuk memastikan tabel berhasil dibuat, database dapat dicek melalui phpMyAdmin. Jika berhasil, maka tabel products akan muncul di dalam database.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-06.png" alt="Tabel products berhasil terbentuk di database">
+                <img src="images/report-laravel-migration/report-laravel-migration-06.webp" alt="Tabel products berhasil terbentuk di database">
                 <figcaption>Tabel <code>products</code> berhasil terbentuk pada database setelah migration dijalankan.</figcaption>
               </figure>
             </section>
@@ -1035,7 +1035,7 @@
                 Untuk membuat seeder ProductSeeder, digunakan perintah <code>php artisan make:seeder ProductSeeder</code>. Setelah perintah dijalankan, file seeder akan dibuat pada folder <code>database/seeders</code>.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-08.png" alt="File ProductSeeder php pada folder seeders">
+                <img src="images/report-laravel-migration/report-laravel-migration-08.webp" alt="File ProductSeeder php pada folder seeders">
                 <figcaption>File <code>ProductSeeder.php</code> berhasil dibuat pada folder <code>seeders</code>.</figcaption>
               </figure>
             </section>
@@ -1049,7 +1049,7 @@
                 Data yang dimasukkan berupa contoh produk, seperti Laptop dan Mouse. Masing-masing data berisi nama produk, harga, deskripsi, serta waktu pembuatan dan pembaruan data. Data tersebut nantinya akan tersimpan di database setelah seeder dijalankan.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-07.png" alt="Kode pengisian data awal produk pada ProductSeeder">
+                <img src="images/report-laravel-migration/report-laravel-migration-07.webp" alt="Kode pengisian data awal produk pada ProductSeeder">
                 <figcaption>Kode pengisian data awal produk pada file <code>ProductSeeder.php</code>.</figcaption>
               </figure>
             </section>
@@ -1063,7 +1063,7 @@
                 Kode tersebut digunakan untuk memberi tahu Laravel bahwa ProductSeeder adalah seeder yang akan dijalankan ketika proses seeding dilakukan.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-09.png" alt="Pemanggilan ProductSeeder pada DatabaseSeeder">
+                <img src="images/report-laravel-migration/report-laravel-migration-09.webp" alt="Pemanggilan ProductSeeder pada DatabaseSeeder">
                 <figcaption>Pemanggilan <code>ProductSeeder</code> pada file <code>DatabaseSeeder.php</code>.</figcaption>
               </figure>
             </section>
@@ -1077,7 +1077,7 @@
                 Setelah perintah seeder dijalankan, data dapat dicek melalui phpMyAdmin pada tabel products. Jika berhasil, maka data produk seperti Laptop dan Mouse akan muncul pada tabel tersebut.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-10.png" alt="Data produk berhasil masuk ke tabel products">
+                <img src="images/report-laravel-migration/report-laravel-migration-10.webp" alt="Data produk berhasil masuk ke tabel products">
                 <figcaption>Data awal produk berhasil masuk ke tabel <code>products</code> setelah seeder dijalankan.</figcaption>
               </figure>
             </section>
@@ -1101,11 +1101,11 @@
                 Kode routing dasar dapat dituliskan pada file <code>routes/web.php</code>. Setelah server Laravel dijalankan dengan perintah <code>php artisan serve</code>, halaman dapat dibuka melalui alamat <code>http://127.0.0.1:8000</code>.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-11.png" alt="Kode routing dasar pada file web php">
+                <img src="images/report-laravel-migration/report-laravel-migration-11.webp" alt="Kode routing dasar pada file web php">
                 <figcaption>Kode routing dasar dituliskan pada file <code>web.php</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-12.png" alt="Hasil tampilan routing dasar di browser">
+                <img src="images/report-laravel-migration/report-laravel-migration-12.webp" alt="Hasil tampilan routing dasar di browser">
                 <figcaption>Hasil tampilan routing dasar ketika URL diakses melalui browser.</figcaption>
               </figure>
             </section>
@@ -1119,11 +1119,11 @@
                 Contohnya, route <code>/produk/{id}</code> dapat digunakan untuk menangkap nilai id produk. Jika pengguna membuka alamat <code>/produk/1</code>, maka Laravel akan mengambil nilai <code>1</code> dari URL dan menampilkannya sebagai bagian dari respon.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-13.png" alt="Kode routing parameter produk id">
+                <img src="images/report-laravel-migration/report-laravel-migration-13.webp" alt="Kode routing parameter produk id">
                 <figcaption>Contoh routing parameter untuk menangkap nilai <code>id</code> dari URL.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-14.png" alt="Hasil tampilan routing parameter produk id di browser">
+                <img src="images/report-laravel-migration/report-laravel-migration-14.webp" alt="Hasil tampilan routing parameter produk id di browser">
                 <figcaption>Nilai parameter dari URL berhasil ditampilkan pada browser.</figcaption>
               </figure>
             </section>
@@ -1137,7 +1137,7 @@
                 Hal ini dapat membantu ketika route digunakan pada banyak bagian aplikasi. Jika alamat URL berubah, bagian lain yang menggunakan nama route tetap lebih mudah disesuaikan.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-15.png" alt="Contoh kode named route dashboard">
+                <img src="images/report-laravel-migration/report-laravel-migration-15.webp" alt="Contoh kode named route dashboard">
                 <figcaption>Contoh named route dengan nama <code>dashboard</code>.</figcaption>
               </figure>
             </section>
@@ -1151,7 +1151,7 @@
                 Contohnya, beberapa route yang berada di bawah awalan <code>/admin</code> dapat dimasukkan ke dalam satu group. Dengan begitu, route seperti dashboard dan products dapat dikelola dalam kelompok route yang sama.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-16.png" alt="Contoh kode route group dengan prefix admin">
+                <img src="images/report-laravel-migration/report-laravel-migration-16.webp" alt="Contoh kode route group dengan prefix admin">
                 <figcaption>Contoh route group dengan prefix <code>admin</code>.</figcaption>
               </figure>
             </section>
@@ -1175,7 +1175,7 @@
                 Kolom yang dapat dimasukkan ke dalam <code>$fillable</code> antara lain <code>name</code>, <code>price</code>, dan <code>description</code>. Dengan pengaturan ini, Laravel mengetahui data apa saja yang boleh diproses melalui model Product.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-17.png" alt="Kode model Product dengan properti fillable">
+                <img src="images/report-laravel-migration/report-laravel-migration-17.webp" alt="Kode model Product dengan properti fillable">
                 <figcaption>Pengaturan model <code>Product</code> dengan properti <code>$fillable</code>.</figcaption>
               </figure>
             </section>
@@ -1196,7 +1196,7 @@
                 Pada bagian tertentu digunakan directive Blade seperti <code>@yield('title')</code> dan <code>@yield('content')</code>. Bagian <code>@yield('title')</code> digunakan sebagai tempat untuk menampilkan judul halaman, sedangkan <code>@yield('content')</code> digunakan sebagai tempat untuk menampilkan isi utama dari halaman.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-18.png" alt="Kode file layout utama app blade php">
+                <img src="images/report-laravel-migration/report-laravel-migration-18.webp" alt="Kode file layout utama app blade php">
                 <figcaption>File layout utama <code>app.blade.php</code> sebagai template dasar tampilan.</figcaption>
               </figure>
             </section>
@@ -1210,7 +1210,7 @@
                 Selanjutnya, <code>@section('title', 'Products')</code> digunakan untuk mengisi judul halaman, sedangkan <code>@section('content')</code> digunakan untuk menulis isi utama halaman. Dengan cara ini, file products tidak perlu menuliskan struktur HTML lengkap karena struktur utama sudah diambil dari file layout.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-19.png" alt="Kode view products menggunakan layout app blade">
+                <img src="images/report-laravel-migration/report-laravel-migration-19.webp" alt="Kode view products menggunakan layout app blade">
                 <figcaption>View products menggunakan layout utama dengan <code>@extends</code> dan <code>@section</code>.</figcaption>
               </figure>
             </section>
@@ -1224,7 +1224,7 @@
                 Dengan menggunakan Blade, proses menampilkan data menjadi lebih sederhana karena Laravel menyediakan sintaks khusus untuk menulis logika tampilan di dalam file view.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-20.png" alt="Kode perulangan Blade untuk menampilkan data produk">
+                <img src="images/report-laravel-migration/report-laravel-migration-20.webp" alt="Kode perulangan Blade untuk menampilkan data produk">
                 <figcaption>Perulangan Blade digunakan untuk menampilkan data produk dari database.</figcaption>
               </figure>
             </section>
@@ -1235,104 +1235,104 @@
                 Pada bagian tugas, dibuat fitur CRUD sederhana untuk data mahasiswa. Langkah pertama adalah membuat database baru melalui phpMyAdmin, kemudian mengatur koneksi database pada file <code>.env</code>. Setelah koneksi berhasil, dibuat model mahasiswa, migration untuk tabel mahasiswa, seeder data awal, route, controller, dan view untuk mengelola data.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-21.png" alt="Pembuatan database db mahasiswa di phpMyAdmin">
+                <img src="images/report-laravel-migration/report-laravel-migration-21.webp" alt="Pembuatan database db mahasiswa di phpMyAdmin">
                 <figcaption>Pembuatan database baru untuk data mahasiswa melalui phpMyAdmin.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-22.png" alt="Konfigurasi database mahasiswa pada file env">
+                <img src="images/report-laravel-migration/report-laravel-migration-22.webp" alt="Konfigurasi database mahasiswa pada file env">
                 <figcaption>Konfigurasi koneksi database mahasiswa pada file <code>.env</code>.</figcaption>
               </figure>
               <p>
                 Setelah database terhubung, dibuat model <code>Mahasiswa</code> pada folder <code>app/Models</code>. Pada model tersebut, properti <code>$fillable</code> diisi dengan kolom <code>nim</code>, <code>nama</code>, dan <code>jurusan</code> agar data dapat diproses secara massal.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-23.png" alt="Kode model Mahasiswa dengan fillable nim nama jurusan">
+                <img src="images/report-laravel-migration/report-laravel-migration-23.webp" alt="Kode model Mahasiswa dengan fillable nim nama jurusan">
                 <figcaption>Pengaturan model <code>Mahasiswa</code> dengan kolom <code>nim</code>, <code>nama</code>, dan <code>jurusan</code>.</figcaption>
               </figure>
               <p>
                 Selanjutnya, dibuat file migration untuk menyusun struktur tabel mahasiswa. Migration dibuat melalui terminal, kemudian struktur tabel diatur pada file migration yang telah dibuat. Kolom yang digunakan antara lain <code>nim</code>, <code>nama</code>, dan <code>jurusan</code>.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-24.png" alt="Perintah membuat migration create mahasiswas table">
+                <img src="images/report-laravel-migration/report-laravel-migration-24.webp" alt="Perintah membuat migration create mahasiswas table">
                 <figcaption>Perintah untuk membuat file migration tabel mahasiswa.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-25.png" alt="Kode migration tabel mahasiswa">
+                <img src="images/report-laravel-migration/report-laravel-migration-25.webp" alt="Kode migration tabel mahasiswa">
                 <figcaption>Struktur tabel mahasiswa dituliskan pada file migration.</figcaption>
               </figure>
               <p>
                 Setelah struktur tabel selesai dibuat, migration dijalankan menggunakan perintah <code>php artisan migrate</code>. Jika berhasil, tabel mahasiswa akan dibuat di dalam database sesuai struktur yang sudah ditentukan.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-28.png" alt="Perintah php artisan migrate pada terminal">
+                <img src="images/report-laravel-migration/report-laravel-migration-28.webp" alt="Perintah php artisan migrate pada terminal">
                 <figcaption>Perintah <code>php artisan migrate</code> dijalankan melalui terminal.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-36.png" alt="Hasil migration berhasil dijalankan">
+                <img src="images/report-laravel-migration/report-laravel-migration-36.webp" alt="Hasil migration berhasil dijalankan">
                 <figcaption>Migration berhasil dijalankan dan tabel berhasil dibuat.</figcaption>
               </figure>
               <p>
                 Setelah tabel dibuat, dibuat seeder dengan nama <code>MahasiswaSeeder</code>. Seeder ini digunakan untuk memasukkan data akademik sebagai data awal. Agar seeder dapat dijalankan, <code>MahasiswaSeeder</code> dipanggil pada file <code>DatabaseSeeder.php</code>, kemudian dijalankan menggunakan perintah <code>php artisan db:seed</code>.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-26.png" alt="Perintah membuat MahasiswaSeeder">
+                <img src="images/report-laravel-migration/report-laravel-migration-26.webp" alt="Perintah membuat MahasiswaSeeder">
                 <figcaption>Perintah untuk membuat file <code>MahasiswaSeeder</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-38.png" alt="Kode MahasiswaSeeder untuk data awal mahasiswa">
+                <img src="images/report-laravel-migration/report-laravel-migration-38.webp" alt="Kode MahasiswaSeeder untuk data awal mahasiswa">
                 <figcaption>Kode <code>MahasiswaSeeder</code> berisi data awal mahasiswa.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-27.png" alt="Pemanggilan MahasiswaSeeder pada DatabaseSeeder">
+                <img src="images/report-laravel-migration/report-laravel-migration-27.webp" alt="Pemanggilan MahasiswaSeeder pada DatabaseSeeder">
                 <figcaption><code>MahasiswaSeeder</code> dipanggil pada file <code>DatabaseSeeder.php</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-37.png" alt="Hasil perintah db seed berhasil">
+                <img src="images/report-laravel-migration/report-laravel-migration-37.webp" alt="Hasil perintah db seed berhasil">
                 <figcaption>Seeder dijalankan sehingga data awal mahasiswa masuk ke database.</figcaption>
               </figure>
               <p>
                 Setelah data awal siap, dibuat route resource pada file <code>web.php</code> dengan controller <code>MahasiswaController</code>. Controller ini berisi beberapa method utama, yaitu <code>index</code> untuk menampilkan data, <code>create</code> untuk membuka form tambah data, <code>store</code> untuk menyimpan data baru, <code>edit</code> untuk membuka form edit, <code>update</code> untuk memperbarui data, dan <code>destroy</code> untuk menghapus data.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-29.png" alt="Route resource mahasiswa pada file web php">
+                <img src="images/report-laravel-migration/report-laravel-migration-29.webp" alt="Route resource mahasiswa pada file web php">
                 <figcaption>Route resource mahasiswa ditambahkan pada file <code>web.php</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-30.png" alt="Kode awal MahasiswaController">
+                <img src="images/report-laravel-migration/report-laravel-migration-30.webp" alt="Kode awal MahasiswaController">
                 <figcaption>Bagian awal <code>MahasiswaController</code> untuk menampilkan, membuat, dan menyimpan data.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-31.png" alt="Kode update dan delete pada MahasiswaController">
+                <img src="images/report-laravel-migration/report-laravel-migration-31.webp" alt="Kode update dan delete pada MahasiswaController">
                 <figcaption>Method <code>update</code> dan <code>destroy</code> digunakan untuk mengubah dan menghapus data mahasiswa.</figcaption>
               </figure>
               <p>
                 Kemudian dibuat beberapa file view di dalam folder <code>resources/views/mahasiswa</code>, yaitu <code>index.blade.php</code>, <code>create.blade.php</code>, dan <code>edit.blade.php</code>. Halaman index digunakan untuk menampilkan daftar mahasiswa, halaman create digunakan untuk menambah data, sedangkan halaman edit digunakan untuk mengubah data yang sudah ada.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-32.png" alt="Kode view index mahasiswa">
+                <img src="images/report-laravel-migration/report-laravel-migration-32.webp" alt="Kode view index mahasiswa">
                 <figcaption>View <code>index.blade.php</code> digunakan untuk menampilkan daftar mahasiswa dan tombol aksi.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-33.png" alt="Kode view create mahasiswa">
+                <img src="images/report-laravel-migration/report-laravel-migration-33.webp" alt="Kode view create mahasiswa">
                 <figcaption>View <code>create.blade.php</code> digunakan untuk menambahkan data mahasiswa baru.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-34.png" alt="Kode view edit mahasiswa">
+                <img src="images/report-laravel-migration/report-laravel-migration-34.webp" alt="Kode view edit mahasiswa">
                 <figcaption>View <code>edit.blade.php</code> digunakan untuk mengubah data mahasiswa.</figcaption>
               </figure>
               <p>
                 Output dari tugas ini adalah halaman daftar mahasiswa yang menampilkan data dari database, tombol tambah data, form tambah mahasiswa baru, form edit data mahasiswa, serta tombol untuk menghapus data. Dengan demikian, fitur CRUD sederhana berhasil dibuat menggunakan Laravel.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-39.png" alt="Output halaman daftar mahasiswa">
+                <img src="images/report-laravel-migration/report-laravel-migration-39.webp" alt="Output halaman daftar mahasiswa">
                 <figcaption>Output halaman daftar mahasiswa yang menampilkan data dari database.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-40.png" alt="Output form tambah mahasiswa baru">
+                <img src="images/report-laravel-migration/report-laravel-migration-40.webp" alt="Output form tambah mahasiswa baru">
                 <figcaption>Output form tambah mahasiswa baru.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-migration/report-laravel-migration-41.png" alt="Output form edit data mahasiswa">
+                <img src="images/report-laravel-migration/report-laravel-migration-41.webp" alt="Output form edit data mahasiswa">
                 <figcaption>Output form edit data mahasiswa.</figcaption>
               </figure>
             </section>
@@ -1418,11 +1418,11 @@
                 Migration pertama yang dibuat adalah tabel majors. Tabel ini digunakan untuk menyimpan data jurusan mahasiswa.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-01.png" alt="Perintah membuat migration tabel majors">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-01.webp" alt="Perintah membuat migration tabel majors">
                 <figcaption>Perintah <code>php artisan make:migration create_majors_table</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-02.png" alt="Kode migration tabel majors">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-02.webp" alt="Kode migration tabel majors">
                 <figcaption>Struktur tabel <code>majors</code> berisi kolom <code>id</code>, <code>name</code>, dan <code>timestamps</code>.</figcaption>
               </figure>
               <p>
@@ -1434,11 +1434,11 @@
                 Selanjutnya dibuat migration untuk tabel students. Tabel ini digunakan untuk menyimpan data mahasiswa seperti NIM, nama, alamat, dan jurusan.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-03.png" alt="Perintah membuat migration tabel students">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-03.webp" alt="Perintah membuat migration tabel students">
                 <figcaption>Perintah <code>php artisan make:migration create_students_table</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-04.png" alt="Kode migration tabel students">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-04.webp" alt="Kode migration tabel students">
                 <figcaption>Struktur tabel <code>students</code> dengan foreign key <code>major_id</code> yang mengarah ke tabel <code>majors</code>.</figcaption>
               </figure>
               <p>
@@ -1450,11 +1450,11 @@
                 Tabel subjects digunakan untuk menyimpan data mata kuliah. Data yang disimpan meliputi nama mata kuliah dan jumlah SKS.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-05.png" alt="Perintah membuat migration tabel subjects">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-05.webp" alt="Perintah membuat migration tabel subjects">
                 <figcaption>Perintah <code>php artisan make:migration create_subjects_table</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-06.png" alt="Kode migration tabel subjects">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-06.webp" alt="Kode migration tabel subjects">
                 <figcaption>Struktur tabel <code>subjects</code> berisi kolom <code>name</code> dan <code>sks</code>.</figcaption>
               </figure>
 
@@ -1463,11 +1463,11 @@
                 Migration berikutnya adalah tabel student_subject. Tabel ini merupakan tabel pivot yang digunakan untuk menghubungkan tabel students dan subjects.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-07.png" alt="Perintah membuat migration tabel student subject">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-07.webp" alt="Perintah membuat migration tabel student subject">
                 <figcaption>Perintah <code>php artisan make:migration create_student_subject_table</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-08.png" alt="Kode migration tabel student subject">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-08.webp" alt="Kode migration tabel student subject">
                 <figcaption>Tabel pivot <code>student_subject</code> memiliki foreign key <code>student_id</code> dan <code>subject_id</code>.</figcaption>
               </figure>
               <p>
@@ -1485,7 +1485,7 @@
                 Model Major digunakan untuk mengelola data pada tabel majors. Pada model Major, ditambahkan properti <code>$fillable</code> agar kolom <code>name</code> dapat diisi secara massal. Relasi yang dibuat adalah <code>students()</code> untuk menunjukkan bahwa satu jurusan dapat memiliki banyak mahasiswa.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-09.png" alt="Kode model Major">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-09.webp" alt="Kode model Major">
                 <figcaption>Model <code>Major</code> dengan relationship <code>hasMany(Student::class)</code>.</figcaption>
               </figure>
 
@@ -1494,7 +1494,7 @@
                 Model Student digunakan untuk mengelola data mahasiswa. Pada model ini terdapat relationship <code>major()</code> untuk menghubungkan mahasiswa dengan jurusan, serta relationship <code>subjects()</code> untuk menghubungkan mahasiswa dengan mata kuliah.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-10.png" alt="Kode model Student">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-10.webp" alt="Kode model Student">
                 <figcaption>Model <code>Student</code> dengan relasi <code>belongsTo</code> ke jurusan dan <code>belongsToMany</code> ke mata kuliah.</figcaption>
               </figure>
 
@@ -1503,7 +1503,7 @@
                 Model Subject digunakan untuk mengelola data mata kuliah. Kolom yang dapat diisi adalah <code>name</code> dan <code>sks</code>. Relationship <code>students()</code> digunakan untuk menunjukkan bahwa satu mata kuliah dapat diambil oleh banyak mahasiswa.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-11.png" alt="Kode model Subject">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-11.webp" alt="Kode model Subject">
                 <figcaption>Model <code>Subject</code> dengan relationship <code>belongsToMany(Student::class)</code>.</figcaption>
               </figure>
             </section>
@@ -1518,7 +1518,7 @@
                 MajorSeeder digunakan untuk mengisi data jurusan ke dalam tabel majors. Data jurusan yang dimasukkan adalah Teknik Informatika, Sistem Informasi, Teknik Komputer, dan Manajemen Informatika.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-12.png" alt="Kode MajorSeeder">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-12.webp" alt="Kode MajorSeeder">
                 <figcaption>Seeder untuk memasukkan data jurusan.</figcaption>
               </figure>
 
@@ -1527,7 +1527,7 @@
                 SubjectSeeder digunakan untuk mengisi data mata kuliah ke dalam tabel subjects. Data mata kuliah yang dimasukkan terdiri dari nama mata kuliah dan jumlah SKS.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-13.png" alt="Kode SubjectSeeder">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-13.webp" alt="Kode SubjectSeeder">
                 <figcaption>Seeder untuk memasukkan data mata kuliah dan jumlah SKS.</figcaption>
               </figure>
 
@@ -1536,7 +1536,7 @@
                 StudentSeeder digunakan untuk mengisi data mahasiswa ke dalam tabel students. Setelah data mahasiswa dibuat, setiap mahasiswa diberikan mata kuliah secara acak menggunakan hubungan melalui tabel pivot student_subject.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-14.png" alt="Kode StudentSeeder">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-14.webp" alt="Kode StudentSeeder">
                 <figcaption>Seeder untuk memasukkan data mahasiswa dan menghubungkannya dengan mata kuliah.</figcaption>
               </figure>
 
@@ -1545,7 +1545,7 @@
                 Setelah semua seeder dibuat, seluruh seeder tersebut dipanggil di dalam file DatabaseSeeder agar dapat dijalankan secara berurutan.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-15.png" alt="Kode pemanggilan seeder pada DatabaseSeeder">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-15.webp" alt="Kode pemanggilan seeder pada DatabaseSeeder">
                 <figcaption>Pemanggilan <code>MajorSeeder</code>, <code>SubjectSeeder</code>, <code>SubjectScheduleSeeder</code>, dan <code>StudentSeeder</code>.</figcaption>
               </figure>
             </section>
@@ -1559,27 +1559,27 @@
                 Controller yang dibuat adalah <code>StudentController</code>. Pada controller ini terdapat beberapa function, seperti index, show, create, store, edit, update, dan destroy.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-16.png" alt="Kode function index pada StudentController">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-16.webp" alt="Kode function index pada StudentController">
                 <figcaption>Function <code>index()</code> mengambil data mahasiswa beserta jurusan dan mata kuliah menggunakan eager loading.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-17.png" alt="Kode function show pada StudentController">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-17.webp" alt="Kode function show pada StudentController">
                 <figcaption>Function <code>show()</code> menampilkan detail data mahasiswa berdasarkan ID.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-18.png" alt="Kode function create pada StudentController">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-18.webp" alt="Kode function create pada StudentController">
                 <figcaption>Function <code>create()</code> menampilkan form tambah mahasiswa beserta data jurusan dan mata kuliah.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-19.png" alt="Kode function store pada StudentController">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-19.webp" alt="Kode function store pada StudentController">
                 <figcaption>Function <code>store()</code> menyimpan mahasiswa baru dan menghubungkan data mata kuliah yang dipilih.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-20.png" alt="Kode sync subject pada StudentController">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-20.webp" alt="Kode sync subject pada StudentController">
                 <figcaption>Method <code>sync()</code> digunakan untuk memperbarui mata kuliah yang diambil mahasiswa.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-21.png" alt="Kode detach dan delete pada StudentController">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-21.webp" alt="Kode detach dan delete pada StudentController">
                 <figcaption>Function <code>destroy()</code> melepaskan relasi mata kuliah sebelum data mahasiswa dihapus.</figcaption>
               </figure>
             </section>
@@ -1590,11 +1590,11 @@
                 Setelah controller dibuat, langkah berikutnya adalah membuat route. Route digunakan untuk menentukan alamat URL yang akan mengarah ke controller tertentu.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-22.png" alt="Kode route halaman utama mahasiswa">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-22.webp" alt="Kode route halaman utama mahasiswa">
                 <figcaption>Route halaman utama diarahkan ke <code>students.index</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-23.png" alt="Kode resource route students">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-23.webp" alt="Kode resource route students">
                 <figcaption>Resource route <code>students</code> menghubungkan function CRUD pada <code>StudentController</code>.</figcaption>
               </figure>
             </section>
@@ -1609,11 +1609,11 @@
                 Layout utama digunakan sebagai template dasar untuk halaman lainnya. Di dalam file ini terdapat struktur HTML, link Bootstrap, navbar, alert success, dan bagian <code>@yield('content')</code>.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-24.png" alt="Lokasi file layout app blade">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-24.webp" alt="Lokasi file layout app blade">
                 <figcaption>File <code>resources/views/layouts/app.blade.php</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-25.png" alt="Kode yield dan script bootstrap pada layout">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-25.webp" alt="Kode yield dan script bootstrap pada layout">
                 <figcaption>Bagian layout untuk menampilkan isi halaman dari view lain.</figcaption>
               </figure>
 
@@ -1622,11 +1622,11 @@
                 View index digunakan untuk menampilkan data mahasiswa dalam bentuk tabel. Data yang ditampilkan meliputi NIM, nama, jurusan, mata kuliah, total SKS, dan aksi.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-26.png" alt="Lokasi file index blade students">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-26.webp" alt="Lokasi file index blade students">
                 <figcaption>File <code>resources/views/students/index.blade.php</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-27.png" alt="Kode view index students">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-27.webp" alt="Kode view index students">
                 <figcaption>Perulangan data mahasiswa, jurusan, mata kuliah, total SKS, dan tombol aksi.</figcaption>
               </figure>
 
@@ -1635,19 +1635,19 @@
                 View create adalah halaman tambah mahasiswa. Form ini berisi input NIM, nama, alamat, pilihan jurusan, dan pilihan mata kuliah.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-28.png" alt="Lokasi file create blade students">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-28.webp" alt="Lokasi file create blade students">
                 <figcaption>File <code>resources/views/students/create.blade.php</code>.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-29.png" alt="Kode form action students store">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-29.webp" alt="Kode form action students store">
                 <figcaption>Form dikirim ke route <code>students.store</code> menggunakan method POST.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-30.png" alt="Kode dropdown jurusan pada form">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-30.webp" alt="Kode dropdown jurusan pada form">
                 <figcaption>Bagian jurusan ditampilkan menggunakan dropdown dari data majors.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-31.png" alt="Kode checkbox mata kuliah pada form">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-31.webp" alt="Kode checkbox mata kuliah pada form">
                 <figcaption>Bagian mata kuliah menggunakan checkbox karena mahasiswa dapat mengambil lebih dari satu mata kuliah.</figcaption>
               </figure>
             </section>
@@ -1662,7 +1662,7 @@
                 Method <code>with()</code> digunakan untuk mengambil data relasi dari model Student. Relasi major digunakan untuk mengambil data jurusan mahasiswa, sedangkan relasi subjects digunakan untuk mengambil data mata kuliah yang diambil oleh mahasiswa.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-32.png" alt="Query menampilkan semua mahasiswa dengan jurusan dan mata kuliah">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-32.webp" alt="Query menampilkan semua mahasiswa dengan jurusan dan mata kuliah">
                 <figcaption>Query untuk mengambil semua mahasiswa beserta jurusan dan mata kuliah.</figcaption>
               </figure>
 
@@ -1671,7 +1671,7 @@
                 Method <code>withCount('students')</code> digunakan untuk menghitung jumlah mahasiswa pada setiap jurusan. Setelah itu data diurutkan dari jumlah mahasiswa terbanyak.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-33.png" alt="Query jurusan dengan mahasiswa terbanyak">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-33.webp" alt="Query jurusan dengan mahasiswa terbanyak">
                 <figcaption>Query untuk mencari jurusan yang memiliki mahasiswa terbanyak.</figcaption>
               </figure>
 
@@ -1680,7 +1680,7 @@
                 Query berikut mencari mahasiswa berdasarkan NIM, kemudian mengambil data mata kuliah yang berhubungan dengan mahasiswa tersebut melalui relasi subjects.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-34.png" alt="Query mata kuliah yang diambil mahasiswa tertentu">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-34.webp" alt="Query mata kuliah yang diambil mahasiswa tertentu">
                 <figcaption>Query untuk mengambil mata kuliah dari mahasiswa tertentu.</figcaption>
               </figure>
 
@@ -1689,21 +1689,21 @@
                 Setelah data mahasiswa dan mata kuliahnya diambil, total SKS dapat dihitung dengan menjumlahkan kolom SKS dari setiap mata kuliah yang diambil mahasiswa.
               </p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-35.png" alt="Query total SKS setiap mahasiswa">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-35.webp" alt="Query total SKS setiap mahasiswa">
                 <figcaption>Query untuk menghitung total SKS yang diambil setiap mahasiswa.</figcaption>
               </figure>
 
               <p><strong>e. Output</strong></p>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-36.png" alt="Output semua mahasiswa beserta jurusan dan mata kuliah">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-36.webp" alt="Output semua mahasiswa beserta jurusan dan mata kuliah">
                 <figcaption>Output semua mahasiswa beserta jurusan dan mata kuliahnya.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-37.png" alt="Output jurusan terbanyak dan mata kuliah mahasiswa tertentu">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-37.webp" alt="Output jurusan terbanyak dan mata kuliah mahasiswa tertentu">
                 <figcaption>Output jurusan dengan mahasiswa terbanyak serta mata kuliah yang diambil oleh mahasiswa tertentu.</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/report-laravel-relationship/report-laravel-relationship-38.png" alt="Output total SKS yang diambil setiap mahasiswa">
+                <img src="images/report-laravel-relationship/report-laravel-relationship-38.webp" alt="Output total SKS yang diambil setiap mahasiswa">
                 <figcaption>Output total SKS yang diambil setiap mahasiswa.</figcaption>
               </figure>
             </section>
@@ -1782,7 +1782,7 @@
         <li>
           <h4>Dokumentasi Praktikum</h4>
           <figure class="report-figure">
-            <img src="images/Project 3.jpg" alt="Screenshot aplikasi presensi piket Java">
+            <img src="images/Project 3.webp" alt="Screenshot aplikasi presensi piket Java">
             <figcaption>Tampilan aplikasi GUI Java untuk pencatatan presensi piket.</figcaption>
           </figure>
         </li>
@@ -2645,7 +2645,7 @@
               <h5>a. Fungsi main() dan runApp</h5>
               <p>Pertama, dibuat fungsi main() yang menjadi titik awal eksekusi aplikasi Flutter. Di dalamnya, dipanggil fungsi runApp() yang akan menjalankan widget utama aplikasi, yaitu MyApp.</p>
               <figure class="report-figure">
-                <img src="images/flutter-widget-dasar/image001.jpg" alt="Screenshot main() function" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-widget-dasar/image001.webp" alt="Screenshot main() function" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Fungsi main() sebagai entry point aplikasi</figcaption>
               </figure>
             </section>
@@ -2654,7 +2654,7 @@
               <h5>b. Class MyApp sebagai StatelessWidget</h5>
               <p>Selanjutnya, dibuat kelas MyApp yang merupakan StatelessWidget. Widget ini berfungsi sebagai akar dari seluruh aplikasi yang mengatur tema, judul, dan halaman awal yang akan ditampilkan.</p>
               <figure class="report-figure">
-                <img src="images/flutter-widget-dasar/image002.jpg" alt="Screenshot Class MyApp" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-widget-dasar/image002.webp" alt="Screenshot Class MyApp" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Class MyApp sebagai root widget</figcaption>
               </figure>
             </section>
@@ -2663,7 +2663,7 @@
               <h5>c. DashboardScreen dengan Scaffold</h5>
               <p>Langkah berikutnya adalah membuat halaman utama aplikasi melalui kelas DashboardScreen. Widget ini menggunakan Scaffold yang menyediakan kerangka dasar aplikasi seperti AppBar dan body. AppBar menampilkan judul praktikum dengan warna latar biru, sedangkan body diisi dengan padding dan tata letak Column yang vertikal.</p>
               <figure class="report-figure">
-                <img src="images/flutter-widget-dasar/image003.jpg" alt="Screenshot DashboardScreen" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-widget-dasar/image003.webp" alt="Screenshot DashboardScreen" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Widget DashboardScreen dengan AppBar dan body</figcaption>
               </figure>
             </section>
@@ -2672,7 +2672,7 @@
               <h5>d. GreetingWidget (StatelessWidget)</h5>
               <p>Untuk bagian sapaan pengguna, dibuat GreetingWidget yang merupakan StatelessWidget. Widget ini menggunakan tata letak Row untuk menyusun ikon avatar dan teks sapaan secara horizontal. Ikon avatar dibuat dengan CircleAvatar berwarna biru, sementara teks sapaan diatur dalam Column untuk penyusunan vertikal.</p>
               <figure class="report-figure">
-                <img src="images/flutter-widget-dasar/image004.jpg" alt="Screenshot GreetingWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-widget-dasar/image004.webp" alt="Screenshot GreetingWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>GreetingWidget untuk sapaan pengguna</figcaption>
               </figure>
             </section>
@@ -2681,7 +2681,7 @@
               <h5>e. BalanceCardWidget (StatefulWidget)</h5>
               <p>Komponen yang membutuhkan interaktivitas dikembangkan menggunakan StatefulWidget. Didefinisikan kelas BalanceCardWidget yang memiliki kelas state terpisah bernama _BalanceCardWidgetState. Di dalam state class, variabel _isBalanceVisible digunakan untuk menyimpan status tampilan saldo, sementara fungsi _toggleVisibility() bertugas mengubah nilai variabel tersebut.</p>
               <figure class="report-figure">
-                <img src="images/flutter-widget-dasar/image005.jpg" alt="Screenshot BalanceCardWidget class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-widget-dasar/image005.webp" alt="Screenshot BalanceCardWidget class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Class BalanceCardWidget dengan state management</figcaption>
               </figure>
             </section>
@@ -2690,7 +2690,7 @@
               <h5>f. Build Method dengan Card dan Kondisional</h5>
               <p>Dalam metode build() dari state class, dibuat kartu saldo menggunakan widget Card dengan desain melengkung (border radius) dan warna biru. Kartu ini memiliki dua bagian utama: baris atas berisi label "Saldo Utama" dan tombol ikon mata yang dapat ditekan. Logika kondisional (ternary operator) diterapkan untuk menentukan ikon yang ditampilkan (Icons.visibility atau Icons.visibility_off) dan teks saldo yang ditampilkan (nominal atau sensor).</p>
               <figure class="report-figure">
-                <img src="images/flutter-widget-dasar/image006.jpg" alt="Screenshot Build method dengan Card" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-widget-dasar/image006.webp" alt="Screenshot Build method dengan Card" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Build method dengan Card dan conditional rendering</figcaption>
               </figure>
             </section>
@@ -2704,7 +2704,7 @@
               <h5>h. Hasil Akhir Aplikasi</h5>
               <p>Setelah semua komponen dibuat, hasil akhir aplikasi menampilkan dua widget utama secara terintegrasi. Bagian atas layar menampilkan sapaan pengguna yang statis, sementara bagian bawah menampilkan kartu saldo yang interaktif. Pengguna dapat menekan ikon mata pada kartu saldo untuk menyembunyikan atau menampilkan nominal saldo, memberikan pengalaman interaksi yang sederhana namun efektif dalam memahami konsep state management pada Flutter.</p>
               <figure class="report-figure">
-                <img src="images/flutter-widget-dasar/image007.jpg" alt="Screenshot Final app result" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-widget-dasar/image007.webp" alt="Screenshot Final app result" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Hasil akhir aplikasi dengan kedua widget</figcaption>
               </figure>
             </section>
@@ -2727,7 +2727,7 @@
               <h5>Implementasi</h5>
               <p>Pada tugas pertama, dilakukan perubahan warna pada BalanceCard dari warna biru (Colors.blueAccent) menjadi warna hijau emerald (Colors.teal). Perubahan ini dilakukan dengan menambahkan properti color: Colors.teal pada widget Card. Properti color pada widget Card berfungsi untuk mengatur warna background dari kartu tersebut. Dengan mengubah nilai properti ini menjadi Colors.teal, maka tampilan kartu saldo akan berubah menjadi hijau emerald sesuai dengan permintaan tugas.</p>
               <figure class="report-figure">
-                <img src="images/flutter-widget-dasar/image008.jpg" alt="Screenshot Tugas 1 - Color change" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-widget-dasar/image008.webp" alt="Screenshot Tugas 1 - Color change" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Modifikasi warna Card menjadi Colors.teal</figcaption>
               </figure>
             </section>
@@ -2741,7 +2741,7 @@
               <h5>Implementasi</h5>
               <p>Pada tugas kedua, ditambahkan teks statis berupa nomor rekening di bagian bawah nominal saldo di dalam kartu. Penambahan ini dilakukan dengan menambahkan widget Text baru setelah widget Text yang menampilkan nominal saldo. Sebelum teks nomor rekening, ditambahkan widget SizedBox(height: 8) untuk memberikan jarak vertikal sebesar 8 pixel antara teks nominal saldo dengan teks nomor rekening. Teks nomor rekening menggunakan styling dengan ukuran font 14 dan warna Colors.white70 agar terlihat lebih subtle dan tidak mendominasi tampilan nominal saldo.</p>
               <figure class="report-figure">
-                <img src="images/flutter-widget-dasar/image009.jpg" alt="Screenshot Tugas 2 - Add account number" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-widget-dasar/image009.webp" alt="Screenshot Tugas 2 - Add account number" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Penambahan teks nomor rekening</figcaption>
               </figure>
             </section>
@@ -2750,7 +2750,7 @@
               <h5>Verifikasi Hasil Tugas</h5>
               <p>Jalankan program nya, dan lihat hasil dari tugas apakah sudah terpenuhi dengan memastikan kedua modifikasi tampil dengan benar di aplikasi.</p>
               <figure class="report-figure">
-                <img src="images/flutter-widget-dasar/image010.jpg" alt="Screenshot Verification result" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-widget-dasar/image010.webp" alt="Screenshot Verification result" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Hasil akhir setelah tugas selesai</figcaption>
               </figure>
             </section>
@@ -2843,7 +2843,7 @@
               <h5>a. Widget MyApp sebagai Root Aplikasi</h5>
               <p>Langkah pertama adalah membuat widget utama sebagai root aplikasi. Widget ini menggunakan StatelessWidget karena tidak memerlukan perubahan state. Di dalam widget MyApp, dikonfigurasi MaterialApp sebagai wrapper aplikasi dengan tema berwarna biru dan menghilangkan banner debug.</p>
               <figure class="report-figure">
-                <img src="images/flutter-layouting/image001.jpg" alt="Screenshot MyApp" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-layouting/image001.webp" alt="Screenshot MyApp" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Widget MyApp sebagai root aplikasi</figcaption>
               </figure>
             </section>
@@ -2852,7 +2852,7 @@
               <h5>b. DashboardScreen dengan SingleChildScrollView</h5>
               <p>Selanjutnya, dibuat halaman utama DashboardScreen yang berfungsi sebagai container untuk seluruh komponen aplikasi. Halaman ini menggunakan Scaffold sebagai struktur dasar dengan AppBar di bagian atas. Agar halaman dapat di-scroll ketika konten melebihi tinggi layar, seluruh body dibungkus dengan SingleChildScrollView. Di dalamnya terdapat Padding untuk memberi jarak dari tepi layar, kemudian Column untuk menyusun widget-widget secara vertikal.</p>
               <figure class="report-figure">
-                <img src="images/flutter-layouting/image002.jpg" alt="Screenshot DashboardScreen" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-layouting/image002.webp" alt="Screenshot DashboardScreen" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>DashboardScreen dengan SingleChildScrollView</figcaption>
               </figure>
             </section>
@@ -2861,7 +2861,7 @@
               <h5>c. GreetingWidget dengan Row</h5>
               <p>Lalu dibuat komponen sapaan pengguna menggunakan StatelessWidget. Widget ini menampilkan avatar pengguna dan teks sapaan. Layout disusun menggunakan Row agar avatar dan teks berada dalam satu baris horizontal. Avatar dibuat dengan CircleAvatar berisi ikon person, sedangkan teks sapaan disusun vertikal menggunakan Column dengan dua baris teks: nama pengguna dan kalimat sambutan.</p>
               <figure class="report-figure">
-                <img src="images/flutter-layouting/image003.jpg" alt="Screenshot GreetingWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-layouting/image003.webp" alt="Screenshot GreetingWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>GreetingWidget dengan Row untuk layout horizontal</figcaption>
               </figure>
             </section>
@@ -2870,7 +2870,7 @@
               <h5>d. BalanceCardWidget dengan Toggle Visibility</h5>
               <p>Kemudian dibuat komponen kartu saldo menggunakan StatefulWidget karena memerlukan state untuk mengatur visibilitas saldo. Di dalam state class, terdapat variabel boolean _isBalanceVisible yang mengontrol apakah saldo ditampilkan atau disembunyikan. Fungsi _toggleVisibility() menggunakan setState() untuk memperbarui state ketika tombol visibility ditekan. Tampilan kartu menggunakan widget Card dengan elevasi dan border radius untuk efek bayangan. Layout internal menggunakan Column dan Row untuk menyusun label, tombol toggle, dan nominal saldo.</p>
               <figure class="report-figure">
-                <img src="images/flutter-layouting/image004.jpg" alt="Screenshot BalanceCardWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-layouting/image004.webp" alt="Screenshot BalanceCardWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>BalanceCardWidget dengan toggle visibility</figcaption>
               </figure>
             </section>
@@ -2879,7 +2879,7 @@
               <h5>e. Tombol Aksi dengan Row.spaceEvenly</h5>
               <p>Berikutnya dibuat widget tombol aksi yang menampilkan tiga tombol: Pemasukan, Pengeluaran, dan Transfer. Widget ini menggunakan Row dengan mainAxisAlignment.spaceEvenly agar jarak antar tombol terbagi rata secara horizontal. Untuk menghindari pengulangan kode, dibuat fungsi helper _buildActionButton() yang menerima parameter ikon, label, dan warna. Setiap tombol disusun vertikal menggunakan Column, berisi Container dengan background transparan sebagai wadah ikon, dan Text sebagai label tombol.</p>
               <figure class="report-figure">
-                <img src="images/flutter-layouting/image005.jpg" alt="Screenshot Tombol Aksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-layouting/image005.webp" alt="Screenshot Tombol Aksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Tombol aksi dengan Row.spaceEvenly</figcaption>
               </figure>
             </section>
@@ -2888,7 +2888,7 @@
               <h5>f. Daftar Transaksi dengan ListTile</h5>
               <p>Terakhir, dibuat widget untuk menampilkan daftar transaksi terakhir. Widget ini menggunakan Column untuk menyusun judul dan daftar transaksi secara vertikal. Judul "Transaksi Terakhir" diberi style bold dengan ukuran font 18. Daftar transaksi dibungkus dengan Card untuk memberikan efek bayangan dan bingkai. Di dalam Card, terdapat beberapa ListTile yang masing-masing merepresentasikan satu item transaksi. Setiap ListTile memiliki tiga komponen utama: leading berupa CircleAvatar dengan ikon, title dan subtitle untuk nama dan tanggal transaksi, serta trailing untuk menampilkan nominal dengan warna sesuai jenis transaksi. Antar item transaksi dipisahkan dengan Divider.</p>
               <figure class="report-figure">
-                <img src="images/flutter-layouting/image006.jpg" alt="Screenshot Daftar Transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-layouting/image006.webp" alt="Screenshot Daftar Transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Daftar transaksi dengan ListTile</figcaption>
               </figure>
             </section>
@@ -2911,7 +2911,7 @@
               <h5>Implementasi Warna Hijau untuk Pemasukan</h5>
               <p>Untuk transaksi pemasukan seperti "Gaji Bulanan" dan "Bonus Proyek", diberikan style dengan warna hijau untuk menunjukkan arus uang masuk. Pada properti trailing, widget Text menggunakan TextStyle dengan color: Colors.green dan fontWeight: FontWeight.bold agar nominal terlihat jelas.</p>
               <figure class="report-figure">
-                <img src="images/flutter-layouting/image007.jpg" alt="Screenshot warna hijau pemasukan" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-layouting/image007.webp" alt="Screenshot warna hijau pemasukan" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Implementasi warna hijau untuk transaksi pemasukan</figcaption>
               </figure>
             </section>
@@ -2920,7 +2920,7 @@
               <h5>Implementasi Warna Merah untuk Pengeluaran</h5>
               <p>Sementara itu, untuk transaksi pengeluaran seperti "Makan Siang", "Isi Bensin", dan "Belanja Bulanan", diberikan style dengan warna merah untuk menunjukkan arus uang keluar. Pada properti trailing, widget Text menggunakan TextStyle dengan color: Colors.red dan fontWeight: FontWeight.bold.</p>
               <figure class="report-figure">
-                <img src="images/flutter-layouting/image008.jpg" alt="Screenshot warna merah pengeluaran" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-layouting/image008.webp" alt="Screenshot warna merah pengeluaran" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Implementasi warna merah untuk transaksi pengeluaran</figcaption>
               </figure>
             </section>
@@ -2934,7 +2934,7 @@
               <h5>Transaksi Keempat: Belanja Bulanan</h5>
               <p>Transaksi pertama yang ditambahkan adalah "Belanja Bulanan" yang merupakan transaksi pengeluaran. Item ini disisipkan setelah transaksi "Isi Bensin" dengan menambahkan Divider terlebih dahulu sebagai pemisah. ListTile ini memiliki leading berupa CircleAvatar dengan background warna orange dan ikon shopping_bag, title dengan teks "Belanja Bulanan", subtitle dengan tanggal "15 Sep 2026", dan trailing menampilkan nominal "- Rp 350.000" dengan warna merah untuk menunjukkan pengeluaran.</p>
               <figure class="report-figure">
-                <img src="images/flutter-layouting/image009.jpg" alt="Screenshot Belanja Bulanan" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-layouting/image009.webp" alt="Screenshot Belanja Bulanan" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Penambahan transaksi Belanja Bulanan</figcaption>
               </figure>
             </section>
@@ -2943,7 +2943,7 @@
               <h5>Transaksi Kelima: Bonus Proyek</h5>
               <p>Transaksi kedua yang ditambahkan adalah "Bonus Proyek" yang merupakan transaksi pemasukan. Item ini disisipkan setelah transaksi "Belanja Bulanan" dengan menambahkan Divider terlebih dahulu. ListTile ini memiliki leading berupa CircleAvatar dengan background warna hijau dan ikon card_giftcard, title dengan teks "Bonus Proyek", subtitle dengan tanggal "18 Sep 2026", dan trailing menampilkan nominal "+ Rp 1.500.000" dengan warna hijau untuk menunjukkan pemasukan.</p>
               <figure class="report-figure">
-                <img src="images/flutter-layouting/image010.jpg" alt="Screenshot Bonus Proyek" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-layouting/image010.webp" alt="Screenshot Bonus Proyek" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Penambahan transaksi Bonus Proyek</figcaption>
               </figure>
             </section>
@@ -2952,7 +2952,7 @@
               <h5>Verifikasi Hasil Tugas</h5>
               <p>Jalankan program nya, dan lihat hasil dari tugas apakah sudah terpenuhi dengan memastikan kedua transaksi baru tampil dengan benar di daftar transaksi beserta styling warna yang sesuai.</p>
               <figure class="report-figure">
-                <img src="images/flutter-layouting/image011.jpg" alt="Screenshot hasil akhir" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/flutter-layouting/image011.webp" alt="Screenshot hasil akhir" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Hasil akhir dashboard Expense Tracker</figcaption>
               </figure>
             </section>
@@ -3034,7 +3034,7 @@
             <section class="report-substep">
               <h5>a. Import Library dan Entry Point</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/1.png" data-basesrc="images/flutter-input-forms/1" alt="File main.dart sebagai titik awal aplikasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/1.webp" data-basesrc="images/flutter-input-forms/1" alt="File main.dart sebagai titik awal aplikasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>File main.dart sebagai titik awal aplikasi</figcaption>
               </figure>
               <p>
@@ -3048,7 +3048,7 @@
                 Selanjutnya, kita membuat fungsi main() sebagai fungsi utama yang pertama kali dijalankan. Fungsi ini memanggil runApp() untuk menjalankan aplikasi Flutter dengan widget MyApp di dalamnya.
               </p>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/2.png" data-basesrc="images/flutter-input-forms/2" alt="Fungsi main() sebagai entry point aplikasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/2.webp" data-basesrc="images/flutter-input-forms/2" alt="Fungsi main() sebagai entry point aplikasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Fungsi main() sebagai entry point aplikasi</figcaption>
               </figure>
             </section>
@@ -3059,7 +3059,7 @@
                 Kita membuat class MyApp yang merupakan StatelessWidget sebagai root dari aplikasi. Di dalamnya terdapat MaterialApp yang berisi pengaturan tema dengan warna dasar Colors.deepPurple sesuai tema Modul 3, serta home yang langsung mengarahkan aplikasi membuka halaman AddTransactionScreen.
               </p>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/3.png" data-basesrc="images/flutter-input-forms/3" alt="Class MyApp sebagai root widget aplikasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/3.webp" data-basesrc="images/flutter-input-forms/3" alt="Class MyApp sebagai root widget aplikasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Class MyApp sebagai root widget aplikasi</figcaption>
               </figure>
             </section>
@@ -3073,7 +3073,7 @@
             <section class="report-substep">
               <h5>a. StatefulWidget</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/4.png" data-basesrc="images/flutter-input-forms/4" alt="Halaman form transaksi menggunakan StatefulWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/4.webp" data-basesrc="images/flutter-input-forms/4" alt="Halaman form transaksi menggunakan StatefulWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Halaman form transaksi menggunakan StatefulWidget</figcaption>
               </figure>
               <p>
@@ -3087,7 +3087,7 @@
                 Sebelum membangun tampilan, kita menyiapkan beberapa hal penting. Pertama, GlobalKey&lt;FormState&gt; yang digunakan untuk mengontrol dan memicu validasi seluruh form. Kedua, TextEditingController untuk judul dan nominal yang berfungsi menangkap teks dari input pengguna. Ketiga, variabel state untuk dropdown beserta daftar kategorinya.
               </p>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/5.png" data-basesrc="images/flutter-input-forms/5" alt="Deklarasi GlobalKey, TextEditingController, dan state dropdown" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/5.webp" data-basesrc="images/flutter-input-forms/5" alt="Deklarasi GlobalKey, TextEditingController, dan state dropdown" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Deklarasi GlobalKey, TextEditingController, dan state dropdown</figcaption>
               </figure>
             </section>
@@ -3098,7 +3098,7 @@
                 Agar tidak terjadi kebocoran memori (memory leak), kedua controller dibersihkan menggunakan metode dispose() saat halaman ditutup.
               </p>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/6.png" data-basesrc="images/flutter-input-forms/6" alt="Method dispose() untuk membersihkan controller" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/6.webp" data-basesrc="images/flutter-input-forms/6" alt="Method dispose() untuk membersihkan controller" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Method dispose() untuk membersihkan controller</figcaption>
               </figure>
             </section>
@@ -3106,7 +3106,7 @@
             <section class="report-substep">
               <h5>d. Scaffold dan AppBar</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/7.png" data-basesrc="images/flutter-input-forms/7" alt="Struktur Scaffold dengan AppBar Deep Purple" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/7.webp" data-basesrc="images/flutter-input-forms/7" alt="Struktur Scaffold dengan AppBar Deep Purple" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Struktur Scaffold dengan AppBar Deep Purple</figcaption>
               </figure>
               <p>
@@ -3117,7 +3117,7 @@
             <section class="report-substep">
               <h5>e. TextFormField untuk Judul</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/8.png" data-basesrc="images/flutter-input-forms/8" alt="Implementasi TextFormField dengan validator" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/8.webp" data-basesrc="images/flutter-input-forms/8" alt="Implementasi TextFormField dengan validator" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Implementasi TextFormField dengan validator</figcaption>
               </figure>
               <p>
@@ -3128,7 +3128,7 @@
             <section class="report-substep">
               <h5>f. TextFormField untuk Nominal</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/9.png" data-basesrc="images/flutter-input-forms/9" alt="Input nominal dengan keyboardType.number" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/9.webp" data-basesrc="images/flutter-input-forms/9" alt="Input nominal dengan keyboardType.number" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Input nominal dengan keyboardType.number</figcaption>
               </figure>
               <p>
@@ -3139,7 +3139,7 @@
             <section class="report-substep">
               <h5>g. DropdownButtonFormField</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/10.png" data-basesrc="images/flutter-input-forms/10" alt="Implementasi DropdownButtonFormField" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/10.webp" data-basesrc="images/flutter-input-forms/10" alt="Implementasi DropdownButtonFormField" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Implementasi DropdownButtonFormField</figcaption>
               </figure>
               <p>
@@ -3150,7 +3150,7 @@
             <section class="report-substep">
               <h5>h. Tombol Submit</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/11.png" data-basesrc="images/flutter-input-forms/11" alt="Tombol submit dengan validasi form" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/11.webp" data-basesrc="images/flutter-input-forms/11" alt="Tombol submit dengan validasi form" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Tombol submit dengan validasi form</figcaption>
               </figure>
               <p>
@@ -3161,7 +3161,7 @@
             <section class="report-substep">
               <h5>i. Hasil Running</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/hasil1.png" data-basesrc="images/flutter-input-forms/hasil1" alt="Tampilan aplikasi Expense Tracker" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/hasil1.webp" data-basesrc="images/flutter-input-forms/hasil1" alt="Tampilan aplikasi Expense Tracker" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Tampilan aplikasi Expense Tracker</figcaption>
               </figure>
               <p>
@@ -3188,7 +3188,7 @@
                 Class AddTransactionScreen dibuat sebagai StatefulWidget karena form memerlukan perubahan state saat user berinteraksi dengannya, seperti mengetik teks pada input field, memilih opsi dari dropdown, atau memilih tanggal dari date picker. Widget ini memiliki state yang berubah-ubahan sehingga dibuat sebagai StatefulWidget, dan method createState() digunakan untuk membuat instance dari state class _AddTransactionScreenState yang berisi logic dan UI dari form.
               </p>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/12.png" data-basesrc="images/flutter-input-forms/12" alt="Class AddTransactionScreen sebagai StatefulWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/12.webp" data-basesrc="images/flutter-input-forms/12" alt="Class AddTransactionScreen sebagai StatefulWidget" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Class AddTransactionScreen sebagai StatefulWidget</figcaption>
               </figure>
             </section>
@@ -3199,7 +3199,7 @@
                 Di dalam state class _AddTransactionScreenState, beberapa komponen penting disiapkan. GlobalKey&lt;FormState&gt; dibuat sebagai _formKey untuk mengakses state form dan memicu validasi ketika tombol submit ditekan. TextEditingController untuk _titleController, _amountController, dan _dateController digunakan untuk mengambil nilai input yang diketik user pada masing-masing field. Variabel _selectedCategory digunakan untuk menyimpan pilihan kategori yang dipilih dari dropdown, dengan nilai default 'Makanan', dan _categories adalah list yang berisi semua opsi kategori yang tersedia di dropdown yaitu Makanan, Transportasi, Hiburan, dan Lainnya.
               </p>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/13.png" data-basesrc="images/flutter-input-forms/13" alt="Deklarasi GlobalKey, TextEditingController, dan daftar kategori" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/13.webp" data-basesrc="images/flutter-input-forms/13" alt="Deklarasi GlobalKey, TextEditingController, dan daftar kategori" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Deklarasi GlobalKey, TextEditingController, dan daftar kategori</figcaption>
               </figure>
             </section>
@@ -3210,7 +3210,7 @@
                 Method dispose() dipanggil secara otomatis saat widget dihancurkan, seperti saat user meninggalkan halaman. Dengan memanggil .dispose() pada setiap controller, memory yang digunakan oleh controller dibebaskan sehingga tidak terjadi memory leak yang dapat memengaruhi kinerja aplikasi.
               </p>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/14.png" data-basesrc="images/flutter-input-forms/14" alt="Method dispose() untuk membersihkan controller" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/14.webp" data-basesrc="images/flutter-input-forms/14" alt="Method dispose() untuk membersihkan controller" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Method dispose() untuk membersihkan controller</figcaption>
               </figure>
             </section>
@@ -3218,7 +3218,7 @@
             <section class="report-substep">
               <h5>d. Scaffold dan AppBar</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/15.png" data-basesrc="images/flutter-input-forms/15" alt="Struktur Scaffold pada method build()" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/15.webp" data-basesrc="images/flutter-input-forms/15" alt="Struktur Scaffold pada method build()" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Struktur Scaffold pada method build()</figcaption>
               </figure>
               <p>
@@ -3232,7 +3232,7 @@
                 SingleChildScrollView digunakan sebagai wrapper agar konten bisa di-scroll jika ukurannya melebihi tinggi layar, terutama saat keyboard muncul dan memenuhi sebagian layar. Form adalah widget wrapper yang menghubungkan semua input field dan memungkinkan penggunaan validasi secara keseluruhan. Key pada Form diisi dengan _formKey agar bisa dipicu validasinya nanti. Column digunakan untuk mengatur layout vertikal dengan crossAxisAlignment: CrossAxisAlignment.stretch agar semua child memiliki lebar yang sama dengan lebar layar.
               </p>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/16.png" data-basesrc="images/flutter-input-forms/16" alt="SingleChildScrollView, Form, dan Column sebagai kerangka layout" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/16.webp" data-basesrc="images/flutter-input-forms/16" alt="SingleChildScrollView, Form, dan Column sebagai kerangka layout" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>SingleChildScrollView, Form, dan Column sebagai kerangka layout</figcaption>
               </figure>
             </section>
@@ -3240,7 +3240,7 @@
             <section class="report-substep">
               <h5>f. TextFormField untuk Judul</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/17.png" data-basesrc="images/flutter-input-forms/17" alt="TextFormField judul transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/17.webp" data-basesrc="images/flutter-input-forms/17" alt="TextFormField judul transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>TextFormField judul transaksi</figcaption>
               </figure>
               <p>
@@ -3251,7 +3251,7 @@
             <section class="report-substep">
               <h5>g. TextFormField untuk Nominal</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/18.png" data-basesrc="images/flutter-input-forms/18" alt="Input nominal uang" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/18.webp" data-basesrc="images/flutter-input-forms/18" alt="Input nominal uang" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Input nominal uang</figcaption>
               </figure>
               <p>
@@ -3262,7 +3262,7 @@
             <section class="report-substep">
               <h5>h. DropdownButtonFormField untuk Kategori</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/19.png" data-basesrc="images/flutter-input-forms/19" alt="Dropdown kategori transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/19.webp" data-basesrc="images/flutter-input-forms/19" alt="Dropdown kategori transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Dropdown kategori transaksi</figcaption>
               </figure>
               <p>
@@ -3273,7 +3273,7 @@
             <section class="report-substep">
               <h5>i. Input Tanggal dengan Date Picker</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/20.png" data-basesrc="images/flutter-input-forms/20" alt="Input tanggal dengan date picker" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/20.webp" data-basesrc="images/flutter-input-forms/20" alt="Input tanggal dengan date picker" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Input tanggal dengan date picker</figcaption>
               </figure>
               <p>
@@ -3284,7 +3284,7 @@
             <section class="report-substep">
               <h5>j. Tombol Submit dengan SnackBar</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/21.png" data-basesrc="images/flutter-input-forms/21" alt="SnackBar feedback setelah submit" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/21.webp" data-basesrc="images/flutter-input-forms/21" alt="SnackBar feedback setelah submit" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>SnackBar feedback setelah submit</figcaption>
               </figure>
               <p>
@@ -3295,7 +3295,7 @@
             <section class="report-substep">
               <h5>k. Hasil Running</h5>
               <figure class="report-figure">
-                <img src="images/flutter-input-forms/hasil2.png" data-basesrc="images/flutter-input-forms/hasil2" alt="Tampilan aplikasi tugas praktikum" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
+                <img src="images/flutter-input-forms/hasil2.webp" data-basesrc="images/flutter-input-forms/hasil2" alt="Tampilan aplikasi tugas praktikum" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);" onerror="window.tryReportImageExt(this)">
                 <figcaption>Tampilan aplikasi tugas praktikum</figcaption>
               </figure>
               <p>
@@ -3401,7 +3401,7 @@
               <h5>3. Kemudian - DashboardScreen sebagai home</h5>
               <p>Kemudian, tentukan DashboardScreen sebagai nilai home melalui const DashboardScreen(). Pengaturan ini menjadikan dashboard sebagai halaman pertama yang dimuat ketika aplikasi dijalankan. Setelah halaman tersebut tampil, proses navigasi ke halaman lain dilakukan dari dashboard sesuai dengan alur yang diterapkan pada program.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/1.png" alt="DashboardScreen sebagai home page" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/1.webp" alt="DashboardScreen sebagai home page" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>DashboardScreen sebagai home page</figcaption>
               </figure>
             </section>
@@ -3415,7 +3415,7 @@
               <h5>1. Selanjutnya - Import & class DashboardScreen</h5>
               <p>Selanjutnya, buat file dashboard_screen.dart sebagai halaman utama aplikasi. Pada bagian awal, program mengimpor material.dart untuk menggunakan komponen Flutter, kemudian mengimpor add_transaction_screen.dart dan transaction_detail_screen.dart karena dashboard akan digunakan untuk berpindah ke halaman pencatatan transaksi dan halaman detail transaksi. Class DashboardScreen dibuat sebagai StatelessWidget, sehingga halaman ini tidak memiliki state yang berubah secara langsung.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/2.png" alt="Import library dan class DashboardScreen" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/2.webp" alt="Import library dan class DashboardScreen" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Import library dan class DashboardScreen</figcaption>
               </figure>
             </section>
@@ -3434,7 +3434,7 @@
               <h5>4. Selanjutnya - Method _buildBalanceCard()</h5>
               <p>Selanjutnya, buat method _buildBalanceCard() untuk menampilkan informasi saldo utama. Widget ini menggunakan Card dengan warna Colors.redAccent dan menampilkan teks "Saldo Utama" serta nominal "Rp 5.000.000". Method tersebut kemudian dipanggil pada bagian body dashboard untuk menampilkan kartu saldo.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/3.png" alt="Method _buildBalanceCard() untuk menampilkan saldo" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/3.webp" alt="Method _buildBalanceCard() untuk menampilkan saldo" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Method _buildBalanceCard() untuk menampilkan saldo</figcaption>
               </figure>
             </section>
@@ -3443,7 +3443,7 @@
               <h5>5. Berikutnya - Method _buildTransactionList "Makan Siang"</h5>
               <p>Berikutnya, buat method _buildTransactionList(BuildContext context) untuk menampilkan daftar transaksi yang dapat dipilih oleh pengguna. Pada transaksi "Makan Siang", ListTile memiliki onTap yang menjalankan Navigator.push untuk membuka TransactionDetailScreen. Data title, amount, category, dan date dikirim melalui constructor sesuai dengan transaksi yang dipilih.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/4.png" alt="Method _buildTransactionList dengan transaksi Makan Siang" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/4.webp" alt="Method _buildTransactionList dengan transaksi Makan Siang" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Method _buildTransactionList dengan transaksi "Makan Siang"</figcaption>
               </figure>
             </section>
@@ -3452,7 +3452,7 @@
               <h5>6. Kemudian - Transaksi "Gaji Bulanan"</h5>
               <p>Kemudian, tambahkan transaksi kedua yaitu "Gaji Bulanan" dengan mekanisme navigasi yang sama. Saat transaksi dipilih, program kembali menggunakan Navigator.push dan mengirimkan data transaksi melalui TransactionDetailScreen, yaitu judul "Gaji Bulanan", nominal "Rp 5.000.000", kategori "Pemasukan", dan tanggal "1 September 2026". Dengan demikian, setiap transaksi pada dashboard dapat membuka halaman detail dengan data yang sesuai dengan baris yang dipilih.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/5.png" alt="Penambahan transaksi Gaji Bulanan" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/5.webp" alt="Penambahan transaksi Gaji Bulanan" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Penambahan transaksi "Gaji Bulanan"</figcaption>
               </figure>
             </section>
@@ -3471,7 +3471,7 @@
               <h5>1. Selanjutnya - StatefulWidget & controller</h5>
               <p>Selanjutnya, buat file add_transaction_screen.dart sebagai halaman untuk mencatat transaksi baru. Pada file ini, program menggunakan StatefulWidget karena halaman memiliki data input yang dikelola melalui controller. Terdapat _formKey untuk mengelola validasi form, _titleController untuk menampung input judul transaksi, dan _amountController untuk menampung input nominal transaksi.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/6.png" alt="StatefulWidget dengan _formKey dan controller" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/6.webp" alt="StatefulWidget dengan _formKey dan controller" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>StatefulWidget dengan _formKey dan controller</figcaption>
               </figure>
             </section>
@@ -3510,7 +3510,7 @@
               <h5>1. Selanjutnya - Import & class TransactionDetailScreen</h5>
               <p>Selanjutnya, buat file transaction_detail_screen.dart sebagai halaman yang bertugas menampilkan informasi detail transaksi. Pada tahap awal, program mengimpor material.dart agar komponen antarmuka Flutter dapat digunakan. Kemudian dibuat class TransactionDetailScreen yang merupakan StatelessWidget karena data transaksi diterima dari halaman sebelumnya dan digunakan untuk ditampilkan.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/7.png" alt="Import library dan class TransactionDetailScreen" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/7.webp" alt="Import library dan class TransactionDetailScreen" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Import library dan class TransactionDetailScreen</figcaption>
               </figure>
             </section>
@@ -3519,7 +3519,7 @@
               <h5>2. Kemudian - Variabel final</h5>
               <p>Kemudian, deklarasikan variabel final untuk menampung data transaksi yang dikirim dari DashboardScreen. Variabel yang digunakan terdiri dari title untuk judul transaksi, amount untuk nominal, category untuk kategori, dan date untuk tanggal transaksi. Penggunaan final sesuai dengan karakteristik StatelessWidget, karena nilai tersebut diterima melalui constructor dan tidak diubah selama halaman ditampilkan.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/8.png" alt="Deklarasi variabel final untuk data transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/8.webp" alt="Deklarasi variabel final untuk data transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Deklarasi variabel final untuk data transaksi</figcaption>
               </figure>
             </section>
@@ -3528,7 +3528,7 @@
               <h5>3. Setelah itu - Constructor required</h5>
               <p>Setelah itu, buat constructor TransactionDetailScreen dengan parameter required untuk memastikan seluruh data transaksi wajib dikirim ketika halaman detail dibuat. Constructor menerima title, amount, category, dan date, sehingga halaman detail dapat memperoleh informasi yang sesuai dengan transaksi yang dipilih pada dashboard.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/9.png" alt="Constructor dengan parameter required" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/9.webp" alt="Constructor dengan parameter required" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Constructor dengan parameter required</figcaption>
               </figure>
             </section>
@@ -3537,7 +3537,7 @@
               <h5>4. Selanjutnya - Scaffold & AppBar</h5>
               <p>Selanjutnya, bangun tampilan halaman detail menggunakan Scaffold dan AppBar. AppBar diberi judul "Detail Transaksi", menggunakan warna merah sebagai latar belakang dan warna putih pada teks maupun elemen navigasinya. Hal ini membuat tampilan halaman detail tetap konsisten dengan halaman dashboard dan form transaksi.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/10.png" alt="Scaffold dan AppBar untuk detail transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/10.webp" alt="Scaffold dan AppBar untuk detail transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Scaffold dan AppBar untuk detail transaksi</figcaption>
               </figure>
             </section>
@@ -3546,7 +3546,7 @@
               <h5>5. Kemudian - Body Padding & Column</h5>
               <p>Kemudian, tambahkan bagian body untuk menampilkan informasi transaksi secara terstruktur. Padding digunakan untuk memberikan jarak dari tepi layar, sedangkan Column digunakan untuk menyusun komponen detail secara vertikal dan menempatkannya di tengah secara horizontal.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/11.png" alt="Body dengan Padding dan Column" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/11.webp" alt="Body dengan Padding dan Column" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Body dengan Padding dan Column</figcaption>
               </figure>
             </section>
@@ -3555,7 +3555,7 @@
               <h5>6. Setelah itu - Ikon & data utama (title, amount)</h5>
               <p>Setelah itu, tampilkan ikon transaksi dan data utama berupa judul serta nominal transaksi. Ikon receipt_long digunakan sebagai representasi visual detail transaksi. Variabel title digunakan untuk menampilkan judul transaksi yang diterima melalui constructor, sedangkan amount digunakan untuk menampilkan nominal transaksi dengan ukuran teks yang lebih besar sehingga menjadi informasi utama pada halaman detail.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/12.png" alt="Ikon dan data utama transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/12.webp" alt="Ikon dan data utama transaksi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Ikon dan data utama transaksi</figcaption>
               </figure>
             </section>
@@ -3564,7 +3564,7 @@
               <h5>7. Selanjutnya - Divider & informasi tambahan</h5>
               <p>Selanjutnya, tambahkan garis pemisah menggunakan Divider dan tampilkan informasi tambahan transaksi. Setelah nominal ditampilkan, Divider digunakan sebagai pemisah antara informasi utama dengan informasi detail. Data kategori ditampilkan melalui _buildDetailRow, kemudian diikuti data tanggal dan status transaksi. Nilai category dan date berasal dari data yang dikirim melalui constructor, sedangkan status ditetapkan secara langsung sebagai "Berhasil".</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/13.png" alt="Divider dan informasi tambahan" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/13.webp" alt="Divider dan informasi tambahan" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Divider dan informasi tambahan</figcaption>
               </figure>
             </section>
@@ -3573,7 +3573,7 @@
               <h5>8. Kemudian - Widget _buildDetailRow()</h5>
               <p>Kemudian, buat widget pembantu _buildDetailRow() untuk menyusun setiap informasi detail dalam format baris. Method ini menerima dua parameter, yaitu label sebagai nama informasi dan value sebagai nilainya. Keduanya ditempatkan dalam Row dengan MainAxisAlignment.spaceBetween, sehingga label berada di satu sisi dan nilai berada di sisi lainnya. Pendekatan ini digunakan agar tampilan kategori, tanggal, dan status memiliki susunan yang konsisten.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/14.png" alt="Widget pembantu _buildDetailRow()" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/14.webp" alt="Widget pembantu _buildDetailRow()" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Widget pembantu _buildDetailRow()</figcaption>
               </figure>
             </section>
@@ -3592,15 +3592,15 @@
               <h5>1. Screenshot hasil akhir aplikasi</h5>
               <p>Sekarang jalankan program dan lihat hasil yang sudah di buat</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/15.png" alt="Hasil akhir aplikasi Expense Tracker multi-screen - Screenshot 1" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/15.webp" alt="Hasil akhir aplikasi Expense Tracker multi-screen - Screenshot 1" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Hasil akhir aplikasi Expense Tracker multi-screen - Screenshot 1</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/card14_navigation/16.png" alt="Hasil akhir aplikasi Expense Tracker multi-screen - Screenshot 2" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/16.webp" alt="Hasil akhir aplikasi Expense Tracker multi-screen - Screenshot 2" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Hasil akhir aplikasi Expense Tracker multi-screen - Screenshot 2</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/card14_navigation/17.png" alt="Hasil akhir aplikasi Expense Tracker multi-screen - Screenshot 3" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/17.webp" alt="Hasil akhir aplikasi Expense Tracker multi-screen - Screenshot 3" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Hasil akhir aplikasi Expense Tracker multi-screen - Screenshot 3</figcaption>
               </figure>
             </section>
@@ -3623,7 +3623,7 @@
               <h5>1. Selanjutnya - StatefulWidget dengan 3 controller</h5>
               <p>Selanjutnya, buat file add_transaction_screen.dart sebagai halaman untuk mencatat transaksi baru. Pada tahap ini, program menggunakan StatefulWidget untuk membangun halaman form transaksi. Di dalam state-nya disiapkan _formKey untuk menangani validasi form serta tiga TextEditingController, yaitu _titleController, _amountController, dan _dateController untuk menampung input judul, nominal, dan tanggal transaksi.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/18.png" alt="StatefulWidget dengan 3 TextEditingController" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/18.webp" alt="StatefulWidget dengan 3 TextEditingController" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>StatefulWidget dengan 3 TextEditingController</figcaption>
               </figure>
             </section>
@@ -3632,7 +3632,7 @@
               <h5>2. Kemudian - Scaffold & AppBar</h5>
               <p>Kemudian, bangun struktur utama halaman menggunakan Scaffold dan AppBar. AppBar digunakan untuk menampilkan judul "Catat Transaksi", sedangkan body menggunakan Padding dan Form agar seluruh input dapat dikelompokkan dalam satu form yang dikendalikan oleh _formKey.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/19.png" alt="Scaffold dan AppBar untuk form enhanced" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/19.webp" alt="Scaffold dan AppBar untuk form enhanced" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Scaffold dan AppBar untuk form enhanced</figcaption>
               </figure>
             </section>
@@ -3641,7 +3641,7 @@
               <h5>3. Setelah itu - Input Judul</h5>
               <p>Setelah itu, tambahkan input Judul untuk menerima nama atau keterangan transaksi. Input menggunakan _titleController sebagai penampung nilai dan dilengkapi validator yang memeriksa apakah field dalam keadaan kosong. Apabila tidak diisi, program menampilkan pesan "Tidak boleh kosong".</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/20.png" alt="Input Judul dengan validasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/20.webp" alt="Input Judul dengan validasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Input Judul dengan validasi</figcaption>
               </figure>
             </section>
@@ -3650,7 +3650,7 @@
               <h5>4. Selanjutnya - Input Nominal</h5>
               <p>Selanjutnya, tambahkan input Nominal untuk menerima jumlah transaksi. _amountController digunakan untuk menampung nilai nominal, sedangkan TextInputType.number mengatur jenis keyboard yang digunakan agar pengguna dapat memasukkan data berupa angka. Field ini juga memiliki validasi wajib diisi.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/21.png" alt="Input Nominal dengan TextInputType.number" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/21.webp" alt="Input Nominal dengan TextInputType.number" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Input Nominal dengan TextInputType.number</figcaption>
               </figure>
             </section>
@@ -3659,7 +3659,7 @@
               <h5>5. Kemudian - Input Tanggal (readOnly)</h5>
               <p>Kemudian, tambahkan input Tanggal sebagai bagian dari data transaksi. Field tanggal menggunakan _dateController dan diatur dengan readOnly: true, sehingga tanggal tidak diketik secara langsung. Pada bagian decoration, diberikan hintText "DD/MM/YYYY" dan suffixIcon berupa tombol tambah yang digunakan untuk membuka pemilih tanggal.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/22.png" alt="Input Tanggal dengan readOnly dan suffixIcon" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/22.webp" alt="Input Tanggal dengan readOnly dan suffixIcon" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Input Tanggal dengan readOnly dan suffixIcon</figcaption>
               </figure>
             </section>
@@ -3668,7 +3668,7 @@
               <h5>6. Setelah itu - showDatePicker</h5>
               <p>Setelah itu, gunakan showDatePicker ketika tombol tambah pada field tanggal ditekan. Fungsi tersebut membuka kalender sehingga pengguna dapat memilih tanggal. initialDate menggunakan tanggal saat ini, sedangkan firstDate dan lastDate menentukan rentang tanggal yang dapat dipilih, yaitu dari tahun 2000 sampai 2100.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/23.png" alt="showDatePicker untuk pemilihan tanggal" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/23.webp" alt="showDatePicker untuk pemilihan tanggal" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>showDatePicker untuk pemilihan tanggal</figcaption>
               </figure>
             </section>
@@ -3677,7 +3677,7 @@
               <h5>7. Selanjutnya - Format DD/MM/YYYY</h5>
               <p>Selanjutnya, periksa apakah pengguna benar-benar memilih tanggal. Apabila selectedDate tidak bernilai null, tanggal tersebut diformat menjadi bentuk DD/MM/YYYY. Fungsi padLeft(2, '0') digunakan agar nilai hari dan bulan selalu terdiri dari dua digit. Setelah format selesai dibuat, setState() digunakan untuk memasukkan hasilnya ke dalam _dateController sehingga tanggal pilihan tampil pada field tanggal.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/24.png" alt="Format tanggal DD/MM/YYYY dengan padLeft" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/24.webp" alt="Format tanggal DD/MM/YYYY dengan padLeft" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Format tanggal DD/MM/YYYY dengan padLeft</figcaption>
               </figure>
             </section>
@@ -3686,7 +3686,7 @@
               <h5>8. Kemudian - Validasi tanggal</h5>
               <p>Kemudian, tambahkan validasi pada input tanggal agar pengguna wajib memilih tanggal sebelum menyimpan transaksi. Validator memeriksa isi _dateController, dan apabila masih kosong akan menampilkan pesan "Tanggal wajib diisi!". Dengan demikian, ketiga data utama pada form, yaitu judul, nominal, dan tanggal, memiliki pemeriksaan sebelum proses penyimpanan dijalankan.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/25.png" alt="Validasi input tanggal" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/25.webp" alt="Validasi input tanggal" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Validasi input tanggal</figcaption>
               </figure>
             </section>
@@ -3695,7 +3695,7 @@
               <h5>9. Setelah seluruh input - Tombol Simpan</h5>
               <p>Setelah seluruh input tersedia, tambahkan tombol Simpan untuk menjalankan proses validasi form. Tombol menggunakan ElevatedButton dengan warna merah dan padding vertikal agar tampil sesuai dengan tema aplikasi. Ketika tombol ditekan, _formKey.currentState!.validate() memeriksa seluruh validator pada form.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/26.png" alt="Tombol Simpan dengan validasi lengkap" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/26.webp" alt="Tombol Simpan dengan validasi lengkap" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Tombol Simpan dengan validasi lengkap</figcaption>
               </figure>
             </section>
@@ -3704,7 +3704,7 @@
               <h5>10. Selanjutnya - SnackBar keberhasilan</h5>
               <p>Selanjutnya, apabila seluruh validasi berhasil, tampilkan pesan keberhasilan menggunakan SnackBar. Program menampilkan pesan "Transaksi Berhasil Disimpan!" sebagai pemberitahuan bahwa data telah melewati proses validasi. Setelah itu, Navigator.pop(context) dijalankan untuk menutup halaman form dan kembali ke halaman sebelumnya, yaitu dashboard.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/27.png" alt="SnackBar dan Navigator.pop setelah validasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/27.webp" alt="SnackBar dan Navigator.pop setelah validasi" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>SnackBar dan Navigator.pop setelah validasi</figcaption>
               </figure>
             </section>
@@ -3713,7 +3713,7 @@
               <h5>11. Terakhir - dispose() controller</h5>
               <p>Terakhir, tambahkan method dispose() untuk memanggil dispose() pada seluruh TextEditingController yang digunakan. Ketiga controller, yaitu _titleController, _amountController, dan _dateController, dilepaskan sebelum super.dispose() dipanggil sehingga pengelolaan controller pada halaman form tetap ditangani secara lengkap.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/28.png" alt="Method dispose() untuk cleanup controller" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/28.webp" alt="Method dispose() untuk cleanup controller" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Method dispose() untuk cleanup controller</figcaption>
               </figure>
             </section>
@@ -3722,11 +3722,11 @@
               <h5>12. Dengan demikian - Kesimpulan implementasi</h5>
               <p>Dengan demikian, add_transaction_screen.dart telah menerapkan form transaksi yang terdiri dari input judul, nominal, dan tanggal. Input tanggal menggunakan showDatePicker, hasil pilihan diformat menjadi DD/MM/YYYY, seluruh field memiliki validasi wajib diisi, dan setelah validasi berhasil halaman kembali ke dashboard menggunakan Navigator.pop. Implementasi ini sesuai dengan latihan pada modul yang meminta penambahan input tanggal transaksi dan validasi wajib diisi.</p>
               <figure class="report-figure">
-                <img src="images/card14_navigation/29.png" alt="Form transaksi lengkap dengan semua fitur - Screenshot 1" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/29.webp" alt="Form transaksi lengkap dengan semua fitur - Screenshot 1" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Form transaksi lengkap dengan semua fitur - Screenshot 1</figcaption>
               </figure>
               <figure class="report-figure">
-                <img src="images/card14_navigation/30.png" alt="Form transaksi lengkap dengan semua fitur - Screenshot 2" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/card14_navigation/30.webp" alt="Form transaksi lengkap dengan semua fitur - Screenshot 2" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Form transaksi lengkap dengan semua fitur - Screenshot 2</figcaption>
               </figure>
             </section>
@@ -3825,7 +3825,7 @@
               <h5>a. Import Package dan Main Function</h5>
               <p>Langkah pertama adalah membuat file baru form-textfield.dart di dalam folder lib dan mengimport package Flutter Material Design yang menyediakan widget-widget dasar untuk membangun UI.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image001.png" alt="Screenshot import package" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image001.webp" alt="Screenshot import package" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Import package Material Design</figcaption>
               </figure>
             </section>
@@ -3834,7 +3834,7 @@
               <h5>b. Class MyApp</h5>
               <p>Selanjutnya, dibuat class MyApp sebagai root widget yang menggunakan StatelessWidget karena tidak memerlukan perubahan state. Widget ini mengembalikan MaterialApp dengan Scaffold yang berisi AppBar dan body.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image003.png" alt="Screenshot Class MyApp" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image003.webp" alt="Screenshot Class MyApp" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Class MyApp sebagai root widget</figcaption>
               </figure>
             </section>
@@ -3843,7 +3843,7 @@
               <h5>c. Class MyForm StatefulWidget</h5>
               <p>Kemudian dibuat class MyForm yang extends StatefulWidget karena form ini akan mengelola state berupa input text dari pengguna. StatefulWidget memerlukan class State yang terpisah untuk mengelola logika dan state-nya.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image005.png" alt="Screenshot Class MyForm" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image005.webp" alt="Screenshot Class MyForm" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Class MyForm extends StatefulWidget</figcaption>
               </figure>
             </section>
@@ -3852,7 +3852,7 @@
               <h5>d. Deklarasi TextEditingController</h5>
               <p>Di dalam class _MyFormState, dideklarasikan variabel _textEditingController yang berfungsi sebagai controller untuk mengambil dan mengelola nilai input dari TextField. Controller ini sangat penting untuk mendapatkan nilai yang diinputkan pengguna.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image007.png" alt="Screenshot TextEditingController" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image007.webp" alt="Screenshot TextEditingController" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Deklarasi TextEditingController</figcaption>
               </figure>
             </section>
@@ -3861,7 +3861,7 @@
               <h5>e. Method dispose()</h5>
               <p>Method dispose() dioverride untuk membersihkan TextEditingController ketika widget dihapus dari widget tree. Ini penting untuk mencegah memory leak karena controller perlu di-dispose secara manual.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image009.png" alt="Screenshot dispose method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image009.webp" alt="Screenshot dispose method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Method dispose() untuk membersihkan controller</figcaption>
               </figure>
             </section>
@@ -3870,7 +3870,7 @@
               <h5>f. Method build() dengan Padding dan Column</h5>
               <p>Pada method build(), dibuat layout menggunakan Padding untuk memberikan jarak dari tepi layar, dan Column untuk menyusun widget secara vertikal dengan crossAxisAlignment.start agar konten rata kiri.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image011.png" alt="Screenshot build method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image011.webp" alt="Screenshot build method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Method build() dengan Padding dan Column</figcaption>
               </figure>
             </section>
@@ -3879,7 +3879,7 @@
               <h5>g. Widget Text dan SizedBox</h5>
               <p>Ditambahkan widget Text sebagai label instruksi untuk pengguna, diikuti dengan SizedBox untuk memberikan jarak vertikal sebesar 10 pixel sebelum TextField.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image013.png" alt="Screenshot Text label" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image013.webp" alt="Screenshot Text label" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Widget Text dan SizedBox</figcaption>
               </figure>
             </section>
@@ -3888,7 +3888,7 @@
               <h5>h. TextField dengan InputDecoration</h5>
               <p>Dibuat widget TextField dengan berbagai properti decoration untuk tampilan visual yang menarik. InputDecoration berisi labelText sebagai label, hintText sebagai placeholder, border: OutlineInputBorder() untuk border kotak, dan prefixIcon untuk icon di sebelah kiri.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image015.png" alt="Screenshot TextField decoration" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image015.webp" alt="Screenshot TextField decoration" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>TextField dengan InputDecoration</figcaption>
               </figure>
             </section>
@@ -3897,7 +3897,7 @@
               <h5>i. Properti controller, keyboardType, dan onChanged</h5>
               <p>Pada TextField yang sama, ditambahkan properti controller yang menghubungkan dengan _textEditingController, keyboardType untuk menentukan jenis keyboard yang muncul (text), dan onChanged sebagai event listener yang akan dijalankan setiap kali ada perubahan input.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image017.png" alt="Screenshot TextField properties" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image017.webp" alt="Screenshot TextField properties" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Properti controller, keyboardType, dan onChanged</figcaption>
               </figure>
             </section>
@@ -3906,7 +3906,7 @@
               <h5>j. SizedBox untuk Jarak</h5>
               <p>Ditambahkan SizedBox dengan height 20 untuk memberikan jarak antara TextField dan button.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image019.png" alt="Screenshot SizedBox" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image019.webp" alt="Screenshot SizedBox" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>SizedBox untuk jarak</figcaption>
               </figure>
             </section>
@@ -3915,7 +3915,7 @@
               <h5>k. ElevatedButton dengan SnackBar</h5>
               <p>Dibuat ElevatedButton dengan method onPressed yang akan mengambil nilai dari controller, kemudian menampilkan nilai tersebut menggunakan SnackBar. Button ini juga diberi styling menggunakan styleFrom dengan background amber dan foreground hitam.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image021.png" alt="Screenshot ElevatedButton" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image021.webp" alt="Screenshot ElevatedButton" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>ElevatedButton dengan SnackBar</figcaption>
               </figure>
             </section>
@@ -3924,7 +3924,7 @@
               <h5>l. Hasil Running Aplikasi TextField</h5>
               <p>Jalankan programnya dan akan terlihat seperti pada gambar di bawah ini.</p>
               <figure class="report-figure">
-                <img src="images/appmob/hasil pertama.png" alt="Screenshot Hasil running TextField" class="report-figure-img" style="width: 40%; max-width: 400px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/hasil pertama.webp" alt="Screenshot Hasil running TextField" class="report-figure-img" style="width: 40%; max-width: 400px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Tampilan hasil running aplikasi TextField</figcaption>
               </figure>
             </section>
@@ -3940,7 +3940,7 @@
               <h5>a. Import Package dan Main Function</h5>
               <p>Sama seperti file sebelumnya, langkah pertama adalah mengimport package Material dan membuat main function yang menjalankan aplikasi.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image023.jpg" alt="Screenshot Import TextFormField" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image023.webp" alt="Screenshot Import TextFormField" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Import package dan main function</figcaption>
               </figure>
             </section>
@@ -3949,7 +3949,7 @@
               <h5>b. Class MyApp</h5>
               <p>Dibuat class MyApp sebagai root widget dengan judul AppBar "Basic Form TextFormField" untuk membedakan dengan implementasi TextField sebelumnya.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image025.jpg" alt="Screenshot MyApp TextFormField" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image025.webp" alt="Screenshot MyApp TextFormField" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Class MyApp untuk TextFormField</figcaption>
               </figure>
             </section>
@@ -3958,7 +3958,7 @@
               <h5>c. Class MyFormText StatefulWidget</h5>
               <p>Dibuat class MyFormText yang extends StatefulWidget karena form ini akan mengelola state yang lebih kompleks dengan mekanisme validasi.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image027.jpg" alt="Screenshot MyFormText class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image027.webp" alt="Screenshot MyFormText class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Class MyFormText extends StatefulWidget</figcaption>
               </figure>
             </section>
@@ -3967,7 +3967,7 @@
               <h5>d. Deklarasi GlobalKey dan Controllers</h5>
               <p>Di dalam class _MyFormTextState, dideklarasikan _formKey bertipe GlobalKey&lt;FormState&gt; yang berfungsi untuk mengakses state dari Form dan memanggil method validasi. Kemudian dideklarasikan dua controller untuk field nama dan email.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image029.jpg" alt="Screenshot GlobalKey declaration" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image029.webp" alt="Screenshot GlobalKey declaration" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Deklarasi GlobalKey dan controllers</figcaption>
               </figure>
             </section>
@@ -3976,7 +3976,7 @@
               <h5>e. Method dispose()</h5>
               <p>Method dispose() dioverride untuk membersihkan kedua controller (name dan email) ketika widget dihapus dari widget tree.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image031.jpg" alt="Screenshot dispose() method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image031.webp" alt="Screenshot dispose() method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Method dispose() untuk kedua controller</figcaption>
               </figure>
             </section>
@@ -3985,7 +3985,7 @@
               <h5>f. Method _submitForm() dengan Validasi</h5>
               <p>Dibuat method _submitForm() yang akan dipanggil ketika button submit ditekan. Method ini menggunakan _formKey.currentState!.validate() untuk menjalankan validasi pada semua TextFormField. Jika validasi berhasil (return true), maka nilai dari kedua controller diambil dan ditampilkan menggunakan SnackBar.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image033.jpg" alt="Screenshot _submitForm() method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image033.webp" alt="Screenshot _submitForm() method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Method _submitForm() dengan validasi</figcaption>
               </figure>
             </section>
@@ -3994,7 +3994,7 @@
               <h5>g. Widget Form dengan Key</h5>
               <p>Pada method build(), layout dibungkus dengan widget Form dan diberi key _formKey untuk menghubungkan dengan GlobalKey yang telah dideklarasikan. Form ini kemudian berisi Padding dan Column untuk layout.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image035.jpg" alt="Screenshot Widget Form" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image035.webp" alt="Screenshot Widget Form" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Widget Form dengan key</figcaption>
               </figure>
             </section>
@@ -4003,7 +4003,7 @@
               <h5>h. SizedBox untuk Jarak dari Atas</h5>
               <p>Ditambahkan SizedBox dengan height 10 untuk memberikan jarak dari atas.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image037.jpg" alt="Screenshot SizedBox" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image037.webp" alt="Screenshot SizedBox" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>SizedBox untuk jarak dari atas</figcaption>
               </figure>
             </section>
@@ -4012,7 +4012,7 @@
               <h5>i. TextFormField untuk Input Nama</h5>
               <p>Dibuat TextFormField pertama untuk input nama dengan controller _nameController dan decoration yang sesuai. Yang membedakan dengan TextField adalah adanya properti validator yang berisi logika validasi. Validator ini menerima parameter value dan mengembalikan String jika ada error, atau null jika valid.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image039.jpg" alt="Screenshot TextFormField nama" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image039.webp" alt="Screenshot TextFormField nama" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>TextFormField untuk input nama</figcaption>
               </figure>
             </section>
@@ -4021,7 +4021,7 @@
               <h5>j. SizedBox untuk Jarak Antar Field</h5>
               <p>Ditambahkan SizedBox untuk jarak antar TextFormField.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image043.jpg" alt="Screenshot SizedBox jarak" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image043.webp" alt="Screenshot SizedBox jarak" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>SizedBox untuk jarak antar field</figcaption>
               </figure>
             </section>
@@ -4030,7 +4030,7 @@
               <h5>k. TextFormField untuk Input Email</h5>
               <p>Dibuat TextFormField kedua untuk input email dengan controller _emailController. Validator pada field ini lebih kompleks karena memeriksa dua kondisi: apakah field kosong dan apakah format email valid (mengandung '@').</p>
               <figure class="report-figure">
-                <img src="images/appmob/image045.jpg" alt="Screenshot TextFormField email" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image045.webp" alt="Screenshot TextFormField email" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>TextFormField untuk input email</figcaption>
               </figure>
             </section>
@@ -4039,7 +4039,7 @@
               <h5>l. SizedBox untuk Jarak Sebelum Button</h5>
               <p>Ditambahkan SizedBox untuk jarak sebelum button submit.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image047.jpg" alt="Screenshot SizedBox button" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image047.webp" alt="Screenshot SizedBox button" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>SizedBox sebelum button</figcaption>
               </figure>
             </section>
@@ -4048,7 +4048,7 @@
               <h5>m. ElevatedButton Submit dengan Full Width</h5>
               <p>Dibuat SizedBox dengan width double.infinity agar button memenuhi lebar layar, kemudian di dalamnya terdapat ElevatedButton yang onPressed-nya memanggil method _submitForm yang telah dibuat sebelumnya.</p>
               <figure class="report-figure">
-                <img src="images/appmob/image049.jpg" alt="Screenshot Button submit" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/image049.webp" alt="Screenshot Button submit" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Button submit dengan full width</figcaption>
               </figure>
             </section>
@@ -4057,7 +4057,7 @@
               <h5>n. Hasil Running Aplikasi TextFormField</h5>
               <p>Jalankan programnya dan akan terlihat seperti pada gambar di bawah ini.</p>
               <figure class="report-figure">
-                <img src="images/appmob/hasil kedua.png" alt="Screenshot Hasil running TextFormField" class="report-figure-img" style="width: 40%; max-width: 400px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/hasil kedua.webp" alt="Screenshot Hasil running TextFormField" class="report-figure-img" style="width: 40%; max-width: 400px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Tampilan hasil running aplikasi TextFormField</figcaption>
               </figure>
             </section>
@@ -4080,7 +4080,7 @@
               <h5>a. Import Package dan Calculator Page</h5>
               <p>Import material.dart dan calculator_page.dart</p>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_01.png" alt="Screenshot Import package" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_01.webp" alt="Screenshot Import package" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Import material dan calculator_page</figcaption>
               </figure>
             </section>
@@ -4089,7 +4089,7 @@
               <h5>b. Fungsi main() dengan runApp(MyApp())</h5>
               <p>Fungsi main sebagai entry point aplikasi</p>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_02.png" alt="Screenshot main() function" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_02.webp" alt="Screenshot main() function" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Fungsi main dengan runApp</figcaption>
               </figure>
             </section>
@@ -4098,7 +4098,7 @@
               <h5>c. Class MyApp</h5>
               <p>Class MyApp sebagai root widget aplikasi dengan MaterialApp, theme, dan home</p>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_03.png" alt="Screenshot MyApp class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_03.webp" alt="Screenshot MyApp class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Class MyApp dengan MaterialApp</figcaption>
               </figure>
             </section>
@@ -4114,7 +4114,7 @@
               <h5>a. Import Material Package dan CalculatorPage Class</h5>
               <p>Import material package dan class CalculatorPage</p>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_04.png" alt="Screenshot CalculatorPage class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_04.webp" alt="Screenshot CalculatorPage class" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Class CalculatorPage extends StatefulWidget</figcaption>
               </figure>
             </section>
@@ -4123,7 +4123,7 @@
               <h5>b. Deklarasi Variabel-Variabel yang Diperlukan</h5>
               <p>Deklarasi variabel untuk mengelola state kalkulator</p>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_05.png" alt="Screenshot Variable declarations" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_05.webp" alt="Screenshot Variable declarations" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Deklarasi variabel state kalkulator</figcaption>
               </figure>
             </section>
@@ -4132,7 +4132,7 @@
               <h5>c. Method dispose() untuk Membersihkan Memory</h5>
               <p>Method dispose untuk cleanup resource</p>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_06.png" alt="Screenshot dispose() method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_06.webp" alt="Screenshot dispose() method" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Method dispose untuk cleanup</figcaption>
               </figure>
             </section>
@@ -4141,22 +4141,22 @@
               <h5>d. Fungsi Utama untuk Melakukan Perhitungan</h5>
               <p>Fungsi ini pertama-tama mengambil text dari kedua controller, lalu melakukan validasi untuk memastikan kedua field tidak kosong. Jika ada yang kosong, akan muncul SnackBar peringatan berwarna merah.</p>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_07.png" alt="Screenshot Calculation methods part 1" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_07.webp" alt="Screenshot Calculation methods part 1" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Fungsi perhitungan - validasi input</figcaption>
               </figure>
               <p>Selanjutnya, kita mengubah text menjadi angka menggunakan double.tryParse(). Jika parsing gagal (input bukan angka), akan muncul peringatan.</p>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_08.png" alt="Screenshot Calculation methods part 2" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_08.webp" alt="Screenshot Calculation methods part 2" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Parsing input menjadi angka</figcaption>
               </figure>
               <p>Pada bagian ini, kita menggunakan switch-case untuk menentukan operasi yang akan dilakukan.</p>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_09.png" alt="Screenshot Calculation methods part 3" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_09.webp" alt="Screenshot Calculation methods part 3" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Switch-case untuk operasi matematika</figcaption>
               </figure>
               <p>Setelah perhitungan selesai, kita gunakan setState() untuk mengupdate tampilan hasil, dan menampilkan SnackBar hijau sebagai konfirmasi perhitungan berhasil.</p>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_10.png" alt="Screenshot Calculation methods part 4" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_10.webp" alt="Screenshot Calculation methods part 4" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Update state dan tampilkan hasil</figcaption>
               </figure>
             </section>
@@ -4164,37 +4164,37 @@
             <section class="report-substep">
               <h5>e. Kemudian, kita membuat tampilan UI aplikasi kalkulator</h5>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_11.png" alt="Screenshot UI part 1" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_11.webp" alt="Screenshot UI part 1" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Scaffold dengan AppBar</figcaption>
               </figure>
               <p>Scaffold menyediakan struktur dasar halaman dengan AppBar berwarna deep purple dan judul "Kalkulator Kalkulator".</p>
               
               <figure class="report-figure">
-                <img src="images/appmob/tugas_12.png" alt="Screenshot UI part 2" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_12.webp" alt="Screenshot UI part 2" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Body dengan SingleChildScrollView</figcaption>
               </figure>
               <p>Bagian header menampilkan icon kalkulator berbukuran besar, judul aplikasi, dan instruksi singkat untuk pengguna. Kita menggunakan SingleChildScrollView agar konten bisa di-scroll jika layar kecil.</p>
 
               <figure class="report-figure">
-                <img src="images/appmob/tugas_13.png" alt="Screenshot UI part 3" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_13.webp" alt="Screenshot UI part 3" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>TextField dengan controller</figcaption>
               </figure>
               <p>TextField pertama menggunakan _firstNumberController sebagai controller, dengan keyboard tipe numeric. Decoration meliputi label, hint text, icon angka 1, dan border dengan rounded corners. Saat di-focus, border akan berubah menjadi deep purple dengan ketebalan 2 pixel.</p>
 
               <figure class="report-figure">
-                <img src="images/appmob/tugas_14.png" alt="Screenshot UI part 4" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_14.webp" alt="Screenshot UI part 4" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>TextField kedua dengan struktur sama</figcaption>
               </figure>
               <p>TextField kedua memiliki struktur yang sama dengan TextField pertama, namun menggunakan _secondNumberController dan icon angka 2.</p>
 
               <figure class="report-figure">
-                <img src="images/appmob/tugas_15.png" alt="Screenshot UI part 5" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_15.webp" alt="Screenshot UI part 5" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Button operasi matematika</figcaption>
               </figure>
               <p>Pada bagian ini, kita membuat 4 tombol operasi matematika yang disusun dalam Row dengan spacing merata (spaceEvenly).</p>
 
               <figure class="report-figure">
-                <img src="images/appmob/tugas_17.png" alt="Screenshot UI part 6" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_17.webp" alt="Screenshot UI part 6" class="report-figure-img" style="width: 70%; max-width: 800px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Tampilan hasil perhitungan</figcaption>
               </figure>
               <p>Bagian terakhir menampilkan hasil perhitungan. Pertama ada Divider sebagai pemisah visual, kemudian label "Hasil Perhitungan", dan terakhir Container yang menampilkan nilai _result.</p>
@@ -4204,7 +4204,7 @@
               <h5>f. Jalankan Program dan Coba</h5>
               <p>Hasil running aplikasi kalkulator</p>
               <figure class="report-figure">
-                <img src="images/appmob/tugas_18.png" alt="Screenshot Hasil running Calculator" class="report-figure-img" style="width: 40%; max-width: 400px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
+                <img src="images/appmob/tugas_18.webp" alt="Screenshot Hasil running Calculator" class="report-figure-img" style="width: 40%; max-width: 400px; margin: 0 auto; display: block; border-radius: var(--radius-cards);">
                 <figcaption>Tampilan hasil running aplikasi Kalkulator</figcaption>
               </figure>
             </section>
