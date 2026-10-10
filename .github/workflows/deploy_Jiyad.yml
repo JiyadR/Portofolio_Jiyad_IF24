@@ -20,6 +20,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ./Jiyad/
-          timeout: 600000
-          log-level: verbose
           dangerous-clean-slate: true
