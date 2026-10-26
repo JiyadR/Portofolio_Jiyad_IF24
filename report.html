@@ -56,7 +56,7 @@
       </p>
     </div>
     <div class="report-count glass">
-      <strong>14</strong>
+      <strong>16</strong>
       <span>Laporan awal</span>
     </div>
   </header>
@@ -348,7 +348,393 @@
       </div>
     </article>
 
+    <article class="report-index-item report-item aplikasi-mobile reveal">
+      <div class="report-index-num">15</div>
+      <div class="report-index-main">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3 class="report-index-title">Flutter Navigation: Named Routes & BottomNavigationBar</h3>
+        <p class="report-index-desc">Implementasi navigasi terpusat dengan Named Routes, BottomNavigationBar, form validasi, dan integrasi multiple screens (Login, Dashboard, History, Profile) dalam aplikasi financial management.</p>
+        <div class="project-meta">
+          <span>Flutter</span>
+          <span>Navigation</span>
+          <span>Mobile Dev</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-mobile-new" class="btn btn-solid report-open" data-report-target="report-mobile-new">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-index-item report-item aplikasi-mobile reveal">
+      <div class="report-index-num">16</div>
+      <div class="report-index-main">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3 class="report-index-title">Flutter Form Validation: TextField & TextFormField</h3>
+        <p class="report-index-desc">Pengenalan widget input TextField dan TextFormField di Flutter dengan implementasi validasi form, TextEditingController, GlobalKey, dan lifecycle management untuk input data yang terstruktur.</p>
+        <div class="project-meta">
+          <span>Flutter</span>
+          <span>Form Input</span>
+          <span>Validation</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-flutter-form-validation" class="btn btn-solid report-open" data-report-target="report-flutter-form-validation">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
+
   </div>
+
+  <section class="report-reader" id="reportReader">
+    <div class="report-empty glass" id="reportEmpty">
+      <i class="bi bi-journal-text"></i>
+      <div>
+        <strong>Pilih salah satu laporan</strong>
+        <p class="mb-0">Tekan tombol Baca Laporan pada card untuk membuka detail praktikum.</p>
+      </div>
+    </div>
+
+    <article class="report-detail glass" id="report-mobile-new" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3>Flutter Navigation: Named Routes & BottomNavigationBar</h3>
+        <p>Implementasi navigasi terpusat dengan Named Routes, BottomNavigationBar, form validasi, dan integrasi multiple screens (Login, Dashboard, History, Profile) dalam aplikasi financial management.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Dalam perkembangan teknologi informasi yang semakin pesat, aplikasi mobile menjadi bagian integral dari kehidupan masyarakat modern. Penggunaan aplikasi mobile tidak hanya terbatas pada penggunaan pribadi, melainkan telah menjadi kebutuhan sehari-hari untuk berbagai aspek kehidupan, termasuk pengelolaan keuangan pribadi. Namun, pengembangan aplikasi mobile yang baik memerlukan perhatian khusus terhadap arsitektur navigasi agar aplikasi tetap terorganisir, mudah dipelihara, dan dapat diskalakan dengan baik.
+          </p>
+          <p>
+            Salah satu tantangan utama dalam pengembangan aplikasi mobile berbasis Flutter adalah bagaimana mengelola navigasi antar halaman secara terpusat dan terstruktur. Seiring dengan bertambahnya fitur dan layar dalam suatu aplikasi, navigasi yang tidak teratur dapat menyebabkan kode yang sulit dibaca, sulit dimodifikasi, dan rentan terhadap kesalahan (spaghetti code). Oleh karena itu, pemahaman dan penerapan teknik navigasi yang tepat menjadi sangat penting dalam setiap proyek pengembangan aplikasi mobile.
+          </p>
+          <p>
+            Pengelolaan keuangan pribadi menjadi semakin penting di era digital saat ini. Aplikasi yang dirancang untuk membantu pengguna mengelola transaksi, melihat saldo, serta riwayat keuangan memerlukan antarmuka yang intuitif dan navigasi yang mudah digunakan. Namun, banyak aplikasi yang masih menggunakan navigasi langsung dengan Navigator.push() yang bersifat imperatif, sehingga mempersulit pengelolaan kode ketika aplikasi berkembang. Untuk mengatasi masalah tersebut, praktikum ini menggunakan pendekatan navigasi berbasis Named Routes pada framework Flutter yang memungkinkan navigasi yang lebih terpusat dan mudah dimodifikasi, serta penggunaan BottomNavigationBar sebagai menu navigasi bawah yang menjadi standar di hampir semua aplikasi modern.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Menerapkan Named Routes untuk navigasi terpusat dan rapi pada aplikasi Flutter.</li>
+            <li>Membangun menu bawah (BottomNavigationBar) ala aplikasi modern.</li>
+            <li>Mengintegrasikan Dashboard, Riwayat, dan Profil dalam satu wadah aplikasi.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Langkah Pengerjaan</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>a. Pertama, import package yang diperlukan dan definisikan fungsi main() sebagai entry point aplikasi</h5>
+              <p>
+                Aplikasi Flutter dimulai dengan fungsi main() yang merupakan entry point program. Fungsi ini menjalankan runApp() dengan widget utama aplikasi (MyApp). Pendekatan ini mengikuti struktur standar aplikasi Flutter di mana proses eksekusi dimulai dari titik ini dan membangun widget tree secara bertingkat. Import package Material diperlukan untuk mengakses komponen UI dasar Flutter, sedangkan import login_screen.dart dan add_transaction_screen.dart diperlukan untuk mengakses halaman-halaman yang akan digunakan dalam Named Routes.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/1.png" alt="Kode program main.dart dan import package">
+                <figcaption>Import package dan fungsi main() sebagai entry point aplikasi.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Selanjutnya, konfigurasi MaterialApp dengan Named Routes untuk navigasi terpusat</h5>
+              <p>
+                Kelas MyApp merupakan StatelessWidget yang berfungsi sebagai root widget aplikasi. MaterialApp dikonfigurasi dengan properti routes yang berupa peta (map) nama rute dan widget terkait. Named Routes memungkinkan navigasi menjadi lebih terpusat dan rapi dibandingkan navigasi langsung karena semua rute didefinisikan di satu tempat. Properti initialRoute, '/login' menunjukkan halaman pertama yang ditampilkan saat aplikasi dibuka adalah halaman login. Tema aplikasi menggunakan Colors.amber sebagai warna utama (primarySwatch). Debug banner dimatikan menggunakan debugShowCheckedModeBanner: false untuk tampilan yang lebih bersih dan profesional.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/2.png" alt="Konfigurasi MaterialApp dengan Named Routes">
+                <figcaption>Konfigurasi MaterialApp dengan Named Routes untuk navigasi terpusat.</figcaption>
+              </figure>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>login_screen.dart</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>a. Pertama, setup struktur dasar LoginScreen dengan StatefulWidget dan controller untuk input email</h5>
+              <p>
+                File ini mengggunakan StatefulWidget karena state input email akan berubah selama pengguna memasukkan teks. TextEditingController bernama _emailController digunakan untuk mengelola input teks dari user pada field email. GlobalKey<FormState> bernama _formKey digunakan untuk mengakses state form dan melakukan validasi. Method dispose() digunung untuk membersihkan, controller saat widget dihapus dari widget tree, mencegah memory leak.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/3.png" alt="Setup struktur dasar LoginScreen">
+                <figcaption>Pertama, setup struktur dasar LoginScreen dengan StatefulWidget dan controller.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Selanjutnya, bangun tampilan UI login dengan form validasi, ScaffoldBody menggunakan SingleChildScrollView untuk viewport yang bergeser, dan Padding digunakan untuk mengatur tata letak agar form berada di tengah layar dan atas. Widget TextField berisi input email dan password untuk menerima keyboard input email saat user memasukkan data. Widget Center dan Padding digunakan untuk mengatur tata letak agar form berada di tengah layar. TextFormField dikonfigurasi dengan keyboardType emailAddress untuk menampilkan keyboard khusus email. Validator memberikan umpan balik kepada pengguna jika kondisi tertentu. Ketika tombol LOGIN diklik, form divalidasi terlebih dahulu. Jika validasi berhasil, navigasi ke halaman login dengan menggunakan method pushReplacementNamed() yang mengantikan halaman login dengan main screen sehingga user tidak bisa kembali ke halaman login dengan tombol back. Email dan _emailController.text dikrim sebagai parameter ke MainScreen.</h5>
+              <p>
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/4.png" alt="Bangun tampilan UI login dengan form validasi">
+                <figcaption>Selanjutnya, bangun tampilan UI login dengan form validasi.</figcaption>
+              </figure>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>main_screen.dart</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>a. Pertama, setup StatefulWidget dengan parameter email dan inisialisasi list pages</h5>
+              <p>
+                File ini menggunakan StatefulWidget karena state tab aktif akan berubah selama penggunaan aplikasi. Parameter email diterima melalui constructor dan akan diteruskan ke ProfileScreen. Variabel _selectedIndex bertipe int dengan nilai awal 0 menentukan tab yang sedang aktif (0 = Dashboard, 1 = History, 2 = Profile). List pages dideklarasikan dengan keyword late karena nilainya baru akan diinisialisasi di dalam method initState(). Method initState() dipanggil sekali saat widget pertama kali dibuat dan digunakan untuk menginisialisasi list pages yang berisi DashboardScreen, HistoryScreen, dan ProfileScreen dengan mengirimkan parameter email ke ProfileScreen menggunakan widget.email.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/5.png" alt="Setup StatefulWidget dengan parameter email dan inisialisasi list pages">
+                <figcaption>Pertama, setup StatefulWidget dengan parameter email dan inisialisasi list pages.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Selanjutnya, definisikan method untuk menangani perpindahan tab dan bangun tampilan dengan BottomNavigationBar</h5>
+              <p>
+                Method _onItemTapped menerima parameter index dari tab yang diklik user dan menggunakan setState() untuk memperbarui nilai _selectedIndex, sehingga body Scaffold akan menampilkan halaman sesuai index yang dipilih. Widget Scaffold memiliki body yang menampilkan halaman dari list pages berdasarkan _selectedIndex, menggunakan konsep dynamic widget switching. BottomNavigationBar dikonfigurasi dengan properti currentIndex yang menunjukkan tab aktif, onTap yang memanggil _onItemTapped saat user menekan tab, dan selectedItemColor untuk memberi warna amber pada tab yang aktif. Tiga BottomNavigationBarItem didefinisikan dengan icon dan label masing-masing untuk tab Beranda, Riwayat, dan Profile.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/6.png" alt="Definisikan method dan bangun tampilan dengan BottomNavigationBar">
+                <figcaption>Selanjutnya, definisikan method untuk menangani perpindahan tab dan bangun tampilan dengan BottomNavigationBar.</figcaption>
+              </figure>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>dashboard_screen.dart</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>a. Pertama, setup struktur dasar DashboardScreen dengan AppBar dan FloatingActionButton (FAB)</h5>
+              <p>
+                DashboardScreen adalah StatelessWidget karena struktur dasar halaman tidak berubah secara internal. Scaffold menyediakan struktur dasar halaman dengan AppBar berwarna merah yang menampilkan judul "Dashboard Keuangan". FloatingActionButton (FAB) ditempatkan di posisi default (kanan bawah) dengan warna amber dan icon plus, yang ketika diklik akan menavigasi Navigator.pushNamed(context, '/add') untuk membuka halaman tambah transaksi menggunakan Named Routes yang sudah didefinisikan di main.dart. Body menggunakan SingleChildScrollView agar konten dapat discroll jika melebihi ukuran layar, dengan padding 16 piksel di semua sisi.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/7.png" alt="Setup struktur dasar DashboardScreen dengan AppBar dan FAB">
+                <figcaption>Pertama, setup struktur dasar DashboardScreen dengan AppBar dan FloatingActionButton (FAB).</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Selanjutnya, buat widget helper untuk menampilkan card saldo dan list transaksi dengan navigasi</h5>
+              <p>
+                Method _buildBalanceCard() menghasilkan widget Card dengan elevation 4 dan border rounded corner radius 16 piksel, berisi informasi saldo utama dengan background berwarna teal dan teks putih. Method _buildTransactionList() menerima parameter BuildContext untuk keperluan navigasi dan menggunakan Column berisi dua Card masing-masing untuk transaksi income dan outcome. ListTile untuk "Makan Siang" dan "Gaji Bulanan". Setiap ListTile memiliki CircleAvatar sebagai leading dengan ikon, judul dan subtitle untuk menampilkan transaksi, dan trailing untuk menampilkan nominal dengan warna merah untuk pengeluaran, dan hijau untuk pemasukan. Property onTap pada masing-masing ListTile memanggil Navigator.pushNamed() dengan MaterialPageRoute yang mengarah ke TransactionDetailScreen, sambil mengirimkan data transaksi (title, amount, category, date) sebagai parameter required melalui constructor.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/8.png" alt="Buat widget helper untuk menampilkan card saldo dan list transaksi">
+                <figcaption>Selanjutnya, buat widget helper untuk menampilkan card saldo dan list transaksi dengan navigasi.</figcaption>
+              </figure>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>history_screen.dart</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>a. Pertama, setup struktur dasar HistoryScreen dengan AppBar dan scroll view</h5>
+              <p>
+                File ini menggunakan StatelessWidget karena menampilkan data statis tanpa state management. Scaffold menyediakan struktur dasar dengan AppBar berwarna merah menampilkan judul "Riwayat Transaksi". Body menggunakan SingleChildScrollView dengan padding 16 piksel agar konten dapat di-scroll jika data transaksi banyak. Column dengan crossAxisAlignment.start membuat konten rata kiri, diawali dengan teks "Semua Transaksi" sebagai header section kemudian memanggil method _buildTransactionHistory() untuk menampilkan daftar transaksi.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/9.png" alt="Setup struktur dasar HistoryScreen dengan AppBar dan scroll view">
+                <figcaption>Pertama, setup struktur dasar HistoryScreen dengan AppBar dan scroll view.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Selanjutnya, buat method untuk menampilkan list transaksi menggunakan data dummy dengan navigasi ke detail</h5>
+              <p>
+                Method _buildTransactionHistory() mengembalikan widget ListView.builder dengan 5 data dummy ditampilkan melalui map dengan key untuk title, amount, category, date, icon, color, dan amountColor. Menggunakan ListView.builder() untuk membuat widget list secara dinamis sebanyak jumlah data transaksi. Setiap item transaksi dibungkus dengan Card dengan elevation 2 dan margin bottom 12 berisi ListTile yang menampilkan CircleAvatar dengan icon dan warna sesuai kategori transaksi. Widget ini title dan subtitle untuk informasi transaksi, serta trailing untuk menampilkan nominal dengan warna sesuai jenis transaksi (merah untuk pengeluaran, hijau untuk pemasukan). Casting IconData pada ikon diperlukan karena data disimpan dalam map dengan key String, sehingga perlu casting eksplisit. Ketika item ditekan, menggunakan tap event yang akan menavigasi ke TransactionDetailScreen dengan menggunakan data transaksi menggunakan Navigator.push() yang membentuk MaterialPageRoute untuk memasukkan tipe data yang benar.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/10.png" alt="Buat method untuk menampilkan list transaksi dengan navigasi ke detail">
+                <figcaption>Selanjutnya, buat method untuk menampilkan list transaksi menggunakan data dummy dengan navigasi ke detail.</figcaption>
+              </figure>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>profile_screen.dart</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>a. Pertama, setup ProfileScreen dengan parameter email dan ekstraksi nama dari email</h5>
+              <p>
+                File ini menggunakan StatelessWidget dengan parameter email yang bersifat required untuk menampilkan data user secara dinamis. Di dalam method build(), dilakukan ekstraksi nama dari email dengan cara memisahkan string sebelum symbol '@' menggunakan split('@').first, kemudian tiap kata di nama dikapitalisasi huruf pertama dengan split(' ').map((word) => '${word[0].toUpperCase()} + ${word.substring(1)}').join(' '). Proses ini mengubah format email seperti "joko.widodo@gmail.com" menjadi nama yang lebih readable yaitu "Joko Widodo".
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/11.png" alt="Setup ProfileScreen dengan parameter email dan ekstraksi nama dari email">
+                <figcaption>Pertama, setup ProfileScreen dengan parameter email dan ekstraksi nama dari email.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Selanjutnya, bangun UI header profile dengan gradient background dan avatar</h5>
+              <p>
+                Scaffold dengan AppBar berwarna merah menampilkan judul "Profil Saya". Body menggunakan SingleChildScrollView agar konten dapat di-scroll. Container pertama sebagai header profile memiliki lebar penuh (width: double.infinity) dan BoxDecoration berisi LinearGradient dari Colors.red ke Colors.redAccent untuk efek visual yang menarik. Di dalam container terdapat column dengan Center dan CircleAvatar berukuran 80 pixel, background putih, merah berukuran 60 piksel. Nama user yang sudah diekstrak dari email ditampilkan dengan font size 24 bold warna putih, diikuti dengan email sub-ditampilkan dengan font size 14 dan warna putih transparent (white70) untuk memberikan hierarki informasi.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/12.png" alt="Bangun UI header profile dengan gradient background dan avatar">
+                <figcaption>Selanjutnya, bangun UI header profile dengan gradient background dan avatar.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Kemudian, tampilkan detail informasi profil menggunakan custom card widget</h5>
+              <p>
+                Section "Informasi Profil" ditampilkan dengan padding horizontal 24 piksel untuk memberikan ruang yang baik di kiri dan kanan. Method _buildInfoCard() dipanggil berulang kali untuk menampilkan informasi Nama, Email, dan Status dengan jarak 12 piksel antar card, setelah detail profil, ditampilkan tombol logout dengan lebar penuh (double.infinity) yang membungkus ElevatedButton berwarna merah dengan padding vertikal 16 piksel dan border radius 8 piksel. Tombol logout menampilkan icon Icons.logout_rounded dan text "LOGOUT" dalam satu row dengan alignment center. Ketika tombol ditekan, akan muncul dialog konfirmasi untuk logout menggunakan _showLogoutDialog() sebelum melakukan logout.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/13.png" alt="Tampilkan detail informasi profil menggunakan custom card widget">
+                <figcaption>Kemudian, tampilkan detail informasi profil menggunakan custom card widget.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>d. Terakhir, buat widget helper untuk detail card dan dialog konfirmasi logout</h5>
+              <p>
+                Method _buildInfoCard() mengembalikan Container dengan card informasi Card informasi dengan Container yang memiliki border abu-abu, border radius 8 piksel, dan padding 16 piksel. Di dalamnya terdapat Column dengan dua Text widget label dengan font size 12 warna abu-abu dan font weight 400 di atas, serta value dengan font size 16 warna hitam dan font weight 600 di bawah. Method _showLogoutDialog() menampilkan showDialog() untuk menampilkan AlertDialog dengan title "Logout" dan konten berisi peringatan konfirmasi. Terdapat dua widget action dalam Dialog adalah tombol "Batal" dan tombol "Batal" yang menutup dialog menggunakan Navigator.pop(context), dan tombol "Logout" berwarna merah yang ketika ditekan akan menutup dialog terlebih dahulu kemudian melakukan navigasi ke LoginScreen menggunakan Navigator.pushReplacementNamed(context, '/login') untuk menghapus semua history dengan tombol back.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/14.png" alt="Buat widget helper untuk detail card dan dialog konfirmasi logout">
+                <figcaption>Terakhir, buat widget helper untuk detail card dan dialog konfirmasi logout.</figcaption>
+              </figure>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>add_transaction_screen.dart</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>a. Pertama, setup StatefulWidget dengan form key dan text controllers untuk input data transaksi</h5>
+              <p>
+                File ini menggunakan StatefulWidget karena form input membutuhkan state management untuk validasi dan update UI. GlobalKey<FormState> berfungsi sebagai _formKey digunakan untuk mengakses state form dan melakukan validasi. Tiga TextEditingController didefinisikan: _titleController untuk input judul transaksi, _amountController untuk input nominal uang, dan _dateController untuk menampilkan tanggal yang dipilih dari date picker. Method dispose() dipanggil untuk membersihkan ketiga controller saat widget dihapus dari widget tree guna mencegah memory leak.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/15.png" alt="Setup StatefulWidget dengan form key dan text controllers">
+                <figcaption>Pertama, setup StatefulWidget dengan form key dan text controllers untuk input data transaksi.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Selanjutnya, bangun tampilan form dengan input field untuk judul dan nominal transaksi</h5>
+              <p>
+                Scaffold dengan AppBar berwarna merah menampilkan judul "Catat Transaksi". Body menggunakan SingleChildScrollView dengan Form dengan padding 16 piksel dan Form dengan _formKey sebagai key. Column dengan crossAxisAlignment.stretch memuat widget TextFormField berupa input untuk judul dengan TextFormField pertama untuk input judul dengan menampilkan hintText "Cth: Makan Siang", decoration InputBorder, "Judul" dan borderRadius OutlineInputBorder() untuk border kotak. Validator mengecek apakah input kosong atau tidak. Icon adalah Icons.title. Jika kosong jika adalah 'Judul wajib diisi!', error message. SizedBoxheight: 16) memberi jarak vertikal antar input field. TextFormField kedua untuk input nominal menggunakan _amountController dengan keyboardType: TextInputType.number untuk keyboard khusus angka, icon Icons.attach_money. Input decoration labelText: "Nominal" dan border: OutlineInputBorder(), serta validator yang mengecek nilai tidak null dan tidak kosong.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/16.png" alt="Bangun tampilan form dengan input field untuk judul dan nominal transaksi">
+                <figcaption>Selanjutnya, bangun tampilan form dengan input field untuk judul dan nominal transaksi.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Kemudian, implementasikan input tanggal dengan TextFormField dan date picker, serta kategori dropdown</h5>
+              <p>
+                TextFormField untuk tanggal dengan readOnly: true agar user tidak bisa mengetikkan _dateController dengan properti readOnly: true agar user tidak bisa langsung mengetikkan tanggal manual. onTap memicu fungsi async untuk membuka showDatePicker(). Date picker dikonfigurasi dengan context, initialDate hari ini, firstDate tahun 2000 sebagai batas awal, dan lastDate DateTime(2100) sebagai batas akhir. Di dalam date picker, user dapat memilih tanggal (selectedDate tidak null), tanggal diformat ke format DD-MM-YYYY menggunakan string interpolation untuk menampilkan data dari controller. Validator mengecek tanggal dan bulan. Hasil format dimasukan ke _dateController.text dengan menggunakan if (selectedDate != null). Di bawahnya terdapat DropdownButtonFormField untuk kategori. Validator mengecek apakah tanggal sudah dipilih dengan pesan error "Tanggal wajib diisi!" jika masih kosong.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/17.png" alt="Implementasikan input tanggal dan kategori dropdown">
+                <figcaption>Kemudian, implementasikan input tanggal dengan TextFormField dan date picker, serta kategori dropdown.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>d. Terakhir, tambahkan tombol simpan dengan validasi dan navigasi kembali ke halaman sebelumnya</h5>
+              <p>
+                ElevatedButton dengan lebar penuh (double.infinity) dan style ElevatedButton.styleFrom() dengan style background merah, foreground putih, dan padding vertikal 16 piksel untuk tombol yang lebih besar. Properti onPressed berisi logika validasi form menggunakan _formKey.currentState?.validate() yang akan mengecek semua validator pada tiap TextFormField. Jika validasi berhasil (semua field valid atau tidak ada error), ScaffoldMessenger.of(context).showSnackBar() digunakan untuk menampilkan pesan "Transaksi Berhasil Disimpan!" sebagai feedback visual. Setelah itu, Navigator.pop(context) dipanggil untuk menutup halaman dan kembali ke halaman sebelumnya (Dashboard) dengan mengirimkan balasan Navigator.pop(context) untuk menutup halaman dan kembali ke halaman Dashboard dengan font size 16. Method dispose() di bawah widget tree digunakan untuk membersihkan ketiga controller saat widget dihapuskan.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/18.png" alt="Tambahkan tombol simpan dengan validasi dan navigasi kembali">
+                <figcaption>Terakhir, tambahkan tombol simpan dengan validasi dan navigasi kembali ke halaman sebelumnya.</figcaption>
+              </figure>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>transaction_detail_screen.dart</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>a. Pertama, setup TransactionDetailScreen dengan parameter required untuk menampilkan detail transaksi yang diterima dari layar sebelumnya</h5>
+              <p>
+                File ini menggunakan StatelessWidget dengan empat parameter required: title untuk menampilkan data yang diterima untuk detail transaksi seperti judul, nominal, kategori, dan tanggal transaksi. Constructor menerima empat parameter dengan keyword required dan keperluan menampilkan data lengkap transaksi. Widget ini title untuk judul transaksi, amount untuk nominal, category untuk kategori transaksi, dan date untuk tanggal transaksi. Keempat parameter ditandai sebagai final sehingga tidak dapat diubah jika keempat data tersebut disesuaikan saat pemangilan. Penggunaan const pada constructor untuk kinerja yang lebih baik dan efficient jika memungkinkan.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/19.png" alt="Setup TransactionDetailScreen dengan parameter required">
+                <figcaption>Pertama, setup TransactionDetailScreen dengan parameter required untuk menampilkan detail transaksi yang diterima dari layar sebelumnya.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Selanjutnya, bangun tampilan detail transaksi dengan icon, informasi utama, dan container dekoratif</h5>
+              <p>
+                Scaffold dengan AppBar berwarna merah menampilkan judul "Detail Transaksi". Body menggunakan Padding 24 piksel dan Center untuk memusatkan konten. CrossAxisAlignment.center untuk memusatkan konten. Column berisi children yang ditampilkan dari atas ke bawah untuk menampilkan elemen secara vertical. Icon receipt berwarna merah dengan ukuran 80 piksel ditampilkan di atas konten sebagai representasi visual transaksi. Setelah jarak 24 piksel, title transaksi ditampilkan dengan font size 24 dan bold, diikuti amount dengan font size 32, bold, dan warna merah untuk menunjukkan nominal transaksi. Divider dengan height 40 dan thickness 2 membuat garis pemisah antara informasi utama dan detail tambahan. Method _buildInfoRow() dipanggil empat kali untuk detail kategori, tanggal, serta row untuk menampilkan informasi Kategori, Tanggal, dan Status transaksi dalam format terstruktur.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/20.png" alt="Bangun tampilan detail transaksi dengan icon dan informasi utama">
+                <figcaption>Selanjutnya, bangun tampilan detail transaksi dengan icon, informasi utama, dan container dekoratif.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Terakhir, buat widget helper untuk menampilkan baris detail dengan format label dan value untuk masing-masing detail transaksi</h5>
+              <p>
+                Method _buildInfoRow() adalah widget Row untuk menampilkan detail dengan format label dan value dalam baris. Row memiliki mainAxisAlignment: MainAxisAlignment.spaceBetween untuk memisahkan elemen kiri dan kanan secara otomatis. Label ditampilkan dengan Expanded di kiri dan value di kanan dengan ukuran fixed. Method menerima dua parameter: label sebagai keterangan (seperti "Kategori") dan value sebagai nilai transaksi (seperti "Makanan"). Widget helper ini membuat kode lebih reusable dan konsisten. Setiap label ditampilkan dengan TextStyle berwarna abu-abu untuk membedakan dengan value yang ditampilkan dengan font weight bold dan warna hitam. Widget Row digunakan untuk mengatur layout baris detail untuk kategori, tanggal, dan status dengan format yang sama untuk semua baris detail.
+              </p>
+              <figure class="report-figure">
+                <img src="images/report-mobile-new/21.png" alt="Buat widget helper untuk menampilkan baris detail transaksi">
+                <figcaption>Terakhir, buat widget helper untuk menampilkan baris detail dengan format label dan value untuk masing-masing detail transaksi.</figcaption>
+              </figure>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Praktikum ini telah berhasil mengimplementasikan aplikasi Flutter bernama "Expense Tracker Final" yang menggabungkan aplikasi pengelola keuangan pribadi dengan menggunakan berbagai konsep fundamental Flutter. Konsep yang telah diserakan dengan mude/didiskusikan, sesuai rapi disajat MaterialApp pada file main.dart, mengintegrasikan navigation, state management, dan UI design.
+          </p>
+          <p>
+            Dibangun dengan lapisan Pernavigasian, tentang StatefulWidget dan StatelessWidget juga telah diuji melalui implementasi yang tepat pada setiap screen, mulai dari LoginScreen, AddTransactionScreen, dan MainScreen mengintegrasikan DashboardScreen, HistoryScreen, dan ProfileScreen. StatefulWidget untuk mengelola state yang berubah, sedangkan StatelessWidget juga telah diuji melalui implementasi data statis.
+          </p>
+          <p>
+            Passing data antar screen telah didimplementasikan, melalu tua integrasi antara named routes dalam navigasi dengan Navigator.push() yang menerima data sebagai parameter named constructor. Validasi form dan input validation menggunakan GlobalKey<FormState> dengan TextFormField dan validator untuk memastikan data input sesuai dengan benar, dan pengguna sudah mendapatkan feedback visual yang jelas melalui error message dan SnackBar. State management menggunakan setState() untuk meperbarui UI widget berdasarkan perubahan data, serta aplikasi dialog yang digunakan untuk popping feedback dari user dan callback dalam fungsi async seperti date picker dan time selection. Tata letak UI design telah didimplementasikan menggabungkan kombinasi widget seperti Scaffold, appBar, icon, ListView, BottomNavigationBar, dan BottomSheet.layout yang mengintegrasikan konteks dengan Context, mempercepat integrasi dengan konteks, expandable dan sesuai Material yang tepat selakukan implementasi untuk kedua dimensi dengan layout terbentuk, tanpa mengatasi material dan dengan orientasi aplikasi, Flutter yang tata ukuran tertata ukur ke dimensi terbentuk dari detail equivalent. Secara keseluruhnya, praktikum ini membentu memperdalam teori agar struktur aplikasi, Flutter yang tata navigation pattern, state management, data passing, form handling, dan UI design merupakan fondasi penting dalam pengembangan aplikasi yang lebih kompleks dan production-ready di masa depan.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
 
   <section class="report-reader" id="reportReader">
     <div class="report-empty glass" id="reportEmpty">
@@ -4243,73 +4629,243 @@
         </a>
       </div>
     </article>
+
+    <article class="report-detail glass" id="report-flutter-form-validation" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3>Flutter Form Validation: TextField & TextFormField</h3>
+        <p>Implementasi widget input TextField dan TextFormField di Flutter dengan fokus pada validasi form, pengelolaan state, TextEditingController, GlobalKey, dan lifecycle management.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Manajemen pengeluaran merupakan salah satu aspek penting dalam kehidupan keuangan personal. Dengan meningkatnya jumlah transaksi digital, menjadi semakin sulit untuk melacak dan menganalisis pola pengeluaran tanpa bantuan aplikasi khusus. Aplikasi mobile telah menjadi solusi praktis untuk mengelola keuangan pribadi dengan cara yang lebih terstruktur dan mudah diakses.
+          </p>
+          <p>
+            Expense Tracker adalah sebuah aplikasi mobile yang dirancang untuk membantu pengguna dalam mencatat penumpan, dan mengelola transaksi keuangan mereka secara real-time. Aplikasi ini dibangun menggunakan Flutter, sebuah framework cross-platform yang memungkinkan pembuatan aplikasi untuk berbagai perangkat dengan codebase yang sama. Dalam konteks praktikum, pengembangan aplikasi ini melibatkan pemahaman mengenai arsitektur aplikasi multi-layer, manajemen basis data lokal, penanganan otentikasi pengguna dengan enkripsi password, serta desain antarmuka pengguna yang intuitif.
+          </p>
+          <p>
+            Fitur utama yang diimplementasikan dalam aplikasi mencakup sistem autentikasi pengguna dengan registrasi dan login, penambahan expense dengan menggunakan shared preferences, pencatatan transaksi dengan kategori pengeluaran dan pemasukan, serta perhitungan saldo berdasarkan seluruh riwayat transaksi. Basis data lokal dikelola menggunakan SQLite melalui library sqflite, yang memungkinkan pengguna tersimpan dengan aman di perangkat tanpa memerlukan koneksi internet. Untuk keamanan password, aplikasi menggunakan library bcrypt guna melakukan hashing satu arah, sehingga password asli pengguna tidak disimpan dalam bentuk plain text melainkan dalam bentuk hash yang aman di database.
+          </p>
+          <p>
+            Arsitektur aplikasi mengikuti pola separation of concerns dengan memisahkan logika bisnis (services), akses data (DAO), model data, dan presentasi (screens). Pendekatan ini memudahkan pemeliharaan kode, pengujian, dan pengembangan fitur tambahan di masa depan. Praktikum ini bertujuan untuk memberikan pemahaman mendalam mengenai bagaimana mengintegrasikan berbagai komponen dalam aplikasi mobile, mulai dari penanganan input pengguna, validasi data, penyimpanan data lokal, hingga penampilan informasi secara dinamis berdasarkan status pengguna.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Memahami dan mengimplementasikan arsitektur aplikasi Flutter yang modular dengan pemisahan layer (models, services, database, screens, utils), sistem autentikasi pengguna dengan enkripsi bcrypt, serta manajemen basis data lokal SQLite dan sesi pengguna menggunakan shared preferences.</li>
+            <li>Mengimplementasikan fitur pencatatan transaksi keuangan dengan kategori, pemasukan dan pengeluaran, termasuk validasi data pada level service, perhitungan saldo otomatis, dan penerapan DAO (Data Access Object) pattern untuk pemisahan logika akses database.</li>
+            <li>Merancang dan mengimplementasikan navigasi aplikasi multi-screen dengan routing terstruktur (splash screen, registrasi, halaman utama), serta menerapkan asynchronous programming dengan Future dan async-await untuk menangani operasi non-blocking.</li>
+            <li>Membangun antarmuka pengguna yang responsif dan user-friendly menggunakan Material Design dan widget-widget Flutter, dengan fokus pada pengalaman pengguna yang intuitif dalam pencatatan dan pengelolaan transaksi keuangan.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Langkah Pengerjaan</h4>
+          
+          <div class="report-substeps">
+            
+            <section class="report-substep">
+              <h5>a. Konfigurasi Konstanta Aplikasi</h5>
+              <p>
+                Pertama siapkan file konfigurasi pada lib/utils/constants.dart untuk mendefinisikan konstanta yang digunakan di seluruh aplikasi. Class AppColors mendefinisikan palet warna aplikasi menggunakan Material Design dengan warna primary amber sebagai identitas visual utama, accent red untuk elemen penting, success green untuk feedback positif, dan error dark red untuk peringatan. Class TransactionCategories menyimpan daftar kategori transaksi dan menyediakan fungsi helper untuk mendapatkan warna dan icon sesuai kategori, agar setiap kategori memiliki representasi visual unik. Class ValidationPatterns menyediakan fungsi validasi untuk memastikan input pengguna sesuai format dengan validasi email menggunakan regular expression, password minimal 6 karakter, dan nama minimal 2 karakter. Class DatabaseConstants mendefinisikan nama database, versi, dan nama kolom untuk menghindari typo. Class SessionConstants mendefinisikan key untuk menyimpan data sesi di SharedPreferences. Class RouteNames mendefinisikan string route untuk navigasi aplikasi.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/1.png" alt="Konfigurasi konstanta aplikasi" class="report-figure-img">
+                <figcaption>Konfigurasi konstanta aplikasi pada constants.dart</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Pembuatan Model User</h5>
+              <p>
+                Selanjutnya, buat model data User pada lib/models/user.dart untuk merepresentasikan struktur data pengguna dalam aplikasi. Class User memiliki field id yang nullable karena auto-increment, email sebagai unique identifier, passwordHash untuk menyimpan hasil hash password (bukan plain text untuk keamanan), name untuk nama pengguna, dan createdAt untuk timestamp pembuatan akun. Constructor menggunakan named parameters dengan default value untuk createdAt yaitu waktu saat ini. Method toMap() mengkonversi objek User menjadi Map untuk disimpan ke database dengan DateTime diubah ke ISO8601 string karena SQLite tidak memiliki tipe datetime native. Factory fromMap() melakukan reverse conversion dari Map hasil query database kembali menjadi objek User. Method copyWith() memudahkan pembuatan salinan objek dengan beberapa field yang diubah, pattern yang berguna untuk immutability dan state management.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/2.png" alt="Pembuatan model User" class="report-figure-img">
+                <figcaption>Pembuatan model data User</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Pembuatan Model Transaction</h5>
+              <p>
+                Kemudian, buat model data Transaction pada lib/models/transaction.dart untuk merepresentasikan data transaksi keuangan. Class Transaction memiliki field id yang nullable untuk auto-increment, userId sebagai foreign key yang merujuk ke tabel users sehingga setiap transaksi terikat pada pengguna tertentu, title untuk deskripsi transaksi, amount yang tipe double untuk "Bensin motor", amount untuk nominal transaksi dengan konvensi positif untuk pemasukan dan negatif untuk pengeluaran, category berisi kategori seperti "transport" dan ditandai dengan penambahan enum amount, category untuk kategori transaksi, date untuk ekseksi transaksi yang disimpan pengguna (bisa berbeda dengan tanggal penciptaan), dan createdAt untuk timestamp pencatatan ke sistem. Sama seperti model User, Transaction menyediakan method toMap() untuk konversi ke Map database dan factory fromMap() untuk konversi dari Map ke objek Transaction.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/3.png" alt="Pembuatan model Transaction" class="report-figure-img">
+                <figcaption>Pembuatan model data Transaction</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>d. Implementasi Layer Database dengan DatabaseHelper dan DAO</h5>
+              <p>
+                Setelah model dibuat, implementasikan layer database pada lib/database/database.dart dengan DatabaseHelper yang mengelola lifecycle database menggunakan singleton pattern dan DAO pattern yang memisahkan logika akses dari logika bisnis. Class DatabaseHelper menggunakan private constructor internal() dan factory constructor untuk memastikan hanya ada satu instance database di aplikasi untuk menghindari multiple connections yang dapat menyebabkan race conditions. Method initDatabase() membuat database di path yang tepat menggunakan getDatabasePath() dan memanggil openDatabase() dengan parameter onCreate callback. Method _onCreate() membuat dua tabel yaitu tabel users dengan primary key auto-increment, email UNIQUE NOT NULL agar tidak ada duplikat email, dan field lainnya NOT NULL karena wajib diisi, serta tabel transactions dengan primary key auto-increment dan foreign key userId yang merujuk ke tabel users untuk menjaga integritas referensial. Class UserDAO menangani operasi CRUD pada tabel users dengan method insertUser() untuk registrasi dengan menggunakan auto-increment, setUserByEmail() untuk mencari user berdasarkan email menggunakan WHERE clause dengan placeholder untuk menghindari SQL injection, getUserById() untuk mencari berdasarkan id, dan emailExists() sebagai helper method untuk mengecek keberadaan email sebelum registrasi. Class TransactionDAO menangani operasi CRUD untuk tabel transactions dengan method insertTransaction() untuk menambahkan transaksi, getTransactionsByUserId() untuk mengambil semua transaksi milik user dengan ORDER BY date DESC agar transaksi terbaru muncul pertama, getAccountTransactionsByWorldl() sama tetapi dengan parameter limit untuk menampilkan hanya beberapa transaksi terbaru di dashboard, getTransactionById() untuk menampilkan satu transaksi berdasarkan id, dan deleteTransaction() untuk menghapus transaksi.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/4.png" alt="Implementasi DatabaseHelper dan DAO" class="report-figure-img">
+                <figcaption>Implementasi layer database dengan DatabaseHelper dan DAO pattern</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>e. Implementasi AuthService, SessionService, dan TransactionService</h5>
+              <p>
+                Selanjutnya, implementasikan layer service pada lib/services/services.dart yang menangani logika bisnis aplikasi. Class AuthService menangani registrasi dan login pengguna dengan validasi input menggunakan ValidationPatterns, pengecekan email duplikat melalui UserDao(), dan hashing password menggunakan BCrypt untuk keamanan. Method register() menerima input email, password, dan nama pengguna, mengecek keberadaan email di database, melakukan hash password menggunakan BCrypt dengan salt otomatis, membuat objek User baru, menyimpan ke database melalui UserDAO, dan mengembalikan hasil berupa Map yang berisi status sukses, userId, dan objek user lengkap. Method login() menerima email dan password, mencari user berdasarkan email di database, memverifikasi password yang diinput dengan passwordHash menggunakan BCrypt.checkpw(), dan mengembalikan hasil berupa Map berisi status, userId, dan objek user jika login berhasil atau pesan error jika gagal. Class SessionService mengelola sesi pengguna menggunakan SharedPreferences untuk menyimpan pengguna yang sedang login, tanpa perlu backend server dengan method saveSession() untuk menyimpan userId, email, dan name, getLoggedInUserId() untuk mengambil userId pengguna yang login untuk akses individual, getSession() untuk mengambil semua data sesi sekaligus, isLoggedIn() untuk mengecek status login, dan clearSession() untuk menghapus sesi saat logout. Class TransactionService menangani operasi transaksi dengan method addTransaction() untuk menambahkan transaksi baru dengan validasi input dan konversi amount menjadi positif untuk pemasukan dan negatif untuk pengeluaran, getTransactions() untuk mengambil semua transaksi user, getRecentTransactions() untuk mengambil beberapa transaksi terbaru, calculateBalance() untuk menghitung total saldo dengan menjumlahkan semua amount, formatCurrency() untuk menyimpan nominal ke format Rupiah dengan pemisah ribuan, dan formatDate() untuk menampilkan DateTime ke format tanggal yang mudah dibaca.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/5.png" alt="Implementasi Services Layer" class="report-figure-img">
+                <figcaption>Implementasi AuthService, SessionService, dan TransactionService</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>f. Implementasi Entry Point Aplikasi</h5>
+              <p>
+                Kemudian, implementasikan entry point aplikasi pada lib/main.dart dengan konfigurasi routing dan Material Design theme. Function main() adalah entry point aplikasi yang memanggil runApp() dengan widget MyApp. Class MyApp berupa StatelessWidget yang mengkonfigurasi MaterialApp dengan theme Material 3 menggunakan warna primary amber dan secondary teal, setting debugShowCheckedModeBanner ke false untuk menghilangkan banner debug. Property initialRoute di-set ke splash screen sebagai halaman pertama yang ditampilkan. Method onGenerateRoute menangani navigasi dengan switch statement berdasarkan nama route: route splash menampilkan SplashScreen, route login menampilkan LoginScreen, route register menampilkan RegisterScreen, route main menggunakan FutureBuilder untuk mengecek userId dari sesi sebelum menampilkan MainScreen. FutureBuilder ini berfungsi untuk memastikan user yang sudah login dapat langsung masuk ke halaman utama, sementara user yang belum login akan diarahkan ke login screen secara otomatis. Jika route tidak valid, akan menampilkan error 404 page.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/6.png" alt="Implementasi Entry Point Aplikasi" class="report-figure-img">
+                <figcaption>Implementasi entry point aplikasi pada main.dart</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>g. Implementasi Splash Screen</h5>
+              <p>
+                Selanjutnya, implementasikan splash screen pada lib/screens/splash_screen.dart yang menampilkan welcome screen dan mengecek status login pengguna menggunakan SessionService. Class SplashScreen berupa StatefulWidget yang di initState-nya memanggil _checkAutoLogin() untuk mengecek status login. Method _checkAutoLogin() menggunakan 2 detik penundaan Future.delayed() untuk memberikan efek splash screen yang kemudian menggunakan SessionService.isLoggedIn(). Pengecekan mounted sebelum navigasi mencegah widget tree diubah saat widget sudah tidak aktif. Jika user sudah login, aplikasi langsung mengarahkan ke main screen dengan pushReplacementNamed(). Method build() menampilkan UI untuk login screen belum login, mengarahkan ke login screen. UI menampilkan logo wallet berwarna amber, nama aplikasi "Expense Tracker" dengan teks bold, dan loading indicator spinner untuk memberikan tampilan awal aplikasi selama pengeluaran cepat.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/7.png" alt="Implementasi Splash Screen" class="report-figure-img">
+                <figcaption>Implementasi splash screen dengan auto-login check</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>h. Implementasi Login Screen</h5>
+              <p>
+                Setelah itu, implementasikan login screen pada lib/screens/auth/login_screen.dart dengan form validasi dan proses autentikasi. Class LoginScreen berupa StatefulWidget yang menggunakan state dengan form key, email controller, password controller, AuthService instance, SessionService instance, loading flag, dan obscurePassword flag untuk toggle password visibility. Method _handleLogin() melakukan validasi form terlebih dahulu menggunakan form key, kemudian mengubah state menjadi loading, memanggil AuthService.login() dengan email dan password yang di-trim, dan setelah selesai mengubah state menjadi tidak loading. Jika login berhasil, menyimpan sesi menggunakan SessionService.saveSession() dengan userId dan email, dan navigasi user yang dikembalikan oleh AuthService, kemudian mengarahkan ke main screen dengan pushReplacementNamed(). Jika login gagal, menampilkan error message sebagai SnackBar. Pengecekan password length, check mounted icon dengan text field email dengan validasi format email menggunakan ValidationPatterns.isValidEmail(), text field password dengan toggle visibility menggunakan suffix icon visibility toggle, tombol LOGIN yang di-disable saat loading, dan menampilkan spinner di tengah tombol saat loading, serta link "Daftar" untuk mengarahkan ke register screen menggunakan pushNamed().
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/8.png" alt="Implementasi Login Screen" class="report-figure-img">
+                <figcaption>Implementasi login screen dengan form validasi dan autentikasi</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>i. Implementasi Register Screen</h5>
+              <p>
+                Kemudian, buat register screen pada lib/screens/auth/register_screen.dart untuk memungkinkan user membuat akun baru. Class RegisterScreen berupa StatefulWidget yang memiliki state dengan form key, name controller, email controller, password controller, confirm password controller, AuthService instance, SessionService instance, loading flag, obscurePassword flag, dan obscureConfirmPassword flag. Method handleRegister() melakukan validasi form terlebih dahulu kemudian mengubah state menjadi loading, memanggil AuthService.register() dengan name, email, dan password yang di-trim. Jika registrasi berhasil, otomatis melakukan login dengan SessionService.saveSession() kemudian mengarahkan ke main screen. Jika registrasi gagal, menampilkan error message melalui SnackBar. UI menampilkan form dengan judul "Daftar Akun", icon person_add, judul "Buat Akun Baru", text field untuk nama lengkap dengan validasi minimal 2 karakter dan menggunakan AppColor, dengan format, text field password dengan validasi minimal 6 karakter dan toggle visibility, text field konfirmasi password dengan validasi harus sama dengan password, tombol DAFTAR, dan link "Masuk" untuk kembali ke login screen menggunakan pop().
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/9.png" alt="Implementasi Register Screen" class="report-figure-img">
+                <figcaption>Implementasi register screen untuk pembuatan akun baru</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>j. Implementasi Main Screen sebagai Container Utama</h5>
+              <p>
+                Selanjutnya, buat main screen pada lib/screens/main/main_screen.dart sebagai container utama aplikasi setelah login. Class MainScreen berupa StatefulWidget yang menerima userId sebagai parameter dari auth. Class _MainScreenState menggunakan properti _selectedIndex untuk tracking index tab yang dipilih dan list final List pages yang diinisialisasi di initState dengan membuat instance dari DashboardScreen, HistoryScreen, dan ProfileScreen. Setiap screen mendapatkan userId sebagai parameter. Method _onItemTapped() mengubah _selectedIndex berdasarkan antar tab. UI menampilkan Scaffold berupa body dengan page yang sedang dipilih, dan BottomNavigationBar dengan 3 item: Beranda (home icon), Riwayat (history icon), dan Profile (person icon). BottomNavigationBar ini memudahkan navigasi antar halaman utama tanpa perlu mengganti screen secara keseluruhan.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/10.png" alt="Implementasi Main Screen Container" class="report-figure-img">
+                <figcaption>Implementasi main screen sebagai container dengan BottomNavigationBar</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>k. Implementasi Dashboard Screen</h5>
+              <p>
+                Kemudian, buat dashboard screen pada lib/screens/main/dashboard_screen.dart untuk menampilkan ringkasan keuangan dan transaksi terbaru. Class DashboardScreen berupa StatefulWidget yang menerima userId dari constructor. State mengelola loading flag, balance yang diinisialisasi di initState melalui method _loadData() mengambil saldo total menggunakan calculateBalance() dan 5 transaksi terbaru menggunakan getRecentTransactions, dan jika loading selesai memanggil setState(). Method _navigateToAddTransaction() navigate ke AddTransactionScreen dan jika return true reload data menggunakan _loadData() jika transaksi berhasil ditambahkan. Method AppBar dengan judul "Dashboard Keuangan", FloatingActionButton untuk menambah transaksi baru yang menampilkan icon add dan ketika di-klik memanggil _navigateToAddTransaction(). Body menggunakan saldo account sebagai Rupiah, dan list of recent transactions dengan setiap item menampilkan icon kategori, judul, tanggal, dan nominal transaksi dengan warna hijau untuk pemasukan dan merah untuk pengeluaran. Jika tidak ada transaksi, tampilkan empty state.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/11.png" alt="Implementasi Dashboard Screen" class="report-figure-img">
+                <figcaption>Implementasi dashboard screen untuk menampilkan ringkasan keuangan</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>l. Implementasi Add Transaction Screen</h5>
+              <p>
+                Selanjutnya, buat add transaction screen pada lib/screens/transaction/add_transaction_screen.dart untuk pencatatan transaksi baru. Class AddTransactionScreen berupa StatefulWidget yang menerima userId. State memiliki form key, title controller, amount controller, date controller, TransactionService instance, selected category (default kategori pertama), selected date (default hari ini), dan isLoading flag. Method _addTransaction() memanggil DatePicker untuk memilih tanggal transaksi dan mengupdate dateController dengan format DD/MM/YYYY. Method _handleSubmit() memvalidasi dan mengubah state menjadi loading, memanggil addTransaction() dengan data dari form, dan setelah selesai pop screen dengan result true jika berhasil atau menampilkan error jika gagal melalui SnackBar. UI menampilkan AppBar dengan title (TextFormField), amount (TextFormField dengan keyboard numeric), category (DropdownButtonFormField dengan icon dan warna setiap kategori), date (read-only TextFormField dengan DatePicker button), dan tombol Simpan yang di-disable saat loading.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/12.png" alt="Implementasi Add Transaction Screen" class="report-figure-img">
+                <figcaption>Implementasi add transaction screen untuk pencatatan transaksi baru</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>m. Implementasi History Screen</h5>
+              <p>
+                Kemudian, buat history screen pada lib/screens/main/history_screen.dart untuk menampilkan list riwayat transaksi. Class HistoryScreen berupa StatefulWidget yang menerima userId. State memiliki TransactionService instance, list of transactions, dan isLoading flag. Method _loadTransactions() mengambil semua transaksi user menggunakan getTransactions() dan update state. UI menampilkan AppBar dengan judul "Riwayat Transaksi", RefreshIndicator untuk pull-to-refresh, dan list of all transactions dengan format sama seperti dashboard yaitu icon kategori, judul, tanggal, dan nominal. UI jika tidak ada transaksi, tampilkan empty state dengan tulisan "Belum ada transaksi" untuk membuka transaction detail screen.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/13.png" alt="Implementasi History Screen" class="report-figure-img">
+                <figcaption>Implementasi history screen untuk menampilkan riwayat transaksi</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>n. Implementasi Profile Screen</h5>
+              <p>
+                Selanjutnya, buat profile screen pada lib/screens/main/profile_screen.dart untuk menampilkan informasi pengguna dan fitur logout. Class ProfileScreen berupa StatefulWidget yang menerima userId. State memiliki SessionService instance, email dan name variables untuk menyimpan data pengguna, dan isLoading flag. Method _loadUserData() mengambil semua pengguna menggunakan getSession() dan update state. Method _showLogoutDialog() menampilkan dialog konfirmasi logout, dan jika user confirm, memanggil clearSession() kemudian mengarahkan user kembali ke login screen dengan pushNamedAndRemoveUntil() untuk menghapus semua screen dari stack. UI menampilkan AppBar, header berwarna gradient red dengan avatar, nama, dan email user, menu profile (Edit Profile, card icon, NULL, Privacy, Setting), dan tombol LOGOUT berwarna merah. Helper method _buildDetailCard() membuat card untuk menampilkan label dan value informasi profil.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/14.png" alt="Implementasi Profile Screen" class="report-figure-img">
+                <figcaption>Implementasi profile screen untuk menampilkan informasi pengguna</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>o. Implementasi Transaction Detail Screen</h5>
+              <p>
+                Terakhir, buat transaction detail screen pada lib/screens/transaction/transaction_detail_screen.dart untuk menampilkan detail lengkap satu transaksi. Class TransactionDetailScreen berupa StatefulWidget yang menerima transaction sebagai parameter. UI menampilkan AppBar dengan judul "Detail Transaksi", card yang menampilkan informasi lengkap transaksi berupa title, nominal (dengan warna berbeda untuk pemasukan pengeluaran), kategori (dengan icon dan warna), tanggal transaksi, dan tanggal pencatatan. Detail ditampilkan dalam bentuk row dengan label dan container dengan border, membuat tampilan terstruktur dan mudah dibaca.
+              </p>
+              <figure class="report-figure">
+                <img src="images/card16/15.png" alt="Implementasi Transaction Detail Screen" class="report-figure-img">
+                <figcaption>Implementasi transaction detail screen untuk menampilkan detail transaksi</figcaption>
+              </figure>
+            </section>
+
+          </div>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Praktikum ini berhasil mengimplementasikan aplikasi manajemen keuangan personal berbasis Flutter yang mencakup fitur autentikasi pengguna, pencatatan transaksi keuangan, visualisasi data, dan profile management. Aplikasi menggunakan SQLite sebagai database lokal untuk penyimpanan data pengguna dan transaksi secara persistent, SharedPreferences untuk manajemen sesi login, serta Provider sebagai state management solution. Arsitektur aplikasi disusun dengan pemisahan concerns yang jelas meliputi model layer, services layer untuk business logic, screens untuk UI, dan utils untuk helper functions. Implementasi database SQLite dengan DatabaseHelper menggunakan singleton pattern sehingga hanya ada satu instance database di sepanjang aplikasi lifecycle. Penerapan DAO (Data Access Object) pattern memisahkan logika akses database dari business logic, foreign key untuk integritas referensial, dan SessionManager untuk menangani sesi login, serta Provider untuk state management terhadap komponen UI. Arsitektur aplikasi dirancang dengan pemisahan concerns yang jelas meliputi model layer, services layer untuk business logic, screens untuk UI, dan utils untuk helper functions.
+          </p>
+          <p>
+            Fitur-fitur aplikasi telah diimplementasikan dengan standar best practices. Autentikasi mencakup validasi input menggunakan regular expression, enkripsi password dengan hashing menggunakan Bcrypt guna mencegah keamanan saat transaksi pengguna auto-login. Dashboard menampilkan visualisasi data keuangan dan penampilan saldo terkini dengan implementasi total pengguna, pengeluaran, dan saldo menggunakan FutureBuilder, serta grafik kategori pengeluaran dengan Pie Chart. Fitur transaksi dilengkapi dengan filtering berdasarkan periode dan kategori, sorting ascending descending, serta infinite scroll untuk performa optimal. State management menggunakan Provider pattern dengan ChangeNotifier memungkinkan UI secara otomatis rebuild ketika data berubah. Error handling ditangani dengan exception handling dan try-catch block dan menampilkan feedback visual melalui SnackBar, sehingga memberikan validation menampilkan data yang terimpan sesuai format yang ditentukan.
+          </p>
+          <p>
+            Dari sisi UI/UX, aplikasi menggunakan Material Design guidelines dengan color scheme yang konsisten, AppColors navigation menggunakan BottomNavigationBar untuk akses cepat ke menu utama, dan responsive layout yang menyesuaikan ukuran layar dengan device. Setiap transisi antar screen menggunakan named route untuk navigasi yang rapi, icon unik untuk membantu identifikasi visual, serta animasi transisi halaman menerapkan push/pop/replacement navigation. Implementasi FloatingActionButton untuk penambahan transaksi yang cepat, dan responsive layout yang support full-stack mobile development menggunakan Flutter dari layer database hingga presentation layer, serta best practices dalam struktur project, separation of concerns, state management, dan user experience design. Aplikasi yang dihasilkan dapat menjadi foundation untuk pengembangan lebih lanjut seperti penambahan fitur export data ke PDF/Excel, integrasi dengan cloud storage, implementasi biometric authentication, atau fitur budgeting dan reminder.
+          </p>
+        </li>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
   </section>
 </main>
-
-<footer class="footer-clean reveal">
-  <div class="container">
-    <div class="row py-4">
-      
-      <div class="col-md-4 mb-4 mb-md-0">
-        <h5 class="footer-brand mb-3">Jiyad<span style="color: var(--color-lake-blue);">R</span></h5>
-        <p class="text-muted small">Mahasiswa Informatika Universitas Andalas yang fokus pada pengembangan web, machine learning, dan aplikasi berbasis OOP.</p>
-      </div>
-
-      <div class="col-md-2 mb-4 mb-md-0">
-        <h6 class="text-uppercase mb-3" style="font-size: 0.875rem; font-weight: 500;">Navigasi</h6>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="index.html" class="text-muted small text-decoration-none">Home</a></li>
-          <li class="mb-2"><a href="about.html" class="text-muted small text-decoration-none">About</a></li>
-          <li class="mb-2"><a href="portfolio.html" class="text-muted small text-decoration-none">Portfolio</a></li>
-          <li class="mb-2"><a href="report.html" class="text-muted small text-decoration-none">Report</a></li>
-          <li class="mb-2"><a href="contact.html" class="text-muted small text-decoration-none">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-3 mb-4 mb-md-0">
-        <h6 class="text-uppercase mb-3" style="font-size: 0.875rem; font-weight: 500;">Area Fokus</h6>
-        <ul class="list-unstyled">
-          <li class="mb-2"><span class="text-muted small">Responsive Web Development</span></li>
-          <li class="mb-2"><span class="text-muted small">Machine Learning &amp; AI</span></li>
-          <li class="mb-2"><span class="text-muted small">Java GUI Applications</span></li>
-        </ul>
-      </div>
-
-      <div class="col-md-3">
-        <h6 class="text-uppercase mb-3" style="font-size: 0.875rem; font-weight: 500;">Koneksi</h6>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <a href="https://github.com/JiyadR" target="_blank" class="text-muted small text-decoration-none">
-              <i class="bi bi-github me-2"></i>GitHub
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="https://instagram.com/jypsrb" target="_blank" class="text-muted small text-decoration-none">
-              <i class="bi bi-instagram me-2"></i>Instagram
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="https://wa.me/6282363629197" target="_blank" class="text-muted small text-decoration-none">
-              <i class="bi bi-whatsapp me-2"></i>WhatsApp
-            </a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="border-top pt-4 mt-4">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-          <p class="mb-0 small text-muted">&copy; 2025 Jiyad Rifqi. All rights reserved.</p>
-        </div>
-        <div class="col-md-6 text-center text-md-end">
-          <p class="mb-0 small text-muted">Informatics Student Portfolio</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
