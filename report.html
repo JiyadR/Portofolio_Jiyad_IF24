@@ -55,10 +55,10 @@
         Kumpulan laporan praktikum berdasarkan mata kulia beserta projek kecil yang saya buat. Pilih kategori mata kuliah, lalu buka detail laporan untuk membaca pendahuluan, tujuan, tools, hasil, dan dokumentasi pendukung.
       </p>
     </div>
-    <div class="report-count glass">
-      <strong>16</strong>
-      <span>Laporan awal</span>
-    </div>
+	    <div class="report-count glass">
+	      <strong>17</strong>
+	      <span>Laporan awal</span>
+	    </div>
   </header>
 
   <ul class="nav nav-pills mb-4" id="reportFilters">
@@ -383,6 +383,26 @@
       <div class="report-index-actions">
         <a href="#report-flutter-form-validation" class="btn btn-solid report-open" data-report-target="report-flutter-form-validation">Baca Laporan</a>
         <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-index-item report-item aplikasi-mobile reveal">
+      <div class="report-index-num">17</div>
+      <div class="report-index-main">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3 class="report-index-title">Flutter State Management: setState() dan Provider</h3>
+        <p class="report-index-desc">Implementasi pengelolaan state lokal menggunakan setState() untuk fitur pengaturan porsi dan state global menggunakan Provider, ChangeNotifier, dan MultiProvider untuk mengelola data favorit pada aplikasi ResepKu.</p>
+        <div class="project-meta">
+          <span>Flutter</span>
+          <span>Provider</span>
+          <span>State Management</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-mobile-card17" class="btn btn-solid report-open" data-report-target="report-mobile-card17">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/2411533003_kelasA_AppMob_ResepKu" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
           <i class="bi bi-github"></i> GitHub
         </a>
       </div>
@@ -4630,32 +4650,304 @@
       </div>
     </article>
 
-    <article class="report-detail glass" id="report-flutter-form-validation" tabindex="-1">
-      <div class="report-detail-head">
-        <span class="report-badge">Aplikasi Mobile</span>
-        <h3>Flutter Form Validation: TextField & TextFormField</h3>
-        <p>Implementasi widget input TextField dan TextFormField di Flutter dengan fokus pada validasi form, pengelolaan state, TextEditingController, GlobalKey, dan lifecycle management.</p>
-      </div>
+	    <article class="report-detail glass" id="report-mobile-card17" tabindex="-1">
+	      <div class="report-detail-head">
+	        <span class="report-badge">Aplikasi Mobile</span>
+	        <h3>Flutter State Management: setState() dan Provider</h3>
+	        <p>Implementasi pengelolaan state lokal menggunakan setState() untuk fitur pengaturan porsi dan state global menggunakan Provider, ChangeNotifier, dan MultiProvider untuk mengelola data favorit pada aplikasi ResepKu.</p>
+	      </div>
 
-      <ol class="report-doc">
-        <li>
-          <h4>Pendahuluan</h4>
-          <p>
-            Manajemen pengeluaran merupakan salah satu aspek penting dalam kehidupan keuangan personal. Dengan meningkatnya jumlah transaksi digital, menjadi semakin sulit untuk melacak dan menganalisis pola pengeluaran tanpa bantuan aplikasi khusus. Aplikasi mobile telah menjadi solusi praktis untuk mengelola keuangan pribadi dengan cara yang lebih terstruktur dan mudah diakses.
-          </p>
-          <p>
-            Expense Tracker adalah sebuah aplikasi mobile yang dirancang untuk membantu pengguna dalam mencatat penumpan, dan mengelola transaksi keuangan mereka secara real-time. Aplikasi ini dibangun menggunakan Flutter, sebuah framework cross-platform yang memungkinkan pembuatan aplikasi untuk berbagai perangkat dengan codebase yang sama. Dalam konteks praktikum, pengembangan aplikasi ini melibatkan pemahaman mengenai arsitektur aplikasi multi-layer, manajemen basis data lokal, penanganan otentikasi pengguna dengan enkripsi password, serta desain antarmuka pengguna yang intuitif.
-          </p>
-          <p>
-            Fitur utama yang diimplementasikan dalam aplikasi mencakup sistem autentikasi pengguna dengan registrasi dan login, penambahan expense dengan menggunakan shared preferences, pencatatan transaksi dengan kategori pengeluaran dan pemasukan, serta perhitungan saldo berdasarkan seluruh riwayat transaksi. Basis data lokal dikelola menggunakan SQLite melalui library sqflite, yang memungkinkan pengguna tersimpan dengan aman di perangkat tanpa memerlukan koneksi internet. Untuk keamanan password, aplikasi menggunakan library bcrypt guna melakukan hashing satu arah, sehingga password asli pengguna tidak disimpan dalam bentuk plain text melainkan dalam bentuk hash yang aman di database.
-          </p>
-          <p>
-            Arsitektur aplikasi mengikuti pola separation of concerns dengan memisahkan logika bisnis (services), akses data (DAO), model data, dan presentasi (screens). Pendekatan ini memudahkan pemeliharaan kode, pengujian, dan pengembangan fitur tambahan di masa depan. Praktikum ini bertujuan untuk memberikan pemahaman mendalam mengenai bagaimana mengintegrasikan berbagai komponen dalam aplikasi mobile, mulai dari penanganan input pengguna, validasi data, penyimpanan data lokal, hingga penampilan informasi secara dinamis berdasarkan status pengguna.
-          </p>
-        </li>
+	      <ol class="report-doc">
+	        <li>
+	          <h4>Pendahuluan</h4>
+	          <p>
+	            State management merupakan salah satu bagian penting dalam pengembangan aplikasi mobile menggunakan Flutter karena berkaitan dengan pengelolaan data yang dapat berubah selama aplikasi berjalan dan memengaruhi tampilan antarmuka (UI). Pada praktikum ini, dipelajari dua pendekatan pengelolaan state, yaitu setState() dan Provider. setState() digunakan untuk mengelola state lokal yang hanya dibutuhkan oleh satu widget, sedangkan Provider digunakan untuk mengelola state yang dibutuhkan oleh beberapa widget maupun halaman dalam aplikasi. Pemahaman terhadap kedua pendekatan tersebut diperlukan agar pengelolaan data dan pembaruan tampilan aplikasi dapat dilakukan sesuai dengan kebutuhan.
+	          </p>
+	          <p>
+	            Pada praktikum Modul 6 ini, dilakukan pengembangan aplikasi ResepKu dengan menerapkan setState() pada fitur pengaturan jumlah porsi resep di halaman Detail dan Provider pada fitur daftar resep favorit. Selain itu, praktikum ini mencakup penerapan ChangeNotifier, MultiProvider, context.watch, context.read, dan Consumer untuk mengelola serta menampilkan perubahan data favorit pada beberapa halaman. Melalui kegiatan ini, mahasiswa diharapkan dapat memahami perbedaan penggunaan state lokal dan state global serta menerapkannya secara langsung dalam pengembangan aplikasi mobile.
+	          </p>
+	        </li>
 
-        <li>
-          <h4>Tujuan</h4>
+	        <li>
+	          <h4>Tujuan</h4>
+	          <ul>
+	            <li>Memahami dan menerapkan pengelolaan state lokal menggunakan StatefulWidget dan setState() pada fitur pengaturan jumlah porsi resep di halaman Detail aplikasi ResepKu.</li>
+	            <li>Memahami keterbatasan state lokal serta menerapkan state global menggunakan Provider, ChangeNotifier, dan MultiProvider untuk mengelola data favorit yang dapat diakses dan diperbarui oleh berbagai widget dan halaman menggunakan context.watch, context.read, dan Consumer.</li>
+	            <li>Mengembangkan dan menguji fitur tambahan aplikasi ResepKu, meliputi pengaturan tema gelap dan terang serta penghapusan seluruh resep favorit dengan konfirmasi AlertDialog, sehingga dapat memahami penerapan state management dalam pengembangan aplikasi mobile.</li>
+	          </ul>
+	        </li>
+
+	        <li>
+	          <h4>Langkah Pengerjaan</h4>
+	          <div class="report-substeps">
+	            <section class="report-substep">
+	              <h5>a. Checkpoint1</h5>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/1.png" alt="Object Margherita Pizza">
+	                <figcaption>Halaman detail resep Margherita Pizza.</figcaption>
+	              </figure>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/2.png" alt="Classic Margherita Pizza">
+	                <figcaption>Halaman detail resep Classic Margherita Pizza.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                Pada halaman detail resep, pertama-tama sistem mengambil nilai porsi awal dari data resep (widget.recipe.servings). Untuk resep Classic Margherita Pizza yang memiliki 4 porsi, tombol pengurangan dapat menjadi tidak aktif ketika jumlah porsi mencapai nilai 1, dilakukan dengan memeriksa kondisi _servings > 1 pada properti onPressed. Jika kondisi bernilai false (porsi = 1), maka perhitungan akan bernilai null, yang membuat tombol tambah kurang nonaktif.
+	              </p>
+	              
+	              <p>
+	                Sistem menghitung total kalori dengan mengalikan nilai caloriesPerServing (300 kkal per porsi) dengan jumlah porsi saat ini (_servings). Ketika porsi diatur menjadi 6, maka perhitungan akan menjadi 300 × 6 = 1800 kkal.
+	              </p>
+	              
+	              <p>
+	                Tombol pengurangan porsi (IconButton dengan ikon minus) dibuat tidak aktif (disabled) ketika jumlah porsi mencapai nilai 1, dilakukan dengan memeriksa kondisi _servings > 1 pada properti onPressed. Jika kondisi bernilai false (porsi = 1), maka perhitungan akan bernilai null, yang membuat tombol menjadi nonaktif.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/3.png" alt="Kode implementasi tombol pengurangan porsi">
+	                <figcaption>Implementasi logika disable tombol pengurangan ketika porsi = 1.</figcaption>
+	              </figure>
+	            </section>
+	            
+	            <section class="report-substep">
+	              <h5>b. Checkpoint2</h5>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/4.png" alt="Halaman utama dengan daftar resep">
+	                <figcaption>Halaman utama (Home) menampilkan daftar resep dengan tombol favorit.</figcaption>
+	              </figure>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/5.png" alt="Halaman detail resep Classic Margherita Pizza">
+	                <figcaption>Halaman detail resep Classic Margherita Pizza dengan tombol favorit.</figcaption>
+	              </figure>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/6.png" alt="Halaman favorit dengan daftar resep favorit">
+	                <figcaption>Halaman Favorit menampilkan resep yang telah ditandai sebagai favorit.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                1. Pada halaman utama (Home), sistem menampilkan tombol favorit di AppBar yang dilengkapi dengan badge penunjuk jumlah resep yang ditandai sebagai favorit. Sistem menggunakan context.watch&lt;FavoriteProvider&gt;().count untuk mendengarkan perubahan jumlah item favorit secara real-time. Badge hanya ditampilkan ketika jumlah favorit lebih dari nol melalui properti isLabelVisible: count > 0. Nilai badge diambil dari Text('$count') yang akan menampilkan angka jumlah favorit, misalnya 2.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/7.png" alt="Kode implementasi tombol favorit dengan badge">
+	                <figcaption>Implementasi badge favorit pada AppBar menggunakan context.watch.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                2. Pada halaman detail resep, sistem menampilkan ikon hati di AppBar yang berubah tampilannya berdasarkan status favorit resep tersebut. Sistem menggunakan context.watch&lt;FavoriteProvider&gt;().isFavorite(widget.recipe) untuk memeriksa apakah resep sedang ditandai sebagai favorit. Jika status adalah favorit (bernilai true), ikon akan menampilkan Icons.favorite (hati terisi) dengan warna merah. Jika bukan favorit, ikon akan menampilkan Icons.favorite_border (hati kosong). Saat pengguna menekan ikon, sistem akan memanggil favoriteProvider.toggle(recipe) untuk mengubah status favorit resep tersebut.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/8.png" alt="Kode implementasi ikon favorit">
+	                <figcaption>Implementasi ikon favorit yang berubah berdasarkan status.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                3. Halaman favorit menampilkan daftar semua resep yang telah ditandai sebagai favorit oleh pengguna. Sistem menggunakan widget Consumer&lt;FavoriteProvider&gt; untuk mendengarkan perubahan data favorit dan memperbarui tampilan secara reaktif berdasarkan perubahan data favorit. Sistem memeriksa terlebih dahulu apakah daftar favorit kosong menggunakan favorite.count == 0. Jika kosong, sistem akan menampilkan pesan informasi dengan Widget Center dan Text. Jika tidak kosong, sistem menampilkan ListView yang menampilkan setiap item dari favorite.items ke dalam Widget ListTile. Setiap item menampilkan nama resep, kategori cuisine, dan tombol hapus dengan ikon Icons.delete_outline.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/9.png" alt="Kode implementasi halaman favorit">
+	                <figcaption>Implementasi halaman favorit dengan Consumer dan ListView.</figcaption>
+	              </figure>
+	            </section>
+	            
+	            <section class="report-substep">
+	              <h5>c. Langkah B2</h5>
+	              
+	              <p><strong>1. Apakah ikon hati berubah? Mengapa?</strong></p>
+	              <p>
+	                Ya, ikon hati berubah ketika ditekan karena setiap RecipeTile memiliki state lokal _isFavorite yang awalnya bernilai false. Ketika ikon ditekan, setState() mengubah nilai tersebut menjadi kebalikannya sehingga ikon berubah dari hati kosong menjadi hati berwarna merah, atau sebaliknya. Perubahan ini hanya berlaku pada RecipeTile yang ditekan.
+	              </p>
+	              
+	              <p><strong>2. Apakah jumlah resep favorit dapat ditampilkan di judul AppBar HomePage? Di class mana data _isFavorite berada, dan apakah HomePage dapat membacanya?</strong></p>
+	              <p>
+	                Tidak dapat dilakukan secara langsung dengan implementasi tersebut karena data _isFavorite disimpan di dalam class _RecipeTileState pada masing-masing RecipeTile. HomePage tidak dapat membaca data tersebut karena state bersifat lokal dan hanya dimiliki oleh widget terkait. Oleh karena itu, HomePage tidak dapat mengetahui jumlah keseluruhan resep yang difavoritkan.
+	              </p>
+	              
+	              <p><strong>3. Bagaimana halaman detail dapat mengetahui bahwa resep tersebut favorit?</strong></p>
+	              <p>
+	                Pada implementasi eksperimen ini, halaman Detail tidak dapat mengetahui bahwa suatu resep telah difavoritkan karena data _isFavorite hanya tersimpan di dalam masing-masing RecipeTile dan tidak dibagikan ke halaman lain. Halaman Detail hanya menerima objek Recipe melalui parameter, sehingga tidak memiliki akses terhadap status favorit yang disimpan pada RecipeTile.
+	              </p>
+	              
+	              <p><strong>4. Mengapa jumlah porsi tetap menggunakan setState() dan tidak dimasukkan ke Provider? Hubungkan jawaban Kalian dengan hasil skenario 6 pada Langkah C.7.</strong></p>
+	              <p>
+	                Jumlah porsi tetap menggunakan setState() karena data tersebut hanya dibutuhkan pada halaman Detail dan tidak perlu diakses oleh widget atau halaman lain. Hal ini sesuai dengan sifat state lokal yang dikelola oleh StatefulWidget. Berdasarkan skenario 6 pada Langkah C.7, ketika jumlah porsi diubah menjadi 2, kemudian kembali ke Home dan membuka resep yang sama, jumlah porsi akan kembali ke nilai awal. Hal tersebut terjadi karena state lokal akan dibuang ketika halaman Detail ditutup. Oleh karena itu, jumlah porsi tidak perlu dimasukkan ke Provider karena pengelolaannya cukup menggunakan setState() pada halaman Detail.
+	              </p>
+	              
+	              <p><strong>5. Pindahkan ChangeNotifierProvider dari main() ke dalam HomePage (membungkus Scaffold). Apa yang terjadi ketika halaman Favorit dibuka? Jelaskan penyebabnya berdasarkan posisi provider di widget tree. Setelah itu, kembalikan kodenya seperti semula</strong></p>
+	              <p>
+	                Ketika ChangeNotifierProvider dipindahkan dari main() ke dalam HomePage yang membungkus Scaffold, halaman Favorit akan mengalami ProviderNotFoundException saat dibuka. Hal ini terjadi karena Provider hanya tersedia untuk widget yang berada di bawahnya dalam widget tree. Ketika halaman Favorit dibuka menggunakan Navigator.push(), halaman tersebut dibuat melalui Navigator yang posisinya berada di luar cakupan Provider di dalam HomePage. Akibatnya, FavoritePage tidak dapat menemukan dan mengakses FavoriteProvider yang dibutuhkan oleh Consumer. Oleh karena itu, ChangeNotifierProvider harus dikembalikan ke dalam MultiProvider di main.dart, tepatnya di atas MaterialApp, agar seluruh halaman aplikasi dapat mengakses state favorit.
+	              </p>
+	            </section>
+	            
+	            <section class="report-substep">
+	              <h5>d. Latihan1</h5>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/10.png" alt="Tampilan mode tema gelap dan terang">
+	                <figcaption>Fitur Mode Tema dengan toggle antara gelap dan terang.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                1. Untuk mengimplementasikan fitur pengaturan tema gelap dan terang pada aplikasi ResepKu, digunakan ThemeProvider yang meng-extend ChangeNotifier. Kelas ini berfungsi sebagai state management untuk mengelola mode tema aplikasi. Di dalam kelas tersebut, dideklarasikan sebuah field notifyListener ThemeMode _themeMode dengan nilai awal ThemeMode.system yang berarti mengikuti pengaturan sistem perangkat. Untuk mengelola nilai _themeMode, disediakan getter getThemeMode, getter isDarkMode yang mengembalikan nilai _themeMode. Selanjutnya untuk mengubah mode tema, disediakan method setThemeMode(ThemeMode mode) yang menerima parameter mode baru, mengubah nilai _themeMode, kemudian memanggil notifyListeners() untuk memberitahu semua widget yang mendengarkan provider ini agar melakukan rebuild.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/11.png" alt="Kode ThemeProvider">
+	                <figcaption>Implementasi ThemeProvider dengan ChangeNotifier.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                2. Setelah ThemeProvider dibuat, langkah selanjutnya adalah mendaftarkan provider tersebut di dalam MultiProvider, pada file main.dart. Provider didaftarkan menggunakan ChangeNotifierProvider(create: (context) => ThemeProvider()) bersama dengan provider lainnya seperti FavoriteProvider. Hal ini memungkinkan seluruh widget dalam aplikasi untuk mengakses dan mendengarkan perubahan pada ThemeProvider.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/12.png" alt="Kode pendaftaran ThemeProvider di MultiProvider">
+	                <figcaption>Pendaftaran ThemeProvider di dalam MultiProvider pada main.dart.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                3. Pada widget MaterialApp, ditambahkan tiga properti penting untuk mendukung tema dinamis. Properti theme didefinisikan dengan ThemeData yang memiliki colorSchemeSeed: Colors.deepOrange dan brightness: Brightness.light untuk tema terang. Properti darkTheme didefinisikan serupa namun dengan brightness: Brightness.dark untuk tema gelap. Yang paling krusial adalah properti themeMode yang diisi dengan context.watch&lt;ThemeProvider&gt;().themeMode. Penggunaan watch mengartikan bahwa MaterialApp akan rebuild setiap kali nilai themeMode di provider berubah, sehingga tema aplikasi berubah secara real-time.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/13.png" alt="Kode MaterialApp dengan properti tema">
+	                <figcaption>Konfigurasi tema pada MaterialApp dengan ThemeProvider.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                4. Untuk antarmuka pengaturan, dibuat file settings_page.dart yang berisi SettingsPage. Di dalam halaman ini, digunakan context.watch&lt;ThemeProvider&gt;() untuk mendapatkan instance provider dan mendengarkan perubahannya. Halaman menampilkan sebuah ListTile dengan ikon Icons.brightness_6, judul "Mode Tema", dan subtitle yang menampilkan label mode tema saat ini (Terang/Gelap/Ikut Sistem) melalui method helper _getThemeModeLabel(). Ketika ListTile diketan, akan memunculkan method showThemeDialog() yang menampilkan dialog pemilihan tema.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/14.png" alt="Kode SettingsPage dengan ListTile mode tema">
+	                <figcaption>Implementasi halaman pengaturan dengan pemilihan mode tema.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                5. Method showThemeDialog() menampilkan AlertDialog berisi tiga pilihan dalam bentuk RadioListTile untuk memilih mode Terang, Gelap, atau Ikut Sistem. Setiap RadioListTile memiliki properti value yang merepresentasikan mode tema, groupValue yang menunjukkan mode tema yang sedang aktif dari callback onChanged yang dijalankan ketika pengguna memilih opsi. Setiap kali pengguna memilih salah satu opsi, sistem akan memanggil themeProvider.setThemeMode(value) untuk mengubah mode tema, kemudian menutup dialog dengan Navigator.pop(context).
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/15.png" alt="Kode showThemeDialog dengan RadioListTile">
+	                <figcaption>Dialog pemilihan tema dengan tiga pilihan mode.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                6. Terakhir, pada halaman utama (HomePage), ditambahkan tombol pengaturan di AppBar menggunakan IconButton dengan ikon Icons.settings. Ketika tombol diketan, akan mengarahkan ke SettingsPage menggunakan Navigator.push dengan MaterialPageRoute. Dengan demikian, pengguna dapat mengakses halaman pengaturan dan mengubah tema aplikasi sesuai preferensi mereka.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/16.png" alt="Kode tombol pengaturan di HomePage">
+	                <figcaption>Tombol pengaturan pada AppBar HomePage untuk navigasi ke SettingsPage.</figcaption>
+	              </figure>
+	            </section>
+	            
+	            <section class="report-substep">
+	              <h5>e. Latihan2</h5>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/17.png" alt="Dialog konfirmasi hapus semua favorit">
+	                <figcaption>Tampilan dialog konfirmasi untuk menghapus semua favorit.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                1. Untuk mengimplementasikan fitur hapus semua favorit, pertama-tama diperlukan method clear() dalam kelas FavoriteProvider. Method ini berfungsi untuk menghapus seluruh item dari list _items menggunakan method _items.clear(), kemudian memanggil notifyListeners() untuk memberitahuan semua widget yang mendengarkan provider bahwa data telah berubah sehingga UI dapat diperbarui.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/18.png" alt="Kode method clear di FavoriteProvider">
+	                <figcaption>Implementasi method clear() pada FavoriteProvider.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                2. Pada halaman favorit (FavoritePage), ditambahkan tombol "Hapus semua" di bagian actions AppBar. Tombol ini dibungkus dengan Consumer&lt;FavoriteProvider&gt; agar dapat mendengarkan perubahan data favorit secara reaktif. Di dalam builder Consumer, dibuat sebuah IconButton dengan ikon Icons.delete_sweep dan tooltip "Hapus semua". Properti onPressed menggunakan conditional expression untuk menentukan apakah tombol aktif atau nonaktif. Jika favorite.count == 0 (daftar favorit kosong), maka onPressed bernilai null yang membuat tombol menjadi nonaktif dan berwarna abu-abu. Jika daftar tidak kosong, onPressed akan memanggil method _showDeleteAllDialog() untuk menampilkan dialog konfirmasi.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/19.png" alt="Kode tombol hapus semua dengan Consumer">
+	                <figcaption>Implementasi tombol hapus semua dengan Consumer dan conditional expression.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                3. Method _showDeleteAllDialog() menampilkan AlertDialog untuk meminta konfirmasi dari pengguna sebelum menghapus semua favorit. Dialog ini memiliki judul "Hapus Semua Favorit" dan konten berupa pertanyaan konfirmasi. Pada bagian actions, terdapat dua tombol: tombol "Batal" yang menggunakan TextButton untuk menutup dialog tanpa melakukan aksi apapun dengan Navigator.pop(context), dan tombol "Hapus" yang menggunakan FilledButton dengan aksi memanggil favorite.clear() untuk menghapus semua item favorit, kemudian menutup dialog. Penggunaan FilledButton memberikan emphasis visual yang lebih kuat pada aksi destruktif ini.
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/20.png" alt="Kode dialog konfirmasi hapus semua">
+	                <figcaption>Dialog konfirmasi dengan tombol Batal dan Hapus.</figcaption>
+	              </figure>
+	              
+	              <p>
+	                4. Pada bagian body dari Scaffold, digunakan Consumer&lt;FavoriteProvider&gt; untuk membaca data favorit. Di dalam builder Consumer, terdapat conditional rendering. Di dalam builder, sistem memeriksa terlebih dahulu apakah daftar favorit kosong dengan kondisi favorite.count == 0. Jika kosong, ditampilkan widget Center dengan teks informatif bahwa belum ada resep favorit. Jika tidak kosong, ditampilkan ListView yang mengulangi setiap item dari favorite.items menjadi ListTile dengan judul berisi nama resep, subtitle berisi kategori cuisine, dan tombol delete individual untuk menghapus item satu per satu menggunakan favorite.toggle(recipe).
+	              </p>
+	              
+	              <figure class="report-figure">
+	                <img src="images/cardprak6/21.png" alt="Kode body FavoritePage dengan Consumer dan ListView">
+	                <figcaption>Implementasi body dengan conditional rendering dan ListView.</figcaption>
+	              </figure>
+	            </section>
+	          </div>
+	        </li>
+
+	        <li>
+	          <h4>Kesimpulan</h4>
+	          <p>
+	            Berdasarkan praktikum Modul 6 yang telah dilakukan, dapat disimpulkan bahwa state management merupakan bagian penting dalam pengembangan aplikasi mobile menggunakan Flutter untuk mengelola perubahan data dan memperbarui tampilan antarmuka. Penggunaan setState() sesuai untuk mengelola state lokal, seperti pengaturan jumlah porsi resep pada halaman Detail, karena data tersebut hanya dibutuhkan oleh satu widget saja dan tidak perlu dibagikan dengan halaman lain. Penerapan state management juga dikembangkan melalui latihan penghapusan seluruh resep favorit menggunakan AlertDialog dan method clear(). Prototyper, demikian, praktikum ini memberikan pemahaman yang menyeluruh dalam membangun aplikasi Flutter yang lebih terstruktur dan mudah dikelola.
+	          </p>
+	          <p>
+	            Selain itu, praktikum ini memberikan pemahaman mengenai keterbatasan state lokal ketika data dibutuhkan oleh beberapa bagian aplikasi, serta pentingnya penggunaan Provider untuk state global, seperti daftar resep favorit, karena data tersebut perlu diakses dan diperbarui oleh berbagai widget dan halaman, seperti HomePage, DetailPage, dan FavoritePage. Penggunaan ChangeNotifier, MultiProvider, context.watch, context.read, dan Consumer, pengelolaan data favorit dapat dilakukan secara terpusat dan efisien. Data dapat ditambahkan secara dinamis melalui tombol favorit. Detail, dan FavoritePage oleh seluruh halaman. Penerapan state management juga dikembangkan melalui latihan penghapusan seluruh resep favorit menggunakan AlertDialog dan method clear(). Prototyper, demikian, praktikum ini memberikan pemahaman yang komprehensif dan pengembangan dalam membangun aplikasi Flutter yang lebih terstruktur dan mudah dikelola.
+	          </p>
+	        </li>
+	      </ol>
+	      
+	      <div class="report-repo-callout">
+	        <div>
+	          <span class="repo-kicker">Source Archive</span>
+	          <h4>Repository Praktikum</h4>
+	          <p>
+	            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+	          </p>
+	        </div>
+	        <a href="https://github.com/JiyadR/2411533003_kelasA_AppMob_ResepKu" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+	          <i class="bi bi-github"></i>
+	          Buka GitHub
+	        </a>
+	      </div>
+	    </article>
+
+	    <article class="report-detail glass" id="report-flutter-form-validation" tabindex="-1">
+	      <div class="report-detail-head">
+	        <span class="report-badge">Aplikasi Mobile</span>
+	        <h3>Flutter Form Validation: TextField & TextFormField</h3>
+	        <p>Implementasi widget input TextField dan TextFormField di Flutter dengan fokus pada validasi form, pengelolaan state, TextEditingController, GlobalKey, dan lifecycle management.</p>
+	      </div>
+
+	      <ol class="report-doc">
+	        <li>
+	          <h4>Pendahuluan</h4>
+	          <p>
+	            Manajemen pengeluaran merupakan salah satu aspek penting dalam kehidupan keuangan personal. Dengan meningkatnya jumlah transaksi digital, menjadi semakin sulit untuk melacak dan menganalisis pola pengeluaran tanpa bantuan aplikasi khusus. Aplikasi mobile telah menjadi solusi praktis untuk mengelola keuangan pribadi dengan cara yang lebih terstruktur dan mudah diakses.
+	          </p>
+	          <p>
+	            Expense Tracker adalah sebuah aplikasi mobile yang dirancang untuk membantu pengguna dalam mencatat penumpan, dan mengelola transaksi keuangan mereka secara real-time. Aplikasi ini dibangun menggunakan Flutter, sebuah framework cross-platform yang memungkankan pembuatan aplikasi untuk berbagai perangkat dengan codebase yang sama. Dalam konteks praktikum, pengembangan aplikasi ini melibatkan pemahaman mengenai arsitektur aplikasi multi-layer, manajemen basis data lokal, penanganan otentikasi pengguna dengan enkripsi password, serta desain antarmuka pengguna yang intuitif.
+	          </p>
+	          <p>
+	            Fitur utama yang diimplementasikan dalam aplikasi mencakup sistem autentikasi pengguna dengan registrasi dan login, penambahan expense dengan menggunakan shared preferences, pencatatan transaksi dengan kategori pengeluaran dan pemasukan, serta perhitungan saldo berdasarkan seluruh riwayat transaksi. Basis data lokal dikelola menggunakan SQLite melalui library sqflite, yang memungkinkan pengguna tersimpan dengan aman di perangkat tanpa memerlukan koneksi internet. Untuk keamanan password, aplikasi menggunakan library bcrypt guna melakukan hashing satu arah, sehingga password asli pengguna tidak disimpan dalam bentuk plain text melainkan dalam bentuk hash yang aman di database.
+	          </p>
+	          <p>
+	            Arsitektur aplikasi mengikuti pola separation of concerns dengan memisahkan logika bisnis (services), akses data (DAO), model data, dan presentasi (screens). Pendekatan ini memudahkan pemeliharaan kode, pengujian, dan pengembangan fitur tambahan di masa depan. Praktikum ini bertujuan untuk memberikan pemahaman mendalam mengenai bagaimana mengintegrasikan berbagai komponen dalam aplikasi mobile, mulai dari penanganan input pengguna, validasi data, penyimpanan data lokal, hingga penampilan informasi secara dinamis berdasarkan status pengguna.
+	          </p>
+	        </li>
+
+	        <li>
+	          <h4>Tujuan</h4>
           <ul>
             <li>Memahami dan mengimplementasikan arsitektur aplikasi Flutter yang modular dengan pemisahan layer (models, services, database, screens, utils), sistem autentikasi pengguna dengan enkripsi bcrypt, serta manajemen basis data lokal SQLite dan sesi pengguna menggunakan shared preferences.</li>
             <li>Mengimplementasikan fitur pencatatan transaksi keuangan dengan kategori, pemasukan dan pengeluaran, termasuk validasi data pada level service, perhitungan saldo otomatis, dan penerapan DAO (Data Access Object) pattern untuk pemisahan logika akses database.</li>
