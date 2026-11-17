@@ -55,10 +55,10 @@
         Kumpulan laporan praktikum berdasarkan mata kulia beserta projek kecil yang saya buat. Pilih kategori mata kuliah, lalu buka detail laporan untuk membaca pendahuluan, tujuan, tools, hasil, dan dokumentasi pendukung.
       </p>
     </div>
-	    <div class="report-count glass">
-	      <strong>17</strong>
-	      <span>Laporan awal</span>
-	    </div>
+            <div class="report-count glass">
+              <strong>18</strong>
+              <span>Laporan awal</span>
+            </div>
   </header>
 
   <ul class="nav nav-pills mb-4" id="reportFilters">
@@ -403,6 +403,26 @@
       <div class="report-index-actions">
         <a href="#report-mobile-card17" class="btn btn-solid report-open" data-report-target="report-mobile-card17">Baca Laporan</a>
         <a href="https://github.com/JiyadR/2411533003_kelasA_AppMob_ResepKu" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-index-item report-item aplikasi-mobile reveal">
+      <div class="report-index-num">18</div>
+      <div class="report-index-main">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3 class="report-index-title">Flutter Image, Aset Lokal, dan ListView/GridView Builder</h3>
+        <p class="report-index-desc">Penerapan custom font Poppins, logo lokal dengan Image.asset, foto resep dari internet dengan Image.network, serta peralihan tampilan antara ListView.builder dan GridView.builder pada aplikasi ResepKu.</p>
+        <div class="project-meta">
+          <span>Flutter</span>
+          <span>Image.asset</span>
+          <span>Image.network</span>
+        </div>
+      </div>
+      <div class="report-index-actions">
+        <a href="#report-mobile-card18" class="btn btn-solid report-open" data-report-target="report-mobile-card18">Baca Laporan</a>
+        <a href="https://github.com/JiyadR/2411533003_kelasA_AppMob_ResepKu/tree/Praktikum7" target="_blank" rel="noopener noreferrer" class="btn btn-repo">
           <i class="bi bi-github"></i> GitHub
         </a>
       </div>
@@ -755,15 +775,6 @@
         </a>
       </div>
     </article>
-
-  <section class="report-reader" id="reportReader">
-    <div class="report-empty glass" id="reportEmpty">
-      <i class="bi bi-journal-text"></i>
-      <div>
-        <strong>Pilih salah satu laporan</strong>
-        <p class="mb-0">Tekan tombol Baca Laporan pada card untuk membuka detail praktikum.</p>
-      </div>
-    </div>
 
     <article class="report-detail glass" id="report-laravel-ui" tabindex="-1">
       <div class="report-detail-head">
@@ -5151,6 +5162,337 @@
           </p>
         </div>
         <a href="https://github.com/JiyadR/Praktikum_AppMob_2411533003" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
+          <i class="bi bi-github"></i>
+          Buka GitHub
+        </a>
+      </div>
+    </article>
+
+    <article class="report-detail glass" id="report-mobile-card18" tabindex="-1">
+      <div class="report-detail-head">
+        <span class="report-badge">Aplikasi Mobile</span>
+        <h3>Flutter API Integration dengan HTTP Package</h3>
+        <p>Implementasi integrasi API menggunakan HTTP package untuk melakukan request data dari server dan menampilkan data secara dinamis pada aplikasi Flutter.</p>
+      </div>
+
+      <ol class="report-doc">
+        <li>
+          <h4>Pendahuluan</h4>
+          <p>
+            Pengembangan antarmuka aplikasi mobile modern menuntut penyajian informasi yang menarik secara visual sekaligus efisien dalam penggunaan sumber daya perangkat. Pada aplikasi ResepKu yang sebelumnya hanya menampilkan teks dan huruf inisial, diperlukan peningkatan tampilan melalui penambahan logo lokal, tipografi khusus (custom font), serta foto resep yang diambil dari jaringan internet. Untuk memastikan pemuatan gambar dari internet tetap ringan dan aplikasi tetap berjalan baik ketika koneksi melambat atau terputus, Flutter menyediakan widget Image.network yang dapat dilengkapi penanganan kondisi pemuatan (loadingBuilder), penanganan galat (errorBuilder) dengan gambar cadangan lokal, serta pengaturan lebar dekode gambar (cacheWidth). Sementara aset lokal seperti logo, gambar placeholder, dan jenis huruf Poppins didaftarkan pada pubspec.yaml agar langsung tersedia tanpa memerlukan koneksi internet.
+          </p>
+          <p>
+            Selain pengelolaan aset dan media, penyajian koleksi data dalam jumlah banyak memerlukan mekanisme rendering secara lazy agar elemen antarmuka hanya dibangun ketika dibutuhkan pada layar. Pada praktikum ini, tampilan katalog resep diterapkan menggunakan ListView.builder untuk susunan daftar satu kolom serta GridView.builder untuk susunan kisi multi-kolom yang dapat diganti secara dinamis melalui satu tombol pada bilah aplikasi. Perpindahan mode tampilan antara list dan grid dikelola secara lokal sebagai ephemeral state menggunakan setState, sedangkan sinkronisasi data resep favorit pada seluruh halaman dan mode tampilan tetap dijaga menggunakan state management Provider yang telah dibangun sebelumnya.
+          </p>
+        </li>
+
+        <li>
+          <h4>Tujuan</h4>
+          <ul>
+            <li>Mendaftarkan aset gambar dan custom font di pubspec.yaml, lalu menggunakannya dengan Image.asset dan ThemeData.</li>
+            <li>Menampilkan gambar dari internet dengan Image.network beserta loading state dan error state.</li>
+            <li>Menampilkan data dengan ListView.builder dan GridView.builder.</li>
+            <li>Mengganti tampilan list dan grid dengan state lokal (setState) tanpa mengganggu state favorit di Provider.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Tools dan Teknologi</h4>
+          <ul>
+            <li>Flutter SDK</li>
+            <li>Dart Programming Language</li>
+            <li>Image.asset untuk aset lokal</li>
+            <li>Image.network untuk gambar dari internet</li>
+            <li>ListView.builder dan GridView.builder</li>
+            <li>setState untuk ephemeral state</li>
+            <li>Provider untuk state management</li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Langkah Pengerjaan</h4>
+          
+          <div class="report-substeps">
+            <section class="report-substep">
+              <h5>a. Checkpoint1</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/1.png" alt="Checkpoint1 - Tampilan aplikasi ResepKu">
+                <figcaption>Checkpoint1 - Tampilan aplikasi ResepKu</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>1. Pertama, terapkan jenis huruf kustom Poppins pada konfigurasi tema aplikasi di dalam berkas lib/main.dart. Pada widget ResepKuApp, properti fontFamily: 'Poppins' ditambahkan ke dalam object ThemeData untuk tema terang (theme) maupun tema gelap (darkTheme) yang menggunakan skema warna Colors.deepOrange, sehingga seluruh elemen teks di dalam aplikasi otomatis berubah menggunakan tipografi Poppins sesuai ketentuan Checkpoint 1. Selain mengatur tipografi global, MaterialApp tetap mempertahankan properti themeMode dan ThemeProvider serta properti builder yang membungkus halaman dengan IdentityFooter agar bilah identitas praktikan selalu muncul di bagian bawah layar.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/2.png" alt="Kode program main.dart dan konfigurasi tema">
+                <figcaption>Pertama, terapkan jenis huruf kustom Poppins pada konfigurasi tema aplikasi.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>2. Selanjutnya, tambahkan logo lokal aplikasi pada bagian bilah atas halaman utama melalui berkas lib/pages/home_page.dart. Setelah pengaturan font diterapkan pada tema, bagian title pada widget AppBar di dalam HomePage disusun menggunakan widget Row yang memuat gambar aset lokal melalui Image.asset('assets/images/logo.png', height: 32), jarak pemisah horizontal SizedBox(width: 8), dan teks judul 'ResepKu'. Susunan tersebut menempatkan logo aplikasi tepat di samping judul pada AppBar tanpa mengubah fungsi tombol FavoriteBadgeButton maupun navigasi menuju SettingsPage pada properti actions.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/3.png" alt="Kode AppBar dengan logo lokal">
+                <figcaption>Selanjutnya, tambahkan logo lokal aplikasi pada bagian bilah atas halaman utama.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>3. Kemudian, pertahankan tampilan identitas mahasiswa pada bagian bawah layar melalui berkas lib/widgets/identity_footer.dart. Widget IdentityFooter yang dipanggil pada MaterialApp menyusun konten utama aplikasi di dalam Expanded dengan MediaQuery.removePadding di atas sebuah bilah Material berwarna Colors.black87 yang menampilkan nilai konstanta kNim ('2411533003') dan kNama ('Jiyad Rifqi Pasaribu'), sehingga identitas NIM dan nama tetap terlihat di bagian bawah layar pada hasil tangkapan layar Checkpoint 1.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/4.png" alt="Kode IdentityFooter">
+                <figcaption>Kemudian, pertahankan tampilan identitas mahasiswa pada bagian bawah layar.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>b. Checkpoint2</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/5.png" alt="Checkpoint2 - Tampilan aplikasi ResepKu dengan foto dari internet">
+                <figcaption>Checkpoint2 - Tampilan aplikasi ResepKu dengan foto dari internet</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>1. Pertama, buat widget RecipeImage pada berkas lib/widgets/recipe_image.dart untuk memuat foto resep dari internet beserta penanganan kondisi loading dan error. Widget ini menggunakan Image.network dengan fit BoxFit.cover, serta parameter optional cacheWidth untuk mengurangi resolusi dekode sumber agar konsumsi memori tetap rendah. Selama gambar dimuat, loadingBuilder menampilkan kotak dengan ikon Icons.cloud_download, hingga waktu request berhasil, sedangkan errorBuilder menampilkan aset gambar placeholder.png jika terjadi kesalahan. Gambar akan mencoba dimuat dari URL yang diberikan sebagai parameter, dengan cache untuk URL yang berhasil. Checkpoint 2 menerapkan widget ini.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/6.png" alt="Kode RecipeImage widget">
+                <figcaption>Pertama, buat widget RecipeImage pada berkas lib/widgets/recipe_image.dart</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>2. Selanjutnya, perbarui komponen baru daftar resep pada berkas lib/widgets/recipe_tile.dart agar menggunakan thumbnail foto dari RecipeImage. Pada bagian leading di dalam ListTile, widget CircleAvatar diubah dengan ClipRRect (borderRadius.circular(8)) yang membungkus SizedBox berukuran $56 times $56 untuk menampilkan RecipeImage.url (recipe.image, cacheWidth: 168) agar ketergantungan terapi $56 times 3 = 168 piksel. Penampilan favorit menggunakan CircleAvatar dengan ikon stars favorit (BorderSide.circular(8)) yang resolusinya RecipeImage dengan parameter url (recipe.image, cacheWidth: 168) agar kebutuhan aset image (width $56 times 3 = 168 piksel), sementara ikon favorit (tambah FavoritePortion), dan navigasi ke DetailScreen tetap dipertahankan.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/7.png" alt="Kode RecipeTile dengan RecipeImage">
+                <figcaption>Selanjutnya, perbarui komponen baru daftar resep pada berkas lib/widgets/recipe_tile.dart</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>3. Kemudian, ganti daftar pada halaman utama menjadi ListView.builder di dalam berkas lib/pages/home_page.dart untuk merender thumbnail resep secara efisien. Konstruktor ListView.builder dengan itemCount: dummyRecipes.length membangun widget RecipeTile secara lazy sesuai item yang tampil di layar, sehingga halaman utama mampu menampilkan thumbnail foto maupun gambar placeholder saat mode offline bersama footer identitas praktikan pada Checkpoint 2.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/8.png" alt="Kode ListView.builder pada home_page.dart">
+                <figcaption>Kemudian, ganti daftar pada halaman utama menjadi ListView.builder.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>c. Checkpoint 3</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/9.png" alt="Checkpoint 3 - Tampilan grid dan detail resep">
+                <figcaption>Checkpoint 3 - Tampilan grid dan detail resep</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/10.png" alt="Checkpoint 3 - Detail resep">
+                <figcaption>Checkpoint 3 - Detail resep</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>1. Pertama, buat widget RecipeGridCard pada berkas lib/widgets/recipe_grid_card.dart untuk menampilkan resep dalam grid. Widget Card dengan properti elevation: 2, borderRadius.circular(12), dan properti Expanded untuk mengatur ukuran. Widget Card ini menggunakan SizedBox(height: 500) dan SizedBox(width: 200) untuk mengatur dimensi. Widget IconButton.filledOnPrimary untuk tombol favorit, dan properti children berisi nama resep dengan batas teks yang diformat. Widget TextOverflow.ellipsis untuk membatasi informasi rating dan total waktu memasak.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/11.png" alt="Kode RecipeGridCard widget">
+                <figcaption>Pertama, buat widget RecipeGridCard pada berkas lib/widgets/recipe_grid_card.dart</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>2. Selanjutnya, ubah halaman utama pada berkas lib/pages/home_page.dart menjadi StatefulWidget agar dapat beralih antara tampilan list dan grid. State lokal bool _isGrid = false ditambahkan pada _HomePageState dan diubah melalui setState saat tombol ikon Icons.grid_view atau Icons.view_list di AppBar ditekan. Ketika _isGrid bernilai true, metode _buildGrid() merender GridView.builder dua kolom (crossAxisCount: 2, childAspectRatio: 3 / 4, dan jarak 8 dp) yang memuat RecipeGridCard.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/12.png" alt="Kode home_page.dart">
+                <figcaption>Selanjutnya, ubah halaman utama pada berkas lib/pages/home_page.dart</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>3. Kemudian, tambahkan tampilan foto resep berukuran besar pada bagian atas halaman detail melalui berkas lib/pages/detail_page.dart. Di dalam ListView pada metode build, widget RecipeImage(url: recipe.image) ditempatkan sebagai elemen pertama di dalam ClipRRect (BorderRadius.circular(16)) dan AspectRatio berasio 16 / 9 tanpa parameter cacheWidth agar foto tampil tajam selebar layar bersama footer identitas praktikan pada Checkpoint 3.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/13.png" alt="Kode detail_page.dart dengan RecipeImage">
+                <figcaption>Kemudian, tambahkan tampilan foto resep berukuran besar pada bagian atas halaman detail.</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>d. Latihan1</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/14.png" alt="Latihan1 - Tampilan filter kategori 1">
+                <figcaption>Latihan1 - Tampilan filter kategori 1</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/15.png" alt="Latihan1 - Tampilan filter kategori 2">
+                <figcaption>Latihan1 - Tampilan filter kategori 2</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/16.png" alt="Latihan1 - Tampilan filter kategori 3">
+                <figcaption>Latihan1 - Tampilan filter kategori 3</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>1. Pertama, tambahkan variabel state _cuisine beserta logika pengambilan daftar kategori makanan dan penyaringan data resep pada berkas lib/pages/home_page.dart. Pada _HomePageState, properti String? _cuisine didefinisikan dengan nilai awal null untuk menandakan bahwa seluruh kategori sedang ditampilkan. Di dalam metode build, daftar kategori unik diambil secara otomatis dari data melalui dummyRecipes.map((r) => r.cuisine).toSet(), lalu daftar diurutkan dan disaring menggunakan where nullable _cuisine tidak bernilai null.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/17.png" alt="Kode home_page.dart dengan _cuisine">
+                <figcaption>Pertama, tambahkan variabel state _cuisine beserta logika pengambilan daftar kategori</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>2. Selanjutnya, ubah properti body pada HomePage menjadi susunan Column untuk menampilkan deretan filter ChoiceChip di atas daftar resep. Bagian atas Column diisi SizedBox(height: 56) yang membungkus ListView.horizontal (scrollDirection: Axis.horizontal) berisi ChoiceChip 'Semua' dan setiap item pada cuisines untuk memperbarui _cuisine melalui setState, sedangkan bagian bawah dibungkus Expanded agar tampilan list maupun grid dapat mengisi sisa tinggi layar secara proporsional.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/18.png" alt="Kode home_page.dart dengan ChoiceChip">
+                <figcaption>Selanjutnya, ubah properti body pada HomePage menjadi susunan Column</figcaption>
+              </figure>
+            </section>
+
+<section class="report-substep">
+              <h5>3. Kemudian, ubah metode buildList() dan buildGrid() pada berkas lib/pages/home_page.dart agar menerima data resep yang telah disaring. Kedua metode pembangun tampilan tersebut diubah supaya menerima parameter List<Recipe> recipes (dengan mengimpor model recipe.dart) dan menggunakan recipes.length serta recipes[index], sehingga filter kategori tetap sinkron baik saat pengguna berada pada mode list maupun grid.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/19.png" alt="Kode home_page.dart dengan buildList dan buildGrid">
+                <figcaption>Kemudian, ubah metode buildList() dan buildGrid()</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>e. Latihan2</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/20.png" alt="Latihan2 - Tampilan favorit resep 1">
+                <figcaption>Latihan2 - Tampilan favorit resep 1</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/21.png" alt="Latihan2 - Tampilan favorit resep 2">
+                <figcaption>Latihan2 - Tampilan favorit resep 2</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/22.png" alt="Latihan2 - Tampilan favorit resep 3">
+                <figcaption>Latihan2 - Tampilan favorit resep 3</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>1. Pertama, impor widget RecipeImage dan ganti tampilan daftar pada berkas lib/pages/favorite_page.dart menjadi ListView.separated. Penggantian ListView biasa dengan ListView.separated memungkinkan penyisipan widget Divider(height: 1) melalui separatorBuilder sebagai garis pemisah di antara setiap item favorit, sementara tombol hapus semua (Icons.delete_sweep) pada AppBar tetap dipertahankan.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/23.png" alt="Kode favorite_page.dart dengan ListView.separated">
+                <figcaption>Pertama, impor widget RecipeImage dan ganti tampilan daftar pada berkas lib/pages/favorite_page.dart menjadi ListView.separated</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>2. Selanjutnya, bungkus setiap baris resep dengan widget Dismissible agar item favorit dapat dihapus melalui gestur geser ke kiri. Widget ini menggunakan kunci unik dan stabil ValueKey(recipe.id) dengan arah geser DismissDirection.endToStart dan latar belakang merah berikon Icons.delete, lalu memanggil favorite.toggle(recipe) serta menampilkan SnackBar berisi nama resep yang dihapus di dalam onDismissed.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/24.png" alt="Kode favorite_page.dart dengan Dismissible">
+                <figcaption>Selanjutnya, bungkus setiap baris resep dengan widget Dismissible</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>3. Kemudian, tambahkan thumbnail foto resep pada bagian leading di dalam ListTile pada berkas FavoritePage. Gambar resep diubah dengan menggunakan widget RecipeImage(url: recipe.image, cacheWidth: 168) di dalam ClipRRect (BorderRadius.circular(8)) dan SizedBox berukuran 56×56 agar tampilan lebih tajam. Kategori makanan dan tombol hapus satu item tetap dipertahankan.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/25.png" alt="Kode favorite_page.dart dengan RecipeImage">
+                <figcaption>Kemudian, tambahkan thumbnail foto resep pada bagian leading di dalam ListTile</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>f. Latihan3</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/26.png" alt="Latihan3 - Tampilan halaman detail">
+                <figcaption>Latihan3 - Tampilan halaman detail</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>1. Pertama, impor paket cached_network_image dan ubah kerangka tampilan halaman detail pada berkas lib/pages/detail_page.dart menjadi CustomScrollView dengan SliverAppBar. Properti appBar statis pada Scaffold dihapus dan digantikan oleh CustomScrollView yang diwakili oleh SliverAppBar pinned: true, expandedHeight: 260 agar bilah judul tetap menempel di bagian atas layar di bawah. Pada properti flexibleSpace, FlexibleSpaceBar menampilkan judul resep. Pada properti title, flexibleSpace menampilkan CachedNetworkImage dengan gambar cadangan lokal (placeholder) serta gambar cadangan lokal (error/Offline) sehingga foto terpasang di penyimpanan disk dan tidak perlu diunduh ulang saat aplikasi dibuka kembali.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/27.png" alt="Kode detail_page.dart dengan CachedNetworkImage">
+                <figcaption>Pertama, impor paket cached_network_image dan ubah kerangka tampilan halaman detail</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>2. Selanjutnya, tempatkan informasi ringkasan resep, pengaturan jumlah porsi, dan judul pengalaman resep ke dalam SliverToBoxAdapter. Karena elemen-elemen tersebut berada widget non-slingular, SliverToBoxAdapter digunakan sebagai pembungkus untuk Column yang berisi kategori resep. Card pengatur jumlah porsi ("servings"), perhitungan total kalori, serta teks judul "Bahan" dan "Pengalaman" diatur secara proporsional dalam CustomScrollView.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/28.png" alt="Kode detail_page.dart dengan SliverToBoxAdapter">
+                <figcaption>Selanjutnya, tempatkan informasi ringkasan resep, pengaturan jumlah porsi, dan judul pengalaman resep</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>3. Kemudian, tampilkan daftar bahan resep menggunakan SliverListBuilder di dalam SliverPadding. Alih-alih menggunakan pengulangan untuk di dalam ListView, SliverListBuilder dengan itemCount: recipe.ingredients.length digunakan untuk membangun setitem ListTile secara lazy di dalam CustomScrollView agar kinerja scroll pada halaman detail tetap lancar.</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/29.png" alt="Kode detail_page.dart dengan SliverListBuilder">
+                <figcaption>Kemudian, tampilkan daftar bahan resep menggunakan SliverListBuilder</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>g. Langkah D2</h5>
+              <figure class="report-figure">
+                <img src="images/report-mobile-card18/tabel.png" alt="Tabel Langkah D2">
+                <figcaption>Tabel Langkah D2</figcaption>
+              </figure>
+            </section>
+
+            <section class="report-substep">
+              <h5>h. Langkah C3</h5>
+              <p>
+                Lebar kartu = 164 dp
+              </p>
+              <p>
+                Tinggi kartu = 218.67 dp
+              </p>
+            </section>
+
+            <section class="report-substep">
+              <h5>i. Pertanyaan Analisis</h5>
+              <p>
+                1. Pada skenario 3 dan 4 Langkah D.2, status favorit tetap sama walaupun tampilan berganti dari grid ke list. Padahal RecipeGridCard dan RecipeTile adalah dua widget yang berbeda. Jelaskan mengapa, dengan mengaitkannya pada Modul 6.
+              </p>
+              <p>
+                Status favorit tetap sama meskipun tampilan berpindah antara RecipeGridCard dan RecipeTile karena data favorit tidak disimpan secara lokal di dalam masing-masing widget, melainkan dikelola secara terpusat sebagai app state pada kelas FavoriteProvider (turunan ChangeNotifier dari Modul 6) yang dibagikan ke seluruh aplikasi melalui MultiProvider. Ketika pengguna menekan ikon hati pada salah satu tampilan, FavoriteProvider.toggle() memperbarui daftar _items dan memanggil notifyListeners(), sehingga baik RecipeGridCard maupun RecipeTile yang sama-sama memantau state tersebut melalui context.watch<FavoriteProvider>().isFavorite(recipe) akan selalu membaca status favorit dari sumber data tunggal yang identik.
+              </p>
+              <p>
+                2. Di dalam loadingBuilder terdapat baris if (loadingProgress == null) return child. Apa yang akan tampil jika baris tersebut dihapus? Jelaskan alasannya.
+              </p>
+              <p>
+                Jika baris if (loadingProgress == null) return child dihapus, foto resep tidak akan pernah muncul di layar meskipun unduhan telah selesai dan aplikasi akan terus menampilkan kotak loading state berikon Icons.restaurant_menu. Hal tersebut terjadi karena loadingBuilder dipanggil berulang kali selama proses pengunduhan dengan mengirimkan informasi progres pada parameter loadingProgress, lalu saat unduhan selesai sepenuhnya Flutter kembali memanggil loadingBuilder dengan nilai loadingProgress sama dengan null sebagai penanda agar widget gambar utama (child) dikembalikan dan ditampilkan.
+              </p>
+              <p>
+                3. Hitung berapa pixel foto thumbnail yang di-decode dengan dan tanpa cacheWidth: 168, jika foto asli dari server berukuran 1200 × 800 pixel. Apa akibatnya bagi memory ketika datanya menjadi 50 resep pada Modul 8?
+              </p>
+              <p>
+                Tanpa cacheWidth, foto berukuran 1200×800 piksel akan didekode secara penuh sebesar 1200×800=960.000 piksel per gambar, sedangkan dengan cacheWidth: 168 yang mempertahankan rasio aspek 3:2 (tinggi menjadi 168×800/1200=112 piksel), jumlah piksel yang didekode menyusut menjadi 168×112=18.816 piksel atau sekitar 51 kali lebih kecil. Apabila jumlah data meningkat menjadi 50 resep pada Modul 8, proses dekode tanpa cacheWidth akan memuat 48.000.000 piksel ke dalam memori (setara sekitar 183 MB pada format RGBA 4 byte per piksel), dibandingkan hanya sekitar 3,6 MB dengan cacheWidth: 168, sehingga berisiko membebani RAM perangkat, membuat scrolling tersendat, hingga memicu aplikasi terhenti akibat kehabisan memori (out of memory).
+              </p>
+              <p>
+                4. Logo memakai Image.asset, sedangkan foto resep memakai Image.network. Mengapa logo tidak sebaiknya diambil dari internet, dan mengapa foto resep tidak dimasukkan ke asset?
+              </p>
+              <p>
+                Logo aplikasi dimuat menggunakan Image.asset karena merupakan aset identitas statis yang jarang berubah dan harus langsung tersedia seketika saat aplikasi dijalankan tanpa bergantung pada ketersediaan koneksi internet. Sebaliknya, foto resep dimuat dari internet melalui Image.network karena koleksi resep bersifat dinamis dan dapat terus bertambah dari server, sehingga menyimpannya di dalam folder assets akan memperbesar ukuran berkas instalasi aplikasi (APK) secara berlebihan serta mengharuskan pengguna memperbarui aplikasi setiap kali ada penambahan atau perubahan data resep.
+              </p>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <h4>Kesimpulan</h4>
+          <p>
+            Berdasarkan praktikum yang telah dilakukan pada proyek ResepKu, aset lokal berupa logo aplikasi, gambar placeholder, serta jenis huruf kustom Poppins berhasil didaftarkan melalui pubspec.yaml dan diterapkan menggunakan Image.asset pada AppBar maupun ThemeData pada tema terang dan tema gelap. Pemuatan foto resep dari internet melalui widget RecipeImage berbasis Image.network berjalan sesuai rancangan, di mana indikator pemuatan tampil melalui loadingBuilder, gambar cadangan placeholder.png muncul menggantikan foto yang gagal dimuat lewat errorBuilder saat koneksi terputus, dan pengaturan cacheWidth menjaga penggunaan memori tetap efisien. Selain itu, penyajian data menggunakan ListView.builder dan GridView.builder dua kolom dapat diganti secara dinamis melalui state lokal (_isGrid) dengan setState tanpa memengaruhi sinkronisasi status resep favorit yang dikelola secara terpusat oleh FavoriteProvider.
+          </p>
+          <p>
+            Pengembangan lebih lanjut pada bagian latihan berhasil memperluas fungsionalitas antarmuka dan pengelolaan daftar pada aplikasi. Penyaringan kategori masakan menggunakan deretan ChoiceChip horizontal berfungsi konsisten baik pada tampilan list maupun grid, sementara halaman favorit menjadi lebih terstruktur melalui penggunaan ListView.separated dengan pembatas Divider, tampilan thumbnail RecipeImage, serta gestur hapus Dismissible yang disertai notifikasi SnackBar. Pada halaman detail, penerapan CustomScrollView dengan SliverAppBar, SliverToBoxAdapter, SliverList.builder, dan CachedNetworkImage menghasilkan efek gulir gambar yang responsif sekaligus menyimpan foto ke penyimpanan lokal perangkat agar tidak perlu diunduh ulang ketika halaman dibuka kembali.
+          </p>
+        </li>
+      </ol>
+
+      <div class="report-repo-callout">
+        <div>
+          <span class="repo-kicker">Source Archive</span>
+          <h4>Repository Praktikum</h4>
+          <p>
+            Kode dan arsip project dapat dibuka melalui repository GitHub berikut.
+          </p>
+        </div>
+        <a href="https://github.com/JiyadR/2411533003_kelasA_AppMob_ResepKu/tree/Praktikum7" target="_blank" rel="noopener noreferrer" class="btn btn-solid repo-cta">
           <i class="bi bi-github"></i>
           Buka GitHub
         </a>
